@@ -1,0 +1,7 @@
+[run]
+omit = setup.py
+    *__init__*
+    */test_*
+    */integration*
+    */timing*.py
+    */memory_test.py
