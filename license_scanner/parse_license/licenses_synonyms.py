@@ -20,6 +20,7 @@ repoze_license = "Repoze public license"
 mozilla_publice_license = "Mozilla public license (mpl)"
 mozilla_publice_license_v2 = "Mozilla public license 2.0 (mpl 2.0)"
 iscl_license = "ISC license (iscl)"
+historical_permission_notice = "Historical Permission Notice and Disclaimer (HPND)"
 
 other = "other/proprietary license"
 unknown = "UNKNOWN"
@@ -216,6 +217,9 @@ LICENSES_SYNONYMS = {
     "isc license (iscl)": iscl_license,
     "isc": iscl_license,
     "iscl": iscl_license,
+    "historical permission notice and disclaimer (hpnd)": historical_permission_notice,
+    "hpnd": historical_permission_notice,
+    "historical permission notice and disclaimer": historical_permission_notice,
     "other/proprietary license": other,
     "proprietary": other,
     "proprietary license": other,
