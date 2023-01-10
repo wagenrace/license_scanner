@@ -16,7 +16,7 @@ with open("requirements.txt") as requirements_file:
 
 setup_requirements = ["pytest-runner"]
 
-test_requirements = ["pytest", "pillow"]
+test_requirements = ["pytest"]
 
 setup(
     author="Tom Nijhof",
