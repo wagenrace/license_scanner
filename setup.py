@@ -16,7 +16,7 @@ with open("requirements.txt") as requirements_file:
 
 setup_requirements = ["pytest-runner"]
 
-test_requirements = ["pytest", "pillow"]
+test_requirements = ["pytest"]
 
 setup(
     author="Tom Nijhof",
@@ -41,7 +41,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite="tests",
     tests_require=test_requirements,
-    url="https://cytosmart.com",
-    version="0.0.1",
+    url="https://github.com/wagenrace/license_scanner",
+    version="0.0.2",
     zip_safe=False,
 )
