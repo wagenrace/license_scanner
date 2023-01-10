@@ -33,6 +33,7 @@ setup(
     entry_points={"console_scripts": ["license_scanner=license_scanner.cli:main"]},
     install_requires=requirements,
     long_description=readme + "\n\n" + history,
+    long_description_content_type="text/markdown",
     include_package_data=True,
     keywords="license_scanner",
     name="license_scanner",
