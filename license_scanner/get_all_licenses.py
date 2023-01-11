@@ -12,7 +12,7 @@ def get_all_licenses():
         try:
             package_name = working_set.normalized_to_canonical_keys[key]
             package = working_set.by_key[package_name]
-            metadata_lines = package.get_metadata("metadata").split("\n")
+            metadata_lines = package.get_metadata("METADATA").split("\n")
         except:
             try:
                 metadata_lines = package.get_metadata("PKG-INFO").split("\n")
