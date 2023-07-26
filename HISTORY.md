@@ -2,6 +2,7 @@
 
 ## 0.1.3 (2023-07-26)
 - Fix mislabeling of 2 AGPL v3 as GPL v3
+
 ## 0.0.1 (2023-01-10)
 
 - Add license scanner
