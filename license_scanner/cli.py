@@ -1,4 +1,4 @@
-from .get_all_licenses import get_all_licenses
+from license_scanner.get_all_licenses import get_all_licenses
 
 
 def main():
