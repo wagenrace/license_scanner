@@ -1,0 +1,4 @@
+
+[tool.license_scanner]
+allowed-licenses=["MIT", "apache software license v2"]
+allowed-packages=[]
