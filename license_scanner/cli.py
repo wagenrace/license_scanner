@@ -70,9 +70,18 @@ def main():
 
         problem_packages = []
 
-        # for used_license in all_used_licenses:
-        #     if not used_license in allowed_licenses:
-        #         for package in
+        for used_license in all_used_licenses:
+            if not used_license in allowed_licenses:
+                for package in all_licenses[used_license]:
+                    if package not in allowed_packages:
+                        problem_packages.append((package, used_license))
+
+        if problem_packages:
+            for package, license in problem_packages:
+                print(f"{package} with {license} is NOT whitelisted")
+            raise ValueError(
+                "Some of the packages found do not use white listed licenses"
+            )
 
 
 if __name__ == "__main__":

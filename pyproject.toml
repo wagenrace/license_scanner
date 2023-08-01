@@ -1,4 +1,17 @@
 
 [tool.license_scanner]
-allowed-licenses=["MIT", "apache software license v2"]
-allowed-packages=[]
+allowed-licenses = [
+  "MIT",
+  "apache software license",
+  "apache software license v2",
+  "apache software license v3",
+  "BSD license",
+  "BSD 3-clause license",
+  'GNU lesser general public license',
+  'GNU lesser general public license v2',
+  'GNU lesser general public license v3',
+  'Python software foundation license',
+  'Mozilla public license 2.0 (mpl 2.0)',
+  'mozilla',
+]
+allowed-packages = ["pillow"]
