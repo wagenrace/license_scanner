@@ -6,12 +6,9 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Test
+name: Pytest & Licenses check
 
 on:
-  push:
-    branches:
-      - "*"
   pull_request:
     branches:
       - main
