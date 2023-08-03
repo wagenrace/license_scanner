@@ -28,13 +28,7 @@ def parse_pyproject_toml() -> Dict[str, Any]:
     return config
 
 
-def main():
-    """
-    Get all the installed packages and licenses.
-    Prints the packages sorted by license
-    """
-    pyproject_config = parse_pyproject_toml()
-
+def __get_arguments() -> Mode:
     parser = argparse.ArgumentParser(
         description="Just an example",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
@@ -50,6 +44,17 @@ def main():
     args = parser.parse_args()
     config = vars(args)
     mode = config["mode"]
+    return mode
+
+
+def main():
+    """
+    Get all the installed packages and licenses.
+    Prints the packages sorted by license
+    """
+    pyproject_config = parse_pyproject_toml()
+
+    mode = __get_arguments()
 
     all_licenses = get_all_licenses()
 
@@ -59,8 +64,8 @@ def main():
     if mode == Mode.print:
         for key in all_used_licenses:
             print(f"\n ======\n {key} \n ======")
-            for license in all_licenses[key]:
-                print(f" - {license}")
+            for _license in all_licenses[key]:
+                print(f" - {_license}")
 
     elif mode == Mode.whitelist:
         raw_allowed_licenses = pyproject_config.get("allowed_licenses", [])
