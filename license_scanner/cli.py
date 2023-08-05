@@ -50,7 +50,13 @@ def __get_arguments() -> Mode:
 def main():
     """
     Get all the installed packages and licenses.
-    Prints the packages sorted by license
+    If will use the system argument -m or --mode to determine what to do with it.
+
+    Mode: print (default)
+        Prints the packages sorted by license
+    Mode: Whitelist
+        Gives an error if one of packages and it licenses are not whitelisted
+        Whitelist are loaded from pyproject.toml -- allowed-licenses && allowed-packages
     """
     pyproject_config = parse_pyproject_toml()
 
