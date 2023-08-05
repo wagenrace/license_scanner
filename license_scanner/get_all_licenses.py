@@ -1,6 +1,6 @@
-#%%
+# %%
 from pkg_resources import working_set
-from .parse_license import parse_license
+from license_scanner.parse_license import parse_license
 
 
 def get_all_licenses():
