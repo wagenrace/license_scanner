@@ -1,7 +1,9 @@
 mit_license = "MIT license"
 bsd_license = "BSD license"
-bsd_license_v3 = "BSD 3-clause license"
-bsd_license_v2 = "BSD 2-clause license"
+bsd_license_c4 = "BSD 4-clause license"
+bsd_license_c3 = "BSD 3-clause license"
+bsd_license_c2 = "BSD 2-clause license"
+bsd_license_c0 = "BSD 0-clause license"
 apache_license = "Apache license"
 apache_license_v1 = "Apache license 1.0"
 apache_license_v2 = "Apache license 2.0"
@@ -26,6 +28,31 @@ other = "other/proprietary license"
 unknown = "UNKNOWN"
 
 LICENSES_SYNONYMS = {
+    mit_license.lower(): mit_license,
+    bsd_license.lower(): bsd_license,
+    bsd_license_c4.lower(): bsd_license_c4,
+    bsd_license_c3.lower(): bsd_license_c3,
+    bsd_license_c2.lower(): bsd_license_c2,
+    bsd_license_c0.lower(): bsd_license_c0,
+    apache_license.lower(): apache_license,
+    apache_license_v1.lower(): apache_license_v1,
+    apache_license_v2.lower(): apache_license_v2,
+    gnu_affero.lower(): gnu_affero,
+    gnu_affero_v3.lower(): gnu_affero_v3,
+    gnu_lesser_public_license.lower(): gnu_lesser_public_license,
+    gnu_lesser_public_license_v2.lower(): gnu_lesser_public_license_v2,
+    gnu_lesser_public_license_v3.lower(): gnu_lesser_public_license_v3,
+    gnu_public_license.lower(): gnu_public_license,
+    gnu_public_license_v2.lower(): gnu_public_license_v2,
+    gnu_public_license_v3.lower(): gnu_public_license_v3,
+    python_license.lower(): python_license,
+    eclipse_public_license_v1.lower(): eclipse_public_license_v1,
+    eclipse_public_license_v2.lower(): eclipse_public_license_v2,
+    repoze_license.lower(): repoze_license,
+    mozilla_publice_license.lower(): mozilla_publice_license,
+    mozilla_publice_license_v2.lower(): mozilla_publice_license_v2,
+    iscl_license.lower(): iscl_license,
+    historical_permission_notice.lower(): historical_permission_notice,
     "mit license": mit_license,
     "the mit license": mit_license,
     "mit license ": mit_license,
@@ -38,23 +65,23 @@ LICENSES_SYNONYMS = {
     "the mit license (mit)": mit_license,
     "mit licence": mit_license,
     "bsd license": bsd_license,
-    "3-clause bsd license": bsd_license_v3,
+    "3-clause bsd license": bsd_license_c3,
     "new bsd": bsd_license,
     "bsd": bsd_license,
-    "bsd 3-clause": bsd_license_v3,
-    "bsd-3-clause": bsd_license_v3,
-    "3-bsd": bsd_license_v3,
-    "bsd 3": bsd_license_v3,
-    "bsd (3-clause)": bsd_license_v3,
-    "bsd 2-clause (see license file)": bsd_license_v2,
-    "bsd 3 clause": bsd_license_v3,
-    "apache-2.0 or bsd": bsd_license_v2,
-    "3-clause bsd <http://www.opensource.org/licenses/bsd-license.php>": bsd_license_v3,
-    "bsd 3-clause license": bsd_license_v3,
-    "3-clause bsd": bsd_license_v3,
-    "bsd (2-clause)": bsd_license_v2,
-    "bsd 2-clause": bsd_license_v2,
-    "bsd-2-clause": bsd_license_v2,
+    "bsd 3-clause": bsd_license_c3,
+    "bsd-3-clause": bsd_license_c3,
+    "3-bsd": bsd_license_c3,
+    "bsd 3": bsd_license_c3,
+    "bsd (3-clause)": bsd_license_c3,
+    "bsd 2-clause (see license file)": bsd_license_c2,
+    "bsd 3 clause": bsd_license_c3,
+    "apache-2.0 or bsd": bsd_license_c2,
+    "3-clause bsd <http://www.opensource.org/licenses/bsd-license.php>": bsd_license_c3,
+    "bsd 3-clause license": bsd_license_c3,
+    "3-clause bsd": bsd_license_c3,
+    "bsd (2-clause)": bsd_license_c2,
+    "bsd 2-clause": bsd_license_c2,
+    "bsd-2-clause": bsd_license_c2,
     "apache software license": apache_license,
     "apache license 2.0": apache_license_v2,
     "apache 2.0": apache_license_v2,
