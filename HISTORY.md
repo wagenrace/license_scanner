@@ -1,5 +1,11 @@
 # History
 
+## 0.2.3 (2023-08-09)
+- Give arguments priority over classifier
+  
+## 0.2.2 (2023-08-09)
+- Bugfix: fix cli
+  
 ## 0.2.1 (2023-08-09)
 - Bugfix: Make it work with python < 3.11
 

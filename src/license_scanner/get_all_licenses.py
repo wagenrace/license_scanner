@@ -37,10 +37,12 @@ def get_all_licenses():
         license_classifier = parse_license(license_classifier)
 
         # You can get the license from license argument or classifier
-        if license_classifier:
-            general_license = license_classifier
-        elif license_arg is not None and license_arg != "UNKNOWN":
+        if license_arg is not None and license_arg != "UNKNOWN":
             general_license = license_arg
+        elif license_classifier:
+            general_license = license_classifier
+        else:
+            general_license = "UNKNOWN"
 
         all_licenses[general_license] = all_licenses.get(general_license, []) + [key]
 
