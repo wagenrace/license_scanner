@@ -1,2 +1,0 @@
-cytoboom==0.0.1>
-validator3000_connector==1.0.0
