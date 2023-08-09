@@ -1,5 +1,8 @@
 # History
 
+## 0.2.1 (2023-08-09)
+- Bugfix: Make it work with python < 3.11
+
 ## 0.2.0 (2023-08-05)
 - Add whitelisted mode to CLI
 
