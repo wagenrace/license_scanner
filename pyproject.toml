@@ -54,4 +54,4 @@ allowed-packages = ["license_scanner"]
 license_scanner = "license_scanner.cli:main"
 
 [tool.hatch.version]
-path = "license_scanner/__init__.py"
+path = "src/license_scanner/__init__.py"
