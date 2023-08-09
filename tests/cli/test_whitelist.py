@@ -10,7 +10,7 @@ def test_nothing_allowed(toml_load_mock, get_all_licenses_mock, argparse_mock):
     toml_load_mock.return_value = {
         "tool": {"license_scanner": {"allowed_licenses": [], "allowed_packages": []}}
     }
-    get_all_licenses_mock.return_value = {"test license 1": ["package 1", "package 2"]}
+    get_all_licenses_mock.return_value = {"BSD license": ["package 1", "package 2"]}
     argparse_mock.return_value = Mode.whitelist
 
     with pytest.raises(ValueError):
@@ -24,12 +24,12 @@ def test_white_listed_licenses(toml_load_mock, get_all_licenses_mock, argparse_m
     toml_load_mock.return_value = {
         "tool": {
             "license_scanner": {
-                "allowed_licenses": ["test license 1"],
+                "allowed_licenses": ["BSD license"],
                 "allowed_packages": [],
             }
         }
     }
-    get_all_licenses_mock.return_value = {"test license 1": ["package 1", "package 2"]}
+    get_all_licenses_mock.return_value = {"BSD license": ["package 1", "package 2"]}
     argparse_mock.return_value = Mode.whitelist
 
     main()
@@ -47,7 +47,7 @@ def test_white_listed_packages(toml_load_mock, get_all_licenses_mock, argparse_m
             }
         }
     }
-    get_all_licenses_mock.return_value = {"test license 1": ["package 1", "package 2"]}
+    get_all_licenses_mock.return_value = {"BSD license": ["package 1", "package 2"]}
     argparse_mock.return_value = Mode.whitelist
 
     main()
@@ -62,14 +62,14 @@ def test_white_listed_license_and_packages(
     toml_load_mock.return_value = {
         "tool": {
             "license_scanner": {
-                "allowed_licenses": ["test license 1"],
+                "allowed_licenses": ["BSD license"],
                 "allowed_packages": ["package 3"],
             }
         }
     }
     get_all_licenses_mock.return_value = {
-        "test license 1": ["package 1", "package 2"],
-        "test license 2": ["package 3"],
+        "BSD license": ["package 1", "package 2"],
+        "MIT license": ["package 3"],
     }
     argparse_mock.return_value = Mode.whitelist
 
