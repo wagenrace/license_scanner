@@ -1,4 +1,5 @@
 import argparse
+import logging
 import sys
 from enum import Enum
 from pathlib import Path
@@ -103,6 +104,8 @@ def main():
             raise ValueError(
                 "Some of the packages found do not use white listed licenses"
             )
+        else:
+            logging.info("All packages are good to use")
 
 
 if __name__ == "__main__":
