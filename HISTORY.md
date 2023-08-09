@@ -1,5 +1,8 @@
 # History
 
+## 0.2.4 (2023-08-09)
+- Print finish message
+
 ## 0.2.3 (2023-08-09)
 - Give arguments priority over classifier
   
