@@ -1,3 +1,17 @@
+[project]
+name = "license_scanner"
+version = "0.2.1"
+dependencies = ["setuptools>=62", "tomli>=1.1.0; python_version < '3.11'"]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "Tom Nijhof", email = "tomsspamadress@gmail.com" }]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.distutils.bdist_wheel]
+universal = true
 
 [tool.license_scanner]
 allowed-licenses = [
@@ -5,8 +19,9 @@ allowed-licenses = [
   "apache software license",
   "apache software license v2",
   "apache software license v3",
-  "BSD license",
   "BSD 3-clause license",
+  "BSD 2-clause license",
+  "BSD 0-clause license",
   'GNU lesser general public license',
   'GNU lesser general public license v2',
   'GNU lesser general public license v3',
@@ -14,4 +29,4 @@ allowed-licenses = [
   'Mozilla public license 2.0 (mpl 2.0)',
   'mozilla',
 ]
-allowed-packages = ["pillow"]
+allowed-packages = ["license_scanner"]
