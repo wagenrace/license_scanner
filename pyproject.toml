@@ -2,16 +2,19 @@
 name = "license_scanner"
 version = "0.2.1"
 dependencies = ["setuptools>=62", "tomli>=1.1.0; python_version < '3.11'"]
+readme = "README.md"
+keywords = ["license", "scanner", "checker"]
 license = { text = "MIT" }
 requires-python = ">=3.8"
 authors = [{ name = "Tom Nijhof", email = "tomsspamadress@gmail.com" }]
 
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+[tool.hatch.build.targets.wheel]
+only-include = ["src"]
+sources = ["src"]
 
-[tool.distutils.bdist_wheel]
-universal = true
+[build-system]
+requires = ["hatchling>=1.8.0", "hatch-vcs", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
 
 [tool.license_scanner]
 allowed-licenses = [
