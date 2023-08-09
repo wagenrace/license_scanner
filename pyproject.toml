@@ -1,3 +1,36 @@
+[project]
+name = "license_scanner"
+dynamic = ["version"]
+dependencies = ["setuptools>=62", "tomli>=1.1.0; python_version < '3.11'"]
+readme = "README.md"
+keywords = ["license", "scanner", "checker"]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [{ name = "Tom Nijhof", email = "tomsspamadress@gmail.com" }]
+classifiers = [
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+]
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src"]
+sources = ["src"]
+
+[build-system]
+requires = ["hatchling>=1.8.0", "hatch-vcs", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
 
 [tool.license_scanner]
 allowed-licenses = [
@@ -5,8 +38,9 @@ allowed-licenses = [
   "apache software license",
   "apache software license v2",
   "apache software license v3",
-  "BSD license",
   "BSD 3-clause license",
+  "BSD 2-clause license",
+  "BSD 0-clause license",
   'GNU lesser general public license',
   'GNU lesser general public license v2',
   'GNU lesser general public license v3',
@@ -14,4 +48,10 @@ allowed-licenses = [
   'Mozilla public license 2.0 (mpl 2.0)',
   'mozilla',
 ]
-allowed-packages = ["pillow"]
+allowed-packages = ["license_scanner"]
+
+[project.scripts]
+license_scanner = "license_scanner.cli:main"
+
+[tool.hatch.version]
+path = "license_scanner/__init__.py"

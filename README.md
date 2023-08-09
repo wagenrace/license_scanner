@@ -42,7 +42,7 @@ allowed-licenses = [
 allowed-packages = ["license_scanner"]
 ```
 
-To run the license scanner make sure you are in the same directory as `pyproject.toml` and run `license_scanner -m whitelist` or `python -m license_scanner.cli -m whitelist`. 
+To run the license scanner make sure you are in the same directory as `pyproject.toml` and run `python -m license_scanner -m whitelist`. 
 It will now throw you an error if your environment has an package with a license you did not approve of.
 
 ### Example: Github actions
@@ -78,7 +78,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install .
         pip install license_scanner
-        python -m license_scanner.cli -m whitelist
+        python -m license_scanner -m whitelist
 
 ```
 # Credits

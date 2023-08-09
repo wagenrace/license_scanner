@@ -1,6 +1,6 @@
 import os
 
-from license_scanner.parse_license.licenses_synonyms import LICENSES_SYNONYMS
+from .licenses_synonyms import LICENSES_SYNONYMS
 
 current_loc = os.path.dirname(os.path.realpath(__file__))
 
