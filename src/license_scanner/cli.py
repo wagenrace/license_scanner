@@ -87,6 +87,8 @@ def main():
     elif mode == Mode.whitelist:
         raw_allowed_licenses = pyproject_config.get("allowed_licenses", [])
         allowed_licenses = [parse_license(i) for i in raw_allowed_licenses]
+        if None in all_licenses:
+            allowed_licenses.remove(None)
         raw_allowed_packages = pyproject_config.get("allowed_packages", [])
         allowed_packages = [i.lower() for i in raw_allowed_packages]
 
@@ -105,7 +107,7 @@ def main():
                 "Some of the packages found do not use white listed licenses"
             )
         else:
-            logging.info("All packages are good to use")
+            print("✨✨ - All packages are good to use - ✨✨")
 
 
 if __name__ == "__main__":
