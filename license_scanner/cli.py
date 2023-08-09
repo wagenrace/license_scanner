@@ -4,8 +4,8 @@ from enum import Enum
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict
 
-from license_scanner.get_all_licenses import get_all_licenses
-from license_scanner.parse_license import parse_license
+from .get_all_licenses import get_all_licenses
+from .parse_license import parse_license
 
 if sys.version_info >= (3, 11):
     try:
