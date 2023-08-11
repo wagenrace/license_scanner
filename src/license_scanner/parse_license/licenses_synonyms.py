@@ -23,6 +23,9 @@ mozilla_publice_license = "Mozilla public license (mpl)"
 mozilla_publice_license_v2 = "Mozilla public license 2.0 (mpl 2.0)"
 iscl_license = "ISC license (iscl)"
 historical_permission_notice = "Historical Permission Notice and Disclaimer (HPND)"
+zope_public_license = "Zope Public License"
+zope_public_license_v1 = "Zope Public License v1"
+zope_public_license_v2 = "Zope Public License v2"
 
 other = "other/proprietary license"
 unknown = "UNKNOWN"
@@ -53,6 +56,9 @@ LICENSES_SYNONYMS = {
     mozilla_publice_license_v2.lower(): mozilla_publice_license_v2,
     iscl_license.lower(): iscl_license,
     historical_permission_notice.lower(): historical_permission_notice,
+    zope_public_license.lower(): zope_public_license,
+    zope_public_license_v1.lower(): zope_public_license_v1,
+    zope_public_license_v2.lower(): zope_public_license_v2,
     "mit license": mit_license,
     "the mit license": mit_license,
     "mit license ": mit_license,
@@ -249,6 +255,10 @@ LICENSES_SYNONYMS = {
     "historical permission notice and disclaimer (hpnd)": historical_permission_notice,
     "hpnd": historical_permission_notice,
     "historical permission notice and disclaimer": historical_permission_notice,
+    "zpl": zope_public_license,
+    "zpl 1": zope_public_license_v1,
+    "zpl 2": zope_public_license_v2,
+    "zpl 2.1": zope_public_license_v2,
     "other/proprietary license": other,
     "proprietary": other,
     "proprietary license": other,

@@ -47,6 +47,7 @@ allowed-licenses = [
   'GNU lesser general public license v3',
   'Python software foundation license',
   'Mozilla public license 2.0 (mpl 2.0)',
+  "ISC license",
   'mozilla',
 ]
 allowed-packages = ["license_scanner"]
