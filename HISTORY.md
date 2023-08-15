@@ -1,5 +1,12 @@
 # History
 
+## 0.2.5 (2023-08-15)
+- Add zope
+- Add unlicensed
+- Add Azure license
+- Add CC0
+- Add MIT-0
+
 ## 0.2.4 (2023-08-09)
 - Print finish message
 

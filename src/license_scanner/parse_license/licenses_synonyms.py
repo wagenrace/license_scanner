@@ -1,12 +1,15 @@
-mit_license = "MIT license"
-bsd_license = "BSD license"
-bsd_license_c4 = "BSD 4-clause license"
-bsd_license_c3 = "BSD 3-clause license"
-bsd_license_c2 = "BSD 2-clause license"
-bsd_license_c0 = "BSD 0-clause license"
 apache_license = "Apache license"
 apache_license_v1 = "Apache license 1.0"
 apache_license_v2 = "Apache license 2.0"
+azure_license = "Azure License"
+bsd_license = "BSD license"
+bsd_license_c0 = "BSD 0-clause license"
+bsd_license_c2 = "BSD 2-clause license"
+bsd_license_c3 = "BSD 3-clause license"
+bsd_license_c4 = "BSD 4-clause license"
+cc0_license = "Creative Commons Zero, CC-0"
+eclipse_public_license_v1 = "Eclipse public license 1.0 (epl-1.0)"
+eclipse_public_license_v2 = "Eclipse public license 2.0 (epl-2.0)"
 gnu_affero = "GNU Affero general public license (apl)"
 gnu_affero_v3 = "GNU Affero general public license v3 (aplv3)"
 gnu_lesser_public_license = "GNU lesser general public license"
@@ -15,44 +18,63 @@ gnu_lesser_public_license_v3 = "GNU lesser general public license v3 (lgplv3)"
 gnu_public_license = "GNU general public license"
 gnu_public_license_v2 = "GNU general public license v2 (gplv2)"
 gnu_public_license_v3 = "GNU general public license v3 (gplv3)"
-python_license = "Python software foundation license"
-eclipse_public_license_v1 = "Eclipse public license 1.0 (epl-1.0)"
-eclipse_public_license_v2 = "Eclipse public license 2.0 (epl-2.0)"
-repoze_license = "Repoze public license"
+historical_permission_notice = "Historical Permission Notice and Disclaimer (HPND)"
+iscl_license = "ISC license (iscl)"
+mit_license = "MIT license"
+mit_zero_license = "MIT No Attribution"
 mozilla_publice_license = "Mozilla public license (mpl)"
 mozilla_publice_license_v2 = "Mozilla public license 2.0 (mpl 2.0)"
-iscl_license = "ISC license (iscl)"
-historical_permission_notice = "Historical Permission Notice and Disclaimer (HPND)"
+public_domain = "Public domain"
+python_license = "Python software foundation license"
+repoze_license = "Repoze public license"
+unlicensed_license = "The Unlicense (Unlicense)"
+wtf_you_want_license = "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE"
+zope_public_license = "Zope Public License"
+zope_public_license_v1 = "Zope Public License v1"
+zope_public_license_v2 = "Zope Public License v2"
 
 other = "other/proprietary license"
-unknown = "UNKNOWN"
+unknown_license = "UNKNOWN"
 
 LICENSES_SYNONYMS = {
-    mit_license.lower(): mit_license,
-    bsd_license.lower(): bsd_license,
-    bsd_license_c4.lower(): bsd_license_c4,
-    bsd_license_c3.lower(): bsd_license_c3,
-    bsd_license_c2.lower(): bsd_license_c2,
-    bsd_license_c0.lower(): bsd_license_c0,
-    apache_license.lower(): apache_license,
     apache_license_v1.lower(): apache_license_v1,
     apache_license_v2.lower(): apache_license_v2,
-    gnu_affero.lower(): gnu_affero,
-    gnu_affero_v3.lower(): gnu_affero_v3,
-    gnu_lesser_public_license.lower(): gnu_lesser_public_license,
-    gnu_lesser_public_license_v2.lower(): gnu_lesser_public_license_v2,
-    gnu_lesser_public_license_v3.lower(): gnu_lesser_public_license_v3,
-    gnu_public_license.lower(): gnu_public_license,
-    gnu_public_license_v2.lower(): gnu_public_license_v2,
-    gnu_public_license_v3.lower(): gnu_public_license_v3,
-    python_license.lower(): python_license,
+    apache_license.lower(): apache_license,
+    azure_license.lower(): azure_license,
+    bsd_license_c0.lower(): bsd_license_c0,
+    bsd_license_c2.lower(): bsd_license_c2,
+    bsd_license_c3.lower(): bsd_license_c3,
+    bsd_license_c4.lower(): bsd_license_c4,
+    bsd_license.lower(): bsd_license,
+    cc0_license.lower(): cc0_license,
     eclipse_public_license_v1.lower(): eclipse_public_license_v1,
     eclipse_public_license_v2.lower(): eclipse_public_license_v2,
-    repoze_license.lower(): repoze_license,
-    mozilla_publice_license.lower(): mozilla_publice_license,
-    mozilla_publice_license_v2.lower(): mozilla_publice_license_v2,
-    iscl_license.lower(): iscl_license,
+    gnu_affero_v3.lower(): gnu_affero_v3,
+    gnu_affero.lower(): gnu_affero,
+    gnu_lesser_public_license_v2.lower(): gnu_lesser_public_license_v2,
+    gnu_lesser_public_license_v3.lower(): gnu_lesser_public_license_v3,
+    gnu_lesser_public_license.lower(): gnu_lesser_public_license,
+    gnu_public_license_v2.lower(): gnu_public_license_v2,
+    gnu_public_license_v3.lower(): gnu_public_license_v3,
+    gnu_public_license.lower(): gnu_public_license,
     historical_permission_notice.lower(): historical_permission_notice,
+    iscl_license.lower(): iscl_license,
+    mit_license.lower(): mit_license,
+    mit_zero_license.lower(): mit_zero_license,
+    mozilla_publice_license_v2.lower(): mozilla_publice_license_v2,
+    mozilla_publice_license.lower(): mozilla_publice_license,
+    public_domain.lower(): public_domain,
+    python_license.lower(): python_license,
+    repoze_license.lower(): repoze_license,
+    unlicensed_license.lower(): unlicensed_license,
+    wtf_you_want_license.lower(): wtf_you_want_license,
+    zope_public_license_v1.lower(): zope_public_license_v1,
+    zope_public_license_v2.lower(): zope_public_license_v2,
+    zope_public_license.lower(): zope_public_license,
+    "mit no attribution license": mit_zero_license,
+    "mit no attribution license (mit-0)": mit_zero_license,
+    "mit-0": mit_zero_license,
+    "mit 0": mit_zero_license,
     "mit license": mit_license,
     "the mit license": mit_license,
     "mit license ": mit_license,
@@ -64,6 +86,16 @@ LICENSES_SYNONYMS = {
     "http://www.opensource.org/licenses/mit-license.php": mit_license,
     "the mit license (mit)": mit_license,
     "mit licence": mit_license,
+    "cc0": cc0_license,
+    "cc0 (copyright waived)": cc0_license,
+    "cc0 1.0 universal (cc0 1.0) public domain dedication": cc0_license,
+    "cc0 1.0 universal (cc0 1.0)": cc0_license,
+    "cc0 1.0": cc0_license,
+    "cc0 1.0 universal": cc0_license,
+    "the unlicense (unlicense)": unlicensed_license,
+    "the unlicense": unlicensed_license,
+    "unlicense": unlicensed_license,
+    "unlicensed": unlicensed_license,
     "bsd license": bsd_license,
     "3-clause bsd license": bsd_license_c3,
     "new bsd": bsd_license,
@@ -82,6 +114,7 @@ LICENSES_SYNONYMS = {
     "bsd (2-clause)": bsd_license_c2,
     "bsd 2-clause": bsd_license_c2,
     "bsd-2-clause": bsd_license_c2,
+    "2-clause bsd license": bsd_license_c2,
     "apache software license": apache_license,
     "apache license 2.0": apache_license_v2,
     "apache 2.0": apache_license_v2,
@@ -232,7 +265,7 @@ LICENSES_SYNONYMS = {
     "eclipse public license v2.0 / eclipse distribution license v1.0": eclipse_public_license_v2,
     "eclipse public license 1.0 (epl-1.0)": eclipse_public_license_v1,
     'eclipse public license - v 1.0\n\nthe accompanying program is provided under the terms of this eclipse public\nlicense ("agreement"). any use, reproduction or distribution of the program\nconstitutes recipient"s acceptance of this agreement.\n\n1. definitions\n\n"contribution" means:\n\na) in the case of the ': eclipse_public_license_v1,
-    "licence.txt": unknown,
+    "licence.txt": unknown_license,
     "repoze public license": repoze_license,
     "bsd-derived (http://www.repoze.org/license.txt)": repoze_license,
     "mozilla public license 2.0 (mpl 2.0)": mozilla_publice_license_v2,
@@ -249,6 +282,12 @@ LICENSES_SYNONYMS = {
     "historical permission notice and disclaimer (hpnd)": historical_permission_notice,
     "hpnd": historical_permission_notice,
     "historical permission notice and disclaimer": historical_permission_notice,
+    "zpl": zope_public_license,
+    "zpl 1": zope_public_license_v1,
+    "zpl 2": zope_public_license_v2,
+    "zpl 2.1": zope_public_license_v2,
+    "https://aka.ms/azureml-sdk-license": azure_license,
+    "wtfpl": wtf_you_want_license,
     "other/proprietary license": other,
     "proprietary": other,
     "proprietary license": other,

@@ -81,6 +81,43 @@ jobs:
         python -m license_scanner -m whitelist
 
 ```
+
+## Supported licenses
+
+- Apache license
+- Apache license 1.0
+- Apache license 2.0
+- Azure License
+- BSD license
+- BSD 0-clause license
+- BSD 2-clause license
+- BSD 3-clause license
+- BSD 4-clause license
+- Creative Commons Zero, CC-0
+- Eclipse public license 1.0 (epl-1.0)
+- Eclipse public license 2.0 (epl-2.0)
+- GNU Affero general public license (apl)
+- GNU Affero general public license v3 (aplv3)
+- GNU lesser general public license
+- GNU lesser general public license v2 (lgplv2)
+- GNU lesser general public license v3 (lgplv3)
+- GNU general public license
+- GNU general public license v2 (gplv2)
+- GNU general public license v3 (gplv3)
+- Historical Permission Notice and Disclaimer (HPND)
+- ISC license (iscl)
+- MIT license
+- MIT No Attribution
+- Mozilla public license (mpl)
+- Mozilla public license 2.0 (mpl 2.0)
+- Public domain
+- Python software foundation license
+- Repoze public license
+- The Unlicense (Unlicense)
+- DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+- Zope Public License
+- Zope Public License v1
+- Zope Public License v2
 # Credits
 
 - Tom Nijhof

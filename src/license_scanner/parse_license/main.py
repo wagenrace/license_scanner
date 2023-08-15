@@ -1,6 +1,6 @@
 import os
 
-from .licenses_synonyms import LICENSES_SYNONYMS
+from .licenses_synonyms import LICENSES_SYNONYMS, unknown_license
 
 current_loc = os.path.dirname(os.path.realpath(__file__))
 
@@ -23,6 +23,6 @@ def parse_license(license_str: str):
     if len(license_str) > 300:
         license_str = license_str[:300]
 
-    license_str = license_str if license_str else f"UNKNOWN"
+    license_str = license_str if license_str else unknown_license
     license_str = LICENSES_SYNONYMS.get(license_str.lower())
     return license_str
