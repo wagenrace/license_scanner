@@ -1,5 +1,7 @@
 # license_scanner
 
+[![Downloads](https://static.pepy.tech/badge/license-scanner)](https://pepy.tech/project/license-scanner)
+
 Find all licenses needed by the package in your python environment.
 It will sort all package by license.
 
