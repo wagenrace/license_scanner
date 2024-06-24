@@ -1,5 +1,8 @@
 # History
 
+## 0.2.6 (2024-06-24)
+- Remove sparkels emoticons and replace with =+=+=+ for issue 14
+
 ## 0.2.5 (2023-08-15)
 - Add zope
 - Add unlicensed
