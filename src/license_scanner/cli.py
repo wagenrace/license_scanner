@@ -107,7 +107,7 @@ def main():
                 "Some of the packages found do not use white listed licenses"
             )
         else:
-            print("✨✨ - All packages are good to use - ✨✨")
+            print("=+=+=+=+= All packages are good to use =+=+=+=+=")
 
 
 if __name__ == "__main__":
