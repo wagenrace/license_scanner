@@ -1,5 +1,9 @@
 # History
 
+## 02.7 (2024-10-23)
+- Add MIT-CMU (the new license of Pillow)
+- Make print mode work WITHOUT pyproject.toml in folder
+
 ## 0.2.6 (2024-06-24)
 - Remove sparkels emoticons and replace with =+=+=+ for issue 14
 
