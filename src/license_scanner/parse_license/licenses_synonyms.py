@@ -21,6 +21,7 @@ gnu_public_license_v3 = "GNU general public license v3 (gplv3)"
 historical_permission_notice = "Historical Permission Notice and Disclaimer (HPND)"
 iscl_license = "ISC license (iscl)"
 mit_license = "MIT license"
+mit_cmu = "CMU License (MIT-CMU)"
 mit_zero_license = "MIT No Attribution"
 mozilla_publice_license = "Mozilla public license (mpl)"
 mozilla_publice_license_v2 = "Mozilla public license 2.0 (mpl 2.0)"
@@ -60,6 +61,7 @@ LICENSES_SYNONYMS = {
     historical_permission_notice.lower(): historical_permission_notice,
     iscl_license.lower(): iscl_license,
     mit_license.lower(): mit_license,
+    mit_cmu.lower(): mit_cmu,
     mit_zero_license.lower(): mit_zero_license,
     mozilla_publice_license_v2.lower(): mozilla_publice_license_v2,
     mozilla_publice_license.lower(): mozilla_publice_license,
@@ -75,6 +77,9 @@ LICENSES_SYNONYMS = {
     "mit no attribution license (mit-0)": mit_zero_license,
     "mit-0": mit_zero_license,
     "mit 0": mit_zero_license,
+    "cmu license": mit_cmu,
+    "mit-cmu": mit_cmu,
+    "cmu-license": mit_cmu,
     "mit license": mit_license,
     "the mit license": mit_license,
     "mit license ": mit_license,
