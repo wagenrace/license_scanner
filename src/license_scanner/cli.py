@@ -69,7 +69,6 @@ def main():
         Gives an error if one of packages and it licenses are not whitelisted
         Whitelist are loaded from pyproject.toml -- allowed-licenses && allowed-packages
     """
-    pyproject_config = parse_pyproject_toml()
 
     mode = __get_arguments()
 
@@ -85,6 +84,8 @@ def main():
                 print(f" - {_license}")
 
     elif mode == Mode.whitelist:
+        pyproject_config = parse_pyproject_toml()
+
         raw_allowed_licenses = pyproject_config.get("allowed_licenses", [])
         allowed_licenses = [parse_license(i) for i in raw_allowed_licenses]
         if None in all_licenses:
