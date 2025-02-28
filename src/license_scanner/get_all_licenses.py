@@ -28,6 +28,8 @@ def get_all_licenses():
         license_classifier_raw = None
         for line in metadata_lines:
             line: str = line
+            if line.startswith("License-Expression: "):
+                license_arg_raw = line.replace("License-Expression: ", "")
             if line.startswith("License: "):
                 license_arg_raw = line.replace("License: ", "")
             if line.startswith("Classifier: License ::"):
