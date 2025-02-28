@@ -1,5 +1,8 @@
 # History
 
+## 0.2.6 (2025-02-28)
+- Check for metadata for License-Expression in line with [PEP 639](https://peps.python.org/pep-0639/)
+
 ## 0.2.5 (2023-08-15)
 - Add zope
 - Add unlicensed
