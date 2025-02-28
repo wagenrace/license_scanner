@@ -1,7 +1,14 @@
 # History
 
-## 0.2.6 (2025-02-28)
+## 0.2.8 (2025-02-28)
 - Check for metadata for License-Expression in line with [PEP 639](https://peps.python.org/pep-0639/)
+
+## 02.7 (2024-10-23)
+- Add MIT-CMU (the new license of Pillow)
+- Make print mode work WITHOUT pyproject.toml in folder
+
+## 0.2.6 (2024-06-24)
+- Remove sparkels emoticons and replace with =+=+=+ for issue 14
 
 ## 0.2.5 (2023-08-15)
 - Add zope
