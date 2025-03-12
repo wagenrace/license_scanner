@@ -43,12 +43,13 @@ def __get_arguments() -> Mode:
         description="Just an example",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
+    all_modes = [i.value for i in list(Mode)]
     parser.add_argument(
         "-m",
         "--mode",
         type=Mode,
-        choices=list(Mode),
-        help=f"The mode determines what to do with the results. Options are: {list(Mode)}",
+        choices=all_modes,
+        help=f"The mode determines what to do with the results. Options are: {all_modes}",
         default=Mode.print,
     )
     args = parser.parse_args()

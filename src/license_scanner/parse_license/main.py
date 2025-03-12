@@ -24,5 +24,5 @@ def parse_license(license_str: str) -> License:
         license_str = license_str[:300]
 
     license_str = license_str if license_str else License.UNKNOWN_LICENSE.value
-    license_obj = LICENSES_SYNONYMS.get(license_str.lower(), License.UNKNOWN_LICENSE)
+    license_obj = LICENSES_SYNONYMS.get(license_str.lower())
     return license_obj
