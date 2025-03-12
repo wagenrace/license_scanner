@@ -1,7 +1,7 @@
 # %%
 from pkg_resources import working_set
 from .parse_license import parse_license
-from .parse_license.licenses_synonyms import unknown_license
+from .parse_license.licenses_synonyms import License
 
 
 def get_all_licenses():
@@ -18,8 +18,8 @@ def get_all_licenses():
             try:
                 metadata_lines = package.get_metadata("PKG-INFO").split("\n")
             except:
-                all_licenses[unknown_license] = all_licenses.get(
-                    unknown_license, []
+                all_licenses[License.UNKNOWN_LICENSE] = all_licenses.get(
+                    License.UNKNOWN_LICENSE, []
                 ) + [key]
                 continue
 
@@ -37,17 +37,19 @@ def get_all_licenses():
                 if license_classifier_raw.lower() in ["osi approved"]:
                     license_classifier_raw = None
 
-        general_license = "NOT FOUND"
         license_arg = parse_license(license_arg_raw)
         license_classifier = parse_license(license_classifier_raw)
 
         # You can get the license from license argument or classifier
-        if license_arg is not None and license_arg != unknown_license:
+        if license_arg is not None and license_arg != License.UNKNOWN_LICENSE:
             general_license = license_arg
         elif license_classifier:
             general_license = license_classifier
         else:
-            general_license = unknown_license
+            print(
+                f"{key} license could not be found. If this is a error please report at https://github.com/wagenrace/license_scanner/issues if you want to ignore this package add it to the whitelist in pyproject.toml"
+            )
+            general_license = License.UNKNOWN_LICENSE
 
         all_licenses[general_license] = all_licenses.get(general_license, []) + [key]
 

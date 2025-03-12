@@ -1,5 +1,4 @@
 import argparse
-import logging
 import sys
 from enum import Enum
 from pathlib import Path
@@ -75,11 +74,11 @@ def main():
     all_licenses = get_all_licenses()
 
     all_used_licenses = list(all_licenses.keys())
-    all_used_licenses.sort()
+    all_used_licenses.sort(key=lambda x: x.value)
 
     if mode == Mode.print:
         for key in all_used_licenses:
-            print(f"\n ======\n {key} \n ======")
+            print(f"\n ======\n {key.value} \n ======")
             for _license in all_licenses[key]:
                 print(f" - {_license}")
 

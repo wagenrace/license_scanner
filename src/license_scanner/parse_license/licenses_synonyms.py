@@ -24,7 +24,7 @@ class License(Enum):
     HISTORICAL_PERMISSION_NOTICE = "Historical Permission Notice and Disclaimer (HPND)"
     ISCL_LICENSE = "ISC license (iscl)"
     MIT_LICENSE = "MIT license"
-    MIT_CMU = "CMU License (MIT-CMU)"
+    MIT_CMU = "MIT-CMU License (MIT-CMU)"
     MIT_ZERO_LICENSE = "MIT No Attribution"
     MOZILLA_PUBLIC_LICENSE = "Mozilla public license (mpl)"
     MOZILLA_PUBLIC_LICENSE_V2 = "Mozilla public license 2.0 (mpl 2.0)"
@@ -82,6 +82,7 @@ LICENSES_SYNONYMS = {
     "cmu license": License.MIT_CMU,
     "mit-cmu": License.MIT_CMU,
     "cmu-license": License.MIT_CMU,
+    "cmu license (mit-cmu)": License.MIT_CMU,
     "mit license": License.MIT_LICENSE,
     "the mit license": License.MIT_LICENSE,
     "mit license ": License.MIT_LICENSE,
