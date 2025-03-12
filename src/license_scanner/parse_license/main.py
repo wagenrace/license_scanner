@@ -1,6 +1,6 @@
 import os
 
-from .licenses_synonyms import LICENSES_SYNONYMS, unknown_license
+from .licenses_synonyms import LICENSES_SYNONYMS, License
 
 current_loc = os.path.dirname(os.path.realpath(__file__))
 
@@ -11,7 +11,7 @@ def remove_trailing_whitespace(string: str):
     return string
 
 
-def parse_license(license_str: str):
+def parse_license(license_str: str) -> License:
     # Get license
     if not license_str:
         return None
@@ -23,6 +23,6 @@ def parse_license(license_str: str):
     if len(license_str) > 300:
         license_str = license_str[:300]
 
-    license_str = license_str if license_str else unknown_license
-    license_str = LICENSES_SYNONYMS.get(license_str.lower())
-    return license_str
+    license_str = license_str if license_str else License.UNKNOWN_LICENSE
+    license_obj = LICENSES_SYNONYMS.get(license_str.lower())
+    return license_obj
