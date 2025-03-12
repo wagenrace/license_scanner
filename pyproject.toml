@@ -49,6 +49,9 @@ allowed-licenses = [
   'Mozilla public license 2.0 (mpl 2.0)',
   "ISC license",
   'mozilla',
+  "The Unlicense (Unlicense)",
+  "ISC license (iscl)",
+  "MIT-CMU License (MIT-CMU)"
 ]
 allowed-packages = ["license_scanner"]
 
