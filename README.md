@@ -109,6 +109,7 @@ jobs:
 - Historical Permission Notice and Disclaimer (HPND)
 - ISC license (iscl)
 - MIT license
+- MIT-CMU License (MIT-CMU)
 - MIT No Attribution
 - Mozilla public license (mpl)
 - Mozilla public license 2.0 (mpl 2.0)
@@ -120,6 +121,7 @@ jobs:
 - Zope Public License
 - Zope Public License v1
 - Zope Public License v2
-# Credits
+
+## Credits
 
 - Tom Nijhof
