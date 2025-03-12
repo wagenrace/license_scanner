@@ -1,5 +1,4 @@
 import argparse
-import logging
 import sys
 from enum import Enum
 from pathlib import Path
@@ -7,6 +6,7 @@ from typing import TYPE_CHECKING, Any, Dict
 
 from .get_all_licenses import get_all_licenses
 from .parse_license import parse_license
+from .parse_license.licenses_synonyms import unknown_license
 
 if sys.version_info >= (3, 11):
     try:
@@ -103,7 +103,12 @@ def main():
 
         if problem_packages:
             for package, license in problem_packages:
-                print(f"{package} with {license} is NOT whitelisted")
+                if license == unknown_license:
+                    print(
+                        f"{package} license could not be found. If this is a error please report at https://github.com/wagenrace/license_scanner/issues if you want to ignore this package add it to the whitelist in pyproject.toml"
+                    )
+                else:
+                    print(f"{package} with {license} is NOT whitelisted")
             raise ValueError(
                 "Some of the packages found do not use white listed licenses"
             )

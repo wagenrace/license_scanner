@@ -9,14 +9,16 @@ Before submitting/accepting this Pull Request, please make sure:
 - [ ] All needed package are in [pyproject.toml](pyproject.toml)
 - [ ] Version number is updated
 - [ ] `HISTORY.rst` is updated
-- [ ] New feature is added to `README.md` subsection `Features`
+- [ ] New feature is added to `README.md`
+- [ ] New license is added to `README.md` subsection `Supported licenses`
 
 ## Reviewer
 
 - [ ] Functions are named based on [Python naming conventions](https://visualgit.readthedocs.io/en/latest/pages/naming_convention.html)
-- [ ] The code is executed on another machine
+- [ ] Explain how to run the code `(docstring)`
 - [ ] Function is tested
-- [ ] Installing just the [pyproject.toml](pyproject.toml) is enough to run the code
+- [ ] All needed package are in [pyproject.toml](pyproject.toml)
 - [ ] Version number is updated
 - [ ] `HISTORY.rst` is updated
-- [ ] New feature is added to `README.md` subsection `Features`
+- [ ] New feature is added to `README.md`
+- [ ] New license is added to `README.md` subsection `Supported licenses`
