@@ -1,5 +1,9 @@
 # History
 
+## 0.2.10 (2025-03-19)
+
+- Change "apache-2.0 or bsd" to map apache_license_v2, instead of BSD 2-clause license. Because bsd can refer to 4-clause too but apache-2.0 is more likely to be one you want to use
+
 ## 0.2.9 (2025-03-12)
 
 - Improve the error message for UNKOWN license

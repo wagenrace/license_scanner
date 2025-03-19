@@ -112,7 +112,7 @@ LICENSES_SYNONYMS = {
     "bsd (3-clause)": bsd_license_c3,
     "bsd 2-clause (see license file)": bsd_license_c2,
     "bsd 3 clause": bsd_license_c3,
-    "apache-2.0 or bsd": bsd_license_c2,
+    "apache-2.0 or bsd": apache_license_v2,
     "3-clause bsd <http://www.opensource.org/licenses/bsd-license.php>": bsd_license_c3,
     "bsd 3-clause license": bsd_license_c3,
     "3-clause bsd": bsd_license_c3,
