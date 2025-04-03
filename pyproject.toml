@@ -46,6 +46,8 @@ allowed-licenses = [
   'GNU lesser general public license v2',
   'GNU lesser general public license v3',
   'Python software foundation license',
+  'Python software foundation license v1',
+  'Python software foundation license v2',
   'Mozilla public license 2.0 (mpl 2.0)',
   "ISC license",
   'mozilla',

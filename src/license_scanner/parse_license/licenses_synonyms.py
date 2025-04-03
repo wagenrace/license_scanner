@@ -27,6 +27,8 @@ mozilla_publice_license = "Mozilla public license (mpl)"
 mozilla_publice_license_v2 = "Mozilla public license 2.0 (mpl 2.0)"
 public_domain = "Public domain"
 python_license = "Python software foundation license"
+python_license_v1 = "Python software foundation license v1"
+python_license_v2 = "Python software foundation license v2"
 repoze_license = "Repoze public license"
 unlicensed_license = "The Unlicense (Unlicense)"
 wtf_you_want_license = "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE"
@@ -265,6 +267,42 @@ LICENSES_SYNONYMS = {
     "python": python_license,
     "python style": python_license,
     "psf license": python_license,
+    "psf-1.0": python_license_v1,
+    "psf 1.0": python_license_v1,
+    "psf 1": python_license_v1,
+    "psf-1": python_license_v1,
+    "psf v1": python_license_v1,
+    "psf v1.0": python_license_v1,
+    "python v1": python_license_v1,
+    "python v1.0": python_license_v1,
+    "python 1.0": python_license_v1,
+    "python 1": python_license_v1,
+    "python style v1": python_license_v1,
+    "python style v1.0": python_license_v1,
+    "python style 1.0": python_license_v1,
+    "python style 1": python_license_v1,
+    "psf license v1": python_license_v1,
+    "psf license v1.0": python_license_v1,
+    "psf license 1.0": python_license_v1,
+    "psf license 1": python_license_v1,
+    "psf v2": python_license_v2,
+    "psf v2.0": python_license_v2,
+    "psf 2.0": python_license_v2,
+    "psf 2": python_license_v2,
+    "python v2": python_license_v2,
+    "python v2.0": python_license_v2,
+    "python 2.0": python_license_v2,
+    "python 2": python_license_v2,
+    "python style v2": python_license_v2,
+    "python style v2.0": python_license_v2,
+    "python style 2.0": python_license_v2,
+    "python style 2": python_license_v2,
+    "psf license v2": python_license_v2,
+    "psf license v2.0": python_license_v2,
+    "psf license 2.0": python_license_v2,
+    "psf license 2": python_license_v2,
+    "psf-2.0": python_license_v2,
+    "psf-2": python_license_v2,
     "eclipse public license 2.0 (epl-2.0)": eclipse_public_license_v2,
     "eclipse public license v2.0": eclipse_public_license_v2,
     "eclipse public license v2.0 / eclipse distribution license v1.0": eclipse_public_license_v2,

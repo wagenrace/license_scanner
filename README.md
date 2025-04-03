@@ -115,6 +115,8 @@ jobs:
 - Mozilla public license 2.0 (mpl 2.0)
 - Public domain
 - Python software foundation license
+- Python software foundation license v1
+- Python software foundation license v2
 - Repoze public license
 - The Unlicense (Unlicense)
 - DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
