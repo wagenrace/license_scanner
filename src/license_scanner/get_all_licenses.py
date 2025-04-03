@@ -1,5 +1,6 @@
 # %%
 from pkg_resources import working_set
+
 from .parse_license import parse_license
 from .parse_license.licenses_synonyms import unknown_license
 

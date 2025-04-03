@@ -1,6 +1,8 @@
-import pytest
-from license_scanner.cli import main, Mode
 from unittest.mock import patch
+
+import pytest
+
+from license_scanner.cli import Mode, main
 
 
 @patch("license_scanner.cli.__get_arguments")
