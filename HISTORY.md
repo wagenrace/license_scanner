@@ -1,5 +1,9 @@
 # History
 
+## 0.2.12 (2025-04-03)
+
+- Added "Python software foundation license v1" and "Python software foundation license v2" as synonyms
+
 ## 0.2.11 (2025-04-03)
 
 - Adding Python Software Foundation V1 and V2, plus a lot of synonyms for it

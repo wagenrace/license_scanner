@@ -69,6 +69,8 @@ LICENSES_SYNONYMS = {
     mozilla_publice_license.lower(): mozilla_publice_license,
     public_domain.lower(): public_domain,
     python_license.lower(): python_license,
+    python_license_v1.lower(): python_license_v1,
+    python_license_v2.lower(): python_license_v2,
     repoze_license.lower(): repoze_license,
     unlicensed_license.lower(): unlicensed_license,
     wtf_you_want_license.lower(): wtf_you_want_license,
