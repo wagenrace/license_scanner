@@ -1,5 +1,9 @@
 # History
 
+## 0.3.0 (2025-05-12)
+
+- Added all SPDX licenses
+
 ## 0.2.12 (2025-04-03)
 
 - Added "Python software foundation license v1" and "Python software foundation license v2" as synonyms
