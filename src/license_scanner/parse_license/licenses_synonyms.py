@@ -211,7 +211,6 @@ detection_rule_license_1_0 = "Detection Rule License 1.0"
 detection_rule_license_1_1 = "Detection Rule License 1.1"
 deutsche_freie_software_lizenz = "Deutsche Freie Software Lizenz"
 diffmark_license = "diffmark license"
-do_what_the_fuck_you_want_to_public_license = "Do What The F*ck You Want To Public License"
 doc_license = "DOC License"
 docbook_schema_license = "DocBook Schema License"
 docbook_stylesheet_license = "DocBook Stylesheet License"
@@ -219,8 +218,6 @@ docbook_xml_license = "DocBook XML License"
 dotseqn_license = "Dotseqn License"
 dsdp_license = "DSDP License"
 dvipdfm_license = "dvipdfm License"
-eclipse_public_license_1_0 = "Eclipse Public License 1.0"
-eclipse_public_license_2_0 = "Eclipse Public License 2.0"
 eclipse_public_license_v1 = "Eclipse public license 1.0 (epl-1.0)"
 eclipse_public_license_v2 = "Eclipse public license 2.0 (epl-2.0)"
 educational_community_license_v1_0 = "Educational Community License v1.0"
@@ -265,7 +262,6 @@ gnome_gcr_documentation_license = "Gnome GCR Documentation License"
 gnu_affero = "GNU Affero general public license (apl)"
 gnu_affero_general_public_license_v3_0_only = "GNU Affero General Public License v3.0 only"
 gnu_affero_general_public_license_v3_0_or_later = "GNU Affero General Public License v3.0 or later"
-gnu_affero_v3 = "GNU Affero general public license v3 (aplv3)"
 gnu_free_documentation_license_v1_1_only = "GNU Free Documentation License v1.1 only"
 gnu_free_documentation_license_v1_1_only___invariants = "GNU Free Documentation License v1.1 only - invariants"
 gnu_free_documentation_license_v1_1_only___no_invariants = "GNU Free Documentation License v1.1 only - no invariants"
@@ -296,7 +292,6 @@ gnu_lesser_general_public_license_v3_0_only = "GNU Lesser General Public License
 gnu_lesser_general_public_license_v3_0_or_later = "GNU Lesser General Public License v3.0 or later"
 gnu_lesser_public_license = "GNU lesser general public license"
 gnu_lesser_public_license_v2 = "GNU lesser general public license v2 (lgplv2)"
-gnu_lesser_public_license_v3 = "GNU lesser general public license v3 (lgplv3)"
 gnu_library_general_public_license_v2_only = "GNU Library General Public License v2 only"
 gnu_library_general_public_license_v2_or_later = "GNU Library General Public License v2 or later"
 gnu_public_license = "GNU general public license"
@@ -894,7 +889,6 @@ LICENSES_SYNONYMS = {
     detection_rule_license_1_1.lower(): detection_rule_license_1_1,
     deutsche_freie_software_lizenz.lower(): deutsche_freie_software_lizenz,
     diffmark_license.lower(): diffmark_license,
-    do_what_the_fuck_you_want_to_public_license.lower(): do_what_the_fuck_you_want_to_public_license,
     doc_license.lower(): doc_license,
     docbook_schema_license.lower(): docbook_schema_license,
     docbook_stylesheet_license.lower(): docbook_stylesheet_license,
@@ -902,8 +896,6 @@ LICENSES_SYNONYMS = {
     dotseqn_license.lower(): dotseqn_license,
     dsdp_license.lower(): dsdp_license,
     dvipdfm_license.lower(): dvipdfm_license,
-    eclipse_public_license_1_0.lower(): eclipse_public_license_1_0,
-    eclipse_public_license_2_0.lower(): eclipse_public_license_2_0,
     eclipse_public_license_v1.lower(): eclipse_public_license_v1,
     eclipse_public_license_v2.lower(): eclipse_public_license_v2,
     educational_community_license_v1_0.lower(): educational_community_license_v1_0,
@@ -947,7 +939,7 @@ LICENSES_SYNONYMS = {
     gnome_gcr_documentation_license.lower(): gnome_gcr_documentation_license,
     gnu_affero_general_public_license_v3_0_only.lower(): gnu_affero_general_public_license_v3_0_only,
     gnu_affero_general_public_license_v3_0_or_later.lower(): gnu_affero_general_public_license_v3_0_or_later,
-    gnu_affero_v3.lower(): gnu_affero_v3,
+    gnu_affero_general_public_license_v3_0_only.lower(): gnu_affero_general_public_license_v3_0_only,
     gnu_affero.lower(): gnu_affero,
     gnu_free_documentation_license_v1_1_only___invariants.lower(): gnu_free_documentation_license_v1_1_only___invariants,
     gnu_free_documentation_license_v1_1_only___no_invariants.lower(): gnu_free_documentation_license_v1_1_only___no_invariants,
@@ -978,7 +970,7 @@ LICENSES_SYNONYMS = {
     gnu_lesser_general_public_license_v3_0_only.lower(): gnu_lesser_general_public_license_v3_0_only,
     gnu_lesser_general_public_license_v3_0_or_later.lower(): gnu_lesser_general_public_license_v3_0_or_later,
     gnu_lesser_public_license_v2.lower(): gnu_lesser_public_license_v2,
-    gnu_lesser_public_license_v3.lower(): gnu_lesser_public_license_v3,
+    gnu_lesser_general_public_license_v3_0_only.lower(): gnu_lesser_general_public_license_v3_0_only,
     gnu_lesser_public_license.lower(): gnu_lesser_public_license,
     gnu_library_general_public_license_v2_only.lower(): gnu_library_general_public_license_v2_only,
     gnu_library_general_public_license_v2_or_later.lower(): gnu_library_general_public_license_v2_or_later,
@@ -1445,46 +1437,47 @@ LICENSES_SYNONYMS = {
     "apache-2": apache_license_v2,
     "apache-2.0 license": apache_license_v2,
     "agpl": gnu_affero,
-    "agpl 3.0": gnu_affero_v3,
-    "agpl v3": gnu_affero_v3,
-    "agpl-3.0": gnu_affero_v3,
-    "agpl-3.0+": gnu_affero_v3,
-    "agpl-3.0-only": gnu_affero_v3,
-    "agplv3": gnu_affero_v3,
-    "agplv3 (see license file)": gnu_affero_v3,
-    "apgl3": gnu_affero_v3,
-    "gnu affero general public license version 3, 19 november 2007 copyright (c) 2007 free software foundation, inc. <http://fsf.org/> everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. preamble the gnu affero general public license is a": gnu_affero_v3,
-    "gnu agplv3": gnu_affero_v3,
-    "gnu affero general public license version 3 (agpl-3.0)": gnu_affero_v3,
-    "gnu affero general public license v3": gnu_affero_v3,
-    "gnu affero general public license v3.0": gnu_affero_v3,
-    "gnu affero general public license, version 3": gnu_affero_v3,
-    "gnu affero gpl 3.0": gnu_affero_v3,
-    "gnu affero general public license v3 or later (agplv3+)": gnu_affero_v3,
+    "agpl 3.0": gnu_affero_general_public_license_v3_0_only,
+    "agpl v3": gnu_affero_general_public_license_v3_0_only,
+    "agpl-3.0": gnu_affero_general_public_license_v3_0_only,
+    "agpl-3.0+": gnu_affero_general_public_license_v3_0_only,
+    "agpl-3.0-only": gnu_affero_general_public_license_v3_0_only,
+    "agplv3": gnu_affero_general_public_license_v3_0_only,
+    "agplv3 (see license file)": gnu_affero_general_public_license_v3_0_only,
+    "apgl3": gnu_affero_general_public_license_v3_0_only,
+    "gnu affero general public license version 3, 19 november 2007 copyright (c) 2007 free software foundation, inc. <http://fsf.org/> everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. preamble the gnu affero general public license is a": gnu_affero_general_public_license_v3_0_only,
+    "gnu agplv3": gnu_affero_general_public_license_v3_0_only,
+    "gnu affero general public license version 3 (agpl-3.0)": gnu_affero_general_public_license_v3_0_only,
+    "gnu affero general public license v3": gnu_affero_general_public_license_v3_0_only,
+    "gnu affero general public license v3.0": gnu_affero_general_public_license_v3_0_only,
+    "gnu affero general public license, version 3": gnu_affero_general_public_license_v3_0_only,
+    "gnu affero gpl 3.0": gnu_affero_general_public_license_v3_0_only,
+    "gnu affero general public license v3 or later (agplv3+)": gnu_affero_general_public_license_v3_0_only,
+    "gnu affero general public license v3 (aplv3)": gnu_affero_general_public_license_v3_0_only,
     "gnu library or lesser general public license (lgpl)": gnu_lesser_public_license,
     "gnu lesser general public license v2 (lgplv2)": gnu_lesser_public_license_v2,
     "gnu lesser general public license v2": gnu_lesser_public_license_v2,
     "lgpl-2.1-only": gnu_lesser_public_license_v2,
-    "gnu lesser general public license v3 (lgplv3)": gnu_lesser_public_license_v3,
-    "gnu lesser general public license v3": gnu_lesser_public_license_v3,
+    "gnu lesser general public license v3 (lgplv3)": gnu_lesser_general_public_license_v3_0_only,
+    "gnu lesser general public license v3": gnu_lesser_general_public_license_v3_0_only,
     "lgpl, see also license.txt": gnu_lesser_public_license,
     "lgpl-2.1 license": gnu_lesser_public_license_v2,
-    "lgpl-3.0": gnu_lesser_public_license_v3,
-    "https://www.gnu.org/licenses/lgpl.html": gnu_lesser_public_license_v3,
-    "lgpl-3.0 license": gnu_lesser_public_license_v3,
-    "gnu lesser general public license version 3, 29 june 2007  copyright (c) 2007 free software foundation, inc. <https://fsf.org/> everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.   this version of the gnu lesser general public licen": gnu_lesser_public_license_v3,
+    "lgpl-3.0": gnu_lesser_general_public_license_v3_0_only,
+    "https://www.gnu.org/licenses/lgpl.html": gnu_lesser_general_public_license_v3_0_only,
+    "lgpl-3.0 license": gnu_lesser_general_public_license_v3_0_only,
+    "gnu lesser general public license version 3, 29 june 2007  copyright (c) 2007 free software foundation, inc. <https://fsf.org/> everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.   this version of the gnu lesser general public licen": gnu_lesser_general_public_license_v3_0_only,
     "gnu lesser general public license v2 or later (lgplv2+)": gnu_lesser_public_license_v2,
-    "gnu lesser general public license v3 or later (lgplv3+)": gnu_lesser_public_license_v3,
-    "lgplv3+": gnu_lesser_public_license_v3,
-    "lgpl v3": gnu_lesser_public_license_v3,
+    "gnu lesser general public license v3 or later (lgplv3+)": gnu_lesser_general_public_license_v3_0_only,
+    "lgplv3+": gnu_lesser_general_public_license_v3_0_only,
+    "lgpl v3": gnu_lesser_general_public_license_v3_0_only,
     "GNU lesser general public license (lgpl)": gnu_lesser_public_license,
     "lgpl": gnu_lesser_public_license,
-    "lgpl-3.0-or-later": gnu_lesser_public_license_v3,
+    "lgpl-3.0-or-later": gnu_lesser_general_public_license_v3_0_only,
     "lgpl-2.1+": gnu_lesser_public_license_v2,
     "lgpl 2.1": gnu_lesser_public_license_v2,
-    "lgpl3": gnu_lesser_public_license_v3,
+    "lgpl3": gnu_lesser_general_public_license_v3_0_only,
     "lgplv2+": gnu_lesser_public_license_v2,
-    "lgplv3": gnu_lesser_public_license_v3,
+    "lgplv3": gnu_lesser_general_public_license_v3_0_only,
     "gpl 2.0/lgpl 2.1": gnu_lesser_public_license_v2,
     "lgpl-2.1": gnu_lesser_public_license_v2,
     "gnu general public license (gpl)": gnu_public_license,
@@ -1618,10 +1611,12 @@ LICENSES_SYNONYMS = {
     "zpl": zope_public_license,
     "zpl 1": zope_public_license_v1,
     "zpl 2": zope_public_license_v2,
-    "zpl 2.1": zope_public_license_v2,
+    "zpl 2.1": zope_public_license_2_1,
     "https://aka.ms/azureml-sdk-license": azure_license,
     "wtfpl": wtf_you_want_license,
-    "0bsd" : bsd_zero_clause_license,
+    "do what the f*ck you want to public license": wtf_you_want_license,
+    "do what the f*ck you want to public": wtf_you_want_license,
+    "0bsd" : bsd_license_c0,
     "3d-slicer-1.0" : spdx_3d_slicer_license_v1_0,
     "aal" : attribution_assurance_license,
     "abstyles" : abstyles_license,
@@ -1837,8 +1832,8 @@ LICENSES_SYNONYMS = {
     "elastic-2.0" : elastic_license_2_0,
     "entessa" : entessa_public_license_v1_0,
     "epics" : epics_open_license,
-    "epl-1.0" : eclipse_public_license_1_0,
-    "epl-2.0" : eclipse_public_license_2_0,
+    "epl-1.0" : eclipse_public_license_v1,
+    "epl-2.0" : eclipse_public_license_v2,
     "erlpl-1.1" : erlang_public_license_v1_1,
     "etalab-2.0" : etalab_open_license_2_0,
     "eudatagrid" : eu_datagrid_software_license,
@@ -1961,6 +1956,7 @@ LICENSES_SYNONYMS = {
     "lgpl-2.0-or-later" : gnu_library_general_public_license_v2_or_later,
     "lgpl-2.1-or-later" : gnu_lesser_general_public_license_v2_1_or_later,
     "lgpl-3.0-only" : gnu_lesser_general_public_license_v3_0_only,
+    "gnu lesser general public license v3 (lgplv3)": gnu_lesser_general_public_license_v3_0_only,
     "lgpllr" : lesser_general_public_license_for_linguistic_resources,
     "libpng" : libpng_license,
     "libpng-2.0" : png_reference_library_version_2,
