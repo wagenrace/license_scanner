@@ -86,7 +86,6 @@ jobs:
 
 ## Supported licenses
 
-- Apache license
 - Abstyles License
 - academic free license v1.1
 - academic free license v1.2
@@ -101,8 +100,6 @@ jobs:
 - Adobe Postscript AFM License
 - Adobe Systems Incorporated Source Code License Agreement
 - Adobe Utopia Font License
-- Affero General Public License v1.0 only
-- Affero General Public License v1.0 or later
 - Afmparse License
 - Aladdin Free Public License
 - Amazon Digital Services License
@@ -113,6 +110,7 @@ jobs:
 - ANTLR Software Rights Notice with license fallback
 - Any OSI License
 - Any OSI License - Perl Modules
+- Apache license
 - Apache License 1.1
 - Apache license 1.0
 - Apache license 2.0
@@ -150,6 +148,8 @@ jobs:
 - BSD 1-Clause License
 - BSD 2-Clause - first lines requirement
 - BSD 2-Clause - Ian Darwin variant
+- BSD 2-Clause FreeBSD License
+- BSD 2-Clause NetBSD License
 - BSD-2-Clause Plus Patent License
 - BSD 2-Clause "Simplified" License
 - BSD 2-Clause with views sentence
@@ -182,6 +182,7 @@ jobs:
 - BSD with attribution
 - BSD with Attribution and HPND disclaimer
 - Business Source License 1.1
+- bzip2 and libbzip2 License v1.0.5
 - bzip2 and libbzip2 License v1.0.6
 - Caldera License
 - Caldera License (without preamble)
@@ -307,6 +308,7 @@ jobs:
 - dvipdfm License
 - Eclipse public license 1.0 (epl-1.0)
 - Eclipse public license 2.0 (epl-2.0)
+- eCos license version 2.0
 - Educational Community License v1.0
 - Educational Community License v2.0
 - eGenix.com Public License 1.1.0
@@ -347,9 +349,12 @@ jobs:
 - Glulxe License
 - Gnome GCR Documentation License
 - GNU Affero general public license (apl)
+- GNU Affero General Public License v1.0 only
+- GNU Affero General Public License v1.0 or later
+- GNU Affero General Public License v2.0 only
+- GNU Affero General Public License v2.0 or later
 - GNU Affero General Public License v3.0 only
 - GNU Affero General Public License v3.0 or later
-- GNU Affero general public license v3 (aplv3)
 - GNU Free Documentation License v1.1 only
 - GNU Free Documentation License v1.1 only - invariants
 - GNU Free Documentation License v1.1 only - no invariants
@@ -372,20 +377,27 @@ jobs:
 - GNU General Public License v1.0 or later
 - GNU General Public License v2.0 only
 - GNU General Public License v2.0 or later
+- GNU General Public License v2.0 w/autoconf exception
+- GNU General Public License v2.0 w/bison exception
+- GNU General Public License v2.0 w/classpath exception
+- GNU General Public License v2.0 w/font exception
+- GNU General Public License v2.0 w/gcc runtime library exception
 - GNU General Public License v3.0 only
 - GNU General Public License v3.0 or later
+- GNU General Public License v3.0 w/autoconf exception
+- GNU General Public License v3.0 w/gcc runtime library exception
+- GNU Lesser General Public License v2.0 only
 - GNU Lesser General Public License v2.1 only
 - GNU Lesser General Public License v2.1 or later
 - GNU Lesser General Public License v3.0 only
 - GNU Lesser General Public License v3.0 or later
 - GNU lesser general public license
-- GNU lesser general public license v2 (lgplv2)
-- GNU lesser general public license v3 (lgplv3)
+- GNU Library General Public License v1 only
+- GNU Library General Public License v1 or later
 - GNU Library General Public License v2 only
 - GNU Library General Public License v2 or later
 - GNU general public license
 - GNU general public license v2 (gplv2)
-- GNU general public license v3 (gplv3)
 - gnuplot License
 - Good Luck With That Public License
 - Graphics Gems License
@@ -529,6 +541,7 @@ jobs:
 - NCBI Public Domain Notice
 - NCL Source Code License
 - Net Boolean Public License v1
+- Net-SNMP License
 - NetCDF license
 - Nethack General Public License
 - Netizen Open Source License
@@ -549,6 +562,7 @@ jobs:
 - NRL License
 - NTP License
 - NTP No Attribution
+- Nunit License
 - OAR License
 - OCLC Research Public License 2.0
 - OFFIS License
@@ -730,6 +744,7 @@ jobs:
 - Wsuipa License
 - DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 - WWL License
+- wxWindows Library License
 - X.Net License
 - X11 License
 - X11 License Distribution Modification Variant
