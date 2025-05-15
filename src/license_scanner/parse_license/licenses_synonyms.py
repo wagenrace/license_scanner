@@ -14,8 +14,6 @@ adobe_glyph_list_license = "Adobe Glyph List License"
 adobe_postscript_afm_license = "Adobe Postscript AFM License"
 adobe_systems_incorporated_source_code_license_agreement = "Adobe Systems Incorporated Source Code License Agreement"
 adobe_utopia_font_license = "Adobe Utopia Font License"
-affero_general_public_license_v1_0_only = "Affero General Public License v1.0 only"
-affero_general_public_license_v1_0_or_later = "Affero General Public License v1.0 or later"
 afmparse_license = "Afmparse License"
 aladdin_free_public_license = "Aladdin Free Public License"
 amazon_digital_services_license = "Amazon Digital Services License"
@@ -260,6 +258,10 @@ gl2ps_license = "GL2PS License"
 glulxe_license = "Glulxe License"
 gnome_gcr_documentation_license = "Gnome GCR Documentation License"
 gnu_affero = "GNU Affero general public license (apl)"
+gnu_affero_general_public_license_v1_0_only = "GNU Affero General Public License v1.0 only"
+gnu_affero_general_public_license_v1_0_or_later = "GNU Affero General Public License v1.0 or later"
+gnu_affero_general_public_license_v2_0_only = "GNU Affero General Public License v2.0 only"
+gnu_affero_general_public_license_v2_0_or_later = "GNU Affero General Public License v2.0 or later"
 gnu_affero_general_public_license_v3_0_only = "GNU Affero General Public License v3.0 only"
 gnu_affero_general_public_license_v3_0_or_later = "GNU Affero General Public License v3.0 or later"
 gnu_free_documentation_license_v1_1_only = "GNU Free Documentation License v1.1 only"
@@ -286,12 +288,12 @@ gnu_general_public_license_v2_0_only = "GNU General Public License v2.0 only"
 gnu_general_public_license_v2_0_or_later = "GNU General Public License v2.0 or later"
 gnu_general_public_license_v3_0_only = "GNU General Public License v3.0 only"
 gnu_general_public_license_v3_0_or_later = "GNU General Public License v3.0 or later"
+gnu_lesser_general_public_license_v2_0_only = "GNU Lesser General Public License v2.0 only"
 gnu_lesser_general_public_license_v2_1_only = "GNU Lesser General Public License v2.1 only"
 gnu_lesser_general_public_license_v2_1_or_later = "GNU Lesser General Public License v2.1 or later"
 gnu_lesser_general_public_license_v3_0_only = "GNU Lesser General Public License v3.0 only"
 gnu_lesser_general_public_license_v3_0_or_later = "GNU Lesser General Public License v3.0 or later"
 gnu_lesser_public_license = "GNU lesser general public license"
-gnu_lesser_public_license_v2 = "GNU lesser general public license v2 (lgplv2)"
 gnu_library_general_public_license_v2_only = "GNU Library General Public License v2 only"
 gnu_library_general_public_license_v2_or_later = "GNU Library General Public License v2 or later"
 gnu_public_license = "GNU general public license"
@@ -690,8 +692,6 @@ LICENSES_SYNONYMS = {
     adobe_postscript_afm_license.lower(): adobe_postscript_afm_license,
     adobe_systems_incorporated_source_code_license_agreement.lower(): adobe_systems_incorporated_source_code_license_agreement,
     adobe_utopia_font_license.lower(): adobe_utopia_font_license,
-    affero_general_public_license_v1_0_only.lower(): affero_general_public_license_v1_0_only,
-    affero_general_public_license_v1_0_or_later.lower(): affero_general_public_license_v1_0_or_later,
     afmparse_license.lower(): afmparse_license,
     aladdin_free_public_license.lower(): aladdin_free_public_license,
     amazon_digital_services_license.lower(): amazon_digital_services_license,
@@ -936,6 +936,10 @@ LICENSES_SYNONYMS = {
     gl2ps_license.lower(): gl2ps_license,
     glulxe_license.lower(): glulxe_license,
     gnome_gcr_documentation_license.lower(): gnome_gcr_documentation_license,
+    gnu_affero_general_public_license_v1_0_only.lower(): gnu_affero_general_public_license_v1_0_only,
+    gnu_affero_general_public_license_v1_0_or_later.lower(): gnu_affero_general_public_license_v1_0_or_later,
+    gnu_affero_general_public_license_v2_0_only.lower(): gnu_affero_general_public_license_v2_0_only,
+    gnu_affero_general_public_license_v2_0_or_later.lower(): gnu_affero_general_public_license_v2_0_or_later,
     gnu_affero_general_public_license_v3_0_only.lower(): gnu_affero_general_public_license_v3_0_only,
     gnu_affero_general_public_license_v3_0_or_later.lower(): gnu_affero_general_public_license_v3_0_or_later,
     gnu_affero_general_public_license_v3_0_only.lower(): gnu_affero_general_public_license_v3_0_only,
@@ -968,7 +972,6 @@ LICENSES_SYNONYMS = {
     gnu_lesser_general_public_license_v2_1_or_later.lower(): gnu_lesser_general_public_license_v2_1_or_later,
     gnu_lesser_general_public_license_v3_0_only.lower(): gnu_lesser_general_public_license_v3_0_only,
     gnu_lesser_general_public_license_v3_0_or_later.lower(): gnu_lesser_general_public_license_v3_0_or_later,
-    gnu_lesser_public_license_v2.lower(): gnu_lesser_public_license_v2,
     gnu_lesser_general_public_license_v3_0_only.lower(): gnu_lesser_general_public_license_v3_0_only,
     gnu_lesser_public_license.lower(): gnu_lesser_public_license,
     gnu_library_general_public_license_v2_only.lower(): gnu_library_general_public_license_v2_only,
@@ -1443,6 +1446,9 @@ LICENSES_SYNONYMS = {
     "agplv3": gnu_affero_general_public_license_v3_0_only,
     "agplv3 (see license file)": gnu_affero_general_public_license_v3_0_only,
     "apgl3": gnu_affero_general_public_license_v3_0_only,
+    "affero general public license v1.0": gnu_affero_general_public_license_v1_0_only,
+    "Affero General Public License v1.0 only": gnu_affero_general_public_license_v1_0_only,
+    "Affero General Public License v1.0 or later": gnu_affero_general_public_license_v1_0_or_later,
     "gnu affero general public license version 3, 19 november 2007 copyright (c) 2007 free software foundation, inc. <http://fsf.org/> everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. preamble the gnu affero general public license is a": gnu_affero_general_public_license_v3_0_only,
     "gnu agplv3": gnu_affero_general_public_license_v3_0_only,
     "gnu affero general public license version 3 (agpl-3.0)": gnu_affero_general_public_license_v3_0_only,
@@ -1453,13 +1459,15 @@ LICENSES_SYNONYMS = {
     "gnu affero general public license v3 or later (agplv3+)": gnu_affero_general_public_license_v3_0_or_later,
     "gnu affero general public license v3 (aplv3)": gnu_affero_general_public_license_v3_0_only,
     "gnu library or lesser general public license (lgpl)": gnu_lesser_public_license,
-    "gnu lesser general public license v2 (lgplv2)": gnu_lesser_public_license_v2,
-    "gnu lesser general public license v2": gnu_lesser_public_license_v2,
-    "lgpl-2.1-only": gnu_lesser_public_license_v2,
+    "gnu lesser general public license v2 (lgplv2)": gnu_lesser_general_public_license_v2_0_only,
+    "gnu lesser general public license v2": gnu_lesser_general_public_license_v2_0_only,
+    "lgpl-2.1-only": gnu_lesser_general_public_license_v2_1_only,
+    "lgpl-2.1": gnu_lesser_general_public_license_v2_1_only,
+    "lgpl-2.1+": gnu_lesser_general_public_license_v2_1_or_later,
     "gnu lesser general public license v3 (lgplv3)": gnu_lesser_general_public_license_v3_0_only,
     "gnu lesser general public license v3": gnu_lesser_general_public_license_v3_0_only,
     "lgpl, see also license.txt": gnu_lesser_public_license,
-    "lgpl-2.1 license": gnu_lesser_public_license_v2,
+    "lgpl-2.1 license": gnu_lesser_general_public_license_v2_1_only,
     "lgpl-3.0": gnu_lesser_general_public_license_v3_0_only,
     "https://www.gnu.org/licenses/lgpl.html": gnu_lesser_general_public_license_v3_0_only,
     "lgpl-3.0 license": gnu_lesser_general_public_license_v3_0_only,
@@ -1476,7 +1484,7 @@ LICENSES_SYNONYMS = {
     "lgpl3": gnu_lesser_general_public_license_v3_0_only,
     "lgplv2+": gnu_general_public_license_v2_0_or_later,
     "lgplv3": gnu_lesser_general_public_license_v3_0_only,
-    "gpl 2.0/lgpl 2.1": gnu_lesser_public_license_v2,
+    "gpl 2.0/lgpl 2.1": gnu_lesser_general_public_license_v2_1_only,
     "lgpl-2.1": gnu_lesser_general_public_license_v2_1_only,
     "gnu general public license (gpl)": gnu_public_license,
     "gnu general public license v2 (gplv2)": gnu_public_license_v2,
@@ -1627,8 +1635,8 @@ LICENSES_SYNONYMS = {
     "adobe-utopia" : adobe_utopia_font_license,
     "adsl" : amazon_digital_services_license,
     "afmparse" : afmparse_license,
-    "agpl-1.0-only" : affero_general_public_license_v1_0_only,
-    "agpl-1.0-or-later" : affero_general_public_license_v1_0_or_later,
+    "agpl-1.0-only" : gnu_affero_general_public_license_v1_0_only,
+    "agpl-1.0-or-later" : gnu_affero_general_public_license_v1_0_or_later,
     "agpl-3.0-or-later" : gnu_affero_general_public_license_v3_0_or_later,
     "aladdin" : aladdin_free_public_license,
     "amd-newlib" : amd_newlib_license,
@@ -1879,6 +1887,9 @@ LICENSES_SYNONYMS = {
     "gfdl-1.3-invariants-or-later" : gnu_free_documentation_license_v1_3_or_later___invariants,
     "gfdl-1.3-no-invariants-only" : gnu_free_documentation_license_v1_3_only___no_invariants,
     "gfdl-1.3-no-invariants-or-later" : gnu_free_documentation_license_v1_3_or_later___no_invariants,
+    "gnu free documentation license v1.1": gnu_free_documentation_license_v1_1_only,
+    "gnu free documentation license v1.2": gnu_free_documentation_license_v1_2_only,
+    "gnu free documentation license v1.3": gnu_free_documentation_license_v1_3_only,
     "gfdl-1.3-only" : gnu_free_documentation_license_v1_3_only,
     "gfdl-1.3-or-later" : gnu_free_documentation_license_v1_3_or_later,
     "giftware" : giftware_license,

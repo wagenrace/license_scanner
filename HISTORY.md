@@ -1,5 +1,11 @@
 # History
 
+## 0.3.1 (2025-05-15)
+
+- Add deprecated SPDX licenses
+- Add missing spellings of SPDX licenses
+- Replace "GNU lesser general public license v2 (lgplv2)" with "GNU Lesser General Public License v2.0 only"
+
 ## 0.3.0 (2025-05-12)
 
 - Added all SPDX licenses
