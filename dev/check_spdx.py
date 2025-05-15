@@ -11,7 +11,7 @@ def get_spdx_licenses() -> list[str]:
     """
     # Get the HTML content of the page
     response = requests.get(license_url)
-    html_content = response.text
+    html_content = response.content
 
     # Parse the HTML content using pandas
     tables = read_html(html_content, flavor="bs4")
