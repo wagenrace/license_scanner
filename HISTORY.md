@@ -1,5 +1,15 @@
 # History
 
+## 0.3.1 (2025-05-15)
+
+- Add deprecated SPDX licenses
+- Add missing spellings of SPDX licenses
+- Merge "GNU lesser general public license v2 (lgplv2)" into "GNU Lesser General Public License v2.0 only"
+- Merge "GNU lesser general public license v3 (lgplv3)" into "GNU Lesser General Public License v3.0 only"
+- Merge "Affero General Public License v1.0 only" into "GNU Affero General Public License v1.0 only"
+- Merge "Affero General Public License v1.0 or later" into "GNU Affero General Public License v1.0 or later"
+- Merge "GNU Affero general public license v3 (aplv3)" into "GNU Affero General Public License v3.0 only"
+
 ## 0.3.0 (2025-05-12)
 
 - Added all SPDX licenses

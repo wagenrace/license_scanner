@@ -11,18 +11,26 @@ def get_spdx_licenses() -> list[str]:
     """
     # Get the HTML content of the page
     response = requests.get(license_url)
-    html_content = response.text
+    html_content = response.content
 
     # Parse the HTML content using pandas
     tables = read_html(html_content, flavor="bs4")
 
-    # The first table contains the license data
+    _licenses = []
+    # First table contains the license data
     license_table = tables[0]
 
     # Extract the license IDs and names
-    licenses_1 = license_table["Full name"].to_list()
-    licenses_2 = license_table["Identifier"].to_list()
-    _licenses = licenses_1 + licenses_2
+    _licenses += license_table["Full name"].to_list()
+    _licenses += license_table["Identifier"].to_list()
+
+    # Second table contains Deprecated License Identifiers
+    license_table_depracted = tables[1]
+
+    # Extract the license IDs and names
+    _licenses += license_table_depracted["Full name"].to_list()
+    _licenses += license_table_depracted["Identifier"].to_list()
+
     return _licenses
 
 
