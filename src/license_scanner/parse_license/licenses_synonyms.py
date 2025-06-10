@@ -1458,7 +1458,7 @@ LICENSES_SYNONYMS = {
     "apache-1.0": apache_license_v1,
     "apache-1.1" : apache_license_1_1,
     "apache-2.0 license": apache_license_v2,
-    "apache-2.0 or bsd": apache_license_v2,
+    "apache-2.0 or bsd": apache_license_v2, # TODO remove when #24 is fixed
     "apache-2.0": apache_license_v2,
     "apache-2": apache_license_v2,
     "apache": apache_license,
@@ -1795,7 +1795,7 @@ LICENSES_SYNONYMS = {
     "gnu lesser general public license v3 or later (lgplv3+)": gnu_lesser_general_public_license_v3_0_or_later,
     "gnu lesser general public license v3": gnu_lesser_general_public_license_v3_0_only,
     "gnu lesser general public license version 3, 29 june 2007  copyright (c) 2007 free software foundation, inc. <https://fsf.org/> everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.   this version of the gnu lesser general public licen": gnu_lesser_general_public_license_v3_0_only,
-    "gnu library or lesser general public license (lgpl)": gnu_lesser_public_license,
+    "gnu library or lesser general public license (lgpl)": gnu_lesser_public_license, # TODO remove when #24 is fixed
     "gnu-gpl": gnu_public_license,
     "gnu-gplv3": gnu_general_public_license_v3_0_only,
     "gnu": gnu_public_license,
@@ -1816,7 +1816,7 @@ LICENSES_SYNONYMS = {
     "gpl-1.0": gnu_general_public_license_v1_0_only,
     "gpl-1.0+": gnu_general_public_license_v1_0_or_later,
     "gpl-2.0-only" : gnu_general_public_license_v2_0_only,
-    "gpl-2.0-or-later or agpl-3.0-or-later or cern-ohl-s-2.0+": gnu_public_license,
+    "gpl-2.0-or-later or agpl-3.0-or-later or cern-ohl-s-2.0+": gnu_public_license, # TODO remove when #24 is fixed
     "gpl-2.0-or-later" : gnu_general_public_license_v2_0_or_later,
     "gpl-2.0-with-autoconf-exception" : gnu_general_public_license_v2_0_w_autoconf_exception,
     "gpl-2.0-with-bison-exception" : gnu_general_public_license_v2_0_w_bison_exception,
