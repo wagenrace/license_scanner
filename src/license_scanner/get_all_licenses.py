@@ -4,6 +4,17 @@ from pkg_resources import working_set
 from .parse_license import parse_license
 from .parse_license.licenses_synonyms import unknown_license
 
+import pkgutil
+import importlib_metadata as im
+
+for i in pkgutil.iter_modules():
+    try:
+        if i.ispkg:
+            print(i.name)
+            str(im.metadata(i.name)).split("\n")
+    except:
+        continue
+
 
 def get_all_licenses():
     all_licenses = {}
@@ -53,3 +64,6 @@ def get_all_licenses():
         all_licenses[general_license] = all_licenses.get(general_license, []) + [key]
 
     return all_licenses
+
+
+# %%
