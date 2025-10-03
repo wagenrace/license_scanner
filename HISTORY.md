@@ -1,5 +1,9 @@
 # History
 
+## 0.3.2 (2025-10-03)
+
+- Put upper limit for setuptools, because pkg_resources will not be in version 81
+
 ## 0.3.1 (2025-05-15)
 
 - Add deprecated SPDX licenses
