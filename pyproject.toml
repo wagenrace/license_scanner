@@ -1,11 +1,11 @@
 [project]
 name = "license_scanner"
 dynamic = ["version"]
-dependencies = ["setuptools>=62", "tomli>=1.1.0; python_version < '3.11'"]
+dependencies = ["setuptools>=62,<81", "tomli>=1.1.0; python_version < '3.11'"]
 readme = "README.md"
 keywords = ["license", "scanner", "checker"]
 license = { text = "MIT" }
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 authors = [{ name = "Tom Nijhof", email = "tomsspamadress@gmail.com" }]
 classifiers = [
   "Environment :: Console",
@@ -15,11 +15,12 @@ classifiers = [
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Development Status :: 4 - Beta",
   "License :: OSI Approved :: MIT License",
 ]
@@ -53,7 +54,7 @@ allowed-licenses = [
   'mozilla',
   "The Unlicense (Unlicense)",
   "ISC license (iscl)",
-  "MIT-CMU License (MIT-CMU)"
+  "MIT-CMU License (MIT-CMU)",
 ]
 allowed-packages = ["license_scanner"]
 

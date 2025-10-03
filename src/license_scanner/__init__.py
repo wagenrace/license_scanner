@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Scans your environment for all needed licenses"""
 
-__author__ = """Tom Nijhof"""
-__version__ = "0.3.1"
+__author__ = """Tom Nijhof-Verhees"""
+__version__ = "0.3.2"
 
 # Add here import to all the functions you need
 
