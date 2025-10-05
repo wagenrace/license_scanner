@@ -1,0 +1,1146 @@
+,package_name_old,package_name_new,package_name_general,license_new,license_old
+0,absl-py,,absl_py,,Apache-2.0
+0,accelerate,accelerate,accelerate,Apache,Apache
+0,acme,acme,acme,Apache-2.0,Apache-2.0
+0,adal,adal,adal,MIT,MIT
+0,adlfs,adlfs,adlfs,BSD,BSD
+0,aenum,aenum,aenum,BSD License,BSD License
+0,agate,agate,agate,MIT,MIT
+0,aioboto3,aioboto3,aioboto3,Apache-2.0,Apache-2.0
+0,aiobotocore,aiobotocore,aiobotocore,Apache-2.0,Apache-2.0
+0,aiodns,aiodns,aiodns,MIT,MIT
+0,aiofiles,aiofiles,aiofiles,Apache-2.0,Apache-2.0
+0,aiohappyeyeballs,aiohappyeyeballs,aiohappyeyeballs,PSF-2.0,PSF-2.0
+0,aiohttp,aiohttp,aiohttp,Apache-2.0 AND MIT,Apache-2.0 AND MIT
+0,aiohttp-cors,aiohttp_cors,aiohttp_cors,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,aiohttp-retry,aiohttp_retry,aiohttp_retry,MIT,MIT
+0,aioitertools,aioitertools,aioitertools, MIT License,MIT License
+0,aioresponses,aioresponses,aioresponses, MIT License,MIT License
+0,aiosignal,aiosignal,aiosignal,Apache 2.0,Apache 2.0
+0,aiosqlite,aiosqlite,aiosqlite, MIT License,MIT License
+0,alabaster,alabaster,alabaster, BSD License,BSD License
+0,alembic,alembic,alembic,MIT,MIT
+0,aliyun-python-sdk-core,,aliyun_python_sdk_core,,Apache License 2.0
+0,altair,altair,altair,"Copyright (c) 2015-2023, Vega-Altair Developers","Copyright (c) 2015-2023, Vega-Altair Developers"
+0,altgraph,altgraph,altgraph,MIT,MIT
+0,amazon-ion,,amazon_ion,,Apache License 2.0
+0,amqp,amqp,amqp,BSD,BSD
+0,aniso8601,aniso8601,aniso8601, BSD License,BSD License
+0,annotated-types,annotated_types,annotated_types, MIT License,MIT License
+0,ansible,ansible,ansible,GPL-3.0-or-later,GPL-3.0-or-later
+0,ansible-core,,ansible_core,,GNU General Public License v3 or later (GPLv3+)
+0,anthropic,anthropic,anthropic,MIT,MIT
+0,antlr4-python3-runtime,,antlr4_python3_runtime,,BSD
+0,anyio,anyio,anyio,MIT,MIT
+0,apache-airflow,,apache_airflow,,Apache Software License
+0,apache-airflow-providers-cncf-kubernetes,,apache_airflow_providers_cncf_kubernetes,,Apache Software License
+0,apache-airflow-providers-common-compat,,apache_airflow_providers_common_compat,,Apache Software License
+0,apache-airflow-providers-common-sql,,apache_airflow_providers_common_sql,,Apache Software License
+0,apache-airflow-providers-databricks,,apache_airflow_providers_databricks,,Apache Software License
+0,apache-airflow-providers-fab,,apache_airflow_providers_fab,,Apache Software License
+0,apache-airflow-providers-google,,apache_airflow_providers_google,,Apache Software License
+0,apache-airflow-providers-http,,apache_airflow_providers_http,,Apache Software License
+0,apache-airflow-providers-mysql,,apache_airflow_providers_mysql,,Apache Software License
+0,apache-airflow-providers-slack,,apache_airflow_providers_slack,,Apache Software License
+0,apache-airflow-providers-snowflake,,apache_airflow_providers_snowflake,,Apache Software License
+0,apache-airflow-providers-sqlite,,apache_airflow_providers_sqlite,,Apache Software License
+0,apache-airflow-providers-ssh,,apache_airflow_providers_ssh,,Apache Software License
+0,apache-beam,apache_beam,apache_beam,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,apispec,apispec,apispec, MIT License,MIT License
+0,appdirs,,appdirs,,MIT
+0,applicationinsights,applicationinsights,applicationinsights,MIT,MIT
+0,appnope,appnope,appnope,BSD,BSD
+0,apscheduler,apscheduler,apscheduler,MIT,MIT
+0,argcomplete,argcomplete,argcomplete,Apache Software License,Apache Software License
+0,argon2-cffi,,argon2_cffi,,MIT
+0,argon2-cffi-bindings,,argon2_cffi_bindings,,MIT
+0,argparse,,argparse,,Python Software Foundation License
+0,arrow,arrow,arrow, Apache Software License,Apache Software License
+0,asgiref,asgiref,asgiref,BSD-3-Clause,BSD-3-Clause
+0,asn1crypto,asn1crypto,asn1crypto,MIT,MIT
+0,astor,astor,astor,BSD-3-Clause,BSD-3-Clause
+0,astroid,astroid,astroid,LGPL-2.1-or-later,LGPL-2.1-or-later
+0,astronomer-cosmos,,astronomer_cosmos,,Apache-2.0
+0,asttokens,asttokens,asttokens,Apache 2.0,Apache 2.0
+0,astunparse,astunparse,astunparse,BSD,BSD
+0,async-lru,async_lru,async_lru,MIT License,MIT License
+0,async-timeout,async_timeout,async_timeout,Apache 2,Apache 2
+0,asyncio,asyncio,asyncio,Apache-2.0,Apache-2.0
+0,asyncpg,asyncpg,asyncpg,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,asyncssh,asyncssh,asyncssh,EPL-2.0 OR GPL-2.0-or-later,EPL-2.0 OR GPL-2.0-or-later
+0,asynctest,asynctest,asynctest,Apache 2,Apache 2
+0,atlassian-python-api,,atlassian_python_api,,Apache-2.0
+0,attrs,attrs,attrs,MIT,MIT
+0,authlib,authlib,authlib,BSD-3-Clause,BSD-3-Clause
+0,autocommand,autocommand,autocommand,LGPLv3,LGPLv3
+0,av,av,av,BSD-3-Clause,BSD-3-Clause
+0,avro,avro,avro,Apache License 2.0,Apache License 2.0
+0,avro-python3,,avro_python3,,Apache License 2.0
+0,aws-lambda-powertools,aws_lambda_powertools,aws_lambda_powertools,MIT,MIT
+0,aws-requests-auth,aws_requests_auth,aws_requests_auth,UNKNOWN,BSD License
+0,aws-sam-translator,,aws_sam_translator,,Apache License 2.0
+0,aws-xray-sdk,aws_xray_sdk,aws_xray_sdk,Apache License 2.0,Apache License 2.0
+0,awscli,awscli,awscli,Apache License 2.0,Apache License 2.0
+0,awswrangler,awswrangler,awswrangler,Apache-2.0,Apache-2.0
+0,azure-appconfiguration,,azure_appconfiguration,,MIT License
+0,azure-batch,,azure_batch,,MIT License
+0,azure-common,,azure_common,,MIT License
+0,azure-core,,azure_core,,MIT License
+0,azure-cosmos,,azure_cosmos,,MIT License
+0,azure-data-tables,,azure_data_tables,,MIT License
+0,azure-datalake-store,,azure_datalake_store,,MIT License
+0,azure-eventhub,,azure_eventhub,,MIT License
+0,azure-identity,,azure_identity,,MIT
+0,azure-keyvault,,azure_keyvault,,MIT License
+0,azure-keyvault-certificates,,azure_keyvault_certificates,,MIT License
+0,azure-keyvault-keys,,azure_keyvault_keys,,MIT License
+0,azure-keyvault-secrets,,azure_keyvault_secrets,,MIT License
+0,azure-kusto-data,,azure_kusto_data,,MIT
+0,azure-mgmt-authorization,,azure_mgmt_authorization,,MIT License
+0,azure-mgmt-compute,,azure_mgmt_compute,,MIT
+0,azure-mgmt-containerinstance,,azure_mgmt_containerinstance,,MIT License
+0,azure-mgmt-containerregistry,,azure_mgmt_containerregistry,,MIT License
+0,azure-mgmt-containerservice,,azure_mgmt_containerservice,,MIT License
+0,azure-mgmt-core,,azure_mgmt_core,,MIT License
+0,azure-mgmt-cosmosdb,,azure_mgmt_cosmosdb,,MIT License
+0,azure-mgmt-datafactory,,azure_mgmt_datafactory,,MIT License
+0,azure-mgmt-datalake-store,,azure_mgmt_datalake_store,,MIT License
+0,azure-mgmt-keyvault,,azure_mgmt_keyvault,,MIT
+0,azure-mgmt-monitor,,azure_mgmt_monitor,,MIT License
+0,azure-mgmt-msi,,azure_mgmt_msi,,MIT License
+0,azure-mgmt-rdbms,,azure_mgmt_rdbms,,MIT License
+0,azure-mgmt-redis,,azure_mgmt_redis,,MIT License
+0,azure-mgmt-resource,,azure_mgmt_resource,,MIT License
+0,azure-mgmt-sql,,azure_mgmt_sql,,MIT License
+0,azure-mgmt-storage,,azure_mgmt_storage,,MIT License
+0,azure-mgmt-web,,azure_mgmt_web,,MIT License
+0,azure-monitor-opentelemetry-exporter,,azure_monitor_opentelemetry_exporter,,MIT License
+0,azure-monitor-query,,azure_monitor_query,,MIT License
+0,azure-nspkg,,azure_nspkg,,MIT License
+0,azure-servicebus,,azure_servicebus,,MIT License
+0,azure-storage-blob,,azure_storage_blob,,MIT License
+0,azure-storage-common,,azure_storage_common,,MIT License
+0,azure-storage-file-datalake,,azure_storage_file_datalake,,MIT License
+0,azure-storage-file-share,,azure_storage_file_share,,MIT License
+0,azure-storage-queue,,azure_storage_queue,,MIT License
+0,azure-synapse-artifacts,,azure_synapse_artifacts,,MIT License
+0,azure-synapse-spark,,azure_synapse_spark,,MIT License
+0,babel,babel,babel,BSD-3-Clause,BSD-3-Clause
+0,backcall,backcall,backcall,UNKNOWN,BSD License
+0,backoff,backoff,backoff,MIT,MIT
+0,backports.tarfile,,backports.tarfile,,MIT License
+0,bandit,bandit,bandit,Apache-2.0,Apache-2.0
+0,bashlex,bashlex,bashlex,GPLv3+,GPLv3+
+0,bcrypt,bcrypt,bcrypt,Apache-2.0,Apache-2.0
+0,beautifulsoup4,,beautifulsoup4,,MIT License
+0,bidict,bidict,bidict,MPL 2.0,MPL 2.0
+0,billiard,billiard,billiard,BSD,BSD
+0,binaryornot,binaryornot,binaryornot,BSD,BSD
+0,bitarray,bitarray,bitarray,PSF-2.0,PSF-2.0
+0,black,black,black,MIT,MIT
+0,bleach,bleach,bleach,Apache Software License,Apache Software License
+0,blessed,blessed,blessed,MIT,MIT
+0,blinker,blinker,blinker, MIT License,MIT License
+0,blis,blis,blis,BSD,BSD
+0,blobfile,blobfile,blobfile,Public Domain,Public Domain
+0,boltons,boltons,boltons, BSD License,BSD License
+0,boto,boto,boto,MIT,MIT
+0,boto3,boto3,boto3,Apache License 2.0,Apache License 2.0
+0,boto3-stubs,,boto3_stubs,,MIT License
+0,botocore,botocore,botocore,Apache License 2.0,Apache License 2.0
+0,botocore-stubs,,botocore_stubs,,MIT License
+0,bracex,bracex,bracex,MIT,MIT
+0,brotli,,brotli,,MIT
+0,bs4,bs4,bs4,MIT License,MIT License
+0,build,build,build,MIT,MIT
+0,bytecode,bytecode,bytecode,The MIT License (MIT),The MIT License (MIT)
+0,cachecontrol,cachecontrol,cachecontrol,Apache-2.0,Apache-2.0
+0,cached-property,,cached_property,,BSD
+0,cachelib,cachelib,cachelib,BSD-3-Clause,BSD-3-Clause
+0,cachetools,cachetools,cachetools,MIT,MIT
+0,catalogue,catalogue,catalogue,MIT,MIT
+0,cattrs,cattrs,cattrs,MIT,MIT
+0,celery,celery,celery,BSD-3-Clause,BSD-3-Clause
+0,certbot-dns-cloudflare,certbot_dns_cloudflare,certbot_dns_cloudflare,Apache-2.0,Apache-2.0
+0,certifi,certifi,certifi,MPL-2.0,MPL-2.0
+0,cffi,cffi,cffi,MIT,MIT
+0,cfgv,,cfgv,,MIT
+0,cfn-flip,cfn_flip,cfn_flip,Apache2,Apache2
+0,cfn-lint,,cfn_lint,,MIT-0
+0,chardet,chardet,chardet,LGPL,LGPL
+0,charset-normalizer,charset_normalizer,charset_normalizer,MIT,MIT
+0,checkov,checkov,checkov,Apache License 2.0,Apache License 2.0
+0,chromadb,chromadb,chromadb, Apache Software License,Apache Software License
+0,ciso8601,,ciso8601,,MIT
+0,cleo,cleo,cleo,MIT,MIT
+0,click,click,click,BSD-3-Clause,BSD-3-Clause
+0,click-didyoumean,click_didyoumean,click_didyoumean,MIT,MIT
+0,click-option-group,click_option_group,click_option_group,BSD-3-Clause,BSD-3-Clause
+0,click-plugins,click_plugins,click_plugins,New BSD,New BSD
+0,click-repl,click_repl,click_repl,MIT,MIT
+0,clickhouse-connect,clickhouse_connect,clickhouse_connect,Apache License 2.0,Apache License 2.0
+0,cloudflare,cloudflare,cloudflare,Apache-2.0,Apache-2.0
+0,cloudpathlib,cloudpathlib,cloudpathlib, MIT License,MIT License
+0,cloudpickle,cloudpickle,cloudpickle,BSD-3-Clause,BSD-3-Clause
+0,cmake,cmake,cmake,Apache 2.0,Apache 2.0
+0,cmdstanpy,cmdstanpy,cmdstanpy,BSD-3-Clause,BSD-3-Clause
+0,cohere,cohere,cohere,MIT,MIT
+0,colorama,colorama,colorama, BSD License,BSD License
+0,coloredlogs,coloredlogs,coloredlogs,MIT,MIT
+0,colorful,colorful,colorful, MIT License,MIT License
+0,colorlog,colorlog,colorlog,MIT License,MIT License
+0,comm,comm,comm,BSD 3-Clause License,BSD 3-Clause License
+0,confection,confection,confection,MIT,MIT
+0,configargparse,,configargparse,,MIT
+0,configparser,,configparser,,MIT License
+0,confluent-kafka,confluent_kafka,confluent_kafka, Apache Software License,Apache Software License
+0,connexion,connexion,connexion,Apache-2.0,Apache-2.0
+0,contextlib2,contextlib2,contextlib2,PSF License,PSF License
+0,contourpy,contourpy,contourpy,BSD 3-Clause License,BSD 3-Clause License
+0,coverage,coverage,coverage,Apache-2.0,Apache-2.0
+0,cramjam,cramjam,cramjam,MIT,MIT
+0,crashtest,crashtest,crashtest,MIT,MIT
+0,cron-descriptor,cron_descriptor,cron_descriptor,MIT,MIT
+0,croniter,croniter,croniter,MIT License,MIT License
+0,cryptography,cryptography,cryptography,Apache-2.0 OR BSD-3-Clause,Apache-2.0 OR BSD-3-Clause
+0,cssselect,cssselect,cssselect,BSD,BSD
+0,cssselect2,cssselect2,cssselect2, BSD License,BSD License
+0,curl-cffi,curl_cffi,curl_cffi,MIT License,MIT License
+0,cycler,cycler,cycler,"Copyright (c) 2015, matplotlib project","Copyright (c) 2015, matplotlib project"
+0,cyclopts,cyclopts,cyclopts,Apache-2.0,Apache-2.0
+0,cymem,cymem,cymem,MIT,MIT
+0,cython,Cython,cython,Apache-2.0,Apache-2.0
+0,dacite,dacite,dacite,MIT,MIT
+0,daff,daff,daff,MIT,MIT
+0,dask,dask,dask,BSD-3-Clause,BSD-3-Clause
+0,databricks-cli,databricks_cli,databricks_cli,Apache License 2.0,Apache License 2.0
+0,databricks-connect,,databricks_connect,,Databricks Proprietary License
+0,databricks-labs-blueprint,,databricks_labs_blueprint,,Other/Proprietary License
+0,databricks-sdk,,databricks_sdk,,Apache Software License
+0,databricks-sql-connector,,databricks_sql_connector,,Apache-2.0
+0,databricks-sqlalchemy,,databricks_sqlalchemy,,Apache-2.0
+0,dataclasses,,dataclasses,,Apache
+0,dataclasses-json,dataclasses_json,dataclasses_json,MIT,MIT
+0,datadog,datadog,datadog,BSD-3-Clause,BSD-3-Clause
+0,datadog-api-client,datadog_api_client,datadog_api_client,BSD,BSD
+0,datasets,datasets,datasets,Apache 2.0,Apache 2.0
+0,dateparser,dateparser,dateparser,BSD,BSD
+0,datetime,DateTime,datetime,ZPL 2.1,ZPL 2.1
+0,db-dtypes,db_dtypes,db_dtypes, Apache Software License,Apache Software License
+0,dbt-adapters,,dbt_adapters,,Apache Software License
+0,dbt-common,dbt_common,dbt_common,Apache-2.0,Apache-2.0
+0,dbt-core,,dbt_core,,Apache Software License
+0,dbt-extractor,dbt_extractor,dbt_extractor, Apache Software License,Apache-2.0
+0,dbt-protos,,dbt_protos,,Apache-2.0
+0,dbt-semantic-interfaces,dbt_semantic_interfaces,dbt_semantic_interfaces,Apache-2.0,Apache-2.0
+0,ddtrace,ddtrace,ddtrace,LICENSE.BSD3,LICENSE.BSD3
+0,debugpy,debugpy,debugpy,MIT,MIT
+0,decorator,,decorator,,BSD-2-Clause
+0,deepdiff,deepdiff,deepdiff, MIT License,MIT License
+0,defusedxml,defusedxml,defusedxml,PSFL,PSFL
+0,delta-spark,,delta_spark,,Apache-2.0
+0,deltalake,deltalake,deltalake, Apache Software License,MIT
+0,dep-logic,dep_logic,dep_logic,Apache-2.0,Apache-2.0
+0,deprecated,deprecated,deprecated,MIT,MIT
+0,deprecation,,deprecation,,Apache 2
+0,diff-cover,diff_cover,diff_cover,Apache-2.0,Apache-2.0
+0,dill,dill,dill,BSD-3-Clause,BSD-3-Clause
+0,diskcache,diskcache,diskcache,Apache 2.0,Apache 2.0
+0,distlib,distlib,distlib,PSF-2.0,PSF-2.0
+0,distro,distro,distro,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,django,django,django,BSD-3-Clause,BSD-3-Clause
+0,django-cors-headers,,django_cors_headers,,MIT
+0,django-extensions,django_extensions,django_extensions,MIT,MIT
+0,django-filter,,django_filter,,BSD License
+0,djangorestframework,,djangorestframework,,BSD
+0,dnspython,,dnspython,,ISC
+0,docker,docker,docker,Apache-2.0,Apache-2.0
+0,docker-pycreds,,docker_pycreds,,Apache License 2.0
+0,docopt,,docopt,,MIT
+0,docstring-parser,docstring_parser,docstring_parser,MIT,MIT
+0,docutils,docutils,docutils, Public Domain,GNU General Public License (GPL)
+0,duckdb,duckdb,duckdb, MIT License,MIT License
+0,dulwich,dulwich,dulwich,Apache-2.0 OR GPL-2.0-or-later,Apache-2.0 OR GPL-2.0-or-later
+0,durationpy,durationpy,durationpy,MIT,MIT
+0,ecdsa,ecdsa,ecdsa,MIT,MIT
+0,editables,editables,editables, MIT License,MIT License
+0,einops,einops,einops,MIT,MIT
+0,elastic-transport,elastic_transport,elastic_transport, Apache Software License,Apache Software License
+0,elasticsearch,elasticsearch,elasticsearch,Apache-2.0,Apache-2.0
+0,email-validator,email_validator,email_validator,Unlicense,Unlicense
+0,emoji,emoji,emoji, BSD License,BSD License
+0,entrypoints,,entrypoints,,MIT License
+0,enum34,,enum34,,BSD License
+0,envier,envier,envier,MIT License,MIT License
+0,et-xmlfile,et_xmlfile,et_xmlfile,MIT,MIT
+0,eval-type-backport,eval_type_backport,eval_type_backport,MIT,MIT
+0,eventlet,eventlet,eventlet,MIT,MIT
+0,events,events,events,BSD,BSD
+0,exceptiongroup,exceptiongroup,exceptiongroup, MIT License,MIT License
+0,execnet,execnet,execnet,MIT,MIT
+0,executing,executing,executing,MIT,MIT
+0,fabric,fabric,fabric,BSD,BSD
+0,face,face,face,BSD,BSD
+0,factory-boy,,factory_boy,,MIT
+0,faiss-cpu,,faiss_cpu,,MIT AND BSD-3-Clause
+0,faker,faker,faker,MIT License,MIT License
+0,fakeredis,fakeredis,fakeredis,BSD-3-Clause,BSD-3-Clause
+0,fastapi,fastapi,fastapi, MIT License,MIT License
+0,fastapi-cli,fastapi_cli,fastapi_cli,MIT,MIT
+0,fastapi-cloud-cli,fastapi_cloud_cli,fastapi_cloud_cli,MIT,MIT
+0,fastavro,fastavro,fastavro,MIT,MIT
+0,fasteners,fasteners,fasteners,Apache-2.0,Apache-2.0
+0,fastjsonschema,fastjsonschema,fastjsonschema,BSD,BSD
+0,fastmcp,fastmcp,fastmcp,Apache-2.0,Apache-2.0
+0,fastparquet,fastparquet,fastparquet,Apache License 2.0,Apache License 2.0
+0,feedparser,feedparser,feedparser,BSD-2-Clause,BSD-2-Clause
+0,filelock,filelock,filelock,Unlicense,Unlicense
+0,filetype,filetype,filetype,MIT,MIT
+0,findpython,findpython,findpython,MIT,MIT
+0,fire,fire,fire,Apache-2.0,Apache-2.0
+0,firebase-admin,firebase_admin,firebase_admin,Apache License 2.0,Apache License 2.0
+0,flake8,flake8,flake8,MIT,MIT
+0,flask,flask,flask,BSD-3-Clause,BSD-3-Clause
+0,flask-appbuilder,flask_appbuilder,flask_appbuilder,BSD,BSD
+0,flask-babel,flask_babel,flask_babel,BSD-3-Clause,BSD-3-Clause
+0,flask-cors,flask_cors,flask_cors,,UNKNOWN
+0,flask-jwt-extended,flask_jwt_extended,flask_jwt_extended,MIT,MIT
+0,flask-limiter,flask_limiter,flask_limiter,MIT,MIT
+0,flask-login,flask_login,flask_login,MIT,MIT
+0,flask-session,flask_session,flask_session, BSD License,BSD License
+0,flask-sqlalchemy,flask_sqlalchemy,flask_sqlalchemy, BSD License,BSD License
+0,flask-wtf,flask_wtf,flask_wtf,Copyright 2010 WTForms,Copyright 2010 WTForms
+0,flatbuffers,flatbuffers,flatbuffers,Apache 2.0,Apache 2.0
+0,flit,flit,flit,BSD-3-Clause,BSD-3-Clause
+0,flit-core,flit_core,flit_core,BSD-3-Clause,BSD-3-Clause
+0,flower,flower,flower,BSD,BSD
+0,fonttools,fontTools,fonttools,MIT,MIT
+0,fqdn,fqdn,fqdn,MPL 2.0,MPL 2.0
+0,freezegun,freezegun,freezegun,Apache-2.0,Apache-2.0
+0,frozendict,frozendict,frozendict,LGPL v3,LGPL v3
+0,frozenlist,frozenlist,frozenlist,Apache-2.0,Apache-2.0
+0,fsspec,fsspec,fsspec,BSD-3-Clause,BSD-3-Clause
+0,ftfy,ftfy,ftfy,Apache-2.0,Apache-2.0
+0,future,future,future,MIT,MIT
+0,fuzzywuzzy,fuzzywuzzy,fuzzywuzzy,GPLv2,GPLv2
+0,gast,gast,gast,BSD 3-Clause,BSD 3-Clause
+0,gcloud-aio-auth,,gcloud_aio_auth,,MIT
+0,gcloud-aio-bigquery,,gcloud_aio_bigquery,,MIT
+0,gcloud-aio-storage,,gcloud_aio_storage,,MIT
+0,gcsfs,gcsfs,gcsfs,BSD,BSD
+0,genson,genson,genson,MIT,MIT
+0,geographiclib,geographiclib,geographiclib,MIT,MIT
+0,geoip2,geoip2,geoip2,Apache-2.0,Apache-2.0
+0,geopandas,geopandas,geopandas,BSD 3-Clause,BSD 3-Clause
+0,geopy,geopy,geopy,MIT,MIT
+0,gevent,gevent,gevent,MIT,MIT
+0,ghp-import,,ghp_import,,Apache Software License
+0,gitdb,gitdb,gitdb,BSD License,BSD License
+0,gitpython,,gitpython,,BSD-3-Clause
+0,glom,glom,glom,UNKNOWN,BSD License
+0,google-ads,,google_ads,,Apache-2.0
+0,google-ai-generativelanguage,,google_ai_generativelanguage,,Apache 2.0
+0,google-analytics-admin,,google_analytics_admin,,Apache 2.0
+0,google-api-core,,google_api_core,,Apache 2.0
+0,google-api-python-client,,google_api_python_client,,Apache 2.0
+0,google-auth,,google_auth,,Apache 2.0
+0,google-auth-httplib2,,google_auth_httplib2,,Apache 2.0
+0,google-auth-oauthlib,google_auth_oauthlib,google_auth_oauthlib,Apache 2.0,Apache 2.0
+0,google-cloud-aiplatform,,google_cloud_aiplatform,,Apache 2.0
+0,google-cloud-appengine-logging,,google_cloud_appengine_logging,,Apache 2.0
+0,google-cloud-audit-log,,google_cloud_audit_log,,Apache-2.0
+0,google-cloud-automl,,google_cloud_automl,,Apache 2.0
+0,google-cloud-batch,,google_cloud_batch,,Apache 2.0
+0,google-cloud-bigquery,,google_cloud_bigquery,,Apache 2.0
+0,google-cloud-bigquery-datatransfer,,google_cloud_bigquery_datatransfer,,Apache 2.0
+0,google-cloud-bigquery-storage,,google_cloud_bigquery_storage,,Apache 2.0
+0,google-cloud-bigtable,,google_cloud_bigtable,,Apache 2.0
+0,google-cloud-build,,google_cloud_build,,Apache 2.0
+0,google-cloud-compute,,google_cloud_compute,,Apache 2.0
+0,google-cloud-container,,google_cloud_container,,Apache 2.0
+0,google-cloud-core,,google_cloud_core,,Apache 2.0
+0,google-cloud-datacatalog,,google_cloud_datacatalog,,Apache 2.0
+0,google-cloud-dataflow-client,,google_cloud_dataflow_client,,Apache 2.0
+0,google-cloud-dataform,,google_cloud_dataform,,Apache 2.0
+0,google-cloud-dataplex,,google_cloud_dataplex,,Apache 2.0
+0,google-cloud-dataproc,,google_cloud_dataproc,,Apache 2.0
+0,google-cloud-dataproc-metastore,,google_cloud_dataproc_metastore,,Apache 2.0
+0,google-cloud-dlp,,google_cloud_dlp,,Apache 2.0
+0,google-cloud-firestore,,google_cloud_firestore,,Apache 2.0
+0,google-cloud-kms,,google_cloud_kms,,Apache 2.0
+0,google-cloud-language,,google_cloud_language,,Apache 2.0
+0,google-cloud-logging,,google_cloud_logging,,Apache 2.0
+0,google-cloud-memcache,,google_cloud_memcache,,Apache 2.0
+0,google-cloud-monitoring,,google_cloud_monitoring,,Apache 2.0
+0,google-cloud-orchestration-airflow,,google_cloud_orchestration_airflow,,Apache 2.0
+0,google-cloud-os-login,,google_cloud_os_login,,Apache 2.0
+0,google-cloud-pubsub,,google_cloud_pubsub,,Apache 2.0
+0,google-cloud-redis,,google_cloud_redis,,Apache 2.0
+0,google-cloud-resource-manager,,google_cloud_resource_manager,,Apache 2.0
+0,google-cloud-run,,google_cloud_run,,Apache 2.0
+0,google-cloud-secret-manager,,google_cloud_secret_manager,,Apache 2.0
+0,google-cloud-spanner,,google_cloud_spanner,,Apache 2.0
+0,google-cloud-speech,,google_cloud_speech,,Apache 2.0
+0,google-cloud-storage,,google_cloud_storage,,Apache 2.0
+0,google-cloud-storage-transfer,,google_cloud_storage_transfer,,Apache 2.0
+0,google-cloud-tasks,,google_cloud_tasks,,Apache 2.0
+0,google-cloud-texttospeech,,google_cloud_texttospeech,,Apache 2.0
+0,google-cloud-translate,,google_cloud_translate,,Apache 2.0
+0,google-cloud-videointelligence,,google_cloud_videointelligence,,Apache 2.0
+0,google-cloud-vision,,google_cloud_vision,,Apache 2.0
+0,google-cloud-workflows,,google_cloud_workflows,,Apache 2.0
+0,google-crc32c,google_crc32c,google_crc32c,Apache 2.0,Apache 2.0
+0,google-genai,,google_genai,,Apache-2.0
+0,google-generativeai,,google_generativeai,,Apache 2.0
+0,google-pasta,,google_pasta,,Apache 2.0
+0,google-re2,,google_re2,,BSD License
+0,google-resumable-media,,google_resumable_media,,Apache 2.0
+0,googleapis-common-protos,,googleapis_common_protos,,Apache 2.0
+0,gql,gql,gql,MIT,MIT
+0,gradio,gradio,gradio,Apache-2.0,Apache-2.0
+0,graphene,graphene,graphene,MIT,MIT
+0,graphql-core,,graphql_core,,MIT license
+0,graphql-relay,graphql_relay,graphql_relay,MIT,MIT
+0,graphviz,graphviz,graphviz,MIT,MIT
+0,great-expectations,great_expectations,great_expectations,Apache-2.0,Apache-2.0
+0,greenlet,greenlet,greenlet,MIT AND Python-2.0,MIT AND Python-2.0
+0,gremlinpython,,gremlinpython,,Apache 2
+0,griffe,griffe,griffe,ISC,ISC
+0,grpc-google-iam-v1,,grpc_google_iam_v1,,Apache 2.0
+0,grpc-interceptor,grpc_interceptor,grpc_interceptor,MIT,MIT
+0,grpcio,,grpcio,,Apache License 2.0
+0,grpcio-gcp,,grpcio_gcp,,Apache License 2.0
+0,grpcio-health-checking,,grpcio_health_checking,,Apache License 2.0
+0,grpcio-status,,grpcio_status,,Apache License 2.0
+0,grpcio-tools,,grpcio_tools,,Apache License 2.0
+0,gspread,gspread,gspread, MIT License,MIT License
+0,gunicorn,gunicorn,gunicorn,MIT,MIT
+0,h11,h11,h11,MIT,MIT
+0,h2,h2,h2,The MIT License (MIT),The MIT License (MIT)
+0,h5py,h5py,h5py,BSD-3-Clause,BSD-3-Clause
+0,hatch,hatch,hatch,MIT,MIT
+0,hatchling,hatchling,hatchling,MIT,MIT
+0,hf-xet,hf_xet,hf_xet, Apache Software License,Apache-2.0
+0,hiredis,hiredis,hiredis,MIT,MIT
+0,hishel,hishel,hishel,BSD-3-Clause,BSD-3-Clause
+0,holidays,holidays,holidays,MIT,MIT
+0,hpack,hpack,hpack,The MIT License (MIT),The MIT License (MIT)
+0,html2text,html2text,html2text,GPL-3.0-or-later,GPL-3.0-or-later
+0,html5lib,html5lib,html5lib,MIT License,MIT License
+0,html5validator,html5validator,html5validator,MIT,MIT
+0,httpcore,httpcore,httpcore,BSD-3-Clause,BSD-3-Clause
+0,httplib2,httplib2,httplib2,MIT,MIT
+0,httptools,httptools,httptools,MIT,MIT
+0,httpx,httpx,httpx,BSD-3-Clause,BSD-3-Clause
+0,httpx-sse,httpx_sse,httpx_sse,MIT,MIT
+0,huggingface-hub,huggingface_hub,huggingface_hub,Apache,Apache
+0,humanfriendly,humanfriendly,humanfriendly,MIT,MIT
+0,humanize,humanize,humanize,MIT,MIT
+0,hvac,hvac,hvac,Apache-2.0,Apache-2.0
+0,hydra-core,,hydra_core,,MIT
+0,hyperframe,hyperframe,hyperframe,The MIT License (MIT),The MIT License (MIT)
+0,hyperlink,hyperlink,hyperlink,MIT,MIT
+0,hypothesis,hypothesis,hypothesis,MPL-2.0,MPL-2.0
+0,ibm-cloud-sdk-core,ibm_cloud_sdk_core,ibm_cloud_sdk_core, Apache Software License,Apache Software License
+0,ibmcloudant,ibmcloudant,ibmcloudant, Apache Software License,Apache Software License
+0,id,id,id, Apache Software License,Apache Software License
+0,identify,identify,identify,MIT,MIT
+0,idna,idna,idna, BSD License,BSD License
+0,ijson,ijson,ijson,BSD-3-Clause AND ISC,BSD-3-Clause AND ISC
+0,imageio,imageio,imageio,BSD-2-Clause,BSD-2-Clause
+0,imagesize,imagesize,imagesize,MIT,MIT
+0,imbalanced-learn,,imbalanced_learn,,MIT License
+0,immutabledict,immutabledict,immutabledict,MIT,MIT
+0,importlib-metadata,importlib_metadata,importlib_metadata, Apache Software License,Apache Software License
+0,importlib-resources,importlib_resources,importlib_resources, Apache Software License,Apache Software License
+0,impyla,,impyla,,"Apache License, Version 2.0"
+0,incremental,incremental,incremental, MIT License,MIT License
+0,inflect,inflect,inflect, MIT License,MIT License
+0,inflection,inflection,inflection,MIT,MIT
+0,iniconfig,iniconfig,iniconfig,MIT,MIT
+0,inputimeout,inputimeout,inputimeout,MIT,MIT
+0,installer,installer,installer, MIT License,MIT License
+0,invoke,invoke,invoke,BSD,BSD
+0,ipdb,ipdb,ipdb,BSD,BSD
+0,ipykernel,ipykernel,ipykernel,BSD 3-Clause License,BSD 3-Clause License
+0,ipython,IPython,ipython,BSD-3-Clause,BSD-3-Clause
+0,ipython-genutils,ipython_genutils,ipython_genutils,BSD,BSD
+0,ipython-pygments-lexers,,ipython_pygments_lexers,,BSD License
+0,ipywidgets,ipywidgets,ipywidgets,BSD 3-Clause License,BSD 3-Clause License
+0,iso8601,iso8601,iso8601,MIT,MIT
+0,isodate,isodate,isodate,"Copyright (c) 2021, Hugo van Kemenade and contributors","Copyright (c) 2021, Hugo van Kemenade and contributors"
+0,isoduration,isoduration,isoduration,UNKNOWN,ISC License (ISCL)
+0,isort,isort,isort,MIT,MIT
+0,itsdangerous,itsdangerous,itsdangerous, BSD License,BSD License
+0,jaraco.classes,,jaraco.classes,,MIT License
+0,jaraco.collections,,jaraco.collections,,MIT License
+0,jaraco.context,,jaraco.context,,MIT License
+0,jaraco.functools,,jaraco.functools,,MIT License
+0,jaraco.text,,jaraco.text,,MIT License
+0,jax,jax,jax,Apache-2.0,Apache-2.0
+0,jaxlib,jaxlib,jaxlib,Apache-2.0,Apache-2.0
+0,jaydebeapi,jaydebeapi,jaydebeapi,GNU LGPL,GNU LGPL
+0,jedi,jedi,jedi,MIT,MIT
+0,jeepney,jeepney,jeepney,MIT,MIT
+0,jellyfish,jellyfish,jellyfish, MIT License,MIT
+0,jinja2,jinja2,jinja2, BSD License,BSD License
+0,jira,jira,jira, BSD License,BSD License
+0,jiter,jiter,jiter, MIT License,MIT
+0,jmespath,jmespath,jmespath,MIT,MIT
+0,joblib,joblib,joblib,BSD 3-Clause,BSD 3-Clause
+0,jpype1,,jpype1,,License :: OSI Approved :: Apache Software License
+0,json5,json5,json5,Files: Everything except for the benchmarks/*.json files.,Files: Everything except for the benchmarks/*.json files.
+0,jsondiff,jsondiff,jsondiff,The MIT License (MIT),The MIT License (MIT)
+0,jsonpatch,,jsonpatch,,Modified BSD License
+0,jsonpath-ng,jsonpath_ng,jsonpath_ng,Apache 2.0,Apache 2.0
+0,jsonpickle,jsonpickle,jsonpickle,BSD-3-Clause,BSD-3-Clause
+0,jsonpointer,,jsonpointer,,Modified BSD License
+0,jsonref,,jsonref,,MIT
+0,jsonschema,jsonschema,jsonschema,MIT,MIT
+0,jsonschema-path,jsonschema_path,jsonschema_path,Apache-2.0,Apache-2.0
+0,jsonschema-specifications,jsonschema_specifications,jsonschema_specifications,MIT,MIT
+0,junit-xml,junit_xml,junit_xml,MIT,MIT
+0,junitparser,junitparser,junitparser,Apache-2.0,Apache-2.0
+0,jupyter,,jupyter,,BSD
+0,jupyter-client,jupyter_client,jupyter_client,BSD 3-Clause License,BSD 3-Clause License
+0,jupyter-console,jupyter_console,jupyter_console,BSD 3-Clause License,BSD 3-Clause License
+0,jupyter-core,jupyter_core,jupyter_core,BSD-3-Clause,BSD-3-Clause
+0,jupyter-events,jupyter_events,jupyter_events,BSD 3-Clause License,BSD 3-Clause License
+0,jupyter-lsp,jupyter_lsp,jupyter_lsp,BSD-3-Clause,BSD-3-Clause
+0,jupyter-server,jupyter_server,jupyter_server,BSD 3-Clause License,BSD 3-Clause License
+0,jupyter-server-terminals,jupyter_server_terminals,jupyter_server_terminals,BSD 3-Clause License,BSD 3-Clause License
+0,jupyterlab,jupyterlab,jupyterlab,Copyright (c) 2015-2025 Project Jupyter Contributors,Copyright (c) 2015-2025 Project Jupyter Contributors
+0,jupyterlab-pygments,jupyterlab_pygments,jupyterlab_pygments,Copyright (c) 2015 Project Jupyter Contributors,Copyright (c) 2015 Project Jupyter Contributors
+0,jupyterlab-server,jupyterlab_server,jupyterlab_server,"Copyright (c) 2015-2017, Project Jupyter Contributors","Copyright (c) 2015-2017, Project Jupyter Contributors"
+0,jupyterlab-widgets,jupyterlab_widgets,jupyterlab_widgets,Copyright (c) 2015 Project Jupyter Contributors,Copyright (c) 2015 Project Jupyter Contributors
+0,jwcrypto,jwcrypto,jwcrypto,LGPLv3+,LGPLv3+
+0,kafka-python,,kafka_python,,Apache Software License
+0,kazoo,kazoo,kazoo,Apache 2.0,Apache 2.0
+0,keras,keras,keras,Apache License 2.0,Apache License 2.0
+0,keyring,keyring,keyring, MIT License,MIT License
+0,keyrings.google-artifactregistry-auth,,keyrings.google_artifactregistry_auth,,Apache Software License
+0,kfp,kfp,kfp, Apache Software License,Apache Software License
+0,kiwisolver,kiwisolver,kiwisolver,=========================,=========================
+0,kombu,kombu,kombu,BSD-3-Clause,BSD-3-Clause
+0,kubernetes,kubernetes,kubernetes,Apache License Version 2.0,Apache License Version 2.0
+0,kubernetes-asyncio,kubernetes_asyncio,kubernetes_asyncio,Apache License Version 2.0,Apache License Version 2.0
+0,langchain,langchain,langchain,MIT,MIT
+0,langchain-community,langchain_community,langchain_community,MIT,MIT
+0,langchain-core,langchain_core,langchain_core,MIT,MIT
+0,langchain-google-vertexai,langchain_google_vertexai,langchain_google_vertexai,MIT,MIT
+0,langchain-openai,langchain_openai,langchain_openai,MIT,MIT
+0,langchain-text-splitters,langchain_text_splitters,langchain_text_splitters,MIT,MIT
+0,langcodes,langcodes,langcodes, MIT License,MIT License
+0,langdetect,langdetect,langdetect,MIT,MIT
+0,langgraph,,langgraph,,MIT
+0,langgraph-checkpoint,,langgraph_checkpoint,,MIT
+0,langgraph-prebuilt,,langgraph_prebuilt,,MIT
+0,langgraph-sdk,langgraph_sdk,langgraph_sdk,MIT,MIT
+0,langsmith,langsmith,langsmith,MIT,MIT
+0,language-data,language_data,language_data, MIT License,MIT License
+0,lark,lark,lark,MIT,MIT
+0,lazy-loader,lazy_loader,lazy_loader,BSD 3-Clause License,BSD 3-Clause License
+0,lazy-object-proxy,lazy_object_proxy,lazy_object_proxy,BSD-2-Clause,BSD-2-Clause
+0,leather,leather,leather,MIT,MIT
+0,levenshtein,Levenshtein,levenshtein,GPL-2.0-or-later,GPL-2.0-or-later
+0,libclang,,libclang,,Apache License 2.0
+0,libcst,libcst,libcst,All contributions towards LibCST are MIT licensed.,All contributions towards LibCST are MIT licensed.
+0,license-scanner,license_scanner,license_scanner, MIT License,MIT License
+0,lightgbm,lightgbm,lightgbm,The MIT License (MIT),The MIT License (MIT)
+0,lightning-utilities,lightning_utilities,lightning_utilities,Apache-2.0,Apache-2.0
+0,limits,limits,limits,MIT,MIT
+0,linkify-it-py,,linkify_it_py,,MIT
+0,litellm,litellm,litellm,MIT,MIT
+0,llama-cloud-services,llama_cloud_services,llama_cloud_services,MIT,MIT
+0,llama-index-core,,llama_index_core,,MIT
+0,llama-parse,llama_parse,llama_parse,MIT,MIT
+0,llvmlite,llvmlite,llvmlite,BSD,BSD
+0,locket,locket,locket,BSD-2-Clause,BSD-2-Clause
+0,lockfile,lockfile,lockfile,UNKNOWN,MIT License
+0,locust,locust,locust,MIT,MIT
+0,loguru,loguru,loguru, MIT License,MIT License
+0,looker-sdk,looker_sdk,looker_sdk,MIT,MIT
+0,lxml,lxml,lxml,BSD-3-Clause,BSD-3-Clause
+0,lz4,lz4,lz4, BSD License,BSD License
+0,makefun,makefun,makefun,BSD 3-Clause,BSD 3-Clause
+0,mako,mako,mako,MIT,MIT
+0,marisa-trie,,marisa_trie,,MIT AND (BSD-2-Clause OR LGPL-2.1-or-later)
+0,markdown,markdown,markdown,BSD-3-Clause,BSD-3-Clause
+0,markdown-it-py,,markdown_it_py,,MIT License
+0,markdownify,markdownify,markdownify, MIT License,MIT License
+0,markupsafe,markupsafe,markupsafe,BSD-3-Clause,BSD-3-Clause
+0,marshmallow,marshmallow,marshmallow, MIT License,MIT License
+0,marshmallow-sqlalchemy,marshmallow_sqlalchemy,marshmallow_sqlalchemy, MIT License,MIT License
+0,mashumaro,mashumaro,mashumaro,Apache-2.0,Apache-2.0
+0,matplotlib,matplotlib,matplotlib,License agreement for matplotlib versions 1.3.0 and later,License agreement for matplotlib versions 1.3.0 and later
+0,matplotlib-inline,matplotlib_inline,matplotlib_inline,BSD 3-Clause License,BSD 3-Clause License
+0,maxminddb,maxminddb,maxminddb,Apache-2.0,Apache-2.0
+0,mccabe,,mccabe,,Expat license
+0,mcp,mcp,mcp,MIT,MIT
+0,mcp-server-fetch,mcp_server_fetch,mcp_server_fetch,MIT,MIT
+0,mdit-py-plugins,mdit_py_plugins,mdit_py_plugins, MIT License,MIT License
+0,mdurl,mdurl,mdurl, MIT License,MIT License
+0,mergedeep,mergedeep,mergedeep,UNKNOWN,MIT License
+0,meson,,meson,,"Apache License, Version 2.0"
+0,methodtools,,methodtools,,BSD 2-Clause License
+0,microsoft-kiota-abstractions,,microsoft_kiota_abstractions,,MIT
+0,microsoft-kiota-authentication-azure,,microsoft_kiota_authentication_azure,,MIT
+0,microsoft-kiota-http,,microsoft_kiota_http,,MIT
+0,microsoft-kiota-serialization-json,,microsoft_kiota_serialization_json,,MIT
+0,microsoft-kiota-serialization-text,,microsoft_kiota_serialization_text,,MIT
+0,mistune,mistune,mistune,BSD-3-Clause,BSD-3-Clause
+0,mkdocs,mkdocs,mkdocs,BSD-2-Clause,BSD-2-Clause
+0,mkdocs-get-deps,mkdocs_get_deps,mkdocs_get_deps,MIT,MIT
+0,mkdocs-material,,mkdocs_material,,MIT
+0,mkdocs-material-extensions,,mkdocs_material_extensions,,MIT
+0,mkdocstrings-python,,mkdocstrings_python,,ISC
+0,ml-dtypes,ml_dtypes,ml_dtypes,Apache-2.0,Apache-2.0
+0,mlflow,mlflow,mlflow,"Copyright 2018 Databricks, Inc.  All rights reserved.","Copyright 2018 Databricks, Inc.  All rights reserved."
+0,mlflow-skinny,,mlflow_skinny,,"Copyright 2018 Databricks, Inc.  All rights reserved."
+0,mmh3,,mmh3,,MIT License
+0,mock,mock,mock, BSD License,BSD License
+0,monotonic,,monotonic,,Apache
+0,more-itertools,more_itertools,more_itertools,MIT,MIT
+0,moto,moto,moto,Apache-2.0,Apache-2.0
+0,motor,motor,motor,Apache License,Apache License
+0,mpmath,mpmath,mpmath,BSD,BSD
+0,msal,msal,msal,MIT,MIT
+0,msal-extensions,msal_extensions,msal_extensions,MIT License,MIT License
+0,msgpack,msgpack,msgpack,Apache 2.0,Apache 2.0
+0,msgraph-core,msgraph_core,msgraph_core,MIT,MIT
+0,msgspec,msgspec,msgspec,BSD,BSD
+0,msrest,msrest,msrest,MIT License,MIT License
+0,msrestazure,msrestazure,msrestazure,MIT License,MIT License
+0,multidict,multidict,multidict,Apache License 2.0,Apache License 2.0
+0,multiprocess,multiprocess,multiprocess,BSD-3-Clause,BSD-3-Clause
+0,murmurhash,murmurhash,murmurhash,MIT,MIT
+0,mypy,mypy,mypy,MIT,MIT
+0,mypy-boto3-rds,mypy_boto3_rds,mypy_boto3_rds,MIT License,MIT License
+0,mypy-boto3-s3,mypy_boto3_s3,mypy_boto3_s3,MIT License,MIT License
+0,mypy-boto3-sqs,mypy_boto3_sqs,mypy_boto3_sqs,MIT License,MIT License
+0,mypy-extensions,,mypy_extensions,,MIT
+0,mysql-connector-python,,mysql_connector_python,,GNU GPLv2 (with FOSS License Exception)
+0,narwhals,narwhals,narwhals, MIT License,MIT License
+0,natsort,natsort,natsort,MIT,MIT
+0,nbclient,nbclient,nbclient,BSD 3-Clause License,BSD 3-Clause License
+0,nbconvert,nbconvert,nbconvert,BSD 3-Clause License,BSD 3-Clause License
+0,nbformat,nbformat,nbformat,BSD 3-Clause License,BSD 3-Clause License
+0,nest-asyncio,,nest_asyncio,,BSD
+0,netaddr,netaddr,netaddr,BSD License,BSD License
+0,networkx,networkx,networkx, BSD License,BSD License
+0,nh3,nh3,nh3,MIT,MIT
+0,ninja,ninja,ninja, Apache Software License,BSD License
+0,nltk,nltk,nltk,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,nodeenv,,nodeenv,,BSD
+0,nose,nose,nose,GNU LGPL,GNU LGPL
+0,notebook,notebook,notebook,BSD 3-Clause License,BSD 3-Clause License
+0,notebook-shim,notebook_shim,notebook_shim,BSD 3-Clause License,BSD 3-Clause License
+0,numba,numba,numba,BSD,BSD
+0,numexpr,numexpr,numexpr,MIT,MIT
+0,numpy,numpy,numpy,"Copyright (c) 2005-2025, NumPy Developers.","Copyright (c) 2005-2025, NumPy Developers."
+0,nvidia-cublas-cu12,,nvidia_cublas_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-cuda-cupti-cu12,,nvidia_cuda_cupti_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-cuda-nvrtc-cu12,,nvidia_cuda_nvrtc_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-cuda-runtime-cu12,,nvidia_cuda_runtime_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-cudnn-cu12,,nvidia_cudnn_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-cufft-cu12,,nvidia_cufft_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-cufile-cu12,,nvidia_cufile_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-curand-cu12,,nvidia_curand_cu12,,NVIDIA Proprietary Software
+0,nvidia-cusolver-cu12,,nvidia_cusolver_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-cusparse-cu12,,nvidia_cusparse_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-cusparselt-cu12,,nvidia_cusparselt_cu12,,NVIDIA Proprietary Software
+0,nvidia-nccl-cu12,,nvidia_nccl_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-nvjitlink-cu12,,nvidia_nvjitlink_cu12,,LicenseRef-NVIDIA-Proprietary
+0,nvidia-nvtx-cu12,,nvidia_nvtx_cu12,,Apache 2.0
+0,oauth2client,oauth2client,oauth2client,Apache 2.0,Apache 2.0
+0,oauthlib,oauthlib,oauthlib,BSD-3-Clause,BSD-3-Clause
+0,oci,oci,oci,Universal Permissive License 1.0 or Apache License 2.0,Universal Permissive License 1.0 or Apache License 2.0
+0,office365-rest-python-client,,office365_rest_python_client,,MIT
+0,omegaconf,omegaconf,omegaconf, BSD License,BSD License
+0,onnx,onnx,onnx,Apache License v2.0,Apache License v2.0
+0,onnxruntime,onnxruntime,onnxruntime,MIT License,MIT License
+0,openai,openai,openai,Apache-2.0,Apache-2.0
+0,openapi-pydantic,openapi_pydantic,openapi_pydantic,MIT,MIT
+0,openapi-schema-validator,openapi_schema_validator,openapi_schema_validator,BSD-3-Clause,BSD-3-Clause
+0,openapi-spec-validator,openapi_spec_validator,openapi_spec_validator,Apache-2.0,Apache-2.0
+0,opencensus,opencensus,opencensus,Apache-2.0,Apache-2.0
+0,opencensus-context,,opencensus_context,,Apache-2.0
+0,opencensus-ext-azure,,opencensus_ext_azure,,Apache-2.0
+0,opencv-python,,opencv_python,,Apache 2.0
+0,opencv-python-headless,,opencv_python_headless,,Apache 2.0
+0,openlineage-integration-common,,openlineage_integration_common,,UNKNOWN
+0,openlineage-python,,openlineage_python,,Apache Software License
+0,openpyxl,openpyxl,openpyxl,MIT,MIT
+0,opensearch-py,,opensearch_py,,Apache-2.0
+0,opentelemetry-api,,opentelemetry_api,,Apache-2.0
+0,opentelemetry-distro,,opentelemetry_distro,,Apache-2.0
+0,opentelemetry-exporter-otlp,,opentelemetry_exporter_otlp,,Apache-2.0
+0,opentelemetry-exporter-otlp-proto-common,,opentelemetry_exporter_otlp_proto_common,,Apache-2.0
+0,opentelemetry-exporter-otlp-proto-grpc,,opentelemetry_exporter_otlp_proto_grpc,,Apache-2.0
+0,opentelemetry-exporter-otlp-proto-http,,opentelemetry_exporter_otlp_proto_http,,Apache-2.0
+0,opentelemetry-exporter-prometheus,,opentelemetry_exporter_prometheus,,Apache-2.0
+0,opentelemetry-instrumentation,,opentelemetry_instrumentation,,Apache-2.0
+0,opentelemetry-instrumentation-asgi,,opentelemetry_instrumentation_asgi,,Apache-2.0
+0,opentelemetry-instrumentation-dbapi,,opentelemetry_instrumentation_dbapi,,Apache-2.0
+0,opentelemetry-instrumentation-django,,opentelemetry_instrumentation_django,,Apache-2.0
+0,opentelemetry-instrumentation-fastapi,,opentelemetry_instrumentation_fastapi,,Apache-2.0
+0,opentelemetry-instrumentation-flask,,opentelemetry_instrumentation_flask,,Apache-2.0
+0,opentelemetry-instrumentation-logging,,opentelemetry_instrumentation_logging,,Apache-2.0
+0,opentelemetry-instrumentation-requests,,opentelemetry_instrumentation_requests,,Apache-2.0
+0,opentelemetry-instrumentation-threading,,opentelemetry_instrumentation_threading,,Apache-2.0
+0,opentelemetry-instrumentation-urllib,,opentelemetry_instrumentation_urllib,,Apache-2.0
+0,opentelemetry-instrumentation-urllib3,,opentelemetry_instrumentation_urllib3,,Apache-2.0
+0,opentelemetry-instrumentation-wsgi,,opentelemetry_instrumentation_wsgi,,Apache-2.0
+0,opentelemetry-proto,,opentelemetry_proto,,Apache-2.0
+0,opentelemetry-sdk,,opentelemetry_sdk,,Apache-2.0
+0,opentelemetry-semantic-conventions,,opentelemetry_semantic_conventions,,Apache-2.0
+0,opentelemetry-util-http,,opentelemetry_util_http,,Apache-2.0
+0,opt-einsum,opt_einsum,opt_einsum,MIT,MIT
+0,optree,optree,optree,Apache-2.0,Apache-2.0
+0,oracledb,oracledb,oracledb,UPL-1.0 OR Apache-2.0,UPL-1.0 OR Apache-2.0
+0,ordered-set,ordered_set,ordered_set, MIT License,MIT License
+0,orderly-set,orderly_set,orderly_set, MIT License,MIT License
+0,orjson,orjson,orjson, Apache Software License,Apache-2.0 OR MIT
+0,ormsgpack,ormsgpack,ormsgpack, Apache Software License,Apache-2.0 OR MIT
+0,oscrypto,oscrypto,oscrypto,MIT,MIT
+0,oss2,oss2,oss2, MIT License,MIT License
+0,outcome,outcome,outcome,MIT OR Apache-2.0,Your choice of MIT or Apache License 2.0
+0,overrides,overrides,overrides,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,packaging,packaging,packaging, Apache Software License,BSD License
+0,pandas,pandas,pandas,BSD 3-Clause License,BSD 3-Clause License
+0,pandas-gbq,pandas_gbq,pandas_gbq,BSD-3-Clause,BSD-3-Clause
+0,pandas-stubs,,pandas_stubs,,BSD-3-Clause
+0,pandocfilters,,pandocfilters,,BSD-3-Clause
+0,parameterized,parameterized,parameterized,FreeBSD,FreeBSD
+0,paramiko,paramiko,paramiko,LGPL-2.1,LGPL-2.1
+0,parse,,parse,,Copyright (c) 2012-2019 Richard Jones <richard@python.org>
+0,parsedatetime,parsedatetime,parsedatetime,Apache License 2.0,Apache License 2.0
+0,parso,parso,parso,MIT,MIT
+0,partd,partd,partd,BSD,BSD
+0,passlib,passlib,passlib,BSD,BSD
+0,patchelf,,patchelf,,GPL-3.0-or-later
+0,pathable,pathable,pathable,Apache-2.0,Apache-2.0
+0,pathos,pathos,pathos,BSD-3-Clause,BSD-3-Clause
+0,pathspec,pathspec,pathspec, Mozilla Public License 2.0 (MPL 2.0),Mozilla Public License 2.0 (MPL 2.0)
+0,patsy,patsy,patsy,2-clause BSD,2-clause BSD
+0,pbr,pbr,pbr,Apache-2.0,Apache-2.0
+0,pbs-installer,pbs_installer,pbs_installer,MIT,MIT
+0,pdfminer-six,,pdfminer_six,,MIT
+0,pdm,pdm,pdm,MIT,MIT
+0,peewee,,peewee,,MIT License
+0,pendulum,pendulum,pendulum, MIT License,MIT License
+0,pexpect,pexpect,pexpect,ISC license,ISC license
+0,pg8000,pg8000,pg8000,BSD 3-Clause License,BSD 3-Clause License
+0,pgvector,pgvector,pgvector,MIT,MIT
+0,phonenumbers,phonenumbers,phonenumbers,Apache License 2.0,Apache License 2.0
+0,pickleshare,,pickleshare,,MIT
+0,pika,pika,pika,BSD-3-Clause,BSD-3-Clause
+0,pillow,,pillow,,MIT-CMU
+0,pinecone,pinecone,pinecone,Apache-2.0,Apache-2.0
+0,pinotdb,pinotdb,pinotdb,MIT,MIT
+0,pip,pip,pip,MIT,MIT
+0,pip-tools,,pip_tools,,BSD
+0,pipenv,pipenv,pipenv,MIT License (MIT),MIT License (MIT)
+0,pipx,pipx,pipx,MIT,MIT
+0,pkginfo,pkginfo,pkginfo,MIT,MIT
+0,pkgutil-resolve-name,,pkgutil_resolve_name,,MIT License
+0,platformdirs,platformdirs,platformdirs,MIT,MIT
+0,playwright,playwright,playwright,Apache-2.0,Apache-2.0
+0,plotly,plotly,plotly,MIT License,MIT License
+0,pluggy,pluggy,pluggy,MIT,MIT
+0,ply,ply,ply,BSD,BSD
+0,poetry,,poetry,,MIT
+0,poetry-core,,poetry_core,,MIT
+0,poetry-plugin-export,poetry_plugin_export,poetry_plugin_export,MIT,MIT
+0,polars,polars,polars,Copyright (c) 2025 Ritchie Vink,Copyright (c) 2025 Ritchie Vink
+0,portalocker,portalocker,portalocker,BSD-3-Clause,BSD-3-Clause
+0,posthog,posthog,posthog,MIT,MIT
+0,pox,pox,pox,BSD-3-Clause,BSD-3-Clause
+0,ppft,ppft,ppft,BSD-3-Clause,BSD-3-Clause
+0,pre-commit,pre_commit,pre_commit,MIT,MIT
+0,preshed,preshed,preshed,MIT,MIT
+0,prettytable,prettytable,prettytable,BSD-3-Clause,BSD-3-Clause
+0,prison,prison,prison,MIT,MIT
+0,progressbar2,,progressbar2,,BSD-3-Clause
+0,prometheus-client,prometheus_client,prometheus_client,Apache-2.0 AND BSD-2-Clause,Apache-2.0 AND BSD-2-Clause
+0,prompt-toolkit,prompt_toolkit,prompt_toolkit, BSD License,BSD License
+0,propcache,propcache,propcache,Apache-2.0,Apache-2.0
+0,protego,protego,protego,BSD-3-Clause,BSD-3-Clause
+0,proto-plus,,proto_plus,,Apache 2.0
+0,protobuf,,protobuf,,3-Clause BSD License
+0,protobuf3-to-dict,,protobuf3_to_dict,,Public Domain
+0,psutil,psutil,psutil,BSD-3-Clause,BSD-3-Clause
+0,ptyprocess,ptyprocess,ptyprocess, ISC License (ISCL),ISC License (ISCL)
+0,pure-eval,pure_eval,pure_eval,MIT,MIT
+0,pure-sasl,,pure_sasl,,MIT
+0,py,py,py,MIT license,MIT license
+0,py-cpuinfo,,py_cpuinfo,,MIT
+0,py-partiql-parser,py_partiql_parser,py_partiql_parser,MIT,MIT
+0,py-spy,,py_spy,,MIT License
+0,py4j,py4j,py4j,BSD License,BSD License
+0,pyarrow,pyarrow,pyarrow,Apache Software License,Apache Software License
+0,pyarrow-hotfix,pyarrow_hotfix,pyarrow_hotfix,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,pyasn1,pyasn1,pyasn1,BSD-2-Clause,BSD-2-Clause
+0,pyasn1-modules,pyasn1_modules,pyasn1_modules,BSD,BSD
+0,pyathena,pyathena,pyathena,Copyright 2017 laughingman7743,Copyright 2017 laughingman7743
+0,pybind11,pybind11,pybind11,BSD-3-Clause,BSD-3-Clause
+0,pycares,pycares,pycares,MIT,MIT
+0,pycodestyle,,pycodestyle,,MIT
+0,pycountry,pycountry,pycountry,LGPL-2.1-only,LGPL-2.1-only
+0,pycparser,pycparser,pycparser,BSD-3-Clause,BSD-3-Clause
+0,pycrypto,,pycrypto,,Public Domain
+0,pycryptodome,,pycryptodome,,"BSD, Public Domain"
+0,pycryptodomex,,pycryptodomex,,"BSD, Public Domain"
+0,pydantic,pydantic,pydantic,MIT,MIT
+0,pydantic-ai-slim,,pydantic_ai_slim,,MIT
+0,pydantic-core,pydantic_core,pydantic_core,MIT,MIT
+0,pydantic-extra-types,pydantic_extra_types,pydantic_extra_types,MIT,MIT
+0,pydantic-settings,pydantic_settings,pydantic_settings,MIT,MIT
+0,pydash,pydash,pydash,MIT License,MIT License
+0,pydata-google-auth,pydata_google_auth,pydata_google_auth,BSD License,BSD License
+0,pydeck,pydeck,pydeck,Apache License 2.0,Apache License 2.0
+0,pydeequ,pydeequ,pydeequ,Apache-2.0,Apache-2.0
+0,pydot,pydot,pydot,MIT,MIT
+0,pydub,pydub,pydub,MIT,MIT
+0,pydyf,pydyf,pydyf, BSD License,BSD License
+0,pyee,pyee,pyee,MIT,MIT
+0,pyelftools,,pyelftools,,Public domain
+0,pyflakes,pyflakes,pyflakes,MIT,MIT
+0,pygithub,,pygithub,,GNU Library or Lesser General Public License (LGPL)
+0,pygments,pygments,pygments,BSD-2-Clause,BSD-2-Clause
+0,pyhive,pyhive,pyhive,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,pyiceberg,pyiceberg,pyiceberg,Apache-2.0,Apache-2.0
+0,pyjwt,,pyjwt,,MIT
+0,pylint,pylint,pylint,GPL-2.0-or-later,GPL-2.0-or-later
+0,pymdown-extensions,,pymdown_extensions,,MIT
+0,pymilvus,pymilvus,pymilvus, Apache Software License,Apache Software License
+0,pymongo,pymongo,pymongo,Apache License,Apache License
+0,pymssql,pymssql,pymssql,LGPL-2.1-or-later,LGPL-2.1-or-later
+0,pymupdf,pymupdf,pymupdf,Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License,Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License
+0,pymysql,pymysql,pymysql,MIT,MIT
+0,pynacl,,pynacl,,Apache-2.0
+0,pyodbc,,pyodbc,,MIT-0 License
+0,pyopenssl,,pyopenssl,,"Apache License, Version 2.0"
+0,pyotp,pyotp,pyotp,MIT License,MIT License
+0,pyparsing,pyparsing,pyparsing,MIT,MIT
+0,pypdf,pypdf,pypdf,BSD-3-Clause,BSD-3-Clause
+0,pypdf2,PyPDF2,pypdf2, BSD License,BSD License
+0,pypdfium2,pypdfium2,pypdfium2,(Apache-2.0 OR BSD-3-Clause) AND LicenseRef-PdfiumThirdParty,(Apache-2.0 OR BSD-3-Clause) AND LicenseRef-PdfiumThirdParty
+0,pyperclip,pyperclip,pyperclip,BSD,BSD
+0,pyphen,pyphen,pyphen, GNU General Public License v2 or later (GPLv2+),Mozilla Public License 1.1 (MPL 1.1)
+0,pyproj,pyproj,pyproj,MIT,MIT
+0,pyproject-api,pyproject_api,pyproject_api,MIT,MIT
+0,pyproject-hooks,pyproject_hooks,pyproject_hooks, MIT License,MIT License
+0,pyright,pyright,pyright,MIT,MIT
+0,pyroaring,,pyroaring,,MIT
+0,pyrsistent,pyrsistent,pyrsistent,MIT,MIT
+0,pyserial,,pyserial,,BSD
+0,pysftp,pysftp,pysftp,BSD,BSD
+0,pysocks,,pysocks,,BSD
+0,pyspark,pyspark,pyspark,http://www.apache.org/licenses/LICENSE-2.0,http://www.apache.org/licenses/LICENSE-2.0
+0,pyspnego,,pyspnego,,MIT
+0,pytest,pytest,pytest,MIT,MIT
+0,pytest-asyncio,pytest_asyncio,pytest_asyncio,Apache-2.0,Apache-2.0
+0,pytest-cov,pytest_cov,pytest_cov,MIT,MIT
+0,pytest-django,pytest_django,pytest_django,pytest-django is released under the BSD (3-clause) license,pytest-django is released under the BSD (3-clause) license
+0,pytest-env,pytest_env,pytest_env,MIT License,MIT License
+0,pytest-html,pytest_html,pytest_html,MPL-2.0,MPL-2.0
+0,pytest-json-report,,pytest_json_report,,MIT
+0,pytest-metadata,pytest_metadata,pytest_metadata,MPL-2.0,MPL-2.0
+0,pytest-mock,pytest_mock,pytest_mock,MIT,MIT
+0,pytest-random-order,,pytest_random_order,,MIT
+0,pytest-rerunfailures,,pytest_rerunfailures,,MPL-2.0
+0,pytest-runner,,pytest_runner,,MIT License
+0,pytest-split,pytest_split,pytest_split,MIT,MIT
+0,pytest-timeout,,pytest_timeout,,MIT
+0,pytest-xdist,,pytest_xdist,,MIT
+0,python-daemon,,python_daemon,,Copying this work
+0,python-dateutil,,python_dateutil,,Dual License
+0,python-docx,,python_docx,,MIT
+0,python-dotenv,,python_dotenv,,BSD-3-Clause
+0,python-engineio,,python_engineio,,MIT
+0,python-gitlab,,python_gitlab,,LGPL-3.0-or-later
+0,python-gnupg,,python_gnupg,,BSD
+0,python-http-client,python_http_client,python_http_client,MIT,MIT
+0,python-jose,,python_jose,,MIT
+0,python-json-logger,,python_json_logger,,BSD-2-Clause License
+0,python-levenshtein,,python_levenshtein,,GPL-2.0-or-later
+0,python-magic,,python_magic,,MIT
+0,python-multipart,python_multipart,python_multipart,Apache-2.0,Apache-2.0
+0,python-pptx,,python_pptx,,MIT
+0,python-slugify,,python_slugify,,MIT
+0,python-socketio,,python_socketio,,MIT
+0,python-telegram-bot,,python_telegram_bot,,LGPL-3.0-only
+0,python-utils,python_utils,python_utils,BSD,BSD
+0,pytimeparse,pytimeparse,pytimeparse,License :: OSI Approved :: MIT License,License :: OSI Approved :: MIT License
+0,pytokens,pytokens,pytokens,MIT,MIT
+0,pytorch-lightning,pytorch_lightning,pytorch_lightning,Apache-2.0,Apache-2.0
+0,pytz,pytz,pytz,MIT,MIT
+0,pytzdata,pytzdata,pytzdata,MIT,MIT
+0,pywavelets,,pywavelets,,MIT AND BSD-3-Clause
+0,pywin32-ctypes,,pywin32_ctypes,,BSD-3-Clause
+0,pyyaml,,pyyaml,,MIT
+0,pyyaml-env-tag,,pyyaml_env_tag,,MIT
+0,pyzmq,,pyzmq,,BSD 3-Clause License
+0,qdrant-client,qdrant_client,qdrant_client,Apache-2.0,Apache-2.0
+0,qrcode,qrcode,qrcode,BSD,BSD
+0,questionary,questionary,questionary,MIT,MIT
+0,rapidfuzz,rapidfuzz,rapidfuzz,MIT,MIT
+0,ratelimit,ratelimit,ratelimit,MIT,MIT
+0,ray,ray,ray,Apache 2.0,Apache 2.0
+0,readabilipy,readabilipy,readabilipy,MIT,"MIT License, see the `LICENSE` file."
+0,readchar,readchar,readchar,MIT Licence,MIT Licence
+0,readme-renderer,readme_renderer,readme_renderer,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,redis,redis,redis,MIT,MIT
+0,redshift-connector,redshift_connector,redshift_connector,Apache License 2.0,Apache License 2.0
+0,referencing,referencing,referencing,MIT,MIT
+0,regex,regex,regex,Apache-2.0 AND CNRI-Python,Apache-2.0 AND CNRI-Python
+0,reportlab,reportlab,reportlab,"BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc.","BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc."
+0,requests,requests,requests,Apache-2.0,Apache-2.0
+0,requests-aws4auth,requests_aws4auth,requests_aws4auth,MIT License,MIT License
+0,requests-file,,requests_file,,Apache 2.0
+0,requests-mock,requests_mock,requests_mock,Apache-2,Apache-2
+0,requests-ntlm,requests_ntlm,requests_ntlm,ISC,ISC
+0,requests-oauthlib,requests_oauthlib,requests_oauthlib,ISC,ISC
+0,requests-toolbelt,requests_toolbelt,requests_toolbelt,Apache 2.0,Apache 2.0
+0,resolvelib,resolvelib,resolvelib,ISC License,ISC License
+0,responses,responses,responses,Apache 2.0,Apache 2.0
+0,retry,retry,retry,Apache License 2.0,Apache License 2.0
+0,retrying,,retrying,,Apache-2.0
+0,rfc3339-validator,,rfc3339_validator,,MIT license
+0,rfc3986,rfc3986,rfc3986,Apache 2.0,Apache 2.0
+0,rfc3986-validator,,rfc3986_validator,,MIT license
+0,rfc3987-syntax,rfc3987_syntax,rfc3987_syntax,MIT,MIT
+0,rich,rich,rich,MIT,MIT
+0,rich-argparse,rich_argparse,rich_argparse,MIT,MIT
+0,rich-click,rich_click,rich_click,MIT License,MIT License
+0,rich-toolkit,rich_toolkit,rich_toolkit,MIT,MIT
+0,rignore,rignore,rignore,MIT,MIT
+0,rpds-py,,rpds_py,,MIT
+0,rsa,rsa,rsa,Apache-2.0,Apache-2.0
+0,ruamel.yaml,,ruamel.yaml,,MIT license
+0,ruamel.yaml.clib,,ruamel.yaml.clib,,MIT
+0,ruff,ruff,ruff, MIT License,MIT License
+0,s3fs,s3fs,s3fs,BSD,BSD
+0,s3transfer,s3transfer,s3transfer,Apache License 2.0,Apache License 2.0
+0,safetensors,safetensors,safetensors, Apache Software License,Apache Software License
+0,sagemaker,sagemaker,sagemaker, Apache Software License,Apache Software License
+0,sagemaker-core,sagemaker_core,sagemaker_core, Apache Software License,Apache Software License
+0,schema,,schema,,MIT
+0,scikit-image,,scikit_image,,Files: *
+0,scikit-learn,,scikit_learn,,BSD-3-Clause
+0,scipy,scipy,scipy,"Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers.","Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers."
+0,scp,,scp,,LGPL-2.1-or-later
+0,scramp,scramp,scramp,MIT No Attribution,MIT No Attribution
+0,seaborn,seaborn,seaborn, BSD License,BSD License
+0,secretstorage,secretstorage,secretstorage,BSD-3-Clause,BSD-3-Clause
+0,segment-analytics-python,,segment_analytics_python,,MIT License
+0,selenium,selenium,selenium,Apache-2.0,Apache-2.0
+0,semantic-version,semantic_version,semantic_version,BSD,BSD
+0,semgrep,semgrep,semgrep,LGPL-2.1-or-later,LGPL-2.1-or-later
+0,semver,semver,semver,"Copyright (c) 2013, Konstantine Rybnikov","Copyright (c) 2013, Konstantine Rybnikov"
+0,send2trash,send2trash,send2trash,BSD License,BSD License
+0,sendgrid,sendgrid,sendgrid,MIT,MIT
+0,sentence-transformers,sentence_transformers,sentence_transformers,Apache 2.0,Apache 2.0
+0,sentencepiece,sentencepiece,sentencepiece,,UNKNOWN
+0,sentry-sdk,sentry_sdk,sentry_sdk,MIT,MIT
+0,setproctitle,setproctitle,setproctitle,BSD-3-Clause,BSD-3-Clause
+0,setuptools,setuptools,setuptools,MIT,MIT
+0,setuptools-scm,setuptools_scm,setuptools_scm,"Permission is hereby granted, free of charge, to any person obtaining a copy","Permission is hereby granted, free of charge, to any person obtaining a copy"
+0,sh,,sh,,MIT
+0,shap,shap,shap,MIT License,MIT License
+0,shapely,shapely,shapely,BSD 3-Clause,BSD 3-Clause
+0,shellingham,shellingham,shellingham,ISC License,ISC License
+0,simple-salesforce,simple_salesforce,simple_salesforce,Apache-2.0,Apache-2.0
+0,simple-websocket,simple_websocket,simple_websocket, MIT License,MIT License
+0,simplejson,simplejson,simplejson,MIT License,MIT License
+0,singer-sdk,singer_sdk,singer_sdk,Apache-2.0,Apache-2.0
+0,six,,six,,MIT
+0,slack-sdk,slack_sdk,slack_sdk,MIT,MIT
+0,slicer,slicer,slicer, MIT License,MIT License
+0,smart-open,smart_open,smart_open, MIT License,MIT License
+0,smdebug-rulesconfig,smdebug_rulesconfig,smdebug_rulesconfig,Apache License Version 2.0,Apache License Version 2.0
+0,smmap,smmap,smmap,BSD-3-Clause,BSD-3-Clause
+0,sniffio,sniffio,sniffio,MIT OR Apache-2.0,MIT OR Apache-2.0
+0,snowballstemmer,snowballstemmer,snowballstemmer,BSD-3-Clause,BSD-3-Clause
+0,snowflake-snowpark-python,,snowflake_snowpark_python,,"Apache License, Version 2.0"
+0,snowflake-sqlalchemy,,snowflake_sqlalchemy,,Apache-2.0
+0,snowplow-tracker,snowplow_tracker,snowplow_tracker,Apache License 2.0,Apache License 2.0
+0,socksio,socksio,socksio,UNKNOWN,MIT License
+0,sortedcontainers,sortedcontainers,sortedcontainers,Apache 2.0,Apache 2.0
+0,soundfile,,soundfile,,BSD 3-Clause License
+0,soupsieve,soupsieve,soupsieve,MIT,MIT
+0,spacy,spacy,spacy,MIT,MIT
+0,spacy-legacy,spacy_legacy,spacy_legacy,MIT,MIT
+0,spacy-loggers,spacy_loggers,spacy_loggers,MIT,MIT
+0,sphinx,sphinx,sphinx,BSD-2-Clause,BSD-2-Clause
+0,sphinx-rtd-theme,sphinx_rtd_theme,sphinx_rtd_theme,MIT,MIT
+0,sphinxcontrib-applehelp,,sphinxcontrib_applehelp,,BSD License
+0,sphinxcontrib-devhelp,,sphinxcontrib_devhelp,,BSD License
+0,sphinxcontrib-htmlhelp,,sphinxcontrib_htmlhelp,,BSD License
+0,sphinxcontrib-jquery,,sphinxcontrib_jquery,,BSD License
+0,sphinxcontrib-jsmath,,sphinxcontrib_jsmath,,BSD
+0,sphinxcontrib-qthelp,,sphinxcontrib_qthelp,,BSD License
+0,sphinxcontrib-serializinghtml,,sphinxcontrib_serializinghtml,,BSD License
+0,sqlalchemy,sqlalchemy,sqlalchemy,MIT,MIT
+0,sqlalchemy-bigquery,sqlalchemy_bigquery,sqlalchemy_bigquery, MIT License,MIT License
+0,sqlalchemy-jsonfield,sqlalchemy_jsonfield,sqlalchemy_jsonfield,Apache-2.0,Apache-2.0
+0,sqlalchemy-spanner,,sqlalchemy_spanner,,Apache 2.0
+0,sqlalchemy-utils,sqlalchemy_utils,sqlalchemy_utils,BSD-3-Clause,BSD-3-Clause
+0,sqlglot,sqlglot,sqlglot,MIT,MIT
+0,sqlparse,sqlparse,sqlparse, BSD License,BSD License
+0,srsly,srsly,srsly,MIT,MIT
+0,sse-starlette,sse_starlette,sse_starlette,BSD-3-Clause,BSD-3-Clause
+0,sshtunnel,,sshtunnel,,MIT
+0,stack-data,stack_data,stack_data,MIT,MIT
+0,starlette,starlette,starlette,BSD-3-Clause,BSD-3-Clause
+0,statsd,statsd,statsd,MIT,MIT
+0,statsmodels,statsmodels,statsmodels,BSD License,BSD License
+0,stevedore,stevedore,stevedore, Apache Software License,Apache Software License
+0,streamlit,streamlit,streamlit,Apache License 2.0,Apache License 2.0
+0,strenum,strenum,strenum, MIT License,MIT License
+0,strictyaml,strictyaml,strictyaml,MIT,MIT
+0,stripe,stripe,stripe, MIT License,MIT License
+0,structlog,structlog,structlog,MIT OR Apache-2.0,MIT OR Apache-2.0
+0,swe-rex,,swe_rex,,MIT License
+0,sympy,sympy,sympy,BSD,New BSD License (see the [LICENSE](LICENSE) file for details) covers all
+0,tableauserverclient,tableauserverclient,tableauserverclient,The MIT License (MIT),The MIT License (MIT)
+0,tabulate,tabulate,tabulate,MIT,MIT
+0,tb-nightly,,tb_nightly,,Apache 2.0
+0,tblib,tblib,tblib,BSD-2-Clause,BSD-2-Clause
+0,temporalio,temporalio,temporalio,,UNKNOWN
+0,tenacity,tenacity,tenacity,Apache 2.0,Apache 2.0
+0,tensorboard,tensorboard,tensorboard,Apache 2.0,Apache 2.0
+0,tensorboard-data-server,tensorboard_data_server,tensorboard_data_server,Apache 2.0,Apache 2.0
+0,tensorflow,tensorflow,tensorflow,Apache 2.0,Apache 2.0
+0,tensorflow-estimator,tensorflow_estimator,tensorflow_estimator,Apache 2.0,Apache 2.0
+0,termcolor,termcolor,termcolor,MIT,MIT
+0,terminado,terminado,terminado,BSD 2-Clause License,BSD 2-Clause License
+0,testcontainers,,testcontainers,,Apache-2.0
+0,text-unidecode,text_unidecode,text_unidecode,Artistic License,Artistic License
+0,texttable,,texttable,,MIT
+0,textual,textual,textual,MIT,MIT
+0,tf-keras-nightly,,tf_keras_nightly,,Apache 2.0
+0,threadpoolctl,,threadpoolctl,,BSD-3-Clause
+0,thrift,thrift,thrift,Apache License 2.0,Apache License 2.0
+0,thrift-sasl,thrift_sasl,thrift_sasl,"Apache License, Version 2.0","Apache License, Version 2.0"
+0,thriftpy2,thriftpy2,thriftpy2,The MIT License (MIT),The MIT License (MIT)
+0,tifffile,tifffile,tifffile,BSD-3-Clause,BSD-3-Clause
+0,tiktoken,tiktoken,tiktoken,MIT License,MIT License
+0,time-machine,time_machine,time_machine,MIT,MIT
+0,timm,timm,timm,Apache-2.0,Apache-2.0
+0,tinycss2,tinycss2,tinycss2, BSD License,BSD License
+0,tinyhtml5,tinyhtml5,tinyhtml5, MIT License,MIT License
+0,tldextract,tldextract,tldextract,BSD-3-Clause,BSD-3-Clause
+0,tokenizers,tokenizers,tokenizers, Apache Software License,Apache Software License
+0,toml,toml,toml,MIT,MIT
+0,tomli,tomli,tomli,MIT License,MIT License
+0,tomli-w,tomli_w,tomli_w, MIT License,MIT License
+0,tomlkit,tomlkit,tomlkit,MIT,MIT
+0,toolz,toolz,toolz,BSD,BSD
+0,torch,torch,torch,BSD-3-Clause,BSD-3-Clause
+0,torchaudio,torchaudio,torchaudio, BSD License,BSD License
+0,torchmetrics,torchmetrics,torchmetrics,Apache-2.0,Apache-2.0
+0,torchvision,torchvision,torchvision,BSD,BSD
+0,tornado,tornado,tornado,Apache-2.0,Apache-2.0
+0,tox,tox,tox,MIT,MIT
+0,tqdm,tqdm,tqdm,MPL-2.0 AND MIT,MPL-2.0 AND MIT
+0,traitlets,traitlets,traitlets,BSD 3-Clause License,BSD 3-Clause License
+0,transformers,transformers,transformers,Apache 2.0 License,Apache 2.0 License
+0,tree-sitter,tree_sitter,tree_sitter, MIT License,MIT License
+0,trino,trino,trino,Apache 2.0,Apache 2.0
+0,trio,trio,trio,MIT OR Apache-2.0,MIT OR Apache-2.0
+0,trio-websocket,trio_websocket,trio_websocket, MIT License,MIT License
+0,triton,triton,triton, MIT License,MIT License
+0,trove-classifiers,trove_classifiers,trove_classifiers, Apache Software License,Apache Software License
+0,truststore,truststore,truststore,MIT,MIT
+0,twilio,twilio,twilio,MIT,MIT
+0,twine,twine,twine,Apache-2.0,Apache-2.0
+0,twisted,twisted,twisted,MIT License,MIT License
+0,typedload,typedload,typedload,This software is released under the GNU General Public License 3.,This software is released under the GNU General Public License 3.
+0,typeguard,typeguard,typeguard,MIT,MIT
+0,typer,typer,typer, MIT License,MIT License
+0,types-aiofiles,,types_aiofiles,,Apache-2.0
+0,types-awscrt,,types_awscrt,,MIT License
+0,types-cachetools,,types_cachetools,,Apache-2.0
+0,types-certifi,,types_certifi,,Apache-2.0 license
+0,types-cffi,,types_cffi,,Apache-2.0
+0,types-deprecated,,types_deprecated,,Apache-2.0
+0,types-docutils,,types_docutils,,Apache-2.0
+0,types-markdown,,types_markdown,,Apache-2.0
+0,types-paramiko,,types_paramiko,,Apache-2.0
+0,types-protobuf,,types_protobuf,,Apache-2.0
+0,types-pyopenssl,,types_pyopenssl,,Apache-2.0 license
+0,types-python-dateutil,,types_python_dateutil,,Apache-2.0
+0,types-pytz,,types_pytz,,Apache-2.0
+0,types-pyyaml,,types_pyyaml,,Apache-2.0
+0,types-redis,,types_redis,,Apache-2.0
+0,types-requests,,types_requests,,Apache-2.0
+0,types-s3transfer,,types_s3transfer,,MIT License
+0,types-setuptools,,types_setuptools,,Apache-2.0
+0,types-tabulate,,types_tabulate,,Apache-2.0
+0,types-toml,,types_toml,,Apache-2.0 license
+0,types-urllib3,,types_urllib3,,Apache-2.0 license
+0,typing-extensions,,typing_extensions,,PSF-2.0
+0,typing-inspect,,typing_inspect,,MIT
+0,typing-inspection,typing_inspection,typing_inspection,MIT,MIT
+0,tzdata,tzdata,tzdata,Apache-2.0,Apache-2.0
+0,tzlocal,tzlocal,tzlocal,MIT,MIT
+0,ua-parser,ua_parser,ua_parser,Apache 2.0,Apache 2.0
+0,ua-parser-builtins,ua_parser_builtins,ua_parser_builtins,Apache 2.0,Apache 2.0
+0,uc-micro-py,,uc_micro_py,,MIT
+0,ujson,,ujson,,UNKNOWN
+0,unearth,unearth,unearth,MIT,MIT
+0,unidecode,unidecode,unidecode,GPL,GPL
+0,universal-pathlib,,universal_pathlib,,MIT
+0,unstructured-client,unstructured_client,unstructured_client,MIT,MIT
+0,uri-template,uri_template,uri_template,MIT License,MIT License
+0,uritemplate,uritemplate,uritemplate,BSD 3-Clause OR Apache-2.0,BSD 3-Clause OR Apache-2.0
+0,urllib3,urllib3,urllib3,MIT,MIT
+0,userpath,userpath,userpath,MIT,MIT
+0,uuid6,uuid6,uuid6,MIT,MIT
+0,uv,uv,uv, MIT License,Apache Software License
+0,uvicorn,uvicorn,uvicorn,BSD-3-Clause,BSD-3-Clause
+0,uvloop,uvloop,uvloop,MIT License,MIT License
+0,validators,validators,validators,MIT,MIT
+0,vine,vine,vine,BSD,BSD
+0,virtualenv,virtualenv,virtualenv,MIT,MIT
+0,wandb,wandb,wandb,MIT License,MIT License
+0,wasabi,wasabi,wasabi,MIT,MIT
+0,watchdog,watchdog,watchdog,Apache-2.0,Apache-2.0
+0,watchfiles,watchfiles,watchfiles, MIT License,MIT
+0,watchtower,watchtower,watchtower,Apache Software License,Apache Software License
+0,wcmatch,wcmatch,wcmatch,MIT,MIT
+0,wcwidth,wcwidth,wcwidth,MIT,MIT
+0,weasel,weasel,weasel,MIT,MIT
+0,weasyprint,weasyprint,weasyprint, BSD License,BSD License
+0,weaviate-client,,weaviate_client,,BSD 3-clause
+0,webcolors,webcolors,webcolors,BSD-3-Clause,BSD-3-Clause
+0,webdriver-manager,webdriver_manager,webdriver_manager, Apache Software License,Apache Software License
+0,webencodings,webencodings,webencodings,BSD,BSD
+0,websocket-client,,websocket_client,,Apache-2.0
+0,websockets,websockets,websockets,BSD-3-Clause,BSD-3-Clause
+0,werkzeug,werkzeug,werkzeug, BSD License,BSD License
+0,wheel,wheel,wheel, MIT License,MIT License
+0,widgetsnbextension,widgetsnbextension,widgetsnbextension,BSD 3-Clause License,BSD 3-Clause License
+0,wirerope,wirerope,wirerope,BSD 2-Clause License,BSD 2-Clause License
+0,wrapt,wrapt,wrapt,BSD,BSD
+0,wsproto,wsproto,wsproto,MIT License,MIT License
+0,wtforms,wtforms,wtforms,Copyright 2008 WTForms,Copyright 2008 WTForms
+0,xarray,xarray,xarray,Apache-2.0,Apache-2.0
+0,xgboost,xgboost,xgboost,Apache-2.0,Apache-2.0
+0,xlrd,xlrd,xlrd,BSD,BSD
+0,xlsxwriter,xlsxwriter,xlsxwriter,BSD-2-Clause,BSD-2-Clause
+0,xmlsec,,xmlsec,,MIT
+0,xmltodict,,xmltodict,,Copyright (C) 2012 Martin Blech and individual contributors.
+0,xxhash,xxhash,xxhash,BSD,BSD
+0,yamllint,yamllint,yamllint,GPL-3.0-or-later,GPL-3.0-or-later
+0,yandexcloud,yandexcloud,yandexcloud,MIT,MIT
+0,yapf,yapf,yapf,Apache License,Apache Software License
+0,yarl,yarl,yarl,Apache-2.0,Apache-2.0
+0,zeep,zeep,zeep,MIT,MIT
+0,zipp,zipp,zipp,MIT,MIT
+0,zope-event,,zope_event,,ZPL-2.1
+0,zope-interface,,zope_interface,,ZPL-2.1
+0,zopfli,zopfli,zopfli,ASL,ASL
+0,zstandard,zstandard,zstandard,BSD-3-Clause,BSD-3-Clause
