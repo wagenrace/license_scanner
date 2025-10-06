@@ -14,19 +14,19 @@ aiohappyeyeballs,aiohappyeyeballs,aiohappyeyeballs,PSF-2.0,PSF-2.0
 aiohttp,aiohttp,aiohttp,Apache-2.0 AND MIT,Apache-2.0 AND MIT
 aiohttp-cors,aiohttp_cors,aiohttp_cors,"Apache License, Version 2.0","Apache License, Version 2.0"
 aiohttp-retry,aiohttp_retry,aiohttp_retry,MIT,MIT
-aioitertools,aioitertools,aioitertools, MIT License,MIT License
-aioresponses,aioresponses,aioresponses, MIT License,MIT License
+aioitertools,aioitertools,aioitertools,MIT License,MIT License
+aioresponses,aioresponses,aioresponses,MIT License,MIT License
 aiosignal,aiosignal,aiosignal,Apache 2.0,Apache 2.0
-aiosqlite,aiosqlite,aiosqlite, MIT License,MIT License
-alabaster,alabaster,alabaster, BSD License,BSD License
+aiosqlite,aiosqlite,aiosqlite,MIT License,MIT License
+alabaster,alabaster,alabaster,BSD License,BSD License
 alembic,alembic,alembic,MIT,MIT
 aliyun-python-sdk-core,,aliyun_python_sdk_core,,Apache License 2.0
 altair,altair,altair,"Copyright (c) 2015-2023, Vega-Altair Developers","Copyright (c) 2015-2023, Vega-Altair Developers"
 altgraph,altgraph,altgraph,MIT,MIT
 amazon-ion,,amazon_ion,,Apache License 2.0
 amqp,amqp,amqp,BSD,BSD
-aniso8601,aniso8601,aniso8601, BSD License,BSD License
-annotated-types,annotated_types,annotated_types, MIT License,MIT License
+aniso8601,aniso8601,aniso8601,BSD License,BSD License
+annotated-types,annotated_types,annotated_types,MIT License,MIT License
 ansible,ansible,ansible,GPL-3.0-or-later,GPL-3.0-or-later
 ansible-core,,ansible_core,,GNU General Public License v3 or later (GPLv3+)
 anthropic,anthropic,anthropic,MIT,MIT
@@ -46,16 +46,16 @@ apache-airflow-providers-snowflake,,apache_airflow_providers_snowflake,,Apache S
 apache-airflow-providers-sqlite,,apache_airflow_providers_sqlite,,Apache Software License
 apache-airflow-providers-ssh,,apache_airflow_providers_ssh,,Apache Software License
 apache-beam,apache_beam,apache_beam,"Apache License, Version 2.0","Apache License, Version 2.0"
-apispec,apispec,apispec, MIT License,MIT License
-appdirs,,appdirs,,MIT
+apispec,apispec,apispec,MIT License,MIT License
+appdirs,appdirs,appdirs,MIT,MIT
 applicationinsights,applicationinsights,applicationinsights,MIT,MIT
 appnope,appnope,appnope,BSD,BSD
 apscheduler,apscheduler,apscheduler,MIT,MIT
 argcomplete,argcomplete,argcomplete,Apache Software License,Apache Software License
 argon2-cffi,,argon2_cffi,,MIT
 argon2-cffi-bindings,,argon2_cffi_bindings,,MIT
-argparse,,argparse,,Python Software Foundation License
-arrow,arrow,arrow, Apache Software License,Apache Software License
+argparse,argparse,argparse,Python Software Foundation License,Python Software Foundation License
+arrow,arrow,arrow,Apache Software License,Apache Software License
 asgiref,asgiref,asgiref,BSD-3-Clause,BSD-3-Clause
 asn1crypto,asn1crypto,asn1crypto,MIT,MIT
 astor,astor,astor,BSD-3-Clause,BSD-3-Clause
@@ -140,22 +140,22 @@ bitarray,bitarray,bitarray,PSF-2.0,PSF-2.0
 black,black,black,MIT,MIT
 bleach,bleach,bleach,Apache Software License,Apache Software License
 blessed,blessed,blessed,MIT,MIT
-blinker,blinker,blinker, MIT License,MIT License
+blinker,blinker,blinker,MIT License,MIT License
 blis,blis,blis,BSD,BSD
 blobfile,blobfile,blobfile,Public Domain,Public Domain
-boltons,boltons,boltons, BSD License,BSD License
+boltons,boltons,boltons,BSD License,BSD License
 boto,boto,boto,MIT,MIT
 boto3,boto3,boto3,Apache License 2.0,Apache License 2.0
 boto3-stubs,,boto3_stubs,,MIT License
 botocore,botocore,botocore,Apache License 2.0,Apache License 2.0
 botocore-stubs,,botocore_stubs,,MIT License
 bracex,bracex,bracex,MIT,MIT
-brotli,,brotli,,MIT
+brotli,brotli,brotli,MIT,MIT
 bs4,bs4,bs4,MIT License,MIT License
 build,build,build,MIT,MIT
 bytecode,bytecode,bytecode,The MIT License (MIT),The MIT License (MIT)
 cachecontrol,cachecontrol,cachecontrol,Apache-2.0,Apache-2.0
-cached-property,,cached_property,,BSD
+cached-property,cached_property,cached_property,BSD,BSD
 cachelib,cachelib,cachelib,BSD-3-Clause,BSD-3-Clause
 cachetools,cachetools,cachetools,MIT,MIT
 catalogue,catalogue,catalogue,MIT,MIT
@@ -164,14 +164,14 @@ celery,celery,celery,BSD-3-Clause,BSD-3-Clause
 certbot-dns-cloudflare,certbot_dns_cloudflare,certbot_dns_cloudflare,Apache-2.0,Apache-2.0
 certifi,certifi,certifi,MPL-2.0,MPL-2.0
 cffi,cffi,cffi,MIT,MIT
-cfgv,,cfgv,,MIT
+cfgv,cfgv,cfgv,MIT,MIT
 cfn-flip,cfn_flip,cfn_flip,Apache2,Apache2
 cfn-lint,,cfn_lint,,MIT-0
 chardet,chardet,chardet,LGPL,LGPL
 charset-normalizer,charset_normalizer,charset_normalizer,MIT,MIT
 checkov,checkov,checkov,Apache License 2.0,Apache License 2.0
-chromadb,chromadb,chromadb, Apache Software License,Apache Software License
-ciso8601,,ciso8601,,MIT
+chromadb,chromadb,chromadb,Apache Software License,Apache Software License
+ciso8601,ciso8601,ciso8601,MIT,MIT
 cleo,cleo,cleo,MIT,MIT
 click,click,click,BSD-3-Clause,BSD-3-Clause
 click-didyoumean,click_didyoumean,click_didyoumean,MIT,MIT
@@ -180,20 +180,20 @@ click-plugins,click_plugins,click_plugins,New BSD,New BSD
 click-repl,click_repl,click_repl,MIT,MIT
 clickhouse-connect,clickhouse_connect,clickhouse_connect,Apache License 2.0,Apache License 2.0
 cloudflare,cloudflare,cloudflare,Apache-2.0,Apache-2.0
-cloudpathlib,cloudpathlib,cloudpathlib, MIT License,MIT License
+cloudpathlib,cloudpathlib,cloudpathlib,MIT License,MIT License
 cloudpickle,cloudpickle,cloudpickle,BSD-3-Clause,BSD-3-Clause
 cmake,cmake,cmake,Apache 2.0,Apache 2.0
 cmdstanpy,cmdstanpy,cmdstanpy,BSD-3-Clause,BSD-3-Clause
 cohere,cohere,cohere,MIT,MIT
-colorama,colorama,colorama, BSD License,BSD License
+colorama,colorama,colorama,BSD License,BSD License
 coloredlogs,coloredlogs,coloredlogs,MIT,MIT
-colorful,colorful,colorful, MIT License,MIT License
+colorful,colorful,colorful,MIT License,MIT License
 colorlog,colorlog,colorlog,MIT License,MIT License
 comm,comm,comm,BSD 3-Clause License,BSD 3-Clause License
 confection,confection,confection,MIT,MIT
-configargparse,,configargparse,,MIT
-configparser,,configparser,,MIT License
-confluent-kafka,confluent_kafka,confluent_kafka, Apache Software License,Apache Software License
+configargparse,configargparse,configargparse,MIT,MIT
+configparser,configparser,configparser,MIT License,MIT License
+confluent-kafka,confluent_kafka,confluent_kafka,Apache Software License,Apache Software License
 connexion,connexion,connexion,Apache-2.0,Apache-2.0
 contextlib2,contextlib2,contextlib2,PSF License,PSF License
 contourpy,contourpy,contourpy,BSD 3-Clause License,BSD 3-Clause License
@@ -204,12 +204,12 @@ cron-descriptor,cron_descriptor,cron_descriptor,MIT,MIT
 croniter,croniter,croniter,MIT License,MIT License
 cryptography,cryptography,cryptography,Apache-2.0 OR BSD-3-Clause,Apache-2.0 OR BSD-3-Clause
 cssselect,cssselect,cssselect,BSD,BSD
-cssselect2,cssselect2,cssselect2, BSD License,BSD License
+cssselect2,cssselect2,cssselect2,BSD License,BSD License
 curl-cffi,curl_cffi,curl_cffi,MIT License,MIT License
 cycler,cycler,cycler,"Copyright (c) 2015, matplotlib project","Copyright (c) 2015, matplotlib project"
 cyclopts,cyclopts,cyclopts,Apache-2.0,Apache-2.0
 cymem,cymem,cymem,MIT,MIT
-cython,Cython,cython,Apache-2.0,Apache-2.0
+cython,cython,cython,Apache-2.0,Apache-2.0
 dacite,dacite,dacite,MIT,MIT
 daff,daff,daff,MIT,MIT
 dask,dask,dask,BSD-3-Clause,BSD-3-Clause
@@ -219,30 +219,30 @@ databricks-labs-blueprint,,databricks_labs_blueprint,,Other/Proprietary License
 databricks-sdk,,databricks_sdk,,Apache Software License
 databricks-sql-connector,,databricks_sql_connector,,Apache-2.0
 databricks-sqlalchemy,,databricks_sqlalchemy,,Apache-2.0
-dataclasses,,dataclasses,,Apache
+dataclasses,dataclasses,dataclasses,Apache,Apache
 dataclasses-json,dataclasses_json,dataclasses_json,MIT,MIT
 datadog,datadog,datadog,BSD-3-Clause,BSD-3-Clause
 datadog-api-client,datadog_api_client,datadog_api_client,BSD,BSD
 datasets,datasets,datasets,Apache 2.0,Apache 2.0
 dateparser,dateparser,dateparser,BSD,BSD
-datetime,DateTime,datetime,ZPL 2.1,ZPL 2.1
-db-dtypes,db_dtypes,db_dtypes, Apache Software License,Apache Software License
+datetime,datetime,datetime,ZPL 2.1,ZPL 2.1
+db-dtypes,db_dtypes,db_dtypes,Apache Software License,Apache Software License
 dbt-adapters,,dbt_adapters,,Apache Software License
 dbt-common,dbt_common,dbt_common,Apache-2.0,Apache-2.0
 dbt-core,,dbt_core,,Apache Software License
-dbt-extractor,dbt_extractor,dbt_extractor, Apache Software License,Apache-2.0
+dbt-extractor,dbt_extractor,dbt_extractor,Apache Software License,Apache-2.0
 dbt-protos,,dbt_protos,,Apache-2.0
 dbt-semantic-interfaces,dbt_semantic_interfaces,dbt_semantic_interfaces,Apache-2.0,Apache-2.0
 ddtrace,ddtrace,ddtrace,LICENSE.BSD3,LICENSE.BSD3
 debugpy,debugpy,debugpy,MIT,MIT
-decorator,,decorator,,BSD-2-Clause
-deepdiff,deepdiff,deepdiff, MIT License,MIT License
+decorator,decorator,decorator,BSD-2-Clause,BSD-2-Clause
+deepdiff,deepdiff,deepdiff,MIT License,MIT License
 defusedxml,defusedxml,defusedxml,PSFL,PSFL
 delta-spark,,delta_spark,,Apache-2.0
-deltalake,deltalake,deltalake, Apache Software License,MIT
+deltalake,deltalake,deltalake,Apache Software License,MIT
 dep-logic,dep_logic,dep_logic,Apache-2.0,Apache-2.0
 deprecated,deprecated,deprecated,MIT,MIT
-deprecation,,deprecation,,Apache 2
+deprecation,deprecation,deprecation,Apache 2,Apache 2
 diff-cover,diff_cover,diff_cover,Apache-2.0,Apache-2.0
 dill,dill,dill,BSD-3-Clause,BSD-3-Clause
 diskcache,diskcache,diskcache,Apache 2.0,Apache 2.0
@@ -256,27 +256,27 @@ djangorestframework,,djangorestframework,,BSD
 dnspython,,dnspython,,ISC
 docker,docker,docker,Apache-2.0,Apache-2.0
 docker-pycreds,,docker_pycreds,,Apache License 2.0
-docopt,,docopt,,MIT
+docopt,docopt,docopt,MIT,MIT
 docstring-parser,docstring_parser,docstring_parser,MIT,MIT
-docutils,docutils,docutils, Public Domain,GNU General Public License (GPL)
-duckdb,duckdb,duckdb, MIT License,MIT License
+docutils,docutils,docutils,Public Domain,GNU General Public License (GPL)
+duckdb,duckdb,duckdb,MIT License,MIT License
 dulwich,dulwich,dulwich,Apache-2.0 OR GPL-2.0-or-later,Apache-2.0 OR GPL-2.0-or-later
 durationpy,durationpy,durationpy,MIT,MIT
 ecdsa,ecdsa,ecdsa,MIT,MIT
-editables,editables,editables, MIT License,MIT License
+editables,editables,editables,MIT License,MIT License
 einops,einops,einops,MIT,MIT
-elastic-transport,elastic_transport,elastic_transport, Apache Software License,Apache Software License
+elastic-transport,elastic_transport,elastic_transport,Apache Software License,Apache Software License
 elasticsearch,elasticsearch,elasticsearch,Apache-2.0,Apache-2.0
 email-validator,email_validator,email_validator,Unlicense,Unlicense
-emoji,emoji,emoji, BSD License,BSD License
-entrypoints,,entrypoints,,MIT License
+emoji,emoji,emoji,BSD License,BSD License
+entrypoints,entrypoints,entrypoints,MIT License,MIT License
 enum34,,enum34,,BSD License
 envier,envier,envier,MIT License,MIT License
 et-xmlfile,et_xmlfile,et_xmlfile,MIT,MIT
 eval-type-backport,eval_type_backport,eval_type_backport,MIT,MIT
 eventlet,eventlet,eventlet,MIT,MIT
 events,events,events,BSD,BSD
-exceptiongroup,exceptiongroup,exceptiongroup, MIT License,MIT License
+exceptiongroup,exceptiongroup,exceptiongroup,MIT License,MIT License
 execnet,execnet,execnet,MIT,MIT
 executing,executing,executing,MIT,MIT
 fabric,fabric,fabric,BSD,BSD
@@ -285,7 +285,7 @@ factory-boy,,factory_boy,,MIT
 faiss-cpu,,faiss_cpu,,MIT AND BSD-3-Clause
 faker,faker,faker,MIT License,MIT License
 fakeredis,fakeredis,fakeredis,BSD-3-Clause,BSD-3-Clause
-fastapi,fastapi,fastapi, MIT License,MIT License
+fastapi,fastapi,fastapi,MIT License,MIT License
 fastapi-cli,fastapi_cli,fastapi_cli,MIT,MIT
 fastapi-cloud-cli,fastapi_cloud_cli,fastapi_cloud_cli,MIT,MIT
 fastavro,fastavro,fastavro,MIT,MIT
@@ -307,8 +307,8 @@ flask-cors,flask_cors,flask_cors,,UNKNOWN
 flask-jwt-extended,flask_jwt_extended,flask_jwt_extended,MIT,MIT
 flask-limiter,flask_limiter,flask_limiter,MIT,MIT
 flask-login,flask_login,flask_login,MIT,MIT
-flask-session,flask_session,flask_session, BSD License,BSD License
-flask-sqlalchemy,flask_sqlalchemy,flask_sqlalchemy, BSD License,BSD License
+flask-session,flask_session,flask_session,BSD License,BSD License
+flask-sqlalchemy,flask_sqlalchemy,flask_sqlalchemy,BSD License,BSD License
 flask-wtf,flask_wtf,flask_wtf,Copyright 2010 WTForms,Copyright 2010 WTForms
 flatbuffers,flatbuffers,flatbuffers,Apache 2.0,Apache 2.0
 flit,flit,flit,BSD-3-Clause,BSD-3-Clause
@@ -334,7 +334,7 @@ geoip2,geoip2,geoip2,Apache-2.0,Apache-2.0
 geopandas,geopandas,geopandas,BSD 3-Clause,BSD 3-Clause
 geopy,geopy,geopy,MIT,MIT
 gevent,gevent,gevent,MIT,MIT
-ghp-import,,ghp_import,,Apache Software License
+ghp-import,ghp_import,ghp_import,Apache Software License,Apache Software License
 gitdb,gitdb,gitdb,BSD License,BSD License
 gitpython,,gitpython,,BSD-3-Clause
 glom,glom,glom,UNKNOWN,BSD License
@@ -344,7 +344,7 @@ google-analytics-admin,,google_analytics_admin,,Apache 2.0
 google-api-core,,google_api_core,,Apache 2.0
 google-api-python-client,,google_api_python_client,,Apache 2.0
 google-auth,,google_auth,,Apache 2.0
-google-auth-httplib2,,google_auth_httplib2,,Apache 2.0
+google-auth-httplib2,google_auth_httplib2,google_auth_httplib2,Apache 2.0,Apache 2.0
 google-auth-oauthlib,google_auth_oauthlib,google_auth_oauthlib,Apache 2.0,Apache 2.0
 google-cloud-aiplatform,,google_cloud_aiplatform,,Apache 2.0
 google-cloud-appengine-logging,,google_cloud_appengine_logging,,Apache 2.0
@@ -413,14 +413,14 @@ grpcio-gcp,,grpcio_gcp,,Apache License 2.0
 grpcio-health-checking,,grpcio_health_checking,,Apache License 2.0
 grpcio-status,,grpcio_status,,Apache License 2.0
 grpcio-tools,,grpcio_tools,,Apache License 2.0
-gspread,gspread,gspread, MIT License,MIT License
+gspread,gspread,gspread,MIT License,MIT License
 gunicorn,gunicorn,gunicorn,MIT,MIT
 h11,h11,h11,MIT,MIT
 h2,h2,h2,The MIT License (MIT),The MIT License (MIT)
 h5py,h5py,h5py,BSD-3-Clause,BSD-3-Clause
 hatch,hatch,hatch,MIT,MIT
 hatchling,hatchling,hatchling,MIT,MIT
-hf-xet,hf_xet,hf_xet, Apache Software License,Apache-2.0
+hf-xet,hf_xet,hf_xet,Apache Software License,Apache-2.0
 hiredis,hiredis,hiredis,MIT,MIT
 hishel,hishel,hishel,BSD-3-Clause,BSD-3-Clause
 holidays,holidays,holidays,MIT,MIT
@@ -441,37 +441,37 @@ hydra-core,,hydra_core,,MIT
 hyperframe,hyperframe,hyperframe,The MIT License (MIT),The MIT License (MIT)
 hyperlink,hyperlink,hyperlink,MIT,MIT
 hypothesis,hypothesis,hypothesis,MPL-2.0,MPL-2.0
-ibm-cloud-sdk-core,ibm_cloud_sdk_core,ibm_cloud_sdk_core, Apache Software License,Apache Software License
-ibmcloudant,ibmcloudant,ibmcloudant, Apache Software License,Apache Software License
-id,id,id, Apache Software License,Apache Software License
+ibm-cloud-sdk-core,ibm_cloud_sdk_core,ibm_cloud_sdk_core,Apache Software License,Apache Software License
+ibmcloudant,ibmcloudant,ibmcloudant,Apache Software License,Apache Software License
+id,id,id,Apache Software License,Apache Software License
 identify,identify,identify,MIT,MIT
-idna,idna,idna, BSD License,BSD License
+idna,idna,idna,BSD License,BSD License
 ijson,ijson,ijson,BSD-3-Clause AND ISC,BSD-3-Clause AND ISC
 imageio,imageio,imageio,BSD-2-Clause,BSD-2-Clause
 imagesize,imagesize,imagesize,MIT,MIT
 imbalanced-learn,,imbalanced_learn,,MIT License
 immutabledict,immutabledict,immutabledict,MIT,MIT
-importlib-metadata,importlib_metadata,importlib_metadata, Apache Software License,Apache Software License
-importlib-resources,importlib_resources,importlib_resources, Apache Software License,Apache Software License
+importlib-metadata,importlib_metadata,importlib_metadata,Apache Software License,Apache Software License
+importlib-resources,importlib_resources,importlib_resources,Apache Software License,Apache Software License
 impyla,,impyla,,"Apache License, Version 2.0"
-incremental,incremental,incremental, MIT License,MIT License
-inflect,inflect,inflect, MIT License,MIT License
+incremental,incremental,incremental,MIT License,MIT License
+inflect,inflect,inflect,MIT License,MIT License
 inflection,inflection,inflection,MIT,MIT
 iniconfig,iniconfig,iniconfig,MIT,MIT
 inputimeout,inputimeout,inputimeout,MIT,MIT
-installer,installer,installer, MIT License,MIT License
+installer,installer,installer,MIT License,MIT License
 invoke,invoke,invoke,BSD,BSD
 ipdb,ipdb,ipdb,BSD,BSD
 ipykernel,ipykernel,ipykernel,BSD 3-Clause License,BSD 3-Clause License
 ipython,IPython,ipython,BSD-3-Clause,BSD-3-Clause
 ipython-genutils,ipython_genutils,ipython_genutils,BSD,BSD
-ipython-pygments-lexers,,ipython_pygments_lexers,,BSD License
+ipython-pygments-lexers,ipython_pygments_lexers,ipython_pygments_lexers,BSD License,BSD License
 ipywidgets,ipywidgets,ipywidgets,BSD 3-Clause License,BSD 3-Clause License
 iso8601,iso8601,iso8601,MIT,MIT
 isodate,isodate,isodate,"Copyright (c) 2021, Hugo van Kemenade and contributors","Copyright (c) 2021, Hugo van Kemenade and contributors"
 isoduration,isoduration,isoduration,UNKNOWN,ISC License (ISCL)
 isort,isort,isort,MIT,MIT
-itsdangerous,itsdangerous,itsdangerous, BSD License,BSD License
+itsdangerous,itsdangerous,itsdangerous,BSD License,BSD License
 jaraco.classes,,jaraco.classes,,MIT License
 jaraco.collections,,jaraco.collections,,MIT License
 jaraco.context,,jaraco.context,,MIT License
@@ -482,26 +482,26 @@ jaxlib,jaxlib,jaxlib,Apache-2.0,Apache-2.0
 jaydebeapi,jaydebeapi,jaydebeapi,GNU LGPL,GNU LGPL
 jedi,jedi,jedi,MIT,MIT
 jeepney,jeepney,jeepney,MIT,MIT
-jellyfish,jellyfish,jellyfish, MIT License,MIT
-jinja2,jinja2,jinja2, BSD License,BSD License
-jira,jira,jira, BSD License,BSD License
-jiter,jiter,jiter, MIT License,MIT
+jellyfish,jellyfish,jellyfish,MIT License,MIT
+jinja2,jinja2,jinja2,BSD License,BSD License
+jira,jira,jira,BSD License,BSD License
+jiter,jiter,jiter,MIT License,MIT
 jmespath,jmespath,jmespath,MIT,MIT
 joblib,joblib,joblib,BSD 3-Clause,BSD 3-Clause
 jpype1,,jpype1,,License :: OSI Approved :: Apache Software License
 json5,json5,json5,Files: Everything except for the benchmarks/*.json files.,Files: Everything except for the benchmarks/*.json files.
 jsondiff,jsondiff,jsondiff,The MIT License (MIT),The MIT License (MIT)
-jsonpatch,,jsonpatch,,Modified BSD License
+jsonpatch,jsonpatch,jsonpatch,Modified BSD License,Modified BSD License
 jsonpath-ng,jsonpath_ng,jsonpath_ng,Apache 2.0,Apache 2.0
 jsonpickle,jsonpickle,jsonpickle,BSD-3-Clause,BSD-3-Clause
-jsonpointer,,jsonpointer,,Modified BSD License
-jsonref,,jsonref,,MIT
+jsonpointer,jsonpointer,jsonpointer,Modified BSD License,Modified BSD License
+jsonref,jsonref,jsonref,MIT,MIT
 jsonschema,jsonschema,jsonschema,MIT,MIT
 jsonschema-path,jsonschema_path,jsonschema_path,Apache-2.0,Apache-2.0
 jsonschema-specifications,jsonschema_specifications,jsonschema_specifications,MIT,MIT
 junit-xml,junit_xml,junit_xml,MIT,MIT
 junitparser,junitparser,junitparser,Apache-2.0,Apache-2.0
-jupyter,,jupyter,,BSD
+jupyter,jupyter,jupyter,BSD,BSD
 jupyter-client,jupyter_client,jupyter_client,BSD 3-Clause License,BSD 3-Clause License
 jupyter-console,jupyter_console,jupyter_console,BSD 3-Clause License,BSD 3-Clause License
 jupyter-core,jupyter_core,jupyter_core,BSD-3-Clause,BSD-3-Clause
@@ -517,9 +517,9 @@ jwcrypto,jwcrypto,jwcrypto,LGPLv3+,LGPLv3+
 kafka-python,,kafka_python,,Apache Software License
 kazoo,kazoo,kazoo,Apache 2.0,Apache 2.0
 keras,keras,keras,Apache License 2.0,Apache License 2.0
-keyring,keyring,keyring, MIT License,MIT License
+keyring,keyring,keyring,MIT License,MIT License
 keyrings.google-artifactregistry-auth,,keyrings.google_artifactregistry_auth,,Apache Software License
-kfp,kfp,kfp, Apache Software License,Apache Software License
+kfp,kfp,kfp,Apache Software License,Apache Software License
 kiwisolver,kiwisolver,kiwisolver,=========================,=========================
 kombu,kombu,kombu,BSD-3-Clause,BSD-3-Clause
 kubernetes,kubernetes,kubernetes,Apache License Version 2.0,Apache License Version 2.0
@@ -530,14 +530,14 @@ langchain-core,langchain_core,langchain_core,MIT,MIT
 langchain-google-vertexai,langchain_google_vertexai,langchain_google_vertexai,MIT,MIT
 langchain-openai,langchain_openai,langchain_openai,MIT,MIT
 langchain-text-splitters,langchain_text_splitters,langchain_text_splitters,MIT,MIT
-langcodes,langcodes,langcodes, MIT License,MIT License
+langcodes,langcodes,langcodes,MIT License,MIT License
 langdetect,langdetect,langdetect,MIT,MIT
 langgraph,,langgraph,,MIT
 langgraph-checkpoint,,langgraph_checkpoint,,MIT
 langgraph-prebuilt,,langgraph_prebuilt,,MIT
 langgraph-sdk,langgraph_sdk,langgraph_sdk,MIT,MIT
 langsmith,langsmith,langsmith,MIT,MIT
-language-data,language_data,language_data, MIT License,MIT License
+language-data,language_data,language_data,MIT License,MIT License
 lark,lark,lark,MIT,MIT
 lazy-loader,lazy_loader,lazy_loader,BSD 3-Clause License,BSD 3-Clause License
 lazy-object-proxy,lazy_object_proxy,lazy_object_proxy,BSD-2-Clause,BSD-2-Clause
@@ -545,7 +545,7 @@ leather,leather,leather,MIT,MIT
 levenshtein,Levenshtein,levenshtein,GPL-2.0-or-later,GPL-2.0-or-later
 libclang,,libclang,,Apache License 2.0
 libcst,libcst,libcst,All contributions towards LibCST are MIT licensed.,All contributions towards LibCST are MIT licensed.
-license-scanner,license_scanner,license_scanner, MIT License,MIT License
+license-scanner,license_scanner,license_scanner,MIT License,MIT License
 lightgbm,lightgbm,lightgbm,The MIT License (MIT),The MIT License (MIT)
 lightning-utilities,lightning_utilities,lightning_utilities,Apache-2.0,Apache-2.0
 limits,limits,limits,MIT,MIT
@@ -558,31 +558,31 @@ llvmlite,llvmlite,llvmlite,BSD,BSD
 locket,locket,locket,BSD-2-Clause,BSD-2-Clause
 lockfile,lockfile,lockfile,UNKNOWN,MIT License
 locust,locust,locust,MIT,MIT
-loguru,loguru,loguru, MIT License,MIT License
+loguru,loguru,loguru,MIT License,MIT License
 looker-sdk,looker_sdk,looker_sdk,MIT,MIT
 lxml,lxml,lxml,BSD-3-Clause,BSD-3-Clause
-lz4,lz4,lz4, BSD License,BSD License
+lz4,lz4,lz4,BSD License,BSD License
 makefun,makefun,makefun,BSD 3-Clause,BSD 3-Clause
 mako,mako,mako,MIT,MIT
-marisa-trie,,marisa_trie,,MIT AND (BSD-2-Clause OR LGPL-2.1-or-later)
+marisa-trie,marisa_trie,marisa_trie,MIT AND (BSD-2-Clause OR LGPL-2.1-or-later),MIT AND (BSD-2-Clause OR LGPL-2.1-or-later)
 markdown,markdown,markdown,BSD-3-Clause,BSD-3-Clause
 markdown-it-py,,markdown_it_py,,MIT License
-markdownify,markdownify,markdownify, MIT License,MIT License
+markdownify,markdownify,markdownify,MIT License,MIT License
 markupsafe,markupsafe,markupsafe,BSD-3-Clause,BSD-3-Clause
-marshmallow,marshmallow,marshmallow, MIT License,MIT License
-marshmallow-sqlalchemy,marshmallow_sqlalchemy,marshmallow_sqlalchemy, MIT License,MIT License
+marshmallow,marshmallow,marshmallow,MIT License,MIT License
+marshmallow-sqlalchemy,marshmallow_sqlalchemy,marshmallow_sqlalchemy,MIT License,MIT License
 mashumaro,mashumaro,mashumaro,Apache-2.0,Apache-2.0
 matplotlib,matplotlib,matplotlib,License agreement for matplotlib versions 1.3.0 and later,License agreement for matplotlib versions 1.3.0 and later
 matplotlib-inline,matplotlib_inline,matplotlib_inline,BSD 3-Clause License,BSD 3-Clause License
 maxminddb,maxminddb,maxminddb,Apache-2.0,Apache-2.0
-mccabe,,mccabe,,Expat license
+mccabe,mccabe,mccabe,Expat license,Expat license
 mcp,mcp,mcp,MIT,MIT
 mcp-server-fetch,mcp_server_fetch,mcp_server_fetch,MIT,MIT
-mdit-py-plugins,mdit_py_plugins,mdit_py_plugins, MIT License,MIT License
-mdurl,mdurl,mdurl, MIT License,MIT License
+mdit-py-plugins,mdit_py_plugins,mdit_py_plugins,MIT License,MIT License
+mdurl,mdurl,mdurl,MIT License,MIT License
 mergedeep,mergedeep,mergedeep,UNKNOWN,MIT License
 meson,,meson,,"Apache License, Version 2.0"
-methodtools,,methodtools,,BSD 2-Clause License
+methodtools,methodtools,methodtools,BSD 2-Clause License,BSD 2-Clause License
 microsoft-kiota-abstractions,,microsoft_kiota_abstractions,,MIT
 microsoft-kiota-authentication-azure,,microsoft_kiota_authentication_azure,,MIT
 microsoft-kiota-http,,microsoft_kiota_http,,MIT
@@ -597,9 +597,9 @@ mkdocstrings-python,,mkdocstrings_python,,ISC
 ml-dtypes,ml_dtypes,ml_dtypes,Apache-2.0,Apache-2.0
 mlflow,mlflow,mlflow,"Copyright 2018 Databricks, Inc.  All rights reserved.","Copyright 2018 Databricks, Inc.  All rights reserved."
 mlflow-skinny,,mlflow_skinny,,"Copyright 2018 Databricks, Inc.  All rights reserved."
-mmh3,,mmh3,,MIT License
-mock,mock,mock, BSD License,BSD License
-monotonic,,monotonic,,Apache
+mmh3,mmh3,mmh3,MIT License,MIT License
+mock,mock,mock,BSD License,BSD License
+monotonic,monotonic,monotonic,Apache,Apache
 more-itertools,more_itertools,more_itertools,MIT,MIT
 moto,moto,moto,Apache-2.0,Apache-2.0
 motor,motor,motor,Apache License,Apache License
@@ -618,20 +618,20 @@ mypy,mypy,mypy,MIT,MIT
 mypy-boto3-rds,mypy_boto3_rds,mypy_boto3_rds,MIT License,MIT License
 mypy-boto3-s3,mypy_boto3_s3,mypy_boto3_s3,MIT License,MIT License
 mypy-boto3-sqs,mypy_boto3_sqs,mypy_boto3_sqs,MIT License,MIT License
-mypy-extensions,,mypy_extensions,,MIT
+mypy-extensions,mypy_extensions,mypy_extensions,MIT,MIT
 mysql-connector-python,,mysql_connector_python,,GNU GPLv2 (with FOSS License Exception)
-narwhals,narwhals,narwhals, MIT License,MIT License
+narwhals,narwhals,narwhals,MIT License,MIT License
 natsort,natsort,natsort,MIT,MIT
 nbclient,nbclient,nbclient,BSD 3-Clause License,BSD 3-Clause License
 nbconvert,nbconvert,nbconvert,BSD 3-Clause License,BSD 3-Clause License
 nbformat,nbformat,nbformat,BSD 3-Clause License,BSD 3-Clause License
-nest-asyncio,,nest_asyncio,,BSD
+nest-asyncio,nest_asyncio,nest_asyncio,BSD,BSD
 netaddr,netaddr,netaddr,BSD License,BSD License
-networkx,networkx,networkx, BSD License,BSD License
+networkx,networkx,networkx,BSD License,BSD License
 nh3,nh3,nh3,MIT,MIT
-ninja,ninja,ninja, Apache Software License,BSD License
+ninja,ninja,ninja,Apache Software License,BSD License
 nltk,nltk,nltk,"Apache License, Version 2.0","Apache License, Version 2.0"
-nodeenv,,nodeenv,,BSD
+nodeenv,nodeenv,nodeenv,BSD,BSD
 nose,nose,nose,GNU LGPL,GNU LGPL
 notebook,notebook,notebook,BSD 3-Clause License,BSD 3-Clause License
 notebook-shim,notebook_shim,notebook_shim,BSD 3-Clause License,BSD 3-Clause License
@@ -656,7 +656,7 @@ oauth2client,oauth2client,oauth2client,Apache 2.0,Apache 2.0
 oauthlib,oauthlib,oauthlib,BSD-3-Clause,BSD-3-Clause
 oci,oci,oci,Universal Permissive License 1.0 or Apache License 2.0,Universal Permissive License 1.0 or Apache License 2.0
 office365-rest-python-client,,office365_rest_python_client,,MIT
-omegaconf,omegaconf,omegaconf, BSD License,BSD License
+omegaconf,omegaconf,omegaconf,BSD License,BSD License
 onnx,onnx,onnx,Apache License v2.0,Apache License v2.0
 onnxruntime,onnxruntime,onnxruntime,MIT License,MIT License
 openai,openai,openai,Apache-2.0,Apache-2.0
@@ -698,22 +698,22 @@ opentelemetry-util-http,,opentelemetry_util_http,,Apache-2.0
 opt-einsum,opt_einsum,opt_einsum,MIT,MIT
 optree,optree,optree,Apache-2.0,Apache-2.0
 oracledb,oracledb,oracledb,UPL-1.0 OR Apache-2.0,UPL-1.0 OR Apache-2.0
-ordered-set,ordered_set,ordered_set, MIT License,MIT License
-orderly-set,orderly_set,orderly_set, MIT License,MIT License
-orjson,orjson,orjson, Apache Software License,Apache-2.0 OR MIT
-ormsgpack,ormsgpack,ormsgpack, Apache Software License,Apache-2.0 OR MIT
+ordered-set,ordered_set,ordered_set,MIT License,MIT License
+orderly-set,orderly_set,orderly_set,MIT License,MIT License
+orjson,orjson,orjson,Apache Software License,Apache-2.0 OR MIT
+ormsgpack,ormsgpack,ormsgpack,Apache Software License,Apache-2.0 OR MIT
 oscrypto,oscrypto,oscrypto,MIT,MIT
-oss2,oss2,oss2, MIT License,MIT License
+oss2,oss2,oss2,MIT License,MIT License
 outcome,outcome,outcome,MIT OR Apache-2.0,Your choice of MIT or Apache License 2.0
 overrides,overrides,overrides,"Apache License, Version 2.0","Apache License, Version 2.0"
-packaging,packaging,packaging, Apache Software License,BSD License
+packaging,packaging,packaging,Apache Software License,BSD License
 pandas,pandas,pandas,BSD 3-Clause License,BSD 3-Clause License
 pandas-gbq,pandas_gbq,pandas_gbq,BSD-3-Clause,BSD-3-Clause
 pandas-stubs,,pandas_stubs,,BSD-3-Clause
-pandocfilters,,pandocfilters,,BSD-3-Clause
+pandocfilters,pandocfilters,pandocfilters,BSD-3-Clause,BSD-3-Clause
 parameterized,parameterized,parameterized,FreeBSD,FreeBSD
 paramiko,paramiko,paramiko,LGPL-2.1,LGPL-2.1
-parse,,parse,,Copyright (c) 2012-2019 Richard Jones <richard@python.org>
+parse,parse,parse,Copyright (c) 2012-2019 Richard Jones <richard@python.org>,Copyright (c) 2012-2019 Richard Jones <richard@python.org>
 parsedatetime,parsedatetime,parsedatetime,Apache License 2.0,Apache License 2.0
 parso,parso,parso,MIT,MIT
 partd,partd,partd,BSD,BSD
@@ -721,19 +721,19 @@ passlib,passlib,passlib,BSD,BSD
 patchelf,,patchelf,,GPL-3.0-or-later
 pathable,pathable,pathable,Apache-2.0,Apache-2.0
 pathos,pathos,pathos,BSD-3-Clause,BSD-3-Clause
-pathspec,pathspec,pathspec, Mozilla Public License 2.0 (MPL 2.0),Mozilla Public License 2.0 (MPL 2.0)
+pathspec,pathspec,pathspec,Mozilla Public License 2.0 (MPL 2.0),Mozilla Public License 2.0 (MPL 2.0)
 patsy,patsy,patsy,2-clause BSD,2-clause BSD
 pbr,pbr,pbr,Apache-2.0,Apache-2.0
 pbs-installer,pbs_installer,pbs_installer,MIT,MIT
 pdfminer-six,,pdfminer_six,,MIT
 pdm,pdm,pdm,MIT,MIT
-peewee,,peewee,,MIT License
-pendulum,pendulum,pendulum, MIT License,MIT License
+peewee,peewee,peewee,MIT License,MIT License
+pendulum,pendulum,pendulum,MIT License,MIT License
 pexpect,pexpect,pexpect,ISC license,ISC license
 pg8000,pg8000,pg8000,BSD 3-Clause License,BSD 3-Clause License
 pgvector,pgvector,pgvector,MIT,MIT
 phonenumbers,phonenumbers,phonenumbers,Apache License 2.0,Apache License 2.0
-pickleshare,,pickleshare,,MIT
+pickleshare,pickleshare,pickleshare,MIT,MIT
 pika,pika,pika,BSD-3-Clause,BSD-3-Clause
 pillow,,pillow,,MIT-CMU
 pinecone,pinecone,pinecone,Apache-2.0,Apache-2.0
@@ -743,7 +743,7 @@ pip-tools,,pip_tools,,BSD
 pipenv,pipenv,pipenv,MIT License (MIT),MIT License (MIT)
 pipx,pipx,pipx,MIT,MIT
 pkginfo,pkginfo,pkginfo,MIT,MIT
-pkgutil-resolve-name,,pkgutil_resolve_name,,MIT License
+pkgutil-resolve-name,pkgutil_resolve_name,pkgutil_resolve_name,MIT License,MIT License
 platformdirs,platformdirs,platformdirs,MIT,MIT
 playwright,playwright,playwright,Apache-2.0,Apache-2.0
 plotly,plotly,plotly,MIT License,MIT License
@@ -763,14 +763,14 @@ prettytable,prettytable,prettytable,BSD-3-Clause,BSD-3-Clause
 prison,prison,prison,MIT,MIT
 progressbar2,,progressbar2,,BSD-3-Clause
 prometheus-client,prometheus_client,prometheus_client,Apache-2.0 AND BSD-2-Clause,Apache-2.0 AND BSD-2-Clause
-prompt-toolkit,prompt_toolkit,prompt_toolkit, BSD License,BSD License
+prompt-toolkit,prompt_toolkit,prompt_toolkit,BSD License,BSD License
 propcache,propcache,propcache,Apache-2.0,Apache-2.0
 protego,protego,protego,BSD-3-Clause,BSD-3-Clause
 proto-plus,,proto_plus,,Apache 2.0
 protobuf,,protobuf,,3-Clause BSD License
 protobuf3-to-dict,,protobuf3_to_dict,,Public Domain
 psutil,psutil,psutil,BSD-3-Clause,BSD-3-Clause
-ptyprocess,ptyprocess,ptyprocess, ISC License (ISCL),ISC License (ISCL)
+ptyprocess,ptyprocess,ptyprocess,ISC License (ISCL),ISC License (ISCL)
 pure-eval,pure_eval,pure_eval,MIT,MIT
 pure-sasl,,pure_sasl,,MIT
 py,py,py,MIT license,MIT license
@@ -785,7 +785,7 @@ pyasn1-modules,pyasn1_modules,pyasn1_modules,BSD,BSD
 pyathena,pyathena,pyathena,Copyright 2017 laughingman7743,Copyright 2017 laughingman7743
 pybind11,pybind11,pybind11,BSD-3-Clause,BSD-3-Clause
 pycares,pycares,pycares,MIT,MIT
-pycodestyle,,pycodestyle,,MIT
+pycodestyle,pycodestyle,pycodestyle,MIT,MIT
 pycountry,pycountry,pycountry,LGPL-2.1-only,LGPL-2.1-only
 pycparser,pycparser,pycparser,BSD-3-Clause,BSD-3-Clause
 pycrypto,,pycrypto,,Public Domain
@@ -802,7 +802,7 @@ pydeck,pydeck,pydeck,Apache License 2.0,Apache License 2.0
 pydeequ,pydeequ,pydeequ,Apache-2.0,Apache-2.0
 pydot,pydot,pydot,MIT,MIT
 pydub,pydub,pydub,MIT,MIT
-pydyf,pydyf,pydyf, BSD License,BSD License
+pydyf,pydyf,pydyf,BSD License,BSD License
 pyee,pyee,pyee,MIT,MIT
 pyelftools,,pyelftools,,Public domain
 pyflakes,pyflakes,pyflakes,MIT,MIT
@@ -813,26 +813,26 @@ pyiceberg,pyiceberg,pyiceberg,Apache-2.0,Apache-2.0
 pyjwt,,pyjwt,,MIT
 pylint,pylint,pylint,GPL-2.0-or-later,GPL-2.0-or-later
 pymdown-extensions,,pymdown_extensions,,MIT
-pymilvus,pymilvus,pymilvus, Apache Software License,Apache Software License
+pymilvus,pymilvus,pymilvus,Apache Software License,Apache Software License
 pymongo,pymongo,pymongo,Apache License,Apache License
 pymssql,pymssql,pymssql,LGPL-2.1-or-later,LGPL-2.1-or-later
 pymupdf,pymupdf,pymupdf,Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License,Dual Licensed - GNU AFFERO GPL 3.0 or Artifex Commercial License
 pymysql,pymysql,pymysql,MIT,MIT
 pynacl,,pynacl,,Apache-2.0
-pyodbc,,pyodbc,,MIT-0 License
+pyodbc,pyodbc,pyodbc,MIT-0 License,MIT-0 License
 pyopenssl,,pyopenssl,,"Apache License, Version 2.0"
 pyotp,pyotp,pyotp,MIT License,MIT License
 pyparsing,pyparsing,pyparsing,MIT,MIT
 pypdf,pypdf,pypdf,BSD-3-Clause,BSD-3-Clause
-pypdf2,PyPDF2,pypdf2, BSD License,BSD License
+pypdf2,PyPDF2,pypdf2,BSD License,BSD License
 pypdfium2,pypdfium2,pypdfium2,(Apache-2.0 OR BSD-3-Clause) AND LicenseRef-PdfiumThirdParty,(Apache-2.0 OR BSD-3-Clause) AND LicenseRef-PdfiumThirdParty
 pyperclip,pyperclip,pyperclip,BSD,BSD
-pyphen,pyphen,pyphen, GNU General Public License v2 or later (GPLv2+),Mozilla Public License 1.1 (MPL 1.1)
+pyphen,pyphen,pyphen,GNU General Public License v2 or later (GPLv2+),Mozilla Public License 1.1 (MPL 1.1)
 pyproj,pyproj,pyproj,MIT,MIT
 pyproject-api,pyproject_api,pyproject_api,MIT,MIT
-pyproject-hooks,pyproject_hooks,pyproject_hooks, MIT License,MIT License
+pyproject-hooks,pyproject_hooks,pyproject_hooks,MIT License,MIT License
 pyright,pyright,pyright,MIT,MIT
-pyroaring,,pyroaring,,MIT
+pyroaring,pyroaring,pyroaring,MIT,MIT
 pyrsistent,pyrsistent,pyrsistent,MIT,MIT
 pyserial,,pyserial,,BSD
 pysftp,pysftp,pysftp,BSD,BSD
@@ -849,10 +849,10 @@ pytest-json-report,,pytest_json_report,,MIT
 pytest-metadata,pytest_metadata,pytest_metadata,MPL-2.0,MPL-2.0
 pytest-mock,pytest_mock,pytest_mock,MIT,MIT
 pytest-random-order,,pytest_random_order,,MIT
-pytest-rerunfailures,,pytest_rerunfailures,,MPL-2.0
+pytest-rerunfailures,pytest_rerunfailures,pytest_rerunfailures,MPL-2.0,MPL-2.0
 pytest-runner,,pytest_runner,,MIT License
 pytest-split,pytest_split,pytest_split,MIT,MIT
-pytest-timeout,,pytest_timeout,,MIT
+pytest-timeout,pytest_timeout,pytest_timeout,MIT,MIT
 pytest-xdist,,pytest_xdist,,MIT
 python-daemon,,python_daemon,,Copying this work
 python-dateutil,,python_dateutil,,Dual License
@@ -898,7 +898,7 @@ regex,regex,regex,Apache-2.0 AND CNRI-Python,Apache-2.0 AND CNRI-Python
 reportlab,reportlab,reportlab,"BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc.","BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc."
 requests,requests,requests,Apache-2.0,Apache-2.0
 requests-aws4auth,requests_aws4auth,requests_aws4auth,MIT License,MIT License
-requests-file,,requests_file,,Apache 2.0
+requests-file,requests_file,requests_file,Apache 2.0,Apache 2.0
 requests-mock,requests_mock,requests_mock,Apache-2,Apache-2
 requests-ntlm,requests_ntlm,requests_ntlm,ISC,ISC
 requests-oauthlib,requests_oauthlib,requests_oauthlib,ISC,ISC
@@ -906,10 +906,10 @@ requests-toolbelt,requests_toolbelt,requests_toolbelt,Apache 2.0,Apache 2.0
 resolvelib,resolvelib,resolvelib,ISC License,ISC License
 responses,responses,responses,Apache 2.0,Apache 2.0
 retry,retry,retry,Apache License 2.0,Apache License 2.0
-retrying,,retrying,,Apache-2.0
-rfc3339-validator,,rfc3339_validator,,MIT license
+retrying,retrying,retrying,Apache-2.0,Apache-2.0
+rfc3339-validator,rfc3339_validator,rfc3339_validator,MIT license,MIT license
 rfc3986,rfc3986,rfc3986,Apache 2.0,Apache 2.0
-rfc3986-validator,,rfc3986_validator,,MIT license
+rfc3986-validator,rfc3986_validator,rfc3986_validator,MIT license,MIT license
 rfc3987-syntax,rfc3987_syntax,rfc3987_syntax,MIT,MIT
 rich,rich,rich,MIT,MIT
 rich-argparse,rich_argparse,rich_argparse,MIT,MIT
@@ -920,19 +920,19 @@ rpds-py,,rpds_py,,MIT
 rsa,rsa,rsa,Apache-2.0,Apache-2.0
 ruamel.yaml,,ruamel.yaml,,MIT license
 ruamel.yaml.clib,,ruamel.yaml.clib,,MIT
-ruff,ruff,ruff, MIT License,MIT License
+ruff,ruff,ruff,MIT License,MIT License
 s3fs,s3fs,s3fs,BSD,BSD
 s3transfer,s3transfer,s3transfer,Apache License 2.0,Apache License 2.0
-safetensors,safetensors,safetensors, Apache Software License,Apache Software License
-sagemaker,sagemaker,sagemaker, Apache Software License,Apache Software License
-sagemaker-core,sagemaker_core,sagemaker_core, Apache Software License,Apache Software License
-schema,,schema,,MIT
+safetensors,safetensors,safetensors,Apache Software License,Apache Software License
+sagemaker,sagemaker,sagemaker,Apache Software License,Apache Software License
+sagemaker-core,sagemaker_core,sagemaker_core,Apache Software License,Apache Software License
+schema,schema,schema,MIT,MIT
 scikit-image,,scikit_image,,Files: *
 scikit-learn,,scikit_learn,,BSD-3-Clause
 scipy,scipy,scipy,"Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers.","Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers."
-scp,,scp,,LGPL-2.1-or-later
+scp,scp,scp,LGPL-2.1-or-later,LGPL-2.1-or-later
 scramp,scramp,scramp,MIT No Attribution,MIT No Attribution
-seaborn,seaborn,seaborn, BSD License,BSD License
+seaborn,seaborn,seaborn,BSD License,BSD License
 secretstorage,secretstorage,secretstorage,BSD-3-Clause,BSD-3-Clause
 segment-analytics-python,,segment_analytics_python,,MIT License
 selenium,selenium,selenium,Apache-2.0,Apache-2.0
@@ -947,18 +947,18 @@ sentry-sdk,sentry_sdk,sentry_sdk,MIT,MIT
 setproctitle,setproctitle,setproctitle,BSD-3-Clause,BSD-3-Clause
 setuptools,setuptools,setuptools,MIT,MIT
 setuptools-scm,setuptools_scm,setuptools_scm,"Permission is hereby granted, free of charge, to any person obtaining a copy","Permission is hereby granted, free of charge, to any person obtaining a copy"
-sh,,sh,,MIT
+sh,sh,sh,MIT,MIT
 shap,shap,shap,MIT License,MIT License
 shapely,shapely,shapely,BSD 3-Clause,BSD 3-Clause
 shellingham,shellingham,shellingham,ISC License,ISC License
 simple-salesforce,simple_salesforce,simple_salesforce,Apache-2.0,Apache-2.0
-simple-websocket,simple_websocket,simple_websocket, MIT License,MIT License
+simple-websocket,simple_websocket,simple_websocket,MIT License,MIT License
 simplejson,simplejson,simplejson,MIT License,MIT License
 singer-sdk,singer_sdk,singer_sdk,Apache-2.0,Apache-2.0
-six,,six,,MIT
+six,six,six,MIT,MIT
 slack-sdk,slack_sdk,slack_sdk,MIT,MIT
-slicer,slicer,slicer, MIT License,MIT License
-smart-open,smart_open,smart_open, MIT License,MIT License
+slicer,slicer,slicer,MIT License,MIT License
+smart-open,smart_open,smart_open,MIT License,MIT License
 smdebug-rulesconfig,smdebug_rulesconfig,smdebug_rulesconfig,Apache License Version 2.0,Apache License Version 2.0
 smmap,smmap,smmap,BSD-3-Clause,BSD-3-Clause
 sniffio,sniffio,sniffio,MIT OR Apache-2.0,MIT OR Apache-2.0
@@ -968,7 +968,7 @@ snowflake-sqlalchemy,,snowflake_sqlalchemy,,Apache-2.0
 snowplow-tracker,snowplow_tracker,snowplow_tracker,Apache License 2.0,Apache License 2.0
 socksio,socksio,socksio,UNKNOWN,MIT License
 sortedcontainers,sortedcontainers,sortedcontainers,Apache 2.0,Apache 2.0
-soundfile,,soundfile,,BSD 3-Clause License
+soundfile,soundfile,soundfile,BSD 3-Clause License,BSD 3-Clause License
 soupsieve,soupsieve,soupsieve,MIT,MIT
 spacy,spacy,spacy,MIT,MIT
 spacy-legacy,spacy_legacy,spacy_legacy,MIT,MIT
@@ -983,24 +983,24 @@ sphinxcontrib-jsmath,,sphinxcontrib_jsmath,,BSD
 sphinxcontrib-qthelp,,sphinxcontrib_qthelp,,BSD License
 sphinxcontrib-serializinghtml,,sphinxcontrib_serializinghtml,,BSD License
 sqlalchemy,sqlalchemy,sqlalchemy,MIT,MIT
-sqlalchemy-bigquery,sqlalchemy_bigquery,sqlalchemy_bigquery, MIT License,MIT License
+sqlalchemy-bigquery,sqlalchemy_bigquery,sqlalchemy_bigquery,MIT License,MIT License
 sqlalchemy-jsonfield,sqlalchemy_jsonfield,sqlalchemy_jsonfield,Apache-2.0,Apache-2.0
 sqlalchemy-spanner,,sqlalchemy_spanner,,Apache 2.0
 sqlalchemy-utils,sqlalchemy_utils,sqlalchemy_utils,BSD-3-Clause,BSD-3-Clause
 sqlglot,sqlglot,sqlglot,MIT,MIT
-sqlparse,sqlparse,sqlparse, BSD License,BSD License
+sqlparse,sqlparse,sqlparse,BSD License,BSD License
 srsly,srsly,srsly,MIT,MIT
 sse-starlette,sse_starlette,sse_starlette,BSD-3-Clause,BSD-3-Clause
-sshtunnel,,sshtunnel,,MIT
+sshtunnel,sshtunnel,sshtunnel,MIT,MIT
 stack-data,stack_data,stack_data,MIT,MIT
 starlette,starlette,starlette,BSD-3-Clause,BSD-3-Clause
 statsd,statsd,statsd,MIT,MIT
 statsmodels,statsmodels,statsmodels,BSD License,BSD License
-stevedore,stevedore,stevedore, Apache Software License,Apache Software License
+stevedore,stevedore,stevedore,Apache Software License,Apache Software License
 streamlit,streamlit,streamlit,Apache License 2.0,Apache License 2.0
-strenum,strenum,strenum, MIT License,MIT License
+strenum,strenum,strenum,MIT License,MIT License
 strictyaml,strictyaml,strictyaml,MIT,MIT
-stripe,stripe,stripe, MIT License,MIT License
+stripe,stripe,stripe,MIT License,MIT License
 structlog,structlog,structlog,MIT OR Apache-2.0,MIT OR Apache-2.0
 swe-rex,,swe_rex,,MIT License
 sympy,sympy,sympy,BSD,New BSD License (see the [LICENSE](LICENSE) file for details) covers all
@@ -1018,10 +1018,10 @@ termcolor,termcolor,termcolor,MIT,MIT
 terminado,terminado,terminado,BSD 2-Clause License,BSD 2-Clause License
 testcontainers,,testcontainers,,Apache-2.0
 text-unidecode,text_unidecode,text_unidecode,Artistic License,Artistic License
-texttable,,texttable,,MIT
+texttable,texttable,texttable,MIT,MIT
 textual,textual,textual,MIT,MIT
 tf-keras-nightly,,tf_keras_nightly,,Apache 2.0
-threadpoolctl,,threadpoolctl,,BSD-3-Clause
+threadpoolctl,threadpoolctl,threadpoolctl,BSD-3-Clause,BSD-3-Clause
 thrift,thrift,thrift,Apache License 2.0,Apache License 2.0
 thrift-sasl,thrift_sasl,thrift_sasl,"Apache License, Version 2.0","Apache License, Version 2.0"
 thriftpy2,thriftpy2,thriftpy2,The MIT License (MIT),The MIT License (MIT)
@@ -1029,17 +1029,17 @@ tifffile,tifffile,tifffile,BSD-3-Clause,BSD-3-Clause
 tiktoken,tiktoken,tiktoken,MIT License,MIT License
 time-machine,time_machine,time_machine,MIT,MIT
 timm,timm,timm,Apache-2.0,Apache-2.0
-tinycss2,tinycss2,tinycss2, BSD License,BSD License
-tinyhtml5,tinyhtml5,tinyhtml5, MIT License,MIT License
+tinycss2,tinycss2,tinycss2,BSD License,BSD License
+tinyhtml5,tinyhtml5,tinyhtml5,MIT License,MIT License
 tldextract,tldextract,tldextract,BSD-3-Clause,BSD-3-Clause
-tokenizers,tokenizers,tokenizers, Apache Software License,Apache Software License
+tokenizers,tokenizers,tokenizers,Apache Software License,Apache Software License
 toml,toml,toml,MIT,MIT
 tomli,tomli,tomli,MIT License,MIT License
-tomli-w,tomli_w,tomli_w, MIT License,MIT License
+tomli-w,tomli_w,tomli_w,MIT License,MIT License
 tomlkit,tomlkit,tomlkit,MIT,MIT
 toolz,toolz,toolz,BSD,BSD
 torch,torch,torch,BSD-3-Clause,BSD-3-Clause
-torchaudio,torchaudio,torchaudio, BSD License,BSD License
+torchaudio,torchaudio,torchaudio,BSD License,BSD License
 torchmetrics,torchmetrics,torchmetrics,Apache-2.0,Apache-2.0
 torchvision,torchvision,torchvision,BSD,BSD
 tornado,tornado,tornado,Apache-2.0,Apache-2.0
@@ -1047,19 +1047,19 @@ tox,tox,tox,MIT,MIT
 tqdm,tqdm,tqdm,MPL-2.0 AND MIT,MPL-2.0 AND MIT
 traitlets,traitlets,traitlets,BSD 3-Clause License,BSD 3-Clause License
 transformers,transformers,transformers,Apache 2.0 License,Apache 2.0 License
-tree-sitter,tree_sitter,tree_sitter, MIT License,MIT License
+tree-sitter,tree_sitter,tree_sitter,MIT License,MIT License
 trino,trino,trino,Apache 2.0,Apache 2.0
 trio,trio,trio,MIT OR Apache-2.0,MIT OR Apache-2.0
-trio-websocket,trio_websocket,trio_websocket, MIT License,MIT License
-triton,triton,triton, MIT License,MIT License
-trove-classifiers,trove_classifiers,trove_classifiers, Apache Software License,Apache Software License
+trio-websocket,trio_websocket,trio_websocket,MIT License,MIT License
+triton,triton,triton,MIT License,MIT License
+trove-classifiers,trove_classifiers,trove_classifiers,Apache Software License,Apache Software License
 truststore,truststore,truststore,MIT,MIT
 twilio,twilio,twilio,MIT,MIT
 twine,twine,twine,Apache-2.0,Apache-2.0
 twisted,twisted,twisted,MIT License,MIT License
 typedload,typedload,typedload,This software is released under the GNU General Public License 3.,This software is released under the GNU General Public License 3.
 typeguard,typeguard,typeguard,MIT,MIT
-typer,typer,typer, MIT License,MIT License
+typer,typer,typer,MIT License,MIT License
 types-aiofiles,,types_aiofiles,,Apache-2.0
 types-awscrt,,types_awscrt,,MIT License
 types-cachetools,,types_cachetools,,Apache-2.0
@@ -1081,15 +1081,15 @@ types-setuptools,,types_setuptools,,Apache-2.0
 types-tabulate,,types_tabulate,,Apache-2.0
 types-toml,,types_toml,,Apache-2.0 license
 types-urllib3,,types_urllib3,,Apache-2.0 license
-typing-extensions,,typing_extensions,,PSF-2.0
-typing-inspect,,typing_inspect,,MIT
+typing-extensions,typing_extensions,typing_extensions,PSF-2.0,PSF-2.0
+typing-inspect,typing_inspect,typing_inspect,MIT,MIT
 typing-inspection,typing_inspection,typing_inspection,MIT,MIT
 tzdata,tzdata,tzdata,Apache-2.0,Apache-2.0
 tzlocal,tzlocal,tzlocal,MIT,MIT
 ua-parser,ua_parser,ua_parser,Apache 2.0,Apache 2.0
 ua-parser-builtins,ua_parser_builtins,ua_parser_builtins,Apache 2.0,Apache 2.0
 uc-micro-py,,uc_micro_py,,MIT
-ujson,,ujson,,UNKNOWN
+ujson,ujson,ujson,,UNKNOWN
 unearth,unearth,unearth,MIT,MIT
 unidecode,unidecode,unidecode,GPL,GPL
 universal-pathlib,,universal_pathlib,,MIT
@@ -1099,7 +1099,7 @@ uritemplate,uritemplate,uritemplate,BSD 3-Clause OR Apache-2.0,BSD 3-Clause OR A
 urllib3,urllib3,urllib3,MIT,MIT
 userpath,userpath,userpath,MIT,MIT
 uuid6,uuid6,uuid6,MIT,MIT
-uv,uv,uv, MIT License,Apache Software License
+uv,uv,uv,MIT License,Apache Software License
 uvicorn,uvicorn,uvicorn,BSD-3-Clause,BSD-3-Clause
 uvloop,uvloop,uvloop,MIT License,MIT License
 validators,validators,validators,MIT,MIT
@@ -1108,20 +1108,20 @@ virtualenv,virtualenv,virtualenv,MIT,MIT
 wandb,wandb,wandb,MIT License,MIT License
 wasabi,wasabi,wasabi,MIT,MIT
 watchdog,watchdog,watchdog,Apache-2.0,Apache-2.0
-watchfiles,watchfiles,watchfiles, MIT License,MIT
+watchfiles,watchfiles,watchfiles,MIT License,MIT
 watchtower,watchtower,watchtower,Apache Software License,Apache Software License
 wcmatch,wcmatch,wcmatch,MIT,MIT
 wcwidth,wcwidth,wcwidth,MIT,MIT
 weasel,weasel,weasel,MIT,MIT
-weasyprint,weasyprint,weasyprint, BSD License,BSD License
+weasyprint,weasyprint,weasyprint,BSD License,BSD License
 weaviate-client,,weaviate_client,,BSD 3-clause
 webcolors,webcolors,webcolors,BSD-3-Clause,BSD-3-Clause
-webdriver-manager,webdriver_manager,webdriver_manager, Apache Software License,Apache Software License
+webdriver-manager,webdriver_manager,webdriver_manager,Apache Software License,Apache Software License
 webencodings,webencodings,webencodings,BSD,BSD
 websocket-client,,websocket_client,,Apache-2.0
 websockets,websockets,websockets,BSD-3-Clause,BSD-3-Clause
-werkzeug,werkzeug,werkzeug, BSD License,BSD License
-wheel,wheel,wheel, MIT License,MIT License
+werkzeug,werkzeug,werkzeug,BSD License,BSD License
+wheel,wheel,wheel,MIT License,MIT License
 widgetsnbextension,widgetsnbextension,widgetsnbextension,BSD 3-Clause License,BSD 3-Clause License
 wirerope,wirerope,wirerope,BSD 2-Clause License,BSD 2-Clause License
 wrapt,wrapt,wrapt,BSD,BSD
@@ -1131,8 +1131,8 @@ xarray,xarray,xarray,Apache-2.0,Apache-2.0
 xgboost,xgboost,xgboost,Apache-2.0,Apache-2.0
 xlrd,xlrd,xlrd,BSD,BSD
 xlsxwriter,xlsxwriter,xlsxwriter,BSD-2-Clause,BSD-2-Clause
-xmlsec,,xmlsec,,MIT
-xmltodict,,xmltodict,,Copyright (C) 2012 Martin Blech and individual contributors.
+xmlsec,xmlsec,xmlsec,MIT,MIT
+xmltodict,xmltodict,xmltodict,Copyright (C) 2012 Martin Blech and individual contributors.,Copyright (C) 2012 Martin Blech and individual contributors.
 xxhash,xxhash,xxhash,BSD,BSD
 yamllint,yamllint,yamllint,GPL-3.0-or-later,GPL-3.0-or-later
 yandexcloud,yandexcloud,yandexcloud,MIT,MIT
@@ -1144,3 +1144,447 @@ zope-event,,zope_event,,ZPL-2.1
 zope-interface,,zope_interface,,ZPL-2.1
 zopfli,zopfli,zopfli,ASL,ASL
 zstandard,zstandard,zstandard,BSD-3-Clause,BSD-3-Clause
+,30fcd23745efe32ce681__mypyc,30fcd23745efe32ce681__mypyc,,
+,5bae8a57b5ef85818b48__mypyc,5bae8a57b5ef85818b48__mypyc,,
+,7ae574991b77ef47acad__mypyc,7ae574991b77ef47acad__mypyc,,
+,Crypto,crypto,,
+,Cryptodome,cryptodome,,
+,OpenSSL,openssl,,
+,PIL,pil,,
+,TCLIService,tcliservice,,
+,__future__,__future__,,
+,__hello__,__hello__,,
+,__phello__,__phello__,,
+,_aix_support,_aix_support,,
+,_android_support,_android_support,,
+,_apple_support,_apple_support,,
+,_argon2_cffi_bindings,_argon2_cffi_bindings,,
+,_asyncio,_asyncio,,
+,_bisect,_bisect,,
+,_black_version,_black_version,,
+,_blake2,_blake2,,
+,_brotli,_brotli,,
+,_bz2,_bz2,,
+,_cffi_backend,_cffi_backend,,
+,_codecs_cn,_codecs_cn,,
+,_codecs_hk,_codecs_hk,,
+,_codecs_iso2022,_codecs_iso2022,,
+,_codecs_jp,_codecs_jp,,
+,_codecs_kr,_codecs_kr,,
+,_codecs_tw,_codecs_tw,,
+,_collections_abc,_collections_abc,,
+,_colorize,_colorize,,
+,_compat_pickle,_compat_pickle,,
+,_compression,_compression,,
+,_contextvars,_contextvars,,
+,_csv,_csv,,
+,_ctypes,_ctypes,,
+,_ctypes_test,_ctypes_test,,
+,_curses,_curses,,
+,_curses_panel,_curses_panel,,
+,_datetime,_datetime,,
+,_decimal,_decimal,,
+,_distutils_hack,_distutils_hack,,
+,_duckdb,_duckdb,,
+,_elementtree,_elementtree,,
+,_hashlib,_hashlib,,
+,_heapq,_heapq,,
+,_hypothesis_ftz_detector,_hypothesis_ftz_detector,,
+,_hypothesis_globals,_hypothesis_globals,,
+,_hypothesis_pytestplugin,_hypothesis_pytestplugin,,
+,_interpchannels,_interpchannels,,
+,_interpqueues,_interpqueues,,
+,_interpreters,_interpreters,,
+,_ios_support,_ios_support,,
+,_jpype,_jpype,,
+,_json,_json,,
+,_kernel_lib,_kernel_lib,,
+,_lsprof,_lsprof,,
+,_lzma,_lzma,,
+,_markupbase,_markupbase,,
+,_md5,_md5,,
+,_multibytecodec,_multibytecodec,,
+,_multiprocess,_multiprocess,,
+,_multiprocessing,_multiprocessing,,
+,_mysql_connector,_mysql_connector,,
+,_opcode,_opcode,,
+,_opcode_metadata,_opcode_metadata,,
+,_osx_support,_osx_support,,
+,_pickle,_pickle,,
+,_plotly_utils,_plotly_utils,,
+,_posixshmem,_posixshmem,,
+,_posixsubprocess,_posixsubprocess,,
+,_py_abc,_py_abc,,
+,_pydatetime,_pydatetime,,
+,_pydecimal,_pydecimal,,
+,_pyio,_pyio,,
+,_pylong,_pylong,,
+,_pyrepl,_pyrepl,,
+,_pyrsistent_version,_pyrsistent_version,,
+,_pytest,_pytest,,
+,_queue,_queue,,
+,_random,_random,,
+,_ruamel_yaml,_ruamel_yaml,,
+,_sha1,_sha1,,
+,_sha2,_sha2,,
+,_sha3,_sha3,,
+,_sitebuiltins,_sitebuiltins,,
+,_socket,_socket,,
+,_soundfile,_soundfile,,
+,_soundfile_data,_soundfile_data,,
+,_sqlite3,_sqlite3,,
+,_ssl,_ssl,,
+,_statistics,_statistics,,
+,_strptime,_strptime,,
+,_struct,_struct,,
+,_sysconfigdata__linux_x86_64-linux-gnu,_sysconfigdata__linux_x86_64_linux_gnu,,
+,_sysconfigdata_x86_64_conda_linux_gnu,_sysconfigdata_x86_64_conda_linux_gnu,,
+,_testbuffer,_testbuffer,,
+,_testcapi,_testcapi,,
+,_testclinic,_testclinic,,
+,_testclinic_limited,_testclinic_limited,,
+,_testexternalinspection,_testexternalinspection,,
+,_testimportmultiple,_testimportmultiple,,
+,_testinternalcapi,_testinternalcapi,,
+,_testlimitedcapi,_testlimitedcapi,,
+,_testmultiphase,_testmultiphase,,
+,_testsinglephase,_testsinglephase,,
+,_threading_local,_threading_local,,
+,_time_machine,_time_machine,,
+,_tkinter,_tkinter,,
+,_uuid,_uuid,,
+,_weakrefset,_weakrefset,,
+,_xxtestfuzz,_xxtestfuzz,,
+,_yaml,_yaml,,
+,_zoneinfo,_zoneinfo,,
+,abc,abc,,
+,absl,absl,,
+,aliyunsdkcore,aliyunsdkcore,,
+,ansible_test,ansible_test,,
+,antigravity,antigravity,,
+,antlr4,antlr4,,
+,apiclient,apiclient,,
+,argon2,argon2,,
+,array,array,,
+,ast,ast,,
+,atlassian,atlassian,,
+,attr,attr,,
+,backports,backports,,
+,base64,base64,,
+,bdb,bdb,,
+,binascii,binascii,,
+,bisect,bisect,,
+,blackd,blackd,,
+,blib2to3,blib2to3,,
+,bson,bson,,
+,bz2,bz2,,
+,cProfile,cprofile,,
+,calendar,calendar,,
+,cattr,cattr,,
+,cdk_integration_tests,cdk_integration_tests,,
+,cfn_clean,cfn_clean,,
+,cfn_tools,cfn_tools,,
+,cfnlint,cfnlint,,
+,chromadb_rust_bindings,chromadb_rust_bindings,,
+,clang,clang,,
+,cmath,cmath,,
+,cmd,cmd,,
+,code,code,,
+,codecs,codecs,,
+,codeop,codeop,,
+,collections,collections,,
+,colorsys,colorsys,,
+,compileall,compileall,,
+,concurrent,concurrent,,
+,contextlib,contextlib,,
+,contextvars,contextvars,,
+,copy,copy,,
+,copyreg,copyreg,,
+,corsheaders,corsheaders,,
+,cosmos,cosmos,,
+,cpuinfo,cpuinfo,,
+,csv,csv,,
+,ctypes,ctypes,,
+,curses,curses,,
+,cv2,cv2,,
+,daemon,daemon,,
+,databricks,databricks,,
+,dateparser_cli,dateparser_cli,,
+,dateparser_data,dateparser_data,,
+,dateparser_scripts,dateparser_scripts,,
+,dateutil,dateutil,,
+,dbm,dbm,,
+,dbt,dbt,,
+,decimal,decimal,,
+,delta,delta,,
+,difflib,difflib,,
+,dis,dis,,
+,django_filters,django_filters,,
+,dns,dns,,
+,dockerpycreds,dockerpycreds,,
+,doctest,doctest,,
+,docx,docx,,
+,dotenv,dotenv,,
+,dsi_pydantic_shim,dsi_pydantic_shim,,
+,elftools,elftools,,
+,email,email,,
+,encodings,encodings,,
+,engineio,engineio,,
+,ensurepip,ensurepip,,
+,enum,enum,,
+,factory,factory,,
+,faiss,faiss,,
+,fb303,fb303,,
+,fcntl,fcntl,,
+,filecmp,filecmp,,
+,fileinput,fileinput,,
+,fitz,fitz,,
+,fnmatch,fnmatch,,
+,fractions,fractions,,
+,ftplib,ftplib,,
+,functools,functools,,
+,functorch,functorch,,
+,genericpath,genericpath,,
+,getopt,getopt,,
+,getpass,getpass,,
+,gettext,gettext,,
+,git,git,,
+,github,github,,
+,gitlab,gitlab,,
+,glob,glob,,
+,gnupg,gnupg,,
+,googleapiclient,googleapiclient,,
+,graphlib,graphlib,,
+,graphql,graphql,,
+,gremlin_python,gremlin_python,,
+,gridfs,gridfs,,
+,grp,grp,,
+,grpc,grpc,,
+,grpc_gcp,grpc_gcp,,
+,grpc_health,grpc_health,,
+,grpc_status,grpc_status,,
+,grpc_tools,grpc_tools,,
+,gzip,gzip,,
+,hashlib,hashlib,,
+,heapq,heapq,,
+,hive_metastore,hive_metastore,,
+,hmac,hmac,,
+,html,html,,
+,http,http,,
+,hydra,hydra,,
+,idlelib,idlelib,,
+,imaplib,imaplib,,
+,imblearn,imblearn,,
+,impala,impala,,
+,importlib,importlib,,
+,inspect,inspect,,
+,install_alot,install_alot,,
+,integration,integration,,
+,io,io,,
+,ipaddress,ipaddress,,
+,ipykernel_launcher,ipykernel_launcher,,
+,isympy,isympy,,
+,jose,jose,,
+,jpype,jpype,,
+,json,json,,
+,jwt,jwt,,
+,kafka,kafka,,
+,keyword,keyword,,
+,kiota_abstractions,kiota_abstractions,,
+,kiota_authentication_azure,kiota_authentication_azure,,
+,kiota_http,kiota_http,,
+,kiota_serialization_json,kiota_serialization_json,,
+,kiota_serialization_text,kiota_serialization_text,,
+,libfuturize,libfuturize,,
+,libpasteurize,libpasteurize,,
+,lightning_fabric,lightning_fabric,,
+,linecache,linecache,,
+,linkify_it,linkify_it,,
+,locale,locale,,
+,logging,logging,,
+,lzma,lzma,,
+,magic,magic,,
+,mailbox,mailbox,,
+,markdown_it,markdown_it,,
+,material,material,,
+,materialx,materialx,,
+,math,math,,
+,mesonbuild,mesonbuild,,
+,mimetypes,mimetypes,,
+,mmap,mmap,,
+,modulefinder,modulefinder,,
+,multipart,multipart,,
+,multiprocessing,multiprocessing,,
+,mypyc,mypyc,,
+,mysql,mysql,,
+,nacl,nacl,,
+,native_internal,native_internal,,
+,netrc,netrc,,
+,ntpath,ntpath,,
+,nturl2path,nturl2path,,
+,numbers,numbers,,
+,nvidia,nvidia,,
+,office365,office365,,
+,opcode,opcode,,
+,opensearchpy,opensearchpy,,
+,operator,operator,,
+,optparse,optparse,,
+,os,os,,
+,past,past,,
+,pasta,pasta,,
+,pathlib,pathlib,,
+,pdb,pdb,,
+,pdfminer,pdfminer,,
+,pickle,pickle,,
+,pickletools,pickletools,,
+,piptools,piptools,,
+,pkg_resources,pkg_resources,,
+,pkgutil,pkgutil,,
+,platform,platform,,
+,playhouse,playhouse,,
+,plistlib,plistlib,,
+,poplib,poplib,,
+,posixpath,posixpath,,
+,pp,pp,,
+,pprint,pprint,,
+,pptx,pptx,,
+,profile,profile,,
+,progressbar,progressbar,,
+,proto,proto,,
+,protobuf_to_dict,protobuf_to_dict,,
+,proxytypes,proxytypes,,
+,pstats,pstats,,
+,ptr,ptr,,
+,pty,pty,,
+,puresasl,puresasl,,
+,pwiz,pwiz,,
+,py_compile,py_compile,,
+,pyclbr,pyclbr,,
+,pydantic_ai,pydantic_ai,,
+,pydevd_plugins,pydevd_plugins,,
+,pydoc,pydoc,,
+,pydoc_data,pydoc_data,,
+,pyexpat,pyexpat,,
+,pylab,pylab,,
+,pymdownx,pymdownx,,
+,pypdfium2_raw,pypdfium2_raw,,
+,pytest_jsonreport,pytest_jsonreport,,
+,pythonjsonlogger,pythonjsonlogger,,
+,pywt,pywt,,
+,pyximport,pyximport,,
+,queue,queue,,
+,quopri,quopri,,
+,random,random,,
+,random_order,random_order,,
+,re,re,,
+,re2,re2,,
+,readline,readline,,
+,reprlib,reprlib,,
+,resource,resource,,
+,rest_framework,rest_framework,,
+,rlcompleter,rlcompleter,,
+,rpds,rpds,,
+,runpy,runpy,,
+,samples,samples,,
+,samtranslator,samtranslator,,
+,sast_integration_tests,sast_integration_tests,,
+,sched,sched,,
+,secrets,secrets,,
+,select,select,,
+,selectors,selectors,,
+,semdep,semdep,,
+,serial,serial,,
+,shelve,shelve,,
+,shlex,shlex,,
+,shutil,shutil,,
+,signal,signal,,
+,site,site,,
+,skimage,skimage,,
+,sklearn,sklearn,,
+,slack,slack,,
+,slugify,slugify,,
+,smtplib,smtplib,,
+,socket,socket,,
+,socketio,socketio,,
+,socketserver,socketserver,,
+,socks,socks,,
+,sockshandler,sockshandler,,
+,spnego,spnego,,
+,sqlalchemy_bigquery_vendored,sqlalchemy_bigquery_vendored,,
+,sqlite3,sqlite3,,
+,sre_compile,sre_compile,,
+,sre_constants,sre_constants,,
+,sre_parse,sre_parse,,
+,ssl,ssl,,
+,stat,stat,,
+,statistics,statistics,,
+,string,string,,
+,stringprep,stringprep,,
+,struct,struct,,
+,subprocess,subprocess,,
+,swerex,swerex,,
+,symtable,symtable,,
+,sysconfig,sysconfig,,
+,syslog,syslog,,
+,tabnanny,tabnanny,,
+,tarfile,tarfile,,
+,telegram,telegram,,
+,tempfile,tempfile,,
+,termios,termios,,
+,test,test,,
+,tests,tests,,
+,textwrap,textwrap,,
+,tf_keras,tf_keras,,
+,this,this,,
+,threading,threading,,
+,timeit,timeit,,
+,tkinter,tkinter,,
+,tlz,tlz,,
+,token,token,,
+,tokenize,tokenize,,
+,tomllib,tomllib,,
+,torchgen,torchgen,,
+,torio,torio,,
+,trace,trace,,
+,traceback,traceback,,
+,tracemalloc,tracemalloc,,
+,tty,tty,,
+,turtle,turtle,,
+,turtledemo,turtledemo,,
+,types,types,,
+,typing,typing,,
+,uc_micro,uc_micro,,
+,unicodedata,unicodedata,,
+,unittest,unittest,,
+,upath,upath,,
+,urllib,urllib,,
+,uuid,uuid,,
+,venv,venv,,
+,vertex_ray,vertex_ray,,
+,vertexai,vertexai,,
+,vnujar,vnujar,,
+,warnings,warnings,,
+,wave,wave,,
+,weakref,weakref,,
+,weaviate,weaviate,,
+,webbrowser,webbrowser,,
+,websocket,websocket,,
+,win32ctypes,win32ctypes,,
+,wsgiref,wsgiref,,
+,xdist,xdist,,
+,xml,xml,,
+,xmlrpc,xmlrpc,,
+,xxlimited,xxlimited,,
+,xxlimited_35,xxlimited_35,,
+,xxsubtype,xxsubtype,,
+,yaml,yaml,,
+,yaml_env_tag,yaml_env_tag,,
+,yandex,yandex,,
+,yapf_third_party,yapf_third_party,,
+,yapftests,yapftests,,
+,zipapp,zipapp,,
+,zipfile,zipfile,,
+,zipimport,zipimport,,
+,zlib,zlib,,
+,zmq,zmq,,
+,zoneinfo,zoneinfo,,
