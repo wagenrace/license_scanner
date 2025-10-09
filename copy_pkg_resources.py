@@ -21,46 +21,28 @@ from __future__ import annotations
 
 import sys
 
-if sys.version_info < (3, 9):  # noqa: UP036 # Check for unsupported versions
-    raise RuntimeError("Python 3.9 or later is required")
 
-import _imp
-import collections
-import email.parser
 import errno
 import functools
 import importlib
-import importlib.abc
 import importlib.machinery
 import inspect
 import io
 import ntpath
-import operator
 import os
 import pkgutil
-import platform
-import plistlib
 import posixpath
 import re
-import stat
-import tempfile
-import textwrap
-import time
 import types
 import warnings
 import zipfile
-import zipimport
 from collections.abc import Iterable, Iterator, Mapping, MutableSequence
 from pkgutil import get_importer
 from typing import (
     TYPE_CHECKING,
     Any,
-    BinaryIO,
     Callable,
     Literal,
-    NamedTuple,
-    NoReturn,
-    Protocol,
     TypeVar,
     Union,
     overload,
@@ -69,25 +51,8 @@ from typing import (
 # workaround for #4476
 sys.modules.pop("backports", None)
 
-# capture these to bypass sandboxing
-from os import open as os_open, utime  # isort: skip
-from os.path import isdir, split  # isort: skip
 
-try:
-    from os import mkdir, rename, unlink
-
-    WRITE_SUPPORT = True
-except ImportError:
-    # no write support, probably under GAE
-    WRITE_SUPPORT = False
-
-import packaging.markers
-import packaging.requirements
-import packaging.specifiers
-import packaging.utils
-import packaging.version
-from jaraco.text import drop_comment, join_continuation, yield_lines
-from platformdirs import user_cache_dir as _user_cache_dir
+from jaraco.text import yield_lines
 
 if TYPE_CHECKING:
     from _typeshed import BytesPath, StrOrBytesPath, StrPath
@@ -123,8 +88,6 @@ class PEP440Warning(RuntimeWarning):
     """
 
 
-parse_version = packaging.version.Version
-
 _state_vars: dict[str, str] = {}
 
 
@@ -138,82 +101,6 @@ class ResolutionError(Exception):
 
     def __repr__(self) -> str:
         return self.__class__.__name__ + repr(self.args)
-
-
-class VersionConflict(ResolutionError):
-    """
-    An already-installed version conflicts with the requested version.
-
-    Should be initialized with the installed Distribution and the requested
-    Requirement.
-    """
-
-    _template = "{self.dist} is installed but {self.req} is required"
-
-    @property
-    def dist(self) -> Distribution:
-        return self.args[0]
-
-    @property
-    def req(self) -> Requirement:
-        return self.args[1]
-
-    def report(self):
-        return self._template.format(**locals())
-
-    def with_context(
-        self, required_by: set[Distribution | str]
-    ) -> Self | ContextualVersionConflict:
-        """
-        If required_by is non-empty, return a version of self that is a
-        ContextualVersionConflict.
-        """
-        if not required_by:
-            return self
-        args = self.args + (required_by,)
-        return ContextualVersionConflict(*args)
-
-
-class ContextualVersionConflict(VersionConflict):
-    """
-    A VersionConflict that accepts a third parameter, the set of the
-    requirements that required the installed Distribution.
-    """
-
-    _template = VersionConflict._template + " by {self.required_by}"
-
-    @property
-    def required_by(self) -> set[str]:
-        return self.args[2]
-
-
-class DistributionNotFound(ResolutionError):
-    """A requested distribution was not found"""
-
-    _template = (
-        "The '{self.req}' distribution was not found "
-        "and is required by {self.requirers_str}"
-    )
-
-    @property
-    def req(self) -> Requirement:
-        return self.args[0]
-
-    @property
-    def requirers(self) -> set[str] | None:
-        return self.args[1]
-
-    @property
-    def requirers_str(self):
-        if not self.requirers:
-            return "the application"
-        return ", ".join(self.requirers)
-
-    def report(self):
-        return self._template.format(**locals())
-
-    def __str__(self) -> str:
-        return self.report()
 
 
 class UnknownExtra(ResolutionError):
@@ -248,18 +135,6 @@ def safe_name(name: str) -> str:
     Any runs of non-alphanumeric/. characters are replaced with a single '-'.
     """
     return re.sub("[^A-Za-z0-9.]+", "-", name)
-
-
-def safe_version(version: str) -> str:
-    """
-    Convert an arbitrary string to a standard version string
-    """
-    try:
-        # normalize the version
-        return str(packaging.version.Version(version))
-    except packaging.version.InvalidVersion:
-        version = version.replace(" ", ".")
-        return re.sub("[^A-Za-z0-9.]+", "-", version)
 
 
 class NullProvider:
@@ -701,14 +576,6 @@ def _is_unpacked_egg(path):
     )
 
 
-def _set_parent_ns(packageName) -> None:
-    parts = packageName.split(".")
-    name = parts.pop()
-    if parts:
-        parent = ".".join(parts)
-        setattr(sys.modules[parent], name, sys.modules[packageName])
-
-
 MODULE = re.compile(r"\w+(\.\w+)*$").match
 EGG_NAME = re.compile(
     r"""
@@ -724,21 +591,6 @@ EGG_NAME = re.compile(
 ).match
 
 
-def _version_from_file(lines):
-    """
-    Given an iterable of lines from a Metadata file, return
-    the value of the Version field, if present, or None otherwise.
-    """
-
-    def is_version_line(line):
-        return line.lower().startswith("version:")
-
-    version_lines = filter(is_version_line, lines)
-    line = next(iter(version_lines), "")
-    _, _, value = line.partition(":")
-    return safe_version(value.strip()) or None
-
-
 class Distribution:
     """Wrap an actual or potential sys.path entry w/metadata"""
 
@@ -749,15 +601,10 @@ class Distribution:
         location: str | None = None,
         metadata: _MetadataType = None,
         project_name: str | None = None,
-        version: str | None = None,
-        py_version: str | None = PY_MAJOR,
         platform: str | None = None,
         precedence: int = EGG_DIST,
     ) -> None:
         self.project_name = safe_name(project_name or "Unknown")
-        if version is not None:
-            self._version = safe_version(version)
-        self.py_version = py_version
         self.platform = platform
         self.location = location
         self.precedence = precedence
@@ -771,61 +618,33 @@ class Distribution:
         metadata: _MetadataType = None,
         **kw: int,  # We could set `precedence` explicitly, but keeping this as `**kw` for full backwards and subclassing compatibility
     ) -> Distribution:
-        project_name, version, py_version, platform = [None] * 4
+        project_name, platform = [None] * 2
         basename, ext = os.path.splitext(basename)
         if ext.lower() in _distributionImpl:
             cls = _distributionImpl[ext.lower()]
 
             match = EGG_NAME(basename)
             if match:
-                project_name, version, py_version, platform = match.group(
-                    "name", "ver", "pyver", "plat"
-                )
+                project_name, platform = match.group("name", "plat")
         return cls(
             location,
             metadata,
             project_name=project_name,
-            version=version,
-            py_version=py_version,
             platform=platform,
             **kw,
-        )._reload_version()
-
-    def _reload_version(self):
-        return self
+        )
 
     def _get_metadata(self, name):
         if self.has_metadata(name):
             yield from self.get_metadata_lines(name)
 
-    def _get_version(self):
-        lines = self._get_metadata(self.PKG_INFO)
-        return _version_from_file(lines)
+    @property
+    def has_metadata(self):
+        return self._provider.has_metadata
 
-    def __getattr__(self, attr: str):
-        """Delegate all unrecognized public attributes to .metadata provider"""
-        if attr.startswith("_"):
-            raise AttributeError(attr)
-        return getattr(self._provider, attr)
-
-
-class EggInfoDistribution(Distribution):
-    def _reload_version(self):
-        """
-        Packages installed by distutils (e.g. numpy or scipy),
-        which uses an old safe_version, and so
-        their version numbers can get mangled when
-        converted to filenames (e.g., 1.11.0.dev0+2329eae to
-        1.11.0.dev0_2329eae). These distributions will not be
-        parsed properly
-        downstream by Distribution and safe_version, so
-        take an extra step and try to get the version number from
-        the metadata file itself instead of the filename.
-        """
-        md_version = self._get_version()
-        if md_version:
-            self._version = md_version
-        return self
+    @property
+    def get_metadata_lines(self):
+        return self._provider.get_metadata_lines
 
 
 class DistInfoDistribution(Distribution):
@@ -840,7 +659,7 @@ class DistInfoDistribution(Distribution):
 
 _distributionImpl = {
     ".egg": Distribution,
-    ".egg-info": EggInfoDistribution,
+    ".egg-info": Distribution,
     ".dist-info": DistInfoDistribution,
 }
 
