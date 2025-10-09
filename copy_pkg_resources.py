@@ -906,21 +906,6 @@ class PathMetadata(DefaultProvider):
         self.egg_info = egg_info
 
 
-class EggMetadata:
-    """Metadata provider for .egg files"""
-
-    def __init__(self, importer: zipimport.zipimporter) -> None:
-        """Create a metadata provider from a zipimporter"""
-
-        self.zip_pre = importer.archive + os.sep
-        self.loader = importer
-        if importer.prefix:
-            self.module_path = os.path.join(importer.archive, importer.prefix)
-        else:
-            self.module_path = importer.archive
-        self._setup_prefix()
-
-
 _distribution_finders: dict[type, _DistFinderType[Any]] = _declare_state(
     "dict", "_distribution_finders", {}
 )
@@ -943,37 +928,6 @@ def find_distributions(path_item: str, only: bool = False) -> Iterable[Distribut
     importer = get_importer(path_item)
     finder = _find_adapter(_distribution_finders, importer)
     return finder(importer, path_item, only)
-
-
-def find_eggs_in_zip(
-    importer: zipimport.zipimporter, path_item: str, only: bool = False
-) -> Iterator[Distribution]:
-    """
-    Find eggs in zip files; possibly multiple nested eggs.
-    """
-    if importer.archive.endswith(".whl"):
-        # wheels are not supported with this finder
-        # they don't have PKG-INFO metadata, and won't ever contain eggs
-        return
-    metadata = EggMetadata(importer)
-    if metadata.has_metadata("PKG-INFO"):
-        yield Distribution.from_filename(path_item, metadata=metadata)
-    if only:
-        # don't yield nested distros
-        return
-    for subitem in metadata.resource_listdir(""):
-        if _is_egg_path(subitem):
-            subpath = os.path.join(path_item, subitem)
-            dists = find_eggs_in_zip(zipimport.zipimporter(subpath), subpath)
-            yield from dists
-        elif subitem.lower().endswith((".dist-info", ".egg-info")):
-            subpath = os.path.join(path_item, subitem)
-            submeta = EggMetadata(zipimport.zipimporter(subpath))
-            submeta.egg_info = subpath
-            yield Distribution.from_location(path_item, subitem, submeta)
-
-
-register_finder(zipimport.zipimporter, find_eggs_in_zip)
 
 
 def find_nothing(
