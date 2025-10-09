@@ -27,16 +27,13 @@ import functools
 import importlib
 import importlib.machinery
 import inspect
-import io
-import ntpath
 import os
 import pkgutil
-import posixpath
 import re
 import types
 import warnings
 import zipfile
-from collections.abc import Iterable, Iterator, Mapping
+from collections.abc import Iterable, Mapping
 from pkgutil import get_importer
 from typing import (
     TYPE_CHECKING,
@@ -51,13 +48,10 @@ from typing import (
 # workaround for #4476
 sys.modules.pop("backports", None)
 
-
-from jaraco.text import yield_lines
-
 if TYPE_CHECKING:
     from _typeshed import BytesPath, StrOrBytesPath, StrPath
     from _typeshed.importlib import LoaderProtocol
-    from typing_extensions import Self, TypeAlias
+    from typing_extensions import TypeAlias
 
 warnings.warn(
     "pkg_resources is deprecated as an API. "
@@ -69,7 +63,6 @@ warnings.warn(
 _T = TypeVar("_T")
 # Type aliases
 _NestedStr: TypeAlias = Union[str, Iterable[Union[str, Iterable["_NestedStr"]]]]
-_MetadataType: TypeAlias = Union["IResourceProvider", None]
 # Any object works, but let's indicate we expect something like a module (optionally has __loader__ or __file__)
 _ModuleLike: TypeAlias = Union[object, types.ModuleType]
 # Any: Should be _ModuleLike but we end up with issues where _ModuleLike doesn't have _ZipLoaderModule's __loader__
@@ -155,27 +148,6 @@ class DefaultProvider:
 
 
 DefaultProvider._register()
-
-
-class EmptyProvider:
-    """Provider that returns nothing for all requests"""
-
-    # A special case, we don't want all Providers inheriting from NullProvider to have a potentially None module_path
-    module_path: str | None = None  # type: ignore[assignment]
-
-    _isdir = _has = lambda self, path: False
-
-    def _get(self, path) -> bytes:
-        return b""
-
-    def _listdir(self, path):
-        return []
-
-    def __init__(self) -> None:
-        pass
-
-
-empty_provider = EmptyProvider()
 
 
 class PathMetadata(DefaultProvider):
@@ -312,19 +284,14 @@ def safe_listdir(path: StrOrBytesPath):
 
 
 def distributions_from_metadata(path: str):
-    root = os.path.dirname(path)
     if os.path.isdir(path):
         if len(os.listdir(path)) == 0:
             # empty metadata dir; skip
             return
-        metadata: _MetadataType = PathMetadata(root, path)
-    else:
-        metadata = FileMetadata(path)
+
     entry = os.path.basename(path)
     yield Distribution.from_location(
-        root,
         entry,
-        metadata,
         precedence=DEVELOP_DIST,
     )
 
@@ -417,24 +384,18 @@ class Distribution:
 
     def __init__(
         self,
-        location: str | None = None,
-        metadata: _MetadataType = None,
         project_name: str | None = None,
         platform: str | None = None,
         precedence: int = EGG_DIST,
     ) -> None:
         self.project_name = safe_name(project_name or "Unknown")
         self.platform = platform
-        self.location = location
         self.precedence = precedence
-        self._provider = metadata or empty_provider
 
     @classmethod
     def from_location(
         cls,
-        location: str,
         basename: StrPath,
-        metadata: _MetadataType = None,
         **kw: int,  # We could set `precedence` explicitly, but keeping this as `**kw` for full backwards and subclassing compatibility
     ) -> Distribution:
         project_name, platform = [None] * 2
@@ -444,8 +405,6 @@ class Distribution:
         if match:
             project_name, platform = match.group("name", "plat")
         return cls(
-            location,
-            metadata,
             project_name=project_name,
             platform=platform,
             **kw,
@@ -478,15 +437,6 @@ def _find_adapter(registry: Mapping[type, _AdapterT], ob: object) -> _AdapterT:
 # because we want earlier uses of filterwarnings to take precedence over this
 # one.
 warnings.filterwarnings("ignore", category=PEP440Warning, append=True)
-
-
-class PkgResourcesDeprecationWarning(Warning):
-    """
-    Base class for warning about deprecations in ``pkg_resources``
-
-    This class is not derived from ``DeprecationWarning``, and as such is
-    visible by default.
-    """
 
 
 if __name__ == "__main__":
