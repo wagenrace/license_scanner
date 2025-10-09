@@ -441,25 +441,19 @@ class IMetadataProvider(Protocol):
 class IResourceProvider(IMetadataProvider, Protocol):
     """An object that provides access to package resources"""
 
-    def get_resource_filename(
-        self, manager: ResourceManager, resource_name: str
-    ) -> str:
+    def get_resource_filename(self, manager, resource_name: str) -> str:
         """Return a true filesystem path for `resource_name`
 
         `manager` must be a ``ResourceManager``"""
         ...
 
-    def get_resource_stream(
-        self, manager: ResourceManager, resource_name: str
-    ) -> _ResourceStream:
+    def get_resource_stream(self, manager, resource_name: str) -> _ResourceStream:
         """Return a readable file-like object for `resource_name`
 
         `manager` must be a ``ResourceManager``"""
         ...
 
-    def get_resource_string(
-        self, manager: ResourceManager, resource_name: str
-    ) -> bytes:
+    def get_resource_string(self, manager, resource_name: str) -> bytes:
         """Return the contents of `resource_name` as :obj:`bytes`
 
         `manager` must be a ``ResourceManager``"""
@@ -476,218 +470,6 @@ class IResourceProvider(IMetadataProvider, Protocol):
     def resource_listdir(self, resource_name: str) -> list[str]:
         """List of resource names in the directory (like ``os.listdir()``)"""
         ...
-
-
-class ExtractionError(RuntimeError):
-    """An error occurred extracting a resource
-
-    The following attributes are available from instances of this exception:
-
-    manager
-        The resource manager that raised this exception
-
-    cache_path
-        The base directory for resource extraction
-
-    original_error
-        The exception instance that caused extraction to fail
-    """
-
-    manager: ResourceManager
-    cache_path: str
-    original_error: BaseException | None
-
-
-class ResourceManager:
-    """Manage resource extraction and packages"""
-
-    extraction_path: str | None = None
-
-    def __init__(self) -> None:
-        # acts like a set
-        self.cached_files: dict[str, Literal[True]] = {}
-
-    def resource_exists(
-        self, package_or_requirement: _PkgReqType, resource_name: str
-    ) -> bool:
-        """Does the named resource exist?"""
-        return get_provider(package_or_requirement).has_resource(resource_name)
-
-    def resource_isdir(
-        self, package_or_requirement: _PkgReqType, resource_name: str
-    ) -> bool:
-        """Is the named resource an existing directory?"""
-        return get_provider(package_or_requirement).resource_isdir(resource_name)
-
-    def resource_filename(
-        self, package_or_requirement: _PkgReqType, resource_name: str
-    ) -> str:
-        """Return a true filesystem path for specified resource"""
-        return get_provider(package_or_requirement).get_resource_filename(
-            self, resource_name
-        )
-
-    def resource_stream(
-        self, package_or_requirement: _PkgReqType, resource_name: str
-    ) -> _ResourceStream:
-        """Return a readable file-like object for specified resource"""
-        return get_provider(package_or_requirement).get_resource_stream(
-            self, resource_name
-        )
-
-    def resource_string(
-        self, package_or_requirement: _PkgReqType, resource_name: str
-    ) -> bytes:
-        """Return specified resource as :obj:`bytes`"""
-        return get_provider(package_or_requirement).get_resource_string(
-            self, resource_name
-        )
-
-    def resource_listdir(
-        self, package_or_requirement: _PkgReqType, resource_name: str
-    ) -> list[str]:
-        """List the contents of the named resource directory"""
-        return get_provider(package_or_requirement).resource_listdir(resource_name)
-
-    def extraction_error(self) -> NoReturn:
-        """Give an error message for problems extracting file(s)"""
-
-        old_exc = sys.exc_info()[1]
-        cache_path = self.extraction_path or get_default_cache()
-
-        tmpl = textwrap.dedent(
-            """
-            Can't extract file(s) to egg cache
-
-            The following error occurred while trying to extract file(s)
-            to the Python egg cache:
-
-              {old_exc}
-
-            The Python egg cache directory is currently set to:
-
-              {cache_path}
-
-            Perhaps your account does not have write access to this directory?
-            You can change the cache directory by setting the PYTHON_EGG_CACHE
-            environment variable to point to an accessible directory.
-            """
-        ).lstrip()
-        err = ExtractionError(tmpl.format(**locals()))
-        err.manager = self
-        err.cache_path = cache_path
-        err.original_error = old_exc
-        raise err
-
-    def get_cache_path(self, archive_name: str, names: Iterable[StrPath] = ()) -> str:
-        """Return absolute location in cache for `archive_name` and `names`
-
-        The parent directory of the resulting path will be created if it does
-        not already exist.  `archive_name` should be the base filename of the
-        enclosing egg (which may not be the name of the enclosing zipfile!),
-        including its ".egg" extension.  `names`, if provided, should be a
-        sequence of path name parts "under" the egg's extraction location.
-
-        This method should only be called by resource providers that need to
-        obtain an extraction location, and only for names they intend to
-        extract, as it tracks the generated names for possible cleanup later.
-        """
-        extract_path = self.extraction_path or get_default_cache()
-        target_path = os.path.join(extract_path, archive_name + "-tmp", *names)
-        try:
-            _bypass_ensure_directory(target_path)
-        except Exception:
-            self.extraction_error()
-
-        self._warn_unsafe_extraction_path(extract_path)
-
-        self.cached_files[target_path] = True
-        return target_path
-
-    @staticmethod
-    def _warn_unsafe_extraction_path(path) -> None:
-        """
-        If the default extraction path is overridden and set to an insecure
-        location, such as /tmp, it opens up an opportunity for an attacker to
-        replace an extracted file with an unauthorized payload. Warn the user
-        if a known insecure location is used.
-
-        See Distribute #375 for more details.
-        """
-        if os.name == "nt" and not path.startswith(os.environ["windir"]):
-            # On Windows, permissions are generally restrictive by default
-            #  and temp directories are not writable by other users, so
-            #  bypass the warning.
-            return
-        mode = os.stat(path).st_mode
-        if mode & stat.S_IWOTH or mode & stat.S_IWGRP:
-            msg = (
-                "Extraction path is writable by group/others "
-                "and vulnerable to attack when "
-                "used with get_resource_filename ({path}). "
-                "Consider a more secure "
-                "location (set with .set_extraction_path or the "
-                "PYTHON_EGG_CACHE environment variable)."
-            ).format(**locals())
-            warnings.warn(msg, UserWarning)
-
-    def postprocess(self, tempname: StrOrBytesPath, filename: StrOrBytesPath) -> None:
-        """Perform any platform-specific postprocessing of `tempname`
-
-        This is where Mac header rewrites should be done; other platforms don't
-        have anything special they should do.
-
-        Resource providers should call this method ONLY after successfully
-        extracting a compressed resource.  They must NOT call it on resources
-        that are already in the filesystem.
-
-        `tempname` is the current (temporary) name of the file, and `filename`
-        is the name it will be renamed to by the caller after this routine
-        returns.
-        """
-
-        if os.name == "posix":
-            # Make the resource executable
-            mode = ((os.stat(tempname).st_mode) | 0o555) & 0o7777
-            os.chmod(tempname, mode)
-
-    def set_extraction_path(self, path: str) -> None:
-        """Set the base path where resources will be extracted to, if needed.
-
-        If you do not call this routine before any extractions take place, the
-        path defaults to the return value of ``get_default_cache()``.  (Which
-        is based on the ``PYTHON_EGG_CACHE`` environment variable, with various
-        platform-specific fallbacks.  See that routine's documentation for more
-        details.)
-
-        Resources are extracted to subdirectories of this path based upon
-        information given by the ``IResourceProvider``.  You may set this to a
-        temporary directory, but then you must call ``cleanup_resources()`` to
-        delete the extracted files when done.  There is no guarantee that
-        ``cleanup_resources()`` will be able to remove all extracted files.
-
-        (Note: you may not change the extraction path for a given resource
-        manager once resources have been extracted, unless you first call
-        ``cleanup_resources()``.)
-        """
-        if self.cached_files:
-            raise ValueError("Can't change extraction path, files already extracted")
-
-        self.extraction_path = path
-
-    def cleanup_resources(self, force: bool = False) -> list[str]:
-        """
-        Delete all extracted resource files and directories, returning a list
-        of the file and directory names that could not be successfully removed.
-        This function does not have any concurrency protection, so it should
-        generally only be called when the extraction path is a temporary
-        directory exclusive to a single process.  This method is not
-        automatically called; you must call it explicitly or register it as an
-        ``atexit`` function if you wish to ensure cleanup of a temporary
-        directory used for extractions.
-        """
-        # XXX
-        return []
 
 
 def get_default_cache() -> str:
@@ -805,26 +587,7 @@ class NullProvider:
     loader: LoaderProtocol | None = None
 
     def __init__(self, module: _ModuleLike) -> None:
-        self.loader = getattr(module, "__loader__", None)
-        self.module_path = os.path.dirname(getattr(module, "__file__", ""))
-
-    def get_resource_filename(
-        self, manager: ResourceManager, resource_name: str
-    ) -> str:
-        return self._fn(self.module_path, resource_name)
-
-    def get_resource_stream(
-        self, manager: ResourceManager, resource_name: str
-    ) -> BinaryIO:
-        return io.BytesIO(self.get_resource_string(manager, resource_name))
-
-    def get_resource_string(
-        self, manager: ResourceManager, resource_name: str
-    ) -> bytes:
-        return self._get(self._fn(self.module_path, resource_name))
-
-    def has_resource(self, resource_name: str) -> bool:
-        return self._has(self._fn(self.module_path, resource_name))
+        pass
 
     def _get_metadata_path(self, name):
         return self._fn(self.egg_info, name)
@@ -854,61 +617,6 @@ class NullProvider:
 
     def resource_isdir(self, resource_name: str) -> bool:
         return self._isdir(self._fn(self.module_path, resource_name))
-
-    def metadata_isdir(self, name: str) -> bool:
-        return bool(self.egg_info and self._isdir(self._fn(self.egg_info, name)))
-
-    def resource_listdir(self, resource_name: str) -> list[str]:
-        return self._listdir(self._fn(self.module_path, resource_name))
-
-    def metadata_listdir(self, name: str) -> list[str]:
-        if self.egg_info:
-            return self._listdir(self._fn(self.egg_info, name))
-        return []
-
-    def run_script(self, script_name: str, namespace: dict[str, Any]) -> None:
-        script = "scripts/" + script_name
-        if not self.has_metadata(script):
-            raise ResolutionError(
-                "Script {script!r} not found in metadata at {self.egg_info!r}".format(
-                    **locals()
-                ),
-            )
-
-        script_text = self.get_metadata(script).replace("\r\n", "\n")
-        script_text = script_text.replace("\r", "\n")
-        script_filename = self._fn(self.egg_info, script)
-        namespace["__file__"] = script_filename
-        if os.path.exists(script_filename):
-            source = _read_utf8_with_fallback(script_filename)
-            code = compile(source, script_filename, "exec")
-            exec(code, namespace, namespace)
-        else:
-            from linecache import cache
-
-            cache[script_filename] = (
-                len(script_text),
-                0,
-                script_text.split("\n"),
-                script_filename,
-            )
-            script_code = compile(script_text, script_filename, "exec")
-            exec(script_code, namespace, namespace)
-
-    def _has(self, path) -> bool:
-        raise NotImplementedError(
-            "Can't perform this operation for unregistered loader type"
-        )
-
-    def _isdir(self, path) -> bool:
-        raise NotImplementedError(
-            "Can't perform this operation for unregistered loader type"
-        )
-
-    def _listdir(self, path) -> list[str]:
-        raise NotImplementedError(
-            "Can't perform this operation for unregistered loader type"
-        )
 
     def _fn(self, base: str | None, resource_name: str):
         if base is None:
@@ -1073,7 +781,7 @@ class DefaultProvider(EggProvider):
 DefaultProvider._register()
 
 
-class EmptyProvider(NullProvider):
+class EmptyProvider:
     """Provider that returns nothing for all requests"""
 
     # A special case, we don't want all Providers inheriting from NullProvider to have a potentially None module_path
@@ -1179,9 +887,7 @@ class ZipProvider(EggProvider):
     def zipinfo(self):
         return self._zip_manifests.load(self.loader.archive)
 
-    def get_resource_filename(
-        self, manager: ResourceManager, resource_name: str
-    ) -> str:
+    def get_resource_filename(self, manager, resource_name: str) -> str:
         if not self.egg_name:
             raise NotImplementedError(
                 "resource_filename() only supported for .egg, not .zip"
@@ -1204,9 +910,7 @@ class ZipProvider(EggProvider):
         return timestamp, size
 
     # FIXME: 'ZipProvider._extract_resource' is too complex (12)
-    def _extract_resource(
-        self, manager: ResourceManager, zip_path
-    ) -> str:  # noqa: C901
+    def _extract_resource(self, manager, zip_path) -> str:  # noqa: C901
         if zip_path in self._index():
             for name in self._index()[zip_path]:
                 last = self._extract_resource(manager, os.path.join(zip_path, name))
