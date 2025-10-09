@@ -102,16 +102,9 @@ warnings.warn(
 )
 
 _T = TypeVar("_T")
-_DistributionT = TypeVar("_DistributionT", bound="Distribution")
 # Type aliases
 _NestedStr: TypeAlias = Union[str, Iterable[Union[str, Iterable["_NestedStr"]]]]
-_StrictInstallerType: TypeAlias = Callable[["Requirement"], "_DistributionT"]
-_InstallerType: TypeAlias = Callable[["Requirement"], Union["Distribution", None]]
-_PkgReqType: TypeAlias = Union[str, "Requirement"]
-_EPDistType: TypeAlias = Union["Distribution", _PkgReqType]
 _MetadataType: TypeAlias = Union["IResourceProvider", None]
-_ResolvedEntryPoint: TypeAlias = Any  # Can be any attribute in the module
-_ResourceStream: TypeAlias = Any  # TODO / Incomplete: A readable file-like object
 # Any object works, but let's indicate we expect something like a module (optionally has __loader__ or __file__)
 _ModuleLike: TypeAlias = Union[object, types.ModuleType]
 # Any: Should be _ModuleLike but we end up with issues where _ModuleLike doesn't have _ZipLoaderModule's __loader__
@@ -121,9 +114,6 @@ _NSHandlerType: TypeAlias = Callable[[_T, str, str, types.ModuleType], Union[str
 _AdapterT = TypeVar(
     "_AdapterT", _DistFinderType[Any], _ProviderFactoryType, _NSHandlerType[Any]
 )
-
-
-_PEP440_FALLBACK = re.compile(r"^v?(?P<safe>(?:[0-9]+!)?[0-9]+(?:\.[0-9]+)*)", re.I)
 
 
 class PEP440Warning(RuntimeWarning):
@@ -272,52 +262,6 @@ def safe_version(version: str) -> str:
         return re.sub("[^A-Za-z0-9.]+", "-", version)
 
 
-def safe_extra(extra: str) -> str:
-    """Convert an arbitrary string to a standard 'extra' name
-
-    Any runs of non-alphanumeric characters are replaced with a single '_',
-    and the result is always lowercased.
-    """
-    return re.sub("[^A-Za-z0-9.-]+", "_", extra).lower()
-
-
-def to_filename(name: str) -> str:
-    """Convert a project or version name to its filename-escaped form
-
-    Any '-' characters are currently replaced with '_'.
-    """
-    return name.replace("-", "_")
-
-
-def invalid_marker(text: str) -> SyntaxError | Literal[False]:
-    """
-    Validate text as a PEP 508 environment marker; return an exception
-    if invalid or False otherwise.
-    """
-    try:
-        evaluate_marker(text)
-    except SyntaxError as e:
-        e.filename = None
-        e.lineno = None
-        return e
-    return False
-
-
-def evaluate_marker(text: str, extra: str | None = None) -> bool:
-    """
-    Evaluate a PEP 508 environment marker.
-    Return a boolean indicating the marker result in this environment.
-    Raise SyntaxError if marker is invalid.
-
-    This implementation uses the 'pyparsing' module.
-    """
-    try:
-        marker = packaging.markers.Marker(text)
-        return marker.evaluate()
-    except packaging.markers.InvalidMarker as e:
-        raise SyntaxError(e) from e
-
-
 class NullProvider:
     """Try to implement resources and metadata for arbitrary PEP 302 loaders"""
 
@@ -437,9 +381,8 @@ is not allowed.
 
         # for compatibility, warn; in future
         # raise ValueError(msg)
-        issue_warning(
+        raise DeprecationWarning(
             msg[:-1] + " and will raise exceptions in a future release.",
-            DeprecationWarning,
         )
 
     def _get(self, path) -> bytes:
@@ -539,85 +482,6 @@ class EmptyProvider:
 
 
 empty_provider = EmptyProvider()
-
-
-class ZipManifests(dict[str, "MemoizedZipManifests.manifest_mod"]):
-    """
-    zip manifest builder
-    """
-
-    # `path` could be `StrPath | IO[bytes]` but that violates the LSP for `MemoizedZipManifests.load`
-    @classmethod
-    def build(cls, path: str) -> dict[str, zipfile.ZipInfo]:
-        """
-        Build a dictionary similar to the zipimport directory
-        caches, except instead of tuples, store ZipInfo objects.
-
-        Use a platform-specific path separator (os.sep) for the path keys
-        for compatibility with pypy on Windows.
-        """
-        with zipfile.ZipFile(path) as zfile:
-            items = (
-                (
-                    name.replace("/", os.sep),
-                    zfile.getinfo(name),
-                )
-                for name in zfile.namelist()
-            )
-            return dict(items)
-
-    load = build
-
-
-class MemoizedZipManifests(ZipManifests):
-    """
-    Memoized zipfile manifests.
-    """
-
-    class manifest_mod(NamedTuple):
-        manifest: dict[str, zipfile.ZipInfo]
-        mtime: float
-
-
-class FileMetadata(EmptyProvider):
-    """Metadata handler for standalone PKG-INFO files
-
-    Usage::
-
-        metadata = FileMetadata("/path/to/PKG-INFO")
-
-    This provider rejects all data and metadata requests except for PKG-INFO,
-    which is treated as existing, and will be the contents of the file at
-    the provided location.
-    """
-
-    def __init__(self, path: StrPath) -> None:
-        self.path = path
-
-    def _get_metadata_path(self, name):
-        return self.path
-
-    def has_metadata(self, name: str) -> bool:
-        return name == "PKG-INFO" and os.path.isfile(self.path)
-
-    def get_metadata(self, name: str) -> str:
-        if name != "PKG-INFO":
-            raise KeyError("No metadata except PKG-INFO is available")
-
-        with open(self.path, encoding="utf-8", errors="replace") as f:
-            metadata = f.read()
-        self._warn_on_replacement(metadata)
-        return metadata
-
-    def _warn_on_replacement(self, metadata) -> None:
-        replacement_char = "�"
-        if replacement_char in metadata:
-            tmpl = "{self.path} could not be properly decoded in UTF-8"
-            msg = tmpl.format(**locals())
-            warnings.warn(msg)
-
-    def get_metadata_lines(self, name: str) -> Iterator[str]:
-        return yield_lines(self.get_metadata(name))
 
 
 class PathMetadata(DefaultProvider):
@@ -771,223 +635,10 @@ def distributions_from_metadata(path: str):
     )
 
 
-def non_empty_lines(path):
-    """
-    Yield non-empty lines from file at path
-    """
-    for line in _read_utf8_with_fallback(path).splitlines():
-        line = line.strip()
-        if line:
-            yield line
-
-
-def resolve_egg_link(path):
-    """
-    Given a path to an .egg-link, resolve distributions
-    present in the referenced path.
-    """
-    referenced_paths = non_empty_lines(path)
-    resolved_paths = (
-        os.path.join(os.path.dirname(path), ref) for ref in referenced_paths
-    )
-    dist_groups = map(find_distributions, resolved_paths)
-    return next(dist_groups, ())
-
-
 if hasattr(pkgutil, "ImpImporter"):
     register_finder(pkgutil.ImpImporter, find_on_path)
 
 register_finder(importlib.machinery.FileFinder, find_on_path)
-
-_namespace_handlers: dict[type, _NSHandlerType[Any]] = _declare_state(
-    "dict", "_namespace_handlers", {}
-)
-_namespace_packages: dict[str | None, list[str]] = _declare_state(
-    "dict", "_namespace_packages", {}
-)
-
-
-def register_namespace_handler(
-    importer_type: type[_T], namespace_handler: _NSHandlerType[_T]
-) -> None:
-    """Register `namespace_handler` to declare namespace packages
-
-    `importer_type` is the type or class of a PEP 302 "Importer" (sys.path item
-    handler), and `namespace_handler` is a callable like this::
-
-        def namespace_handler(importer, path_entry, moduleName, module):
-            # return a path_entry to use for child packages
-
-    Namespace handlers are only called if the importer object has already
-    agreed that it can handle the relevant path item, and they should only
-    return a subpath if the module __path__ does not already contain an
-    equivalent subpath.  For an example namespace handler, see
-    ``pkg_resources.file_ns_handler``.
-    """
-    _namespace_handlers[importer_type] = namespace_handler
-
-
-def _handle_ns(packageName, path_item):
-    """Ensure that named package includes a subpath of path_item (if needed)"""
-
-    importer = get_importer(path_item)
-    if importer is None:
-        return None
-
-    # use find_spec (PEP 451) and fall-back to find_module (PEP 302)
-    try:
-        spec = importer.find_spec(packageName)
-    except AttributeError:
-        # capture warnings due to #1111
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore")
-            loader = importer.find_module(packageName)
-    else:
-        loader = spec.loader if spec else None
-
-    if loader is None:
-        return None
-    module = sys.modules.get(packageName)
-    if module is None:
-        module = sys.modules[packageName] = types.ModuleType(packageName)
-        module.__path__ = []
-        _set_parent_ns(packageName)
-    elif not hasattr(module, "__path__"):
-        raise TypeError("Not a package:", packageName)
-    handler = _find_adapter(_namespace_handlers, importer)
-    subpath = handler(importer, path_item, packageName, module)
-    if subpath is not None:
-        path = module.__path__
-        path.append(subpath)
-        importlib.import_module(packageName)
-        _rebuild_mod_path(path, packageName, module)
-    return subpath
-
-
-def _rebuild_mod_path(orig_path, package_name, module: types.ModuleType) -> None:
-    """
-    Rebuild module.__path__ ensuring that all entries are ordered
-    corresponding to their sys.path order
-    """
-    sys_path = [_normalize_cached(p) for p in sys.path]
-
-    def safe_sys_path_index(entry):
-        """
-        Workaround for #520 and #513.
-        """
-        try:
-            return sys_path.index(entry)
-        except ValueError:
-            return float("inf")
-
-    def position_in_sys_path(path):
-        """
-        Return the ordinal of the path based on its position in sys.path
-        """
-        path_parts = path.split(os.sep)
-        module_parts = package_name.count(".") + 1
-        parts = path_parts[:-module_parts]
-        return safe_sys_path_index(_normalize_cached(os.sep.join(parts)))
-
-    new_path = sorted(orig_path, key=position_in_sys_path)
-    new_path = [_normalize_cached(p) for p in new_path]
-
-    if isinstance(module.__path__, list):
-        module.__path__[:] = new_path
-    else:
-        module.__path__ = new_path
-
-
-def declare_namespace(packageName: str) -> None:
-    """Declare that package 'packageName' is a namespace package"""
-
-    msg = (
-        f"Deprecated call to `pkg_resources.declare_namespace({packageName!r})`.\n"
-        "Implementing implicit namespace packages (as specified in PEP 420) "
-        "is preferred to `pkg_resources.declare_namespace`. "
-        "See https://setuptools.pypa.io/en/latest/references/"
-        "keywords.html#keyword-namespace-packages"
-    )
-    warnings.warn(msg, DeprecationWarning, stacklevel=2)
-
-    _imp.acquire_lock()
-    try:
-        if packageName in _namespace_packages:
-            return
-
-        path: MutableSequence[str] = sys.path
-        parent, _, _ = packageName.rpartition(".")
-
-        if parent:
-            declare_namespace(parent)
-            if parent not in _namespace_packages:
-                __import__(parent)
-            try:
-                path = sys.modules[parent].__path__
-            except AttributeError as e:
-                raise TypeError("Not a package:", parent) from e
-
-        # Track what packages are namespaces, so when new path items are added,
-        # they can be updated
-        _namespace_packages.setdefault(parent or None, []).append(packageName)
-        _namespace_packages.setdefault(packageName, [])
-
-        for path_item in path:
-            # Ensure all the parent's path items are reflected in the child,
-            # if they apply
-            _handle_ns(packageName, path_item)
-
-    finally:
-        _imp.release_lock()
-
-
-def fixup_namespace_packages(path_item: str, parent: str | None = None) -> None:
-    """Ensure that previously-declared namespace packages include path_item"""
-    _imp.acquire_lock()
-    try:
-        for package in _namespace_packages.get(parent, ()):
-            subpath = _handle_ns(package, path_item)
-            if subpath:
-                fixup_namespace_packages(subpath, package)
-    finally:
-        _imp.release_lock()
-
-
-def file_ns_handler(
-    importer: object,
-    path_item: StrPath,
-    packageName: str,
-    module: types.ModuleType,
-):
-    """Compute an ns-package subpath for a filesystem or zipfile importer"""
-
-    subpath = os.path.join(path_item, packageName.split(".")[-1])
-    normalized = _normalize_cached(subpath)
-    for item in module.__path__:
-        if _normalize_cached(item) == normalized:
-            break
-    else:
-        # Only return the path if it's not already there
-        return subpath
-
-
-if hasattr(pkgutil, "ImpImporter"):
-    register_namespace_handler(pkgutil.ImpImporter, file_ns_handler)
-
-register_namespace_handler(zipimport.zipimporter, file_ns_handler)
-register_namespace_handler(importlib.machinery.FileFinder, file_ns_handler)
-
-
-def null_ns_handler(
-    importer: object,
-    path_item: str | None,
-    packageName: str | None,
-    module: _ModuleLike | None,
-) -> None:
-    return None
-
-
-register_namespace_handler(object, null_ns_handler)
 
 
 @overload
@@ -1231,39 +882,6 @@ class PkgResourcesDeprecationWarning(Warning):
     """
 
 
-# Ported from ``setuptools`` to avoid introducing an import inter-dependency:
-_LOCALE_ENCODING = "locale" if sys.version_info >= (3, 10) else None
-
-
-# This must go before calls to `_call_aside`. See https://github.com/pypa/setuptools/pull/4422
-def _read_utf8_with_fallback(file: str, fallback_encoding=_LOCALE_ENCODING) -> str:
-    """See setuptools.unicode_utils._read_utf8_with_fallback"""
-    try:
-        with open(file, "r", encoding="utf-8") as f:
-            return f.read()
-    except UnicodeDecodeError:  # pragma: no cover
-        msg = f"""\
-        ********************************************************************************
-        `encoding="utf-8"` fails with {file!r}, trying `encoding={fallback_encoding!r}`.
-
-        This fallback behaviour is considered **deprecated** and future versions of
-        `setuptools/pkg_resources` may not implement it.
-
-        Please encode {file!r} with "utf-8" to ensure future builds will succeed.
-
-        If this file was produced by `setuptools` itself, cleaning up the cached files
-        and re-building/re-installing the package with a newer version of `setuptools`
-        (e.g. by updating `build-system.requires` in its `pyproject.toml`)
-        might solve the problem.
-        ********************************************************************************
-        """
-        # TODO: Add a deadline?
-        #       See comment in setuptools.unicode_utils._Utf8EncodingNeeded
-        warnings.warn(msg, PkgResourcesDeprecationWarning, stacklevel=2)
-        with open(file, "r", encoding=fallback_encoding) as f:
-            return f.read()
-
-
 if __name__ == "__main__":
     # This part of the code should keep on working
     # coverage run copy_pkg_resources.py
@@ -1278,3 +896,4 @@ if __name__ == "__main__":
             for dist in dists:
                 all_package_names.append(dist.project_name)
     print(f"All package names {len(all_package_names)}:", sorted(all_package_names))
+    print(f"Are there unknowns: {'Unknown' in all_package_names}")
