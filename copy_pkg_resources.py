@@ -252,15 +252,6 @@ def register_loader_type(
     _provider_factories[loader_type] = provider_factory
 
 
-def get_default_cache() -> str:
-    """
-    Return the ``PYTHON_EGG_CACHE`` environment variable
-    or a platform-relevant user cache dir for an app
-    named "Python-Eggs".
-    """
-    return os.environ.get("PYTHON_EGG_CACHE") or _user_cache_dir(appname="Python-Eggs")
-
-
 def safe_name(name: str) -> str:
     """Convert an arbitrary string to a standard distribution name
 
@@ -279,38 +270,6 @@ def safe_version(version: str) -> str:
     except packaging.version.InvalidVersion:
         version = version.replace(" ", ".")
         return re.sub("[^A-Za-z0-9.]+", "-", version)
-
-
-def _forgiving_version(version) -> str:
-    """Fallback when ``safe_version`` is not safe enough
-    >>> parse_version(_forgiving_version('0.23ubuntu1'))
-    <Version('0.23.dev0+sanitized.ubuntu1')>
-    >>> parse_version(_forgiving_version('0.23-'))
-    <Version('0.23.dev0+sanitized')>
-    >>> parse_version(_forgiving_version('0.-_'))
-    <Version('0.dev0+sanitized')>
-    >>> parse_version(_forgiving_version('42.+?1'))
-    <Version('42.dev0+sanitized.1')>
-    >>> parse_version(_forgiving_version('hello world'))
-    <Version('0.dev0+sanitized.hello.world')>
-    """
-    version = version.replace(" ", ".")
-    match = _PEP440_FALLBACK.search(version)
-    if match:
-        safe = match["safe"]
-        rest = version[len(safe) :]
-    else:
-        safe = "0"
-        rest = version
-    local = f"sanitized.{_safe_segment(rest)}".strip(".")
-    return f"{safe}.dev0+{local}"
-
-
-def _safe_segment(segment):
-    """Convert an arbitrary string into a safe segment"""
-    segment = re.sub("[^A-Za-z0-9.]+", "-", segment)
-    segment = re.sub("-[^A-Za-z0-9]+", "-", segment)
-    return re.sub(r"\.[^A-Za-z0-9]+", ".", segment).strip(".-")
 
 
 def safe_extra(extra: str) -> str:
@@ -1244,45 +1203,6 @@ class Distribution:
                 raise packaging.version.InvalidVersion(f"{str(ex)} {info}") from None
 
         return self._parsed_version
-
-    @property
-    def _forgiving_parsed_version(self):
-        try:
-            return self.parsed_version
-        except packaging.version.InvalidVersion as ex:
-            self._parsed_version = parse_version(_forgiving_version(self.version))
-
-            notes = "\n".join(getattr(ex, "__notes__", []))  # PEP 678
-            msg = f"""!!\n\n
-            *************************************************************************
-            {str(ex)}\n{notes}
-
-            This is a long overdue deprecation.
-            For the time being, `pkg_resources` will use `{self._parsed_version}`
-            as a replacement to avoid breaking existing environments,
-            but no future compatibility is guaranteed.
-
-            If you maintain package {self.project_name} you should implement
-            the relevant changes to adequate the project to PEP 440 immediately.
-            *************************************************************************
-            \n\n!!
-            """
-            warnings.warn(msg, DeprecationWarning)
-
-            return self._parsed_version
-
-    @property
-    def version(self):
-        try:
-            return self._version
-        except AttributeError as e:
-            version = self._get_version()
-            if version is None:
-                path = self._get_metadata_path_for_display(self.PKG_INFO)
-                msg = f"Missing 'Version:' header and/or {self.PKG_INFO} file at path: {path}"
-                raise ValueError(msg, self) from e
-
-            return version
 
     @property
     def _dep_map(self):
