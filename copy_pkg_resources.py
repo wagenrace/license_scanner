@@ -36,7 +36,7 @@ import re
 import types
 import warnings
 import zipfile
-from collections.abc import Iterable, Iterator, Mapping, MutableSequence
+from collections.abc import Iterable, Iterator, Mapping
 from pkgutil import get_importer
 from typing import (
     TYPE_CHECKING,
@@ -137,192 +137,11 @@ def safe_name(name: str) -> str:
     return re.sub("[^A-Za-z0-9.]+", "-", name)
 
 
-class NullProvider:
-    """Try to implement resources and metadata for arbitrary PEP 302 loaders"""
-
-    egg_name: str | None = None
-    egg_info: str | None = None
-    loader: LoaderProtocol | None = None
-
-    def __init__(self, module: _ModuleLike) -> None:
-        pass
-
-    def _get_metadata_path(self, name):
-        return self._fn(self.egg_info, name)
-
-    def has_metadata(self, name: str) -> bool:
-        if not self.egg_info:
-            return False
-
-        path = self._get_metadata_path(name)
-        return self._has(path)
-
-    def get_metadata(self, name: str) -> str:
-        if not self.egg_info:
-            return ""
-        path = self._get_metadata_path(name)
-        value = self._get(path)
-        try:
-            return value.decode("utf-8")
-        except UnicodeDecodeError as exc:
-            # Include the path in the error message to simplify
-            # troubleshooting, and without changing the exception type.
-            exc.reason += f" in {name} file at path: {path}"
-            raise
-
-    def get_metadata_lines(self, name: str) -> Iterator[str]:
-        return yield_lines(self.get_metadata(name))
-
-    def resource_isdir(self, resource_name: str) -> bool:
-        return self._isdir(self._fn(self.module_path, resource_name))
-
-    def _fn(self, base: str | None, resource_name: str):
-        if base is None:
-            raise TypeError(
-                "`base` parameter in `_fn` is `None`. Either override this method or check the parameter first."
-            )
-        self._validate_resource_path(resource_name)
-        if resource_name:
-            return os.path.join(base, *resource_name.split("/"))
-        return base
-
-    @staticmethod
-    def _validate_resource_path(path) -> None:
-        """
-        Validate the resource paths according to the docs.
-        https://setuptools.pypa.io/en/latest/pkg_resources.html#basic-resource-access
-
-        >>> warned = getfixture('recwarn')
-        >>> warnings.simplefilter('always')
-        >>> vrp = NullProvider._validate_resource_path
-        >>> vrp('foo/bar.txt')
-        >>> bool(warned)
-        False
-        >>> vrp('../foo/bar.txt')
-        >>> bool(warned)
-        True
-        >>> warned.clear()
-        >>> vrp('/foo/bar.txt')
-        >>> bool(warned)
-        True
-        >>> vrp('foo/../../bar.txt')
-        >>> bool(warned)
-        True
-        >>> warned.clear()
-        >>> vrp('foo/f../bar.txt')
-        >>> bool(warned)
-        False
-
-        Windows path separators are straight-up disallowed.
-        >>> vrp(r'\\foo/bar.txt')
-        Traceback (most recent call last):
-        ...
-        ValueError: Use of .. or absolute path in a resource path \
-is not allowed.
-
-        >>> vrp(r'C:\\foo/bar.txt')
-        Traceback (most recent call last):
-        ...
-        ValueError: Use of .. or absolute path in a resource path \
-is not allowed.
-
-        Blank values are allowed
-
-        >>> vrp('')
-        >>> bool(warned)
-        False
-
-        Non-string values are not.
-
-        >>> vrp(None)
-        Traceback (most recent call last):
-        ...
-        AttributeError: ...
-        """
-        invalid = (
-            os.path.pardir in path.split(posixpath.sep)
-            or posixpath.isabs(path)
-            or ntpath.isabs(path)
-            or path.startswith("\\")
-        )
-        if not invalid:
-            return
-
-        msg = "Use of .. or absolute path in a resource path is not allowed."
-
-        # Aggressively disallow Windows absolute paths
-        if (path.startswith("\\") or ntpath.isabs(path)) and not posixpath.isabs(path):
-            raise ValueError(msg)
-
-        # for compatibility, warn; in future
-        # raise ValueError(msg)
-        raise DeprecationWarning(
-            msg[:-1] + " and will raise exceptions in a future release.",
-        )
-
-    def _get(self, path) -> bytes:
-        if hasattr(self.loader, "get_data") and self.loader:
-            # Already checked get_data exists
-            return self.loader.get_data(path)  # type: ignore[attr-defined]
-        raise NotImplementedError(
-            "Can't perform this operation for loaders without 'get_data()'"
-        )
-
-
-register_loader_type(object, NullProvider)
-
-
-def _parents(path):
-    """
-    yield all parents of path including path
-    """
-    last = None
-    while path != last:
-        yield path
-        last = path
-        path, _ = os.path.split(path)
-
-
-class EggProvider(NullProvider):
-    """Provider based on a virtual filesystem"""
-
-    def __init__(self, module: _ModuleLike) -> None:
-        super().__init__(module)
-        self._setup_prefix()
-
-    def _setup_prefix(self):
-        # Assume that metadata may be nested inside a "basket"
-        # of multiple eggs and use module_path instead of .archive.
-        eggs = filter(_is_egg_path, _parents(self.module_path))
-        egg = next(eggs, None)
-        egg and self._set_egg(egg)
-
-    def _set_egg(self, path: str) -> None:
-        self.egg_name = os.path.basename(path)
-        self.egg_info = os.path.join(path, "EGG-INFO")
-        self.egg_root = path
-
-
-class DefaultProvider(EggProvider):
+class DefaultProvider:
     """Provides access to package resources in the filesystem"""
 
-    def _has(self, path) -> bool:
-        return os.path.exists(path)
-
-    def _isdir(self, path) -> bool:
-        return os.path.isdir(path)
-
-    def _listdir(self, path):
-        return os.listdir(path)
-
-    def get_resource_stream(
-        self, manager: object, resource_name: str
-    ) -> io.BufferedReader:
-        return open(self._fn(self.module_path, resource_name), "rb")
-
-    def _get(self, path) -> bytes:
-        with open(path, "rb") as stream:
-            return stream.read()
+    egg_info: str | None = None
+    loader: LoaderProtocol | None = None
 
     @classmethod
     def _register(cls) -> None:
@@ -619,13 +438,11 @@ class Distribution:
         **kw: int,  # We could set `precedence` explicitly, but keeping this as `**kw` for full backwards and subclassing compatibility
     ) -> Distribution:
         project_name, platform = [None] * 2
-        basename, ext = os.path.splitext(basename)
-        if ext.lower() in _distributionImpl:
-            cls = _distributionImpl[ext.lower()]
+        basename, _ = os.path.splitext(basename)
 
-            match = EGG_NAME(basename)
-            if match:
-                project_name, platform = match.group("name", "plat")
+        match = EGG_NAME(basename)
+        if match:
+            project_name, platform = match.group("name", "plat")
         return cls(
             location,
             metadata,
@@ -633,13 +450,6 @@ class Distribution:
             platform=platform,
             **kw,
         )
-
-
-_distributionImpl = {
-    ".egg": Distribution,
-    ".egg-info": Distribution,
-    ".dist-info": Distribution,
-}
 
 
 def _always_object(classes):
@@ -681,9 +491,7 @@ class PkgResourcesDeprecationWarning(Warning):
 
 if __name__ == "__main__":
     # This part of the code should keep on working
-    # coverage run copy_pkg_resources.py
-    # coverage report
-    # coverage html
+    # coverage run copy_pkg_resources.py; coverage report; coverage html
     entries = sys.path
 
     all_package_names = []
