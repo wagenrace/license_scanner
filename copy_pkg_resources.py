@@ -634,33 +634,11 @@ class Distribution:
             **kw,
         )
 
-    def _get_metadata(self, name):
-        if self.has_metadata(name):
-            yield from self.get_metadata_lines(name)
-
-    @property
-    def has_metadata(self):
-        return self._provider.has_metadata
-
-    @property
-    def get_metadata_lines(self):
-        return self._provider.get_metadata_lines
-
-
-class DistInfoDistribution(Distribution):
-    """
-    Wrap an actual or potential sys.path entry
-    w/metadata, .dist-info style.
-    """
-
-    PKG_INFO = "METADATA"
-    EQEQ = re.compile(r"([\(,])\s*(\d.*?)\s*([,\)])")
-
 
 _distributionImpl = {
     ".egg": Distribution,
     ".egg-info": Distribution,
-    ".dist-info": DistInfoDistribution,
+    ".dist-info": Distribution,
 }
 
 
