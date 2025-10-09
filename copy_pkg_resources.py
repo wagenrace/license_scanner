@@ -292,7 +292,6 @@ def distributions_from_metadata(path: str):
     entry = os.path.basename(path)
     yield Distribution.from_location(
         entry,
-        precedence=DEVELOP_DIST,
     )
 
 
@@ -386,11 +385,9 @@ class Distribution:
         self,
         project_name: str | None = None,
         platform: str | None = None,
-        precedence: int = EGG_DIST,
     ) -> None:
         self.project_name = safe_name(project_name or "Unknown")
         self.platform = platform
-        self.precedence = precedence
 
     @classmethod
     def from_location(
