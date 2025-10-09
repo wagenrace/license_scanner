@@ -123,10 +123,6 @@ _AdapterT = TypeVar(
 )
 
 
-class _ZipLoaderModule(Protocol):
-    __loader__: zipimport.zipimporter
-
-
 _PEP440_FALLBACK = re.compile(r"^v?(?P<safe>(?:[0-9]+!)?[0-9]+(?:\.[0-9]+)*)", re.I)
 
 
@@ -145,32 +141,6 @@ _state_vars: dict[str, str] = {}
 def _declare_state(vartype: str, varname: str, initial_value: _T) -> _T:
     _state_vars[varname] = vartype
     return initial_value
-
-
-def get_supported_platform():
-    """Return this platform's maximum compatible version.
-
-    distutils.util.get_platform() normally reports the minimum version
-    of macOS that would be required to *use* extensions produced by
-    distutils.  But what we want when checking compatibility is to know the
-    version of macOS that we are *running*.  To allow usage of packages that
-    explicitly require a newer version of macOS, we must also know the
-    current version of the OS.
-
-    If this condition occurs for any other platform with a version in its
-    platform strings, this function should be extended accordingly.
-    """
-    plat = get_build_platform()
-    m = macosVersionString.match(plat)
-    if m is not None and sys.platform == "darwin":
-        try:
-            major_minor = ".".join(_macos_vers()[:2])
-            build = m.group(3)
-            plat = f"macosx-{major_minor}-{build}"
-        except ValueError:
-            # not macOS
-            pass
-    return plat
 
 
 class ResolutionError(Exception):
@@ -280,196 +250,6 @@ def register_loader_type(
     returns an ``IResourceProvider`` for that module.
     """
     _provider_factories[loader_type] = provider_factory
-
-
-@overload
-def get_provider(moduleOrReq: str) -> IResourceProvider: ...
-@overload
-def get_provider(moduleOrReq: Requirement) -> Distribution: ...
-def get_provider(moduleOrReq: str | Requirement) -> IResourceProvider | Distribution:
-    """Return an IResourceProvider for the named module or requirement"""
-    if isinstance(moduleOrReq, Requirement):
-        return working_set.find(moduleOrReq) or require(str(moduleOrReq))[0]
-    try:
-        module = sys.modules[moduleOrReq]
-    except KeyError:
-        __import__(moduleOrReq)
-        module = sys.modules[moduleOrReq]
-    loader = getattr(module, "__loader__", None)
-    return _find_adapter(_provider_factories, loader)(module)
-
-
-@functools.cache
-def _macos_vers():
-    version = platform.mac_ver()[0]
-    # fallback for MacPorts
-    if version == "":
-        plist = "/System/Library/CoreServices/SystemVersion.plist"
-        if os.path.exists(plist):
-            with open(plist, "rb") as fh:
-                plist_content = plistlib.load(fh)
-            if "ProductVersion" in plist_content:
-                version = plist_content["ProductVersion"]
-    return version.split(".")
-
-
-def _macos_arch(machine):
-    return {"PowerPC": "ppc", "Power_Macintosh": "ppc"}.get(machine, machine)
-
-
-def get_build_platform():
-    """Return this platform's string for platform-specific distributions"""
-    from sysconfig import get_platform
-
-    plat = get_platform()
-    if sys.platform == "darwin" and not plat.startswith("macosx-"):
-        try:
-            version = _macos_vers()
-            machine = _macos_arch(os.uname()[4].replace(" ", "_"))
-            return f"macosx-{version[0]}.{version[1]}-{machine}"
-        except ValueError:
-            # if someone is running a non-Mac darwin system, this will fall
-            # through to the default implementation
-            pass
-    return plat
-
-
-macosVersionString = re.compile(r"macosx-(\d+)\.(\d+)-(.*)")
-darwinVersionString = re.compile(r"darwin-(\d+)\.(\d+)\.(\d+)-(.*)")
-# XXX backward compat
-get_platform = get_build_platform
-
-
-def compatible_platforms(provided: str | None, required: str | None) -> bool:
-    """Can code for the `provided` platform run on the `required` platform?
-
-    Returns true if either platform is ``None``, or the platforms are equal.
-
-    XXX Needs compatibility checks for Linux and other unixy OSes.
-    """
-    if provided is None or required is None or provided == required:
-        # easy case
-        return True
-
-    # macOS special cases
-    reqMac = macosVersionString.match(required)
-    if reqMac:
-        provMac = macosVersionString.match(provided)
-
-        # is this a Mac package?
-        if not provMac:
-            # this is backwards compatibility for packages built before
-            # setuptools 0.6. All packages built after this point will
-            # use the new macOS designation.
-            provDarwin = darwinVersionString.match(provided)
-            if provDarwin:
-                dversion = int(provDarwin.group(1))
-                macosversion = f"{reqMac.group(1)}.{reqMac.group(2)}"
-                if (
-                    dversion == 7
-                    and macosversion >= "10.3"
-                    or dversion == 8
-                    and macosversion >= "10.4"
-                ):
-                    return True
-            # egg isn't macOS or legacy darwin
-            return False
-
-        # are they the same major version and machine type?
-        if provMac.group(1) != reqMac.group(1) or provMac.group(3) != reqMac.group(3):
-            return False
-
-        # is the required OS major update >= the provided one?
-        if int(provMac.group(2)) > int(reqMac.group(2)):
-            return False
-
-        return True
-
-    # XXX Linux and other platforms' special cases should go here
-    return False
-
-
-@overload
-def get_distribution(dist: _DistributionT) -> _DistributionT: ...
-@overload
-def get_distribution(dist: _PkgReqType) -> Distribution: ...
-def get_distribution(dist: Distribution | _PkgReqType) -> Distribution:
-    """Return a current distribution object for a Requirement or string"""
-    if isinstance(dist, str):
-        dist = Requirement.parse(dist)
-    if isinstance(dist, Requirement):
-        dist = get_provider(dist)
-    if not isinstance(dist, Distribution):
-        raise TypeError("Expected str, Requirement, or Distribution", dist)
-    return dist
-
-
-def load_entry_point(dist: _EPDistType, group: str, name: str) -> _ResolvedEntryPoint:
-    """Return `name` entry point of `group` for `dist` or raise ImportError"""
-    return get_distribution(dist).load_entry_point(group, name)
-
-
-class IMetadataProvider(Protocol):
-    def has_metadata(self, name: str) -> bool:
-        """Does the package's distribution contain the named metadata?"""
-        ...
-
-    def get_metadata(self, name: str) -> str:
-        """The named metadata resource as a string"""
-        ...
-
-    def get_metadata_lines(self, name: str) -> Iterator[str]:
-        """Yield named metadata resource as list of non-blank non-comment lines
-
-        Leading and trailing whitespace is stripped from each line, and lines
-        with ``#`` as the first non-blank character are omitted."""
-        ...
-
-    def metadata_isdir(self, name: str) -> bool:
-        """Is the named metadata a directory?  (like ``os.path.isdir()``)"""
-        ...
-
-    def metadata_listdir(self, name: str) -> list[str]:
-        """List of metadata names in the directory (like ``os.listdir()``)"""
-        ...
-
-    def run_script(self, script_name: str, namespace: dict[str, Any]) -> None:
-        """Execute the named script in the supplied namespace dictionary"""
-        ...
-
-
-class IResourceProvider(IMetadataProvider, Protocol):
-    """An object that provides access to package resources"""
-
-    def get_resource_filename(self, manager, resource_name: str) -> str:
-        """Return a true filesystem path for `resource_name`
-
-        `manager` must be a ``ResourceManager``"""
-        ...
-
-    def get_resource_stream(self, manager, resource_name: str) -> _ResourceStream:
-        """Return a readable file-like object for `resource_name`
-
-        `manager` must be a ``ResourceManager``"""
-        ...
-
-    def get_resource_string(self, manager, resource_name: str) -> bytes:
-        """Return the contents of `resource_name` as :obj:`bytes`
-
-        `manager` must be a ``ResourceManager``"""
-        ...
-
-    def has_resource(self, resource_name: str) -> bool:
-        """Does the package contain the named resource?"""
-        ...
-
-    def resource_isdir(self, resource_name: str) -> bool:
-        """Is the named resource a directory?  (like ``os.path.isdir()``)"""
-        ...
-
-    def resource_listdir(self, resource_name: str) -> list[str]:
-        """List of resource names in the directory (like ``os.listdir()``)"""
-        ...
 
 
 def get_default_cache() -> str:
@@ -1765,15 +1545,6 @@ class Distribution:
             # TODO: remove this except clause when python/cpython#103632 is fixed.
             return False
         return True
-
-    def clone(self, **kw: str | int | IResourceProvider | None) -> Self:
-        """Copy this distribution, substituting in any changed keyword args"""
-        names = "project_name version py_version platform location precedence"
-        for attr in names.split():
-            kw.setdefault(attr, getattr(self, attr, None))
-        kw.setdefault("metadata", self._provider)
-        # Unsafely unpacking. But keeping **kw for backwards and subclassing compatibility
-        return self.__class__(**kw)  # type:ignore[arg-type]
 
     @property
     def extras(self):
