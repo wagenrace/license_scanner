@@ -36,7 +36,6 @@ from typing import (
     Any,
     Callable,
     Literal,
-    TypeVar,
     Union,
     overload,
 )
@@ -156,7 +155,7 @@ def find_distributions(path_item: str, only: bool = False) -> Iterable[Distribut
 
 def find_on_path(path_item, only=False):
     """Yield distributions accessible on a sys.path directory"""
-    path_item = _normalize_cached(path_item)
+    path_item = normalize_path(path_item)
 
     if _is_unpacked_egg(path_item):
         yield Distribution.from_filename(
@@ -254,22 +253,6 @@ def _cygwin_patch(filename: StrOrBytesPath):  # pragma: nocover
     return os.path.abspath(filename) if sys.platform == "cygwin" else filename
 
 
-if TYPE_CHECKING:
-    # https://github.com/python/mypy/issues/16261
-    # https://github.com/python/typeshed/issues/6347
-    @overload
-    def _normalize_cached(filename: StrPath) -> str: ...
-    @overload
-    def _normalize_cached(filename: BytesPath) -> bytes: ...
-    def _normalize_cached(filename: StrOrBytesPath) -> str | bytes: ...
-
-else:
-
-    @functools.cache
-    def _normalize_cached(filename):
-        return normalize_path(filename)
-
-
 def _is_egg_path(path):
     """
     Determine if given path appears to be an egg.
@@ -294,7 +277,6 @@ def _is_unpacked_egg(path):
     )
 
 
-MODULE = re.compile(r"\w+(\.\w+)*$").match
 EGG_NAME = re.compile(
     r"""
     (?P<name>[^-]+) (
