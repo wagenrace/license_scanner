@@ -22,19 +22,15 @@ from __future__ import annotations
 import sys
 
 
-import errno
 import functools
 import importlib
 import importlib.machinery
-import inspect
 import os
-import pkgutil
 import re
 import types
 import warnings
 import zipfile
-from collections.abc import Iterable, Mapping
-from pkgutil import get_importer
+from collections.abc import Iterable
 from typing import (
     TYPE_CHECKING,
     Any,
@@ -60,18 +56,11 @@ warnings.warn(
     stacklevel=2,
 )
 
-_T = TypeVar("_T")
 # Type aliases
-_NestedStr: TypeAlias = Union[str, Iterable[Union[str, Iterable["_NestedStr"]]]]
 # Any object works, but let's indicate we expect something like a module (optionally has __loader__ or __file__)
 _ModuleLike: TypeAlias = Union[object, types.ModuleType]
 # Any: Should be _ModuleLike but we end up with issues where _ModuleLike doesn't have _ZipLoaderModule's __loader__
 _ProviderFactoryType: TypeAlias = Callable[[Any], "IResourceProvider"]
-_DistFinderType: TypeAlias = Callable[[_T, str, bool], Iterable["Distribution"]]
-_NSHandlerType: TypeAlias = Callable[[_T, str, str, types.ModuleType], Union[str, None]]
-_AdapterT = TypeVar(
-    "_AdapterT", _DistFinderType[Any], _ProviderFactoryType, _NSHandlerType[Any]
-)
 
 
 class PEP440Warning(RuntimeWarning):
@@ -79,14 +68,6 @@ class PEP440Warning(RuntimeWarning):
     Used when there is an issue with a version or specifier not complying with
     PEP 440.
     """
-
-
-_state_vars: dict[str, str] = {}
-
-
-def _declare_state(vartype: str, varname: str, initial_value: _T) -> _T:
-    _state_vars[varname] = vartype
-    return initial_value
 
 
 class ResolutionError(Exception):
@@ -101,13 +82,6 @@ class UnknownExtra(ResolutionError):
 
 
 _provider_factories: dict[type[_ModuleLike], _ProviderFactoryType] = {}
-
-PY_MAJOR = f"{sys.version_info.major}.{sys.version_info.minor}"
-EGG_DIST = 3
-BINARY_DIST = 2
-SOURCE_DIST = 1
-CHECKOUT_DIST = 0
-DEVELOP_DIST = -1
 
 
 def register_loader_type(
@@ -175,40 +149,12 @@ class PathMetadata(DefaultProvider):
         self.egg_info = egg_info
 
 
-_distribution_finders: dict[type, _DistFinderType[Any]] = _declare_state(
-    "dict", "_distribution_finders", {}
-)
-
-
-def register_finder(
-    importer_type: type[_T], distribution_finder: _DistFinderType[_T]
-) -> None:
-    """Register `distribution_finder` to find distributions in sys.path items
-
-    `importer_type` is the type or class of a PEP 302 "Importer" (sys.path item
-    handler), and `distribution_finder` is a callable that, passed a path
-    item and the importer instance, yields ``Distribution`` instances found on
-    that path item.  See ``pkg_resources.find_on_path`` for an example."""
-    _distribution_finders[importer_type] = distribution_finder
-
-
 def find_distributions(path_item: str, only: bool = False) -> Iterable[Distribution]:
     """Yield distributions accessible via `path_item`"""
-    importer = get_importer(path_item)
-    finder = _find_adapter(_distribution_finders, importer)
-    return finder(importer, path_item, only)
+    return find_on_path(path_item, only)
 
 
-def find_nothing(
-    importer: object | None, path_item: str | None, only: bool | None = False
-):
-    return ()
-
-
-register_finder(object, find_nothing)
-
-
-def find_on_path(importer: object | None, path_item, only=False):
+def find_on_path(path_item, only=False):
     """Yield distributions accessible on a sys.path directory"""
     path_item = _normalize_cached(path_item)
 
@@ -271,16 +217,9 @@ def safe_listdir(path: StrOrBytesPath):
     """
     Attempt to list contents of path, but suppress some exceptions.
     """
-    try:
-        return os.listdir(path)
-    except (PermissionError, NotADirectoryError):
-        pass
-    except OSError as e:
-        # Ignore the directory if does not exist, not a directory or
-        # permission denied
-        if e.errno not in (errno.ENOTDIR, errno.EACCES, errno.ENOENT):
-            raise
-    return ()
+    if not os.path.isdir(path):
+        return ()
+    return os.listdir(path)
 
 
 def distributions_from_metadata(path: str):
@@ -293,12 +232,6 @@ def distributions_from_metadata(path: str):
     yield Distribution.from_location(
         entry,
     )
-
-
-if hasattr(pkgutil, "ImpImporter"):
-    register_finder(pkgutil.ImpImporter, find_on_path)
-
-register_finder(importlib.machinery.FileFinder, find_on_path)
 
 
 @overload
@@ -408,27 +341,6 @@ class Distribution:
         )
 
 
-def _always_object(classes):
-    """
-    Ensure object appears in the mro even
-    for old-style classes.
-    """
-    if object not in classes:
-        return classes + (object,)
-    return classes
-
-
-def _find_adapter(registry: Mapping[type, _AdapterT], ob: object) -> _AdapterT:
-    """Return an adapter factory for `ob` from `registry`"""
-    types = _always_object(inspect.getmro(getattr(ob, "__class__", type(ob))))
-    for t in types:
-        if t in registry:
-            return registry[t]
-    # _find_adapter would previously return None, and immediately be called.
-    # So we're raising a TypeError to keep backward compatibility if anyone depended on that behaviour.
-    raise TypeError(f"Could not find adapter for {registry} and {ob}")
-
-
 # Silence the PEP440Warning by default, so that end users don't get hit by it
 # randomly just because they use pkg_resources. We want to append the rule
 # because we want earlier uses of filterwarnings to take precedence over this
@@ -443,7 +355,7 @@ if __name__ == "__main__":
 
     all_package_names = []
     for entry in entries:
-        dists = find_distributions(entry)
+        dists = find_on_path(entry)
         if dists:
             for dist in dists:
                 all_package_names.append(dist.project_name)
