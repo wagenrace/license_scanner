@@ -9,6 +9,9 @@ def parse_license(license_str: str):
     # Get license
     if not license_str:
         return None
+    # If you paste a license, only take the first line
+    license_str = license_str.split("\n")[0]
+
     license_str = license_str.strip()
 
     if "copyright (c) " in license_str:
@@ -19,4 +22,5 @@ def parse_license(license_str: str):
 
     license_str = license_str if license_str else unknown_license
     license_str = LICENSES_SYNONYMS.get(license_str.lower())
+
     return license_str
