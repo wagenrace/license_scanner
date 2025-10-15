@@ -122,6 +122,7 @@ jobs:
 - Apple Public Source License 1.2
 - Apple Public Source License 2.0
 - Arphic Public License
+- Artistic License
 - Artistic License 1.0
 - Artistic License 1.0 (Perl)
 - Artistic License 1.0 w/clause 8
@@ -728,6 +729,7 @@ jobs:
 - Unicode License v3
 - Unicode Terms of Use
 - United Kingdom Open Parliament Licence v3.0
+- Universal Permissive License
 - Universal Permissive License v1.0
 - University of Illinois/NCSA Open Source License
 - UnixCrypt License
