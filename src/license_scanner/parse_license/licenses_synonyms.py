@@ -1,10 +1,11 @@
 # fmt: off
 abstyles_license = "Abstyles License"
-academic_free_v1_1 = "academic free license v1.1"
-academic_free_v1_2 = "academic free license v1.2"
-academic_free_v2_0 = "academic free license v2.0"
-academic_free_v2_1 = "academic free license v2.1"
-academic_free_v3_0 = "academic free license v3.0"
+academic_free = "Academic Free License (AFL)"
+academic_free_v1_1 = "Academic Free License v1.1"
+academic_free_v1_2 = "Academic Free License v1.2"
+academic_free_v2_0 = "Academic Free License v2.0"
+academic_free_v2_1 = "Academic Free License v2.1"
+academic_free_v3_0 = "Academic Free License v3.0"
 academy_of_motion_picture_arts_and_sciences_bsd = "Academy of Motion Picture Arts and Sciences BSD"
 adacore_doc_license = "AdaCore Doc License"
 adaptive_public_license_1_0 = "Adaptive Public License 1.0"
@@ -695,6 +696,7 @@ unknown_license = "UNKNOWN"
 
 LICENSES_SYNONYMS = {
     abstyles_license.lower(): abstyles_license,
+    academic_free.lower(): academic_free,
     academic_free_v1_1.lower(): academic_free_v1_1,
     academic_free_v1_2.lower(): academic_free_v1_2,
     academic_free_v2_0.lower(): academic_free_v2_0,
@@ -1405,11 +1407,17 @@ LICENSES_SYNONYMS = {
     "affero general public license v1.0 only": gnu_affero_general_public_license_v1_0_only,
     "affero general public license v1.0 or later": gnu_affero_general_public_license_v1_0_or_later,
     "affero general public license v1.0": gnu_affero_general_public_license_v1_0_only,
+    "afl": academic_free,
     "afl-1.1": academic_free_v1_1,
+    "afl 1.1": academic_free_v1_1,
     "afl-1.2": academic_free_v1_2,
+    "afl 1.2": academic_free_v1_2,
     "afl-2.0": academic_free_v2_0,
+    "afl 2.0": academic_free_v2_0,
     "afl-2.1": academic_free_v2_1,
+    "afl 2.1": academic_free_v2_1,
     "afl-3.0": academic_free_v3_0,
+    "afl 3.0": academic_free_v3_0,
     "afmparse" : afmparse_license,
     "agpl 3.0": gnu_affero_general_public_license_v3_0_only,
     "agpl v3": gnu_affero_general_public_license_v3_0_only,

@@ -87,11 +87,12 @@ jobs:
 ## Supported licenses
 
 - Abstyles License
-- academic free license v1.1
-- academic free license v1.2
-- academic free license v2.0
-- academic free license v2.1
-- academic free license v3.0
+- Academic Free License (AFL)
+- Academic Free License v1.1
+- Academic Free License v1.2
+- Academic Free License v2.0
+- Academic Free License v2.1
+- Academic Free License v3.0
 - Academy of Motion Picture Arts and Sciences BSD
 - AdaCore Doc License
 - Adaptive Public License 1.0
