@@ -15,14 +15,6 @@ def safe_listdir(path):
     return os.listdir(path)
 
 
-def safe_name(name: str) -> str:
-    """Convert an arbitrary string to a standard distribution name
-
-    Any runs of non-alphanumeric/. characters are replaced with a single '-'.
-    """
-    return re.sub("[^A-Za-z0-9.]+", "-", name)
-
-
 EGG_NAME = re.compile(
     r"""
     (?P<name>[^-]+) (
@@ -81,7 +73,7 @@ def get_all_package_names():
             if is_egg_info or is_dist_info:
                 package_name = get_package_name(package_name)
                 if package_name:
-                    all_package_names.append(safe_name(package_name))
+                    all_package_names.append(package_name)
                 else:
                     print(f"Could not parse package name from {module_folder_name}")
                     all_package_names.append(module_folder_name)
