@@ -1,7 +1,7 @@
 [project]
 name = "license_scanner"
 dynamic = ["version"]
-dependencies = ["setuptools>=62,<81", "tomli>=1.1.0; python_version < '3.11'"]
+dependencies = ["tomli>=1.1.0; python_version < '3.11'"]
 readme = "README.md"
 keywords = ["license", "scanner", "checker"]
 license = { text = "MIT" }
