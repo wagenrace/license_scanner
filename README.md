@@ -19,6 +19,13 @@ license_scanner
 
 ![](readme_files/demo.gif)
 
+## 0.4 update
+
+[X] drop setuptools as requirements
+[ ] Support SPDX logic
+[ ] Add support all licenses in top 1000 most downloaded packages
+[ ] Add integration tests for python 3.10 till 3.14 for windows and linux (maybe mac) 
+
 ## Check within you pipeline
 
 You can make your pipeline fail if a project does not have the correct licenses.
