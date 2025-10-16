@@ -24,7 +24,10 @@ license_scanner
 [X] drop setuptools as requirements
 [ ] Support SPDX logic
 [ ] Add support all licenses in top 1000 most downloaded packages
-[ ] Add integration tests for python 3.10 till 3.14 for windows and linux (maybe mac) 
+[ ] Add integration tests for python 3.10 till 3.14 for windows and linux (maybe mac)
+[ ] fill in missing metadata of package itself
+[ ] switch to UV
+[ ] Redo readme
 
 ## Check within you pipeline
 
@@ -51,7 +54,7 @@ allowed-licenses = [
 allowed-packages = ["license_scanner"]
 ```
 
-To run the license scanner make sure you are in the same directory as `pyproject.toml` and run `license_scanner -m whitelist` or `python -m license_scanner -m whitelist`. 
+To run the license scanner make sure you are in the same directory as `pyproject.toml` and run `license_scanner -m whitelist` or `python -m license_scanner -m whitelist`.
 It will now throw you an error if your environment has an package with a license you did not approve of.
 
 ### Example: Github actions
