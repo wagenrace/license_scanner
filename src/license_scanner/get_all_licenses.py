@@ -5,7 +5,7 @@ from .parse_license import parse_license
 from .parse_license.licenses_synonyms import unknown_license
 from .get_all_packages import get_all_package_names
 
-import importlib_metadata as im
+import importlib.metadata as im
 
 
 def get_license(name: str) -> List[str]:
