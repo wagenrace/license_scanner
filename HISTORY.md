@@ -1,5 +1,14 @@
 # History
 
+## 0.4.0b0 (2025-10-15)
+
+- Remove Setuptools from requirements
+- Add ALL found licenses to the results; one package can now have multiple licenses
+- Add some missing synonyms for licenses
+- Add Artistic License (without version number)
+- Add Universal Permissive License (without version number)
+- Add Academic Free License (without version number)
+
 ## 0.3.2 (2025-10-03)
 
 - Put upper limit for setuptools, because pkg_resources will not be in version 81

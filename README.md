@@ -19,6 +19,13 @@ license_scanner
 
 ![](readme_files/demo.gif)
 
+## 0.4 update
+
+[X] drop setuptools as requirements
+[ ] Support SPDX logic
+[ ] Add support all licenses in top 1000 most downloaded packages
+[ ] Add integration tests for python 3.10 till 3.14 for windows and linux (maybe mac) 
+
 ## Check within you pipeline
 
 You can make your pipeline fail if a project does not have the correct licenses.
@@ -87,11 +94,12 @@ jobs:
 ## Supported licenses
 
 - Abstyles License
-- academic free license v1.1
-- academic free license v1.2
-- academic free license v2.0
-- academic free license v2.1
-- academic free license v3.0
+- Academic Free License (AFL)
+- Academic Free License v1.1
+- Academic Free License v1.2
+- Academic Free License v2.0
+- Academic Free License v2.1
+- Academic Free License v3.0
 - Academy of Motion Picture Arts and Sciences BSD
 - AdaCore Doc License
 - Adaptive Public License 1.0
@@ -121,6 +129,7 @@ jobs:
 - Apple Public Source License 1.2
 - Apple Public Source License 2.0
 - Arphic Public License
+- Artistic License
 - Artistic License 1.0
 - Artistic License 1.0 (Perl)
 - Artistic License 1.0 w/clause 8
@@ -727,6 +736,7 @@ jobs:
 - Unicode License v3
 - Unicode Terms of Use
 - United Kingdom Open Parliament Licence v3.0
+- Universal Permissive License
 - Universal Permissive License v1.0
 - University of Illinois/NCSA Open Source License
 - UnixCrypt License

@@ -1,10 +1,11 @@
 # fmt: off
 abstyles_license = "Abstyles License"
-academic_free_v1_1 = "academic free license v1.1"
-academic_free_v1_2 = "academic free license v1.2"
-academic_free_v2_0 = "academic free license v2.0"
-academic_free_v2_1 = "academic free license v2.1"
-academic_free_v3_0 = "academic free license v3.0"
+academic_free = "Academic Free License (AFL)"
+academic_free_v1_1 = "Academic Free License v1.1"
+academic_free_v1_2 = "Academic Free License v1.2"
+academic_free_v2_0 = "Academic Free License v2.0"
+academic_free_v2_1 = "Academic Free License v2.1"
+academic_free_v3_0 = "Academic Free License v3.0"
 academy_of_motion_picture_arts_and_sciences_bsd = "Academy of Motion Picture Arts and Sciences BSD"
 adacore_doc_license = "AdaCore Doc License"
 adaptive_public_license_1_0 = "Adaptive Public License 1.0"
@@ -34,6 +35,7 @@ apple_public_source_license_1_1 = "Apple Public Source License 1.1"
 apple_public_source_license_1_2 = "Apple Public Source License 1.2"
 apple_public_source_license_2_0 = "Apple Public Source License 2.0"
 arphic_public_license = "Arphic Public License"
+artistic_license = "Artistic License"
 artistic_license_1_0 = "Artistic License 1.0"
 artistic_license_1_0_perl = "Artistic License 1.0 (Perl)"
 artistic_license_1_0_w_clause_8 = "Artistic License 1.0 w/clause 8"
@@ -304,7 +306,7 @@ gnu_lesser_general_public_license_v2_1_only = "GNU Lesser General Public License
 gnu_lesser_general_public_license_v2_1_or_later = "GNU Lesser General Public License v2.1 or later"
 gnu_lesser_general_public_license_v3_0_only = "GNU Lesser General Public License v3.0 only"
 gnu_lesser_general_public_license_v3_0_or_later = "GNU Lesser General Public License v3.0 or later"
-gnu_lesser_public_license = "GNU lesser general public license"
+gnu_lesser_general_public_license = "GNU lesser general public license"
 gnu_library_general_public_license_v1_only = "GNU Library General Public License v1 only"
 gnu_library_general_public_license_v1_or_later = "GNU Library General Public License v1 or later"
 gnu_library_general_public_license_v2_only = "GNU Library General Public License v2 only"
@@ -640,6 +642,7 @@ unicode_license_agreement___data_files_and_software_2016 = "Unicode License Agre
 unicode_license_v3 = "Unicode License v3"
 unicode_terms_of_use = "Unicode Terms of Use"
 united_kingdom_open_parliament_licence_v3_0 = "United Kingdom Open Parliament Licence v3.0"
+universal_permissive_license = "Universal Permissive License"
 universal_permissive_license_v1_0 = "Universal Permissive License v1.0"
 university_of_illinois_ncsa_open_source_license = "University of Illinois/NCSA Open Source License"
 unixcrypt_license = "UnixCrypt License"
@@ -695,6 +698,7 @@ unknown_license = "UNKNOWN"
 
 LICENSES_SYNONYMS = {
     abstyles_license.lower(): abstyles_license,
+    academic_free.lower(): academic_free,
     academic_free_v1_1.lower(): academic_free_v1_1,
     academic_free_v1_2.lower(): academic_free_v1_2,
     academic_free_v2_0.lower(): academic_free_v2_0,
@@ -729,6 +733,7 @@ LICENSES_SYNONYMS = {
     apple_public_source_license_1_2.lower(): apple_public_source_license_1_2,
     apple_public_source_license_2_0.lower(): apple_public_source_license_2_0,
     arphic_public_license.lower(): arphic_public_license,
+    artistic_license.lower(): artistic_license,
     artistic_license_1_0_perl.lower(): artistic_license_1_0_perl,
     artistic_license_1_0_w_clause_8.lower(): artistic_license_1_0_w_clause_8,
     artistic_license_1_0.lower(): artistic_license_1_0,
@@ -1000,7 +1005,7 @@ LICENSES_SYNONYMS = {
     gnu_lesser_general_public_license_v3_0_only.lower(): gnu_lesser_general_public_license_v3_0_only,
     gnu_lesser_general_public_license_v3_0_only.lower(): gnu_lesser_general_public_license_v3_0_only,
     gnu_lesser_general_public_license_v3_0_or_later.lower(): gnu_lesser_general_public_license_v3_0_or_later,
-    gnu_lesser_public_license.lower(): gnu_lesser_public_license,
+    gnu_lesser_general_public_license.lower(): gnu_lesser_general_public_license,
     gnu_library_general_public_license_v1_only.lower(): gnu_library_general_public_license_v1_only,
     gnu_library_general_public_license_v1_or_later.lower(): gnu_library_general_public_license_v1_or_later,
     gnu_library_general_public_license_v2_only.lower(): gnu_library_general_public_license_v2_only,
@@ -1336,6 +1341,7 @@ LICENSES_SYNONYMS = {
     unicode_license_v3.lower(): unicode_license_v3,
     unicode_terms_of_use.lower(): unicode_terms_of_use,
     united_kingdom_open_parliament_licence_v3_0.lower(): united_kingdom_open_parliament_licence_v3_0,
+    universal_permissive_license.lower(): universal_permissive_license,
     universal_permissive_license_v1_0.lower(): universal_permissive_license_v1_0,
     university_of_illinois_ncsa_open_source_license.lower(): university_of_illinois_ncsa_open_source_license,
     unixcrypt_license.lower(): unixcrypt_license,
@@ -1389,6 +1395,8 @@ LICENSES_SYNONYMS = {
     "['gplv3 or any later version']": gnu_general_public_license_v3_0_or_later,
     "0bsd" : bsd_license_c0,
     "2-clause bsd license": bsd_license_c2,
+    "2-bsd": bsd_license_c2,
+    "2-clause bsd": bsd_license_c2,
     "3-bsd": bsd_license_c3,
     "3-clause bsd <http://www.opensource.org/licenses/bsd-license.php>": bsd_license_c3,
     "3-clause bsd license": bsd_license_c3,
@@ -1405,11 +1413,17 @@ LICENSES_SYNONYMS = {
     "affero general public license v1.0 only": gnu_affero_general_public_license_v1_0_only,
     "affero general public license v1.0 or later": gnu_affero_general_public_license_v1_0_or_later,
     "affero general public license v1.0": gnu_affero_general_public_license_v1_0_only,
+    "afl": academic_free,
     "afl-1.1": academic_free_v1_1,
+    "afl 1.1": academic_free_v1_1,
     "afl-1.2": academic_free_v1_2,
+    "afl 1.2": academic_free_v1_2,
     "afl-2.0": academic_free_v2_0,
+    "afl 2.0": academic_free_v2_0,
     "afl-2.1": academic_free_v2_1,
+    "afl 2.1": academic_free_v2_1,
     "afl-3.0": academic_free_v3_0,
+    "afl 3.0": academic_free_v3_0,
     "afmparse" : afmparse_license,
     "agpl 3.0": gnu_affero_general_public_license_v3_0_only,
     "agpl v3": gnu_affero_general_public_license_v3_0_only,
@@ -1490,6 +1504,9 @@ LICENSES_SYNONYMS = {
     "bittorrent-1.1" : bittorrent_open_source_license_v1_1,
     "blessing" : sqlite_blessing,
     "blueoak-1.0.0" : blue_oak_model_license_1_0_0,
+    "blue oak model license (blueoak-1.0.0)" : blue_oak_model_license_1_0_0,
+    "blueOak-1.0.0" : blue_oak_model_license_1_0_0,
+    "blueoak-1.0.0" : blue_oak_model_license_1_0_0,
     "boehm-gc-without-fee" : boehm_demers_weiser_gc_license_without_fee,
     "boehm-gc" : boehm_demers_weiser_gc_license,
     "borceux" : borceux_license,
@@ -1499,8 +1516,15 @@ LICENSES_SYNONYMS = {
     "bsd (3-clause)": bsd_license_c3,
     "bsd 2-clause (see license file)": bsd_license_c2,
     "bsd 2-clause": bsd_license_c2,
+    "bsd-2-clause": bsd_license_c2,
+    "bsd-2-clause license": bsd_license_c2,
+    "bsd-2-clause-license": bsd_license_c2,
+    "bsd-3-clause": bsd_license_c3,
     "bsd 3 clause": bsd_license_c3,
     "bsd 3-clause license": bsd_license_c3,
+    "bsd 3-clause-license": bsd_license_c3,
+    "bsd-3-clause license": bsd_license_c3,
+    "bsd-3-clause-license": bsd_license_c3,
     "bsd 3-clause": bsd_license_c3,
     "bsd 3": bsd_license_c3,
     "bsd license": bsd_license,
@@ -1787,7 +1811,8 @@ LICENSES_SYNONYMS = {
     "gnu gplv2": gnu_public_license_v2,
     "gnu gplv3 or any higher": gnu_general_public_license_v3_0_only,
     "gnu gplv3": gnu_general_public_license_v3_0_only,
-    "GNU lesser general public license (lgpl)": gnu_lesser_public_license,
+    "gnu lgpl": gnu_lesser_general_public_license,
+    "gnu lesser general public license (lgpl)": gnu_lesser_general_public_license,
     "gnu lesser general public license v2 (lgplv2)": gnu_lesser_general_public_license_v2_0_only,
     "gnu lesser general public license v2 or later (lgplv2+)": gnu_general_public_license_v2_0_or_later,
     "gnu lesser general public license v2": gnu_lesser_general_public_license_v2_0_only,
@@ -1795,7 +1820,7 @@ LICENSES_SYNONYMS = {
     "gnu lesser general public license v3 or later (lgplv3+)": gnu_lesser_general_public_license_v3_0_or_later,
     "gnu lesser general public license v3": gnu_lesser_general_public_license_v3_0_only,
     "gnu lesser general public license version 3, 29 june 2007  copyright (c) 2007 free software foundation, inc. <https://fsf.org/> everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.   this version of the gnu lesser general public licen": gnu_lesser_general_public_license_v3_0_only,
-    "gnu library or lesser general public license (lgpl)": gnu_lesser_public_license, # TODO remove when #24 is fixed
+    "gnu library or lesser general public license (lgpl)": gnu_lesser_general_public_license,
     "gnu-gpl": gnu_public_license,
     "gnu-gplv3": gnu_general_public_license_v3_0_only,
     "gnu": gnu_public_license,
@@ -1943,8 +1968,8 @@ LICENSES_SYNONYMS = {
     "lgpl-3.0-or-later": gnu_lesser_general_public_license_v3_0_or_later,
     "lgpl-3.0": gnu_lesser_general_public_license_v3_0_only,
     "lgpl-3.0+": gnu_lesser_general_public_license_v3_0_or_later,
-    "lgpl, see also license.txt": gnu_lesser_public_license,
-    "lgpl": gnu_lesser_public_license,
+    "lgpl, see also license.txt": gnu_lesser_general_public_license,
+    "lgpl": gnu_lesser_general_public_license,
     "lgpl3": gnu_lesser_general_public_license_v3_0_only,
     "lgpllr" : lesser_general_public_license_for_linguistic_resources,
     "lgplv2+": gnu_general_public_license_v2_0_or_later,
@@ -2002,6 +2027,7 @@ LICENSES_SYNONYMS = {
     "mit license": mit_license,
     "mit licensed, as found in the license file": mit_license,
     "mit no attribution license (mit-0)": mit_zero_license,
+    "mit-0 license": mit_zero_license,
     "mit no attribution license": mit_zero_license,
     "mit-0": mit_zero_license,
     "mit-advertising" : enlightenment_license_e16,
@@ -2019,6 +2045,7 @@ LICENSES_SYNONYMS = {
     "mitnfa" : mit_no_false_attribs_license,
     "mmixware" : mmixware_license,
     "motosoto" : motosoto_license,
+    "mozilla public license 1.1 (mpl 1.1)": mozilla_public_license_1_1,
     "mozilla public license 2.0 (mpl 2.0)": mozilla_publice_license_v2,
     "mozilla public license 2.0": mozilla_publice_license_v2,
     "mozilla public license version 2.0": mozilla_publice_license_v2,
@@ -2159,6 +2186,7 @@ LICENSES_SYNONYMS = {
     "psf-2.0": python_license_v2,
     "psf-2": python_license_v2,
     "psf": python_license,
+    "psfl": python_license,
     "psfrag" : psfrag_license,
     "psutils" : psutils_license,
     "python 1.0": python_license_v1,
@@ -2275,6 +2303,8 @@ LICENSES_SYNONYMS = {
     "unixcrypt" : unixcrypt_license,
     "unlicense": unlicensed_license,
     "unlicensed": unlicensed_license,
+    "universal permissive license (upl)": universal_permissive_license,
+    "upl": universal_permissive_license,
     "upl-1.0" : universal_permissive_license_v1_0,
     "urt-rle" : utah_raster_toolkit_run_length_encoded_license,
     "vim" : vim_license,
