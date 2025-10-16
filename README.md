@@ -466,7 +466,6 @@ jobs:
 - IPA Font License
 - ISC License
 - ISC Veillard variant
-- ISC license (iscl)
 - Jam License
 - Japan Network Information Center License
 - JasPer License
