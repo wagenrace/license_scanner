@@ -65,6 +65,11 @@ def get_all_licenses() -> Dict[str, str]:
         # Parse and remove duplicates
         licenses = list(set([parse_license(i) for i in licenses_raw]))
 
+        # If no license is known let it know
+        if len(licenses) == 0:
+            licenses = [unknown_license]
+
+        # Reformat output
         for license in licenses:
             all_licenses[license] = all_licenses.get(license, []) + [package_name]
 
