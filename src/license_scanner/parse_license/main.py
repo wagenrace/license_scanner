@@ -9,8 +9,14 @@ def parse_license(license_str: str):
     # Get license
     if not license_str:
         return None
-    # If you paste a license, only take the first line
-    license_str = license_str.split("\n")[0]
+
+    # If a break line is in there, it is a whole license.
+    # Don't bother
+    if "\n" in license_str:
+        warnings.warn(
+            f"It seems like a full license (not just a name) was paste for license: {repr(license_str)}"
+        )
+        return None
 
     license_str = license_str.strip()
 
