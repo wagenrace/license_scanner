@@ -692,8 +692,7 @@ zope_public_license_v2 = "Zope Public License v2"
 
 # fmt: off
 
-other = "other/proprietary license"
-unknown_license = "UNKNOWN"
+unknown_license = "There is no known license"
 
 LICENSES_SYNONYMS = {
     abstyles_license.lower(): abstyles_license,
@@ -1460,6 +1459,7 @@ LICENSES_SYNONYMS = {
     "apache license, v2.0": apache_license_v2,
     "apache license, version 2.0": apache_license_v2,
     "apache license": apache_license,
+    "license :: osi approved :: apache software license": apache_license,
     "apache software license (apache 2.0)": apache_license_v2,
     "apache software license 2.0": apache_license_v2,
     "apache software license v2.0": apache_license_v2,
@@ -1982,7 +1982,6 @@ LICENSES_SYNONYMS = {
     "licence libre du québec – permissive version 1.1": licence_libre_du_québec_permissive_version_1_1,
     "licence libre du québec – réciprocité forte version 1.1": licence_libre_du_québec_Réciprocité_forte_version_1_1,
     "licence libre du québec – réciprocité version 1.1": licence_libre_du_québec_Réciprocité_version_1_1,
-    "licence.txt": unknown_license,
     "liliq-p-1.1" : licence_libre_du_québec_permissive_version_1_1,
     "liliq-r-1.1" : licence_libre_du_québec_Réciprocité_forte_version_1_1,
     "liliq-rplus-1.1" : licence_libre_du_québec_Réciprocité_version_1_1,
@@ -2016,6 +2015,7 @@ LICENSES_SYNONYMS = {
     "mips" : mips_license,
     "miros" : the_miros_licence,
     "mit -  see license.txt": mit_license,
+    'license :: osi approved :: mit license': mit_license,
     "mit 0": mit_zero_license,
     "mit licence": mit_license,
     "mit license ": mit_license,
@@ -2346,7 +2346,4 @@ LICENSES_SYNONYMS = {
     "zpl-2.0" : zope_public_license_2_0,
     "zpl-2.1" : zope_public_license_2_1,
     "zpl": zope_public_license,
-    "other/proprietary license": other,
-    "proprietary": other,
-    "proprietary license": other,
 }
