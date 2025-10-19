@@ -1531,6 +1531,7 @@ LICENSES_SYNONYMS = {
     "bsd-2-clause-darwin" : bsd_2_clause___ian_darwin_variant,
     "bsd-2-clause-first-lines" : bsd_2_clause___first_lines_requirement,
     "bsd-2-clause-freebsd": bsd_2_clause__freebsd,
+    "freebsd": bsd_2_clause__freebsd,
     "bsd-2-clause-netbsd": bsd_2_clause__netbsd,
     "bsd-2-clause-patent" : bsd_2_clause_plus_patent_license,
     "bsd-2-clause-views" : bsd_2_clause_with_views_sentence,
