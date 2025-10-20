@@ -9,20 +9,20 @@ def _split_expression(license_expression: str) -> list[str]:
     :return: List containing the parts of the expression split by the first operator.
     :rtype: list[str]
     """
-    license_expression = license_expression.lower().strip()
-    pos_first_and = license_expression.find(" and ")
-    pos_first_or = license_expression.find(" or ")
+    license_expression_norm = license_expression.lower().strip()
+    pos_first_and = license_expression_norm.find(" and ")
+    pos_first_or = license_expression_norm.find(" or ")
 
-    if pos_first_and != -1 and pos_first_and < pos_first_or:
+    if pos_first_and != -1 and (pos_first_and < pos_first_or or pos_first_or == -1):
         # First operator is AND
         first_part = license_expression[:pos_first_and]
         second_part = license_expression[pos_first_and + 5 :]
-        return [first_part, "AND"] + _split_expression(second_part)
-    elif pos_first_or != -1 and pos_first_or < pos_first_and:
+        return [first_part.strip(), "AND"] + _split_expression(second_part.strip())
+    elif pos_first_or != -1 and (pos_first_or < pos_first_and or pos_first_and == -1):
         # First operator is OR
         first_part = license_expression[:pos_first_or]
         second_part = license_expression[pos_first_or + 4 :]
-        return [first_part, "OR"] + _split_expression(second_part)
+        return [first_part.strip(), "OR"] + _split_expression(second_part.strip())
     else:
         return [license_expression]
 
