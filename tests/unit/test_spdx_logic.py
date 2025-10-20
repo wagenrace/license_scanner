@@ -1,4 +1,4 @@
-from src.license_scanner.spdx_logic.main import spdx_logic
+from src.license_scanner.spdx_logic.main import spdx_logic, _split_expression
 
 
 def test_spdx_single_license():
@@ -64,3 +64,32 @@ def test_spdx_single_level_brackets_expressions():
     assert spdx_logic("BSD-3-Clause AND (MIT OR GPL-3.0)", allowed_licenses) is True
     assert spdx_logic("(MIT OR BSD-3-Clause) AND GPL-3.0", allowed_licenses) is False
     assert spdx_logic("GPL-3.0 AND (MIT OR BSD-3-Clause)", allowed_licenses) is False
+
+
+def test_split_expression():
+
+    assert _split_expression("MIT AND Apache-2.0") == [
+        "MIT",
+        "AND",
+        "Apache-2.0",
+    ]
+    assert _split_expression("MIT OR Apache-2.0") == [
+        "MIT",
+        "OR",
+        "Apache-2.0",
+    ]
+    assert _split_expression("MIT") == ["MIT"]
+    assert _split_expression("MIT AND Apache-2.0 OR BSD-3-Clause") == [
+        "MIT",
+        "AND",
+        "Apache-2.0",
+        "OR",
+        "BSD-3-Clause",
+    ]
+    assert _split_expression("MIT OR Apache-2.0 AND BSD-3-Clause") == [
+        "MIT",
+        "OR",
+        "Apache-2.0 ",
+        "AND",
+        "BSD-3-Clause",
+    ]
