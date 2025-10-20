@@ -89,7 +89,7 @@ def test_split_expression():
     assert _split_expression("MIT OR Apache-2.0 AND BSD-3-Clause") == [
         "MIT",
         "OR",
-        "Apache-2.0 ",
+        "Apache-2.0",
         "AND",
         "BSD-3-Clause",
     ]
