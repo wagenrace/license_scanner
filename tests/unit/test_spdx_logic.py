@@ -1,0 +1,41 @@
+from src.license_scanner.spdx_logic.main import spdx_logic
+
+
+def test_spdx_single_license():
+    allowed_licenses = [
+        "MIT",
+        "Apache-2.0",
+        "BSD-3-Clause",
+        "completely unknown license",
+    ]
+
+    # SPDX named licenses
+    assert spdx_logic("MIT", allowed_licenses) is True
+    assert spdx_logic("Apache-2.0", allowed_licenses) is True
+    assert spdx_logic("BSD-3-Clause", allowed_licenses) is True
+    assert spdx_logic("GPL-3.0", allowed_licenses) is False
+
+    # License NOT named in SPDX, but present in allowed licenses
+    assert spdx_logic("MIT license", allowed_licenses) is True
+    assert spdx_logic("BSD 3-clause license", allowed_licenses) is True
+    assert spdx_logic("GPL version 3", allowed_licenses) is False
+    assert spdx_logic("mit 0", allowed_licenses) is False
+
+    # License NOT named in SPDX and NOT present in allowed licenses
+    assert spdx_logic("completely unknown license", allowed_licenses) is True
+    assert spdx_logic("another unknown license", allowed_licenses) is False
+
+
+def test_spdx_simple_expressions():
+    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
+
+    assert spdx_logic("MIT OR Apache-2.0", allowed_licenses) is True
+    assert spdx_logic("MIT AND BSD-3-Clause", allowed_licenses) is True
+    assert spdx_logic("MIT AND GPL-3.0", allowed_licenses) is False
+
+
+def test_spdx_single_level_brackets_expressions():
+    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
+
+    assert spdx_logic("(MIT OR Apache-2.0) AND BSD-3-Clause", allowed_licenses) is True
+    assert spdx_logic("(MIT OR GPL-3.0) AND BSD-3-Clause", allowed_licenses) is False
