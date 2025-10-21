@@ -108,7 +108,7 @@ def main():
                         f"{package} license could not be found. If this is a error please report at https://github.com/wagenrace/license_scanner/issues if you want to ignore this package add it to the whitelist in pyproject.toml"
                     )
                 else:
-                    print(f"{package} with {license} is NOT whitelisted")
+                    print(f'{package} with "{license}" is NOT whitelisted')
             raise ValueError(
                 "Some of the packages found do not use white listed licenses"
             )

@@ -1,5 +1,10 @@
 # History
 
+## 0.4.0b1 (2025-10-16)
+
+- merge "ISC License" and "ISC license (iscl)" into "ISC license"
+- Exclude full licenses. If your license name has a line break we are not parsing it
+
 ## 0.4.0b0 (2025-10-15)
 
 - Remove Setuptools from requirements

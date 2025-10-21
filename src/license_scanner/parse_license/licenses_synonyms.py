@@ -367,9 +367,8 @@ intel_acpi_software_license_agreement = "Intel ACPI Software License Agreement"
 intel_open_source_license = "Intel Open Source License"
 interbase_public_license_v1_0 = "Interbase Public License v1.0"
 ipa_font_license = "IPA Font License"
-isc_license = "ISC License"
 isc_veillard_variant = "ISC Veillard variant"
-iscl_license = "ISC license (iscl)"
+isc_license = "ISC license"
 jam_license = "Jam License"
 japan_network_information_center_license = "Japan Network Information Center License"
 jasper_license = "JasPer License"
@@ -693,8 +692,7 @@ zope_public_license_v2 = "Zope Public License v2"
 
 # fmt: off
 
-other = "other/proprietary license"
-unknown_license = "UNKNOWN"
+unknown_license = "There is no known license"
 
 LICENSES_SYNONYMS = {
     abstyles_license.lower(): abstyles_license,
@@ -1068,7 +1066,6 @@ LICENSES_SYNONYMS = {
     ipa_font_license.lower(): ipa_font_license,
     isc_license.lower(): isc_license,
     isc_veillard_variant.lower(): isc_veillard_variant,
-    iscl_license.lower(): iscl_license,
     jam_license.lower(): jam_license,
     japan_network_information_center_license.lower(): japan_network_information_center_license,
     jasper_license.lower(): jasper_license,
@@ -1462,10 +1459,12 @@ LICENSES_SYNONYMS = {
     "apache license, v2.0": apache_license_v2,
     "apache license, version 2.0": apache_license_v2,
     "apache license": apache_license,
+    "license :: osi approved :: apache software license": apache_license,
     "apache software license (apache 2.0)": apache_license_v2,
     "apache software license 2.0": apache_license_v2,
     "apache software license v2.0": apache_license_v2,
     "apache software license v2": apache_license_v2,
+    "apache software license v1": apache_license_v1,
     "apache software license, version 2.0, http://www.apache.org/licenses/license-2.0": apache_license_v2,
     "apache software license": apache_license,
     "apache v2": apache_license_v2,
@@ -1503,9 +1502,8 @@ LICENSES_SYNONYMS = {
     "bittorrent-1.0" : bittorrent_open_source_license_v1_0,
     "bittorrent-1.1" : bittorrent_open_source_license_v1_1,
     "blessing" : sqlite_blessing,
-    "blueoak-1.0.0" : blue_oak_model_license_1_0_0,
+    "blueoak 1.0.0" : blue_oak_model_license_1_0_0,
     "blue oak model license (blueoak-1.0.0)" : blue_oak_model_license_1_0_0,
-    "blueOak-1.0.0" : blue_oak_model_license_1_0_0,
     "blueoak-1.0.0" : blue_oak_model_license_1_0_0,
     "boehm-gc-without-fee" : boehm_demers_weiser_gc_license_without_fee,
     "boehm-gc" : boehm_demers_weiser_gc_license,
@@ -1533,10 +1531,10 @@ LICENSES_SYNONYMS = {
     "bsd-2-clause-darwin" : bsd_2_clause___ian_darwin_variant,
     "bsd-2-clause-first-lines" : bsd_2_clause___first_lines_requirement,
     "bsd-2-clause-freebsd": bsd_2_clause__freebsd,
+    "freebsd": bsd_2_clause__freebsd,
     "bsd-2-clause-netbsd": bsd_2_clause__netbsd,
     "bsd-2-clause-patent" : bsd_2_clause_plus_patent_license,
     "bsd-2-clause-views" : bsd_2_clause_with_views_sentence,
-    "bsd-2-clause": bsd_license_c2,
     "bsd-3-clause-acpica" : bsd_3_clause_acpica_variant,
     "bsd-3-clause-attribution" : bsd_with_attribution,
     "bsd-3-clause-clear" : bsd_3_clause_clear_license,
@@ -1550,7 +1548,6 @@ LICENSES_SYNONYMS = {
     "bsd-3-clause-no-nuclear-warranty" : bsd_3_clause_no_nuclear_warranty,
     "bsd-3-clause-open-mpi" : bsd_3_clause_open_mpi_variant,
     "bsd-3-clause-sun" : bsd_3_clause_sun_microsystems,
-    "bsd-3-clause": bsd_license_c3,
     "bsd-4-clause-shortened" : bsd_4_clause_shortened,
     "bsd-4-clause-uc" : bsd_4_clause_university_of_california_specific,
     "bsd-4-clause" : bsd_4_clause_original_or_old_license,
@@ -1931,10 +1928,10 @@ LICENSES_SYNONYMS = {
     "interbase-1.0" : interbase_public_license_v1_0,
     "ipa" : ipa_font_license,
     "ipl-1.0" : ibm_public_license_v1_0,
-    "isc license (iscl)": iscl_license,
+    "isc license (iscl)": isc_license,
     "isc-veillard" : isc_veillard_variant,
-    "isc": iscl_license,
-    "iscl": iscl_license,
+    "isc": isc_license,
+    "iscl": isc_license,
     "jam" : jam_license,
     "jasper-2.0" : jasper_license,
     "jpl-image" : jpl_image_use_policy,
@@ -1986,7 +1983,6 @@ LICENSES_SYNONYMS = {
     "licence libre du québec – permissive version 1.1": licence_libre_du_québec_permissive_version_1_1,
     "licence libre du québec – réciprocité forte version 1.1": licence_libre_du_québec_Réciprocité_forte_version_1_1,
     "licence libre du québec – réciprocité version 1.1": licence_libre_du_québec_Réciprocité_version_1_1,
-    "licence.txt": unknown_license,
     "liliq-p-1.1" : licence_libre_du_québec_permissive_version_1_1,
     "liliq-r-1.1" : licence_libre_du_québec_Réciprocité_forte_version_1_1,
     "liliq-rplus-1.1" : licence_libre_du_québec_Réciprocité_version_1_1,
@@ -2020,6 +2016,7 @@ LICENSES_SYNONYMS = {
     "mips" : mips_license,
     "miros" : the_miros_licence,
     "mit -  see license.txt": mit_license,
+    'license :: osi approved :: mit license': mit_license,
     "mit 0": mit_zero_license,
     "mit licence": mit_license,
     "mit license ": mit_license,
@@ -2350,7 +2347,4 @@ LICENSES_SYNONYMS = {
     "zpl-2.0" : zope_public_license_2_0,
     "zpl-2.1" : zope_public_license_2_1,
     "zpl": zope_public_license,
-    "other/proprietary license": other,
-    "proprietary": other,
-    "proprietary license": other,
 }
