@@ -115,30 +115,40 @@ def test_spdx_single_license_another_unknown_license():
     assert spdx_logic("another unknown license", allowed_licenses) is False
 
 
-def test_spdx_simple_expressions1():
+def test_spdx_simple_expressions_or_both_allowed():
     allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
 
     assert spdx_logic("MIT OR Apache-2.0", allowed_licenses) is True
 
 
-def test_spdx_simple_expressions2():
-    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
+def test_spdx_simple_expressions_or_one_allowed():
+    allowed_licenses = ["MIT", "BSD-3-Clause"]
     assert spdx_logic("MIT OR GPL-3.0", allowed_licenses) is True
 
 
-def test_spdx_simple_expressions3():
+def test_spdx_simple_expressions_or_other_one_allowed():
+    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
+    assert spdx_logic("GPL-3.0 OR Apache-2.0", allowed_licenses) is True
+
+
+def test_spdx_simple_expressions_or_none_allowed():
     allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
     assert spdx_logic("BSD-4-Clause OR GPL-3.0", allowed_licenses) is False
 
 
-def test_spdx_simple_expressions4():
+def test_spdx_simple_expressions_and_both_allowed():
     allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
     assert spdx_logic("MIT AND BSD-3-Clause", allowed_licenses) is True
 
 
-def test_spdx_simple_expressions5():
+def test_spdx_simple_expressions_and_one_allowed():
     allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
     assert spdx_logic("MIT AND GPL-3.0", allowed_licenses) is False
+
+
+def test_spdx_simple_expressions_and_other_one_allowed():
+    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
+    assert spdx_logic("GPL-3.0 AND BSD-3-Clause", allowed_licenses) is False
 
 
 def test_spdx_multiple_operators_expressions1():
