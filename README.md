@@ -23,7 +23,7 @@ license_scanner
 
 [X] drop setuptools as requirements
 [ ] Support SPDX logic
-[ ] Add support all licenses in top 1000 most downloaded packages
+[X] Add support all licenses in top 1000 most downloaded packages
 [ ] Add integration tests for python 3.10 till 3.14 for windows and linux (maybe mac)
 [ ] fill in missing metadata of package itself
 [ ] switch to UV
