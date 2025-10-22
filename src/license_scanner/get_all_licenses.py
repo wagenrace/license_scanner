@@ -64,6 +64,7 @@ def get_all_licenses() -> Dict[str, str]:
 
         # Parse and remove duplicates
         licenses = list(set([parse_license(i) for i in licenses_raw]))
+        licenses = [i for i in licenses if i]
 
         # If no license is known let it know
         if len(licenses) == 0:
