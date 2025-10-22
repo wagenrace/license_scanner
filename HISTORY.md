@@ -1,5 +1,9 @@
 # History
 
+## 0.4.0b2 (2025-10-22)
+
+- Bugfix: Filter out all license that are None
+
 ## 0.4.0b1 (2025-10-16)
 
 - merge "ISC License" and "ISC license (iscl)" into "ISC license"
