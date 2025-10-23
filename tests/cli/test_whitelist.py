@@ -2,12 +2,12 @@ from unittest.mock import patch
 
 import pytest
 
-from license_scanner.cli import Mode, main
+from src.license_scanner.cli import Mode, main
 
 
-@patch("license_scanner.cli.__get_arguments")
-@patch("license_scanner.cli.get_all_licenses")
-@patch("license_scanner.cli.tomllib.load")
+@patch("src.license_scanner.cli.__get_arguments")
+@patch("src.license_scanner.cli.get_all_licenses")
+@patch("src.license_scanner.cli.tomllib.load")
 def test_nothing_allowed(toml_load_mock, get_all_licenses_mock, argparse_mock):
     toml_load_mock.return_value = {
         "tool": {"license_scanner": {"allowed_licenses": [], "allowed_packages": []}}
@@ -19,9 +19,9 @@ def test_nothing_allowed(toml_load_mock, get_all_licenses_mock, argparse_mock):
         main()
 
 
-@patch("license_scanner.cli.__get_arguments")
-@patch("license_scanner.cli.get_all_licenses")
-@patch("license_scanner.cli.tomllib.load")
+@patch("src.license_scanner.cli.__get_arguments")
+@patch("src.license_scanner.cli.get_all_licenses")
+@patch("src.license_scanner.cli.tomllib.load")
 def test_white_listed_licenses(toml_load_mock, get_all_licenses_mock, argparse_mock):
     toml_load_mock.return_value = {
         "tool": {
@@ -37,9 +37,9 @@ def test_white_listed_licenses(toml_load_mock, get_all_licenses_mock, argparse_m
     main()
 
 
-@patch("license_scanner.cli.__get_arguments")
-@patch("license_scanner.cli.get_all_licenses")
-@patch("license_scanner.cli.tomllib.load")
+@patch("src.license_scanner.cli.__get_arguments")
+@patch("src.license_scanner.cli.get_all_licenses")
+@patch("src.license_scanner.cli.tomllib.load")
 def test_white_listed_packages(toml_load_mock, get_all_licenses_mock, argparse_mock):
     toml_load_mock.return_value = {
         "tool": {
@@ -55,9 +55,9 @@ def test_white_listed_packages(toml_load_mock, get_all_licenses_mock, argparse_m
     main()
 
 
-@patch("license_scanner.cli.__get_arguments")
-@patch("license_scanner.cli.get_all_licenses")
-@patch("license_scanner.cli.tomllib.load")
+@patch("src.license_scanner.cli.__get_arguments")
+@patch("src.license_scanner.cli.get_all_licenses")
+@patch("src.license_scanner.cli.tomllib.load")
 def test_white_listed_license_and_packages(
     toml_load_mock, get_all_licenses_mock, argparse_mock
 ):
