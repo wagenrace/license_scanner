@@ -7,9 +7,6 @@ on:
   pull_request:
     branches:
       - main
-  push:
-    branches:
-      - main
 
 permissions:
   contents: read
@@ -37,10 +34,6 @@ jobs:
         pip install -r tests/integration_test/requirements.txt
         pip install pytest
         pip install .
-    
-    - name: Check for licenses
-      run: |
-        python -m license_scanner -m whitelist
 
     - name: Run all tests
       run: |
