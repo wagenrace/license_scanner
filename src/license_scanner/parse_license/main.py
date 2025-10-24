@@ -13,8 +13,10 @@ def parse_license(license_str: str):
     # If a break line is in there, it is a whole license.
     # Don't bother
     if "\n" in license_str:
+        # Only print the first 5 lines
+        part_of_license = repr("\n".join(license_str.split("\n")[:5]))
         warnings.warn(
-            f"It seems like a full license (not just a name) was paste for license: {repr(license_str)}"
+            f"It seems like a full license (not just a name) was paste for license: {part_of_license}"
         )
         return None
 

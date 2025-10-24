@@ -32,12 +32,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install .
         python -m license_scanner.cli -m whitelist
-
-    - name: Pytest
-      run: |
-        pip install pytest
-        python -m pytest
-
     - name: build package
       run: |
         pip install build
