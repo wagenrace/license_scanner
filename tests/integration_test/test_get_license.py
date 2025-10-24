@@ -1,7 +1,7 @@
 from src.license_scanner.get_all_licenses import get_licenses, parse_license
 from src.license_scanner.parse_license.licenses_synonyms import (
     mit_license,
-    bsd_license_c3,
+    bsd_license,
     apache_license_v2,
     mit_cmu,
     historical_permission_notice,
@@ -35,7 +35,7 @@ def test_get_licenses_mit(model_name):
 def test_get_licenses_bsd3(model_name):
     licenses = get_licenses(model_name)
     licenses = [parse_license(i) for i in licenses]
-    assert bsd_license_c3 in licenses
+    assert bsd_license in licenses
 
 
 @pytest.mark.parametrize(
