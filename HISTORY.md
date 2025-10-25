@@ -1,5 +1,9 @@
 # History
 
+## 0.4.0b3 (2025-10-25)
+
+- Limit full license logger to first 5 lines
+
 ## 0.4.0b2 (2025-10-22)
 
 - Bugfix: Filter out all license that are None
