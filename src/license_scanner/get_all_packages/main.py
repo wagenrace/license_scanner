@@ -4,6 +4,7 @@ import sys
 
 import os
 import re
+from typing import List
 
 
 def safe_listdir(path):
@@ -53,14 +54,19 @@ def normalize_path(filename) -> str | bytes:
     return os.path.normcase(os.path.realpath(os.path.normpath(_cygwin_patch(filename))))
 
 
-def get_all_package_names():
+def get_all_package_names() -> List[str]:
+    """Get all package names installed into the environment
+
+    :return: list of package names
+    :rtype: List[str]
+    """
     all_package_names = []
 
     for sys_path in sys.path:
         sys_path = normalize_path(sys_path)
         all_modules = safe_listdir(sys_path)
         for module_folder_name in all_modules:
-            lower = module_folder_name.lower()
+            lower = str(module_folder_name).lower()
             is_egg_info = lower.endswith(".egg-info")
             if is_egg_info:
                 package_name = module_folder_name[: -len(".egg-info")]
@@ -71,7 +77,7 @@ def get_all_package_names():
                 package_name = module_folder_name[: -len(".dist-info")]
 
             if is_egg_info or is_dist_info:
-                package_name = get_package_name(package_name)
+                package_name: str = get_package_name(package_name)
                 if package_name:
                     all_package_names.append(package_name)
                 else:
