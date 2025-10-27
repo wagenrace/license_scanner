@@ -21,14 +21,14 @@ license_scanner
 
 ## 0.4 update
 
-[X] drop setuptools as requirements
-[ ] Support SPDX logic
-[X] Add support all licenses in top 1000 most downloaded packages
-[X] Add integration tests for python 3.8 till 3.14 for Linux
-[ ] Add integration tests for python 3.8 till 3.14 for windows (maybe mac)
-[ ] fill in missing metadata of package itself
-[ ] switch to UV
-[ ] Redo readme
+- [X] drop setuptools as requirements
+- [X] Support SPDX logic
+- [X] Add support all licenses in top 1000 most downloaded packages
+- [X] Add integration tests for python 3.8 till 3.14 for Linux
+- [ ] Add integration tests for python 3.8 till 3.14 for windows (maybe mac)
+- [ ] fill in missing metadata of package itself
+- [ ] switch to UV
+- [ ] Redo readme
 
 ## Check within you pipeline
 
