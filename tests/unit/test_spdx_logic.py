@@ -1,3 +1,4 @@
+import pytest
 from src.license_scanner.spdx_logic.main import spdx_logic
 
 
@@ -218,32 +219,45 @@ def test_spdx_multiple_operators_expressions_and_or_combined5():
     assert spdx_logic("GPL-3.0 AND BSD-3-Clause OR GPL-2.0", allowed_licenses) is False
 
 
-def test_spdx_single_level_brackets_expressions1():
+@pytest.mark.parametrize(
+    "license_expression",
+    [
+        "(MIT OR Apache-2.0) AND BSD-3-Clause",
+        "BSD-3-Clause AND (MIT OR Apache-2.0)",
+        "(MIT OR GPL-3.0) AND BSD-3-Clause",
+        "BSD-3-Clause AND (MIT OR GPL-3.0)",
+    ],
+)
+def test_spdx_single_level_brackets_expressions_pass(license_expression):
     allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
 
-    assert spdx_logic("(MIT OR Apache-2.0) AND BSD-3-Clause", allowed_licenses) is True
+    assert spdx_logic(license_expression, allowed_licenses) is True
 
 
-def test_spdx_single_level_brackets_expressions2():
+@pytest.mark.parametrize(
+    "license_expression",
+    [
+        "(MIT OR BSD-3-Clause) AND GPL-3.0",
+        "GPL-3.0 AND (MIT OR BSD-3-Clause)",
+    ],
+)
+def test_spdx_single_level_brackets_expressions_fail(license_expression):
     allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("BSD-3-Clause AND (MIT OR Apache-2.0)", allowed_licenses) is True
+
+    assert spdx_logic(license_expression, allowed_licenses) is False
 
 
-def test_spdx_single_level_brackets_expressions3():
-    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("(MIT OR GPL-3.0) AND BSD-3-Clause", allowed_licenses) is True
+@pytest.mark.parametrize(
+    "license_name",
+    [
+        'BSD 4-Clause "Original" or "Old" License',
+        'BSD 3-Clause "New" or "Revised" License',
+        "GNU Affero General Public License v1.0 or later",
+        "Historical Permission Notice and Disclaimer (HPND)",
+        "FSF Unlimited License (With License Retention and Warranty Disclaimer)",
+    ],
+)
+def test_spdx_licenses_with_and_or_in_name(license_name):
+    allowed_licenses = [license_name]
 
-
-def test_spdx_single_level_brackets_expressions4():
-    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("BSD-3-Clause AND (MIT OR GPL-3.0)", allowed_licenses) is True
-
-
-def test_spdx_single_level_brackets_expressions5():
-    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("(MIT OR BSD-3-Clause) AND GPL-3.0", allowed_licenses) is False
-
-
-def test_spdx_single_level_brackets_expressions6():
-    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("GPL-3.0 AND (MIT OR BSD-3-Clause)", allowed_licenses) is False
+    assert spdx_logic(license_name, allowed_licenses) is True
