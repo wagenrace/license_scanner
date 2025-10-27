@@ -95,6 +95,13 @@ jobs:
 
 ```
 
+## Supports SPDX
+
+All names and shorted names of SPDX are supported.
+As well as the `AND` and `OR` operators.
+Meaning `MIT OR Apache-2.0` will be processed correctly.
+However, the `WITH` operator is NOT supported at the moment.
+
 ## Supported licenses
 
 - Abstyles License
