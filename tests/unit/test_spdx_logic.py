@@ -179,44 +179,36 @@ def test_spdx_multiple_operators_expressions_all_and_some_allowed():
     assert spdx_logic("MIT AND Apache-2.0 AND GPL-3.0", allowed_licenses) is False
 
 
-def test_spdx_multiple_operators_expressions_and_or_combined1():
+@pytest.mark.parametrize(
+    "license_expression",
+    [
+        "MIT AND GPL-3.0 OR BSD-3-Clause",
+        "GPL-2.0 AND GPL-3.0 OR BSD-3-Clause",
+        "BSD-3-Clause OR GPL-2.0 AND GPL-3.0",
+    ],
+)
+def test_spdx_multiple_operators_expressions_and_or_combined_positive(
+    license_expression,
+):
     # D.4.5 Order of precedence and parentheses
     # AND should be resolved before OR
 
     allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("MIT AND GPL-3.0 OR BSD-3-Clause", allowed_licenses) is True
+    assert spdx_logic(license_expression, allowed_licenses) is True
 
 
-def test_spdx_multiple_operators_expressions_and_or_combined2():
+@pytest.mark.parametrize(
+    "license_expression",
+    ["GPL-2.0 OR GPL-3.0 AND BSD-3-Clause", "GPL-3.0 AND BSD-3-Clause OR GPL-2.0"],
+)
+def test_spdx_multiple_operators_expressions_and_or_combined_negative(
+    license_expression,
+):
     # D.4.5 Order of precedence and parentheses
     # AND should be resolved before OR
 
     allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("GPL-2.0 AND GPL-3.0 OR BSD-3-Clause", allowed_licenses) is True
-
-
-def test_spdx_multiple_operators_expressions_and_or_combined3():
-    # D.4.5 Order of precedence and parentheses
-    # AND should be resolved before OR
-
-    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("BSD-3-Clause OR GPL-2.0 AND GPL-3.0", allowed_licenses) is True
-
-
-def test_spdx_multiple_operators_expressions_and_or_combined4():
-    # D.4.5 Order of precedence and parentheses
-    # AND should be resolved before OR
-
-    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("GPL-2.0 OR GPL-3.0 AND BSD-3-Clause", allowed_licenses) is False
-
-
-def test_spdx_multiple_operators_expressions_and_or_combined5():
-    # D.4.5 Order of precedence and parentheses
-    # AND should be resolved before OR
-
-    allowed_licenses = ["MIT", "Apache-2.0", "BSD-3-Clause"]
-    assert spdx_logic("GPL-3.0 AND BSD-3-Clause OR GPL-2.0", allowed_licenses) is False
+    assert spdx_logic(license_expression, allowed_licenses) is False
 
 
 @pytest.mark.parametrize(
@@ -239,6 +231,8 @@ def test_spdx_single_level_brackets_expressions_pass(license_expression):
     [
         "(MIT OR BSD-3-Clause) AND GPL-3.0",
         "GPL-3.0 AND (MIT OR BSD-3-Clause)",
+        "GPL-3.0 OR (GPL-2.0 AND BSD-3-Clause)",
+        "MIT AND (GPL-2.0 OR GPL-3.0)",
     ],
 )
 def test_spdx_single_level_brackets_expressions_fail(license_expression):
