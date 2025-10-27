@@ -3,6 +3,7 @@ from typing import List
 import warnings
 from enum import Enum
 from src.license_scanner.parse_license import parse_license
+from src.license_scanner.parse_license.licenses_synonyms import LICENSES_SYNONYMS
 
 
 class SpdxOperator(Enum):
@@ -103,15 +104,19 @@ def spdx_logic(license_expression: str, allowed_licenses: list[str]) -> bool:
     allowed_licenses = [parse_license(lic) for lic in allowed_licenses]
 
     license_expression = license_expression.lower().strip()
+
+    if license_expression in LICENSES_SYNONYMS.keys():
+        # If the license (including operators)is a known synonym we do NOT process it further
+        # e.g. "Historical Permission Notice and Disclaimer (HPND)"
+        parsed_license = parse_license(license_expression)
+        return parsed_license in allowed_licenses
+
     split_expression = _split_expression(license_expression)
 
-    # Only one license in expression
     if len(split_expression) == 1:
         # Single license
         parsed_license = parse_license(split_expression[0])
         return parsed_license in allowed_licenses
-
-    # More complex expression
 
     # Process all parts that are not operators
     processed_parts: List[SpdxOperator] = []
