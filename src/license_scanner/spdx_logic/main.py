@@ -1,6 +1,15 @@
 import re
+from typing import List
 import warnings
+from enum import Enum
 from src.license_scanner.parse_license import parse_license
+
+
+class SpdxOperator(Enum):
+    AND = "AND"
+    OR = "OR"
+    ACCEPTED = "ACCEPTED"
+    REJECTED = "REJECTED"
 
 
 def _split_expression(license_expression: str) -> list[str]:
@@ -93,12 +102,84 @@ def spdx_logic(license_expression: str, allowed_licenses: list[str]) -> bool:
 
     allowed_licenses = [parse_license(lic) for lic in allowed_licenses]
 
-    if not allowed_licenses:
-        return False
-
     license_expression = license_expression.lower().strip()
     split_expression = _split_expression(license_expression)
+
+    # Only one license in expression
     if len(split_expression) == 1:
         # Single license
         parsed_license = parse_license(split_expression[0])
         return parsed_license in allowed_licenses
+
+    # More complex expression
+
+    # Process all parts that are not operators
+    processed_parts: List[SpdxOperator] = []
+    for part in split_expression:
+        if part.lower() == "and":
+            processed_parts.append(SpdxOperator.AND)
+        elif part.lower() == "or":
+            processed_parts.append(SpdxOperator.OR)
+        else:
+            processed_part = spdx_logic(part, allowed_licenses)
+            if processed_part:
+                processed_parts.append(SpdxOperator.ACCEPTED)
+            else:
+                processed_parts.append(SpdxOperator.REJECTED)
+
+    # Now evaluate the processed parts
+    # First handle all ANDs
+    while SpdxOperator.AND in processed_parts:
+        index_and = processed_parts.index(SpdxOperator.AND)
+        if index_and == 0 or index_and == len(processed_parts) - 1:
+            warnings.warn(
+                f"Malformed SPDX expression: AND operator at the beginning or end: {license_expression}",
+                UserWarning,
+            )
+            return False
+        left_part = processed_parts[index_and - 1]
+        right_part = processed_parts[index_and + 1]
+
+        if left_part == SpdxOperator.ACCEPTED and right_part == SpdxOperator.ACCEPTED:
+            result = SpdxOperator.ACCEPTED
+        else:
+            result = SpdxOperator.REJECTED
+
+        # Replace the three parts with the result
+        processed_parts = (
+            processed_parts[: index_and - 1]
+            + [result]
+            + processed_parts[index_and + 2 :]
+        )
+
+    # Then handle all ORs
+    while SpdxOperator.OR in processed_parts:
+        index_or = processed_parts.index(SpdxOperator.OR)
+        if index_or == 0 or index_or == len(processed_parts) - 1:
+            warnings.warn(
+                f"Malformed SPDX expression: OR operator at the beginning or end: {license_expression}",
+                UserWarning,
+            )
+            return False
+        left_part = processed_parts[index_or - 1]
+        right_part = processed_parts[index_or + 1]
+
+        if left_part == SpdxOperator.ACCEPTED or right_part == SpdxOperator.ACCEPTED:
+            result = SpdxOperator.ACCEPTED
+        else:
+            result = SpdxOperator.REJECTED
+
+        # Replace the three parts with the result
+        processed_parts = (
+            processed_parts[: index_or - 1] + [result] + processed_parts[index_or + 2 :]
+        )
+
+    # At the end there should be only one part left
+    if len(processed_parts) == 1:
+        return processed_parts[0] == SpdxOperator.ACCEPTED
+    else:
+        warnings.warn(
+            f"Malformed SPDX expression after processing: {license_expression}",
+            UserWarning,
+        )
+        return False
