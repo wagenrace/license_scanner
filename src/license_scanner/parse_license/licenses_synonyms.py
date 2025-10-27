@@ -1471,7 +1471,6 @@ LICENSES_SYNONYMS = {
     "apache-1.0": apache_license_v1,
     "apache-1.1" : apache_license_1_1,
     "apache-2.0 license": apache_license_v2,
-    "apache-2.0 or bsd": apache_license_v2, # TODO remove when #24 is fixed
     "apache-2.0": apache_license_v2,
     "apache-2": apache_license_v2,
     "apache": apache_license,
