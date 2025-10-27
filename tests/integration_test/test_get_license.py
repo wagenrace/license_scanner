@@ -34,6 +34,12 @@ def test_get_licenses_apache(model_name):
     assert apache_license_v2 in licenses
 
 
+def test_get_dual_license():
+    licenses = get_licenses("uv")
+    licenses = [parse_license(i) for i in licenses]
+    assert "MIT OR Apache-2.0" in licenses
+
+
 def test_get_licenses_pillow():
     licenses = get_licenses("pillow")
     licenses = [parse_license(i) for i in licenses]
