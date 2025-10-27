@@ -14,18 +14,20 @@ class SpdxOperator(Enum):
 
 
 def _split_expression(license_expression: str) -> list[str]:
-    """Split the license expression into parts based on the first operator found (AND/OR).
+    """Split the license expression into parts based on the operators found (AND/OR).
+        For example
+        'Q OR (A AND (B OR C)) AND D'
+        becomes
+        ['Q', 'OR', 'A AND (B OR C)', 'AND', 'D']
 
     :param license_expression: The SPDX license expression to split.
     :type license_expression: str
-    :return: List containing the parts of the expression split by the first operator.
+    :return: List containing the parts of the expression split by the operators.
     :rtype: list[str]
     """
 
+    # Dealing with brackets
     if "(" in license_expression:
-        # Dealing with brackets
-        # This will split Q OR (A AND (B OR C)) AND D into ['Q', 'OR', 'A AND (B OR C)', 'AND', 'D']
-
         # Number opening and closing brackets should match
         if license_expression.count("(") != license_expression.count(")"):
             warnings.warn("Unmatched parentheses in license expression.", UserWarning)
@@ -38,7 +40,9 @@ def _split_expression(license_expression: str) -> list[str]:
         number_of_brackets = 1
 
         # Find the matching closing bracket
-        # Handle nested brackets as well; e.g., Q OR (A AND (B OR C))
+        # Handle nested brackets as well;
+        # e.g., Q OR (A AND (B OR C)) OR Z
+        # Will return the indexes "(A AND (B OR C))"
         while number_of_brackets > 0:
             next_char = license_expression[end_index]
             if next_char == "(":
