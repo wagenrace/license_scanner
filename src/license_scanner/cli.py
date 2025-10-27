@@ -94,15 +94,15 @@ def main():
         raw_allowed_packages = pyproject_config.get("allowed_packages", [])
         allowed_packages = [i.lower() for i in raw_allowed_packages]
 
+        # Check if all license or package are in a allowed list
         problem_packages = []
-
         for used_license in all_used_licenses:
             if not spdx_logic(used_license, allowed_licenses):
-                # if not used_license in allowed_licenses:
                 for package in all_licenses[used_license]:
                     if package not in allowed_packages:
                         problem_packages.append((package, used_license))
 
+        # If any package is not allowed raise error
         if problem_packages:
             for package, license in problem_packages:
                 if license == unknown_license:
