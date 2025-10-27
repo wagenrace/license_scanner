@@ -1,5 +1,9 @@
 # History
 
+## 0.4.0b4 (2025-10-27)
+
+- Add support for SPDX operators like "MIT and Apache V2"
+  
 ## 0.4.0b3 (2025-10-25)
 
 - Limit full license logger to first 5 lines

@@ -6,7 +6,7 @@ readme = "README.md"
 keywords = ["license", "scanner", "checker"]
 license = { text = "MIT" }
 requires-python = ">=3.8"
-authors = [{ name = "Tom Nijhof", email = "tomsspamadress@gmail.com" }]
+authors = [{ name = "Tom Nijhof", email = "nijhof.dns@gmail.com" }]
 classifiers = [
   "Environment :: Console",
   "Intended Audience :: Developers",
@@ -25,6 +25,13 @@ classifiers = [
   "Development Status :: 4 - Beta",
   "License :: OSI Approved :: MIT License",
 ]
+
+[project.urls]
+homepage = "https://github.com/wagenrace/license_scanner"
+documentation = "https://github.com/wagenrace/license_scanner"
+source = "https://github.com/wagenrace/license_scanner"
+download = "https://pypi.org/project/license_scanner/#files"
+tracker = "https://github.com/wagenrace/license_scanner/issues"
 
 [tool.hatch.build.targets.wheel]
 only-include = ["src"]
