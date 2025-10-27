@@ -71,7 +71,7 @@ def get_all_licenses() -> Dict[str, str]:
             licenses = [unknown_license]
 
         # Reformat output
-        for license in licenses:
-            all_licenses[license] = all_licenses.get(license, []) + [package_name]
+        for _license in licenses:
+            all_licenses[_license] = all_licenses.get(_license, []) + [package_name]
 
     return all_licenses
