@@ -1,3 +1,4 @@
+from typing import List
 from pandas import read_html
 import requests
 from license_scanner.parse_license import parse_license
@@ -5,7 +6,7 @@ from license_scanner.parse_license import parse_license
 license_url = "https://spdx.org/licenses/"
 
 
-def get_spdx_licenses() -> list[str]:
+def get_spdx_licenses() -> List[str]:
     """
     Get all SPDX licenses from the SPDX website.
     """

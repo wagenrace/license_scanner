@@ -13,7 +13,7 @@ class SpdxOperator(Enum):
     REJECTED = "REJECTED"
 
 
-def _split_expression(license_expression: str) -> list[str]:
+def _split_expression(license_expression: str) -> List[str]:
     """Split the license expression into parts based on the operators found (AND/OR).
         For example
         'Q OR (A AND (B OR C)) AND D'
@@ -23,7 +23,7 @@ def _split_expression(license_expression: str) -> list[str]:
     :param license_expression: The SPDX license expression to split.
     :type license_expression: str
     :return: List containing the parts of the expression split by the operators.
-    :rtype: list[str]
+    :rtype: List[str]
     """
 
     # Dealing with brackets
@@ -91,7 +91,7 @@ def _split_expression(license_expression: str) -> list[str]:
     return return_values
 
 
-def spdx_logic(license_expression: str, allowed_licenses: list[str]) -> bool:
+def spdx_logic(license_expression: str, allowed_licenses: List[str]) -> bool:
     """Evaluate the SPDX license expression against the allowed licenses.
     These are expressions like "MIT OR Apache-2.0" or "GPL-3.0 AND (BSD-3-Clause OR MIT)".
 
@@ -100,7 +100,7 @@ def spdx_logic(license_expression: str, allowed_licenses: list[str]) -> bool:
     :param license_expression: The SPDX license expression to evaluate.
     :type license_expression: str
     :param allowed_licenses: The list of allowed licenses.
-    :type allowed_licenses: list[str]
+    :type allowed_licenses: List[str]
     :return: True if the license expression is valid, False otherwise.
     :rtype: bool
     """
