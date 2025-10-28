@@ -1,29 +1,11 @@
 # History
 
-## 0.4.0b5 (2025-10-27)
+## 0.4.0 (2025-10-27)
 
-- bugfix: import error
-
-## 0.4.0b4 (2025-10-27)
-
-- Add support for SPDX operators like "MIT and Apache V2"
-  
-## 0.4.0b3 (2025-10-25)
-
-- Limit full license logger to first 5 lines
-
-## 0.4.0b2 (2025-10-22)
-
-- Bugfix: Filter out all license that are None
-
-## 0.4.0b1 (2025-10-16)
-
-- merge "ISC License" and "ISC license (iscl)" into "ISC license"
-- Exclude full licenses. If your license name has a line break we are not parsing it
-
-## 0.4.0b0 (2025-10-15)
-
+- Add support for SPDX operators AND/OR like "MIT AND Apache V2" and "MIT OR Apache V2"
 - Remove Setuptools from requirements
+- Exclude full licenses. If your license name has a line break we are not parsing it
+- merge "ISC License" and "ISC license (iscl)" into "ISC license"
 - Add ALL found licenses to the results; one package can now have multiple licenses
 - Add some missing synonyms for licenses
 - Add Artistic License (without version number)
