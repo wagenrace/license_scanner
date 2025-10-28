@@ -32,6 +32,7 @@ documentation = "https://github.com/wagenrace/license_scanner"
 source = "https://github.com/wagenrace/license_scanner"
 download = "https://pypi.org/project/license_scanner/#files"
 tracker = "https://github.com/wagenrace/license_scanner/issues"
+"release notes" = "https://github.com/wagenrace/license_scanner/blob/main/HISTORY.md"
 
 [tool.hatch.build.targets.wheel]
 only-include = ["src"]
