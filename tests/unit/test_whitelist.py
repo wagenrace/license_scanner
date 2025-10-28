@@ -8,12 +8,12 @@ from src.license_scanner.cli import Mode, main
 @pytest.mark.parametrize(
     "allowed_licenses, allowed_packages, all_licenses",
     [
-        (["BSD license"], [], {"MIT license": ["package 1", "package 2"]}),
-        ([], ["package 1"], {"BSD license": ["package 1", "package 2"]}),
+        (["BSD license"], [], {"MIT license": ["package-1", "package-2"]}),
+        ([], ["package-1"], {"BSD license": ["package-1", "package-2"]}),
         (
             ["MIT license"],
-            ["package 4"],
-            {"MIT license": ["package 1", "package 2"], "BSD license": ["package 3"]},
+            ["package-4"],
+            {"MIT license": ["package-1", "package-2"], "BSD license": ["package-3"]},
         ),
     ],
     ids=[
@@ -51,20 +51,20 @@ def test_white_listed_licenses_fail(
 @pytest.mark.parametrize(
     "allowed_licenses, allowed_packages, all_licenses",
     [
-        (["BSD license"], [], {"BSD license": ["package 1", "package 2"]}),
-        ([], ["package 1", "package 2"], {"BSD license": ["package 1", "package 2"]}),
+        (["BSD license"], [], {"BSD license": ["package_1", "package-2"]}),
+        ([], ["package-1", "package_2"], {"BSD license": ["package_1", "package-2"]}),
         (
             ["MIT license"],
-            ["package 3"],
-            {"MIT license": ["package 1", "package 2"], "BSD license": ["package 3"]},
+            ["package-3"],
+            {"MIT license": ["package-1", "package-2"], "BSD license": ["package-3"]},
         ),
         (
             ["MIT", "BSD", "apache 2.0"],
             [],
             {
-                "MIT license": ["package 1"],
-                "BSD license": ["package 2"],
-                "Apache license 2.0": ["package 3"],
+                "MIT license": ["package-1"],
+                "BSD license": ["package-2"],
+                "Apache license 2.0": ["package-3"],
             },
         ),
         (
@@ -77,12 +77,12 @@ def test_white_listed_licenses_fail(
             ],
             [],
             {
-                'BSD 4-Clause "Original" or "Old" License': ["package 1"],
-                'BSD 3-Clause "New" or "Revised" License': ["package 2"],
-                "GNU Affero General Public License v1.0 or later": ["package 3"],
-                "Historical Permission Notice and Disclaimer (HPND)": ["package 4"],
+                'BSD 4-Clause "Original" or "Old" License': ["package-1"],
+                'BSD 3-Clause "New" or "Revised" License': ["package-2"],
+                "GNU Affero General Public License v1.0 or later": ["package-3"],
+                "Historical Permission Notice and Disclaimer (HPND)": ["package-4"],
                 "FSF Unlimited License (With License Retention and Warranty Disclaimer)": [
-                    "package 5"
+                    "package-5"
                 ],
             },
         ),

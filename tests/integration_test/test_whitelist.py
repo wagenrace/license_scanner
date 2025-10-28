@@ -56,11 +56,24 @@ PYTEST_PACKAGES = [
             ],
             ["absl_py", *PYTEST_PACKAGES],
         ),
+        (
+            [
+                "BSD license",
+                "BSD 2-clause license",
+                "BSD 3-clause license",
+                "Apache license",
+                "MiT",
+                "Historical Permission Notice and Disclaimer (HPND)",
+                "CMU License (MIT-CMU)",
+            ],
+            ["absl-py", *PYTEST_PACKAGES],
+        ),
     ],
     ids=[
         "pure allowed licenses",
         "no HPND or MIT-CMU",
         "no Apache 2.0",
+        "no Apache 2.0 used - in package name",
     ],
 )
 @patch("src.license_scanner.cli.__get_arguments")
