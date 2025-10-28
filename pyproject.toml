@@ -4,9 +4,9 @@ dynamic = ["version"]
 dependencies = ["tomli>=1.1.0; python_version < '3.11'"]
 readme = "README.md"
 keywords = ["license", "scanner", "checker"]
-license = { text = "MIT" }
+license = "MIT"
 requires-python = ">=3.8"
-authors = [{ name = "Tom Nijhof", email = "nijhof.dns@gmail.com" }]
+authors = [{ name = "Tom Nijhof-Verhees", email = "nijhof.dns@gmail.com" }]
 classifiers = [
   "Environment :: Console",
   "Intended Audience :: Developers",
