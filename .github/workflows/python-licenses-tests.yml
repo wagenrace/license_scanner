@@ -30,7 +30,9 @@ jobs:
     - name: run license scanner
       run: |
         pip install .
+        cd .. # move out of repo to avoid picking up local files
         python -m license_scanner -m whitelist
+        cd - # move back to repo
         
     - name: Install dependencies
       run: |
