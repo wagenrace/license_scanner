@@ -2,8 +2,8 @@ import re
 from typing import List
 import warnings
 from enum import Enum
-from src.license_scanner.parse_license import parse_license
-from src.license_scanner.parse_license.licenses_synonyms import LICENSES_SYNONYMS
+from ..parse_license import parse_license
+from ..parse_license.licenses_synonyms import LICENSES_SYNONYMS
 
 
 class SpdxOperator(Enum):

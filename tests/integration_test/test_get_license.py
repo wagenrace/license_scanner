@@ -3,6 +3,7 @@ from src.license_scanner.parse_license.licenses_synonyms import (
     mit_license,
     bsd_license,
     apache_license_v2,
+    apache_license,
     mit_cmu,
     historical_permission_notice,
 )
@@ -32,6 +33,13 @@ def test_get_licenses_apache(model_name):
     licenses = get_licenses(model_name)
     licenses = [parse_license(i) for i in licenses]
     assert apache_license_v2 in licenses
+
+
+def test_get_dual_license():
+    licenses = get_licenses("uv")
+    licenses = [parse_license(i) for i in licenses]
+    assert mit_license in licenses
+    assert apache_license in licenses
 
 
 def test_get_licenses_pillow():

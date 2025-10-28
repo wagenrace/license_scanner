@@ -1,5 +1,9 @@
 # History
 
+## 0.4.0b5 (2025-10-27)
+
+- bugfix: import error
+
 ## 0.4.0b4 (2025-10-27)
 
 - Add support for SPDX operators like "MIT and Apache V2"
