@@ -4,9 +4,9 @@ dynamic = ["version"]
 dependencies = ["tomli>=1.1.0; python_version < '3.11'"]
 readme = "README.md"
 keywords = ["license", "scanner", "checker"]
-license = { text = "MIT" }
+license = "MIT"
 requires-python = ">=3.8"
-authors = [{ name = "Tom Nijhof", email = "nijhof.dns@gmail.com" }]
+authors = [{ name = "Tom Nijhof-Verhees", email = "nijhof.dns@gmail.com" }]
 classifiers = [
   "Environment :: Console",
   "Intended Audience :: Developers",
@@ -32,6 +32,7 @@ documentation = "https://github.com/wagenrace/license_scanner"
 source = "https://github.com/wagenrace/license_scanner"
 download = "https://pypi.org/project/license_scanner/#files"
 tracker = "https://github.com/wagenrace/license_scanner/issues"
+"release notes" = "https://github.com/wagenrace/license_scanner/blob/main/HISTORY.md"
 
 [tool.hatch.build.targets.wheel]
 only-include = ["src"]

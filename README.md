@@ -1,9 +1,32 @@
 # license_scanner
 
 [![Downloads](https://static.pepy.tech/badge/license-scanner)](https://pepy.tech/project/license-scanner)
+[![Tests & License Check](https://github.com/wagenrace/license_scanner/actions/workflows/python-licenses-tests.yml/badge.svg)](https://github.com/wagenrace/license_scanner/actions/workflows/python-licenses-tests.yml)
+[![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3130/)
+[![Python 3.14](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/downloads/release/python-3140/)
+
 
 Find all licenses needed by the package in your python environment.
-It will sort all package by license.
+It will sort all package by license or be used in CI/CD.
+
+## Table of content
+
+- [license\_scanner](#license_scanner)
+  - [Table of content](#table-of-content)
+  - [Get all licenses](#get-all-licenses)
+  - [Check within you pipeline](#check-within-you-pipeline)
+    - [Example: Github actions](#example-github-actions)
+  - [Supports operators SPDX](#supports-operators-spdx)
+  - [Supported licenses](#supported-licenses)
+  - [Credits](#credits)
+
+
+## Get all licenses
 
 Install by pip
 
@@ -19,16 +42,6 @@ license_scanner
 
 ![](readme_files/demo.gif)
 
-## 0.4 update
-
-- [X] drop setuptools as requirements
-- [X] Support SPDX logic
-- [X] Add support all licenses in top 1000 most downloaded packages
-- [X] Add integration tests for python 3.8 till 3.14 for Linux
-- [ ] Add integration tests for python 3.8 till 3.14 for windows (maybe mac)
-- [ ] fill in missing metadata of package itself
-- [ ] switch to UV
-- [ ] Redo readme
 
 ## Check within you pipeline
 
@@ -95,7 +108,7 @@ jobs:
 
 ```
 
-## Supports SPDX
+## Supports operators SPDX
 
 All names and shorted names of SPDX are supported.
 As well as the `AND` and `OR` operators.
@@ -797,4 +810,4 @@ However, the `WITH` operator is NOT supported at the moment.
 
 ## Credits
 
-- Tom Nijhof
+- Tom Nijhof-Verhees
