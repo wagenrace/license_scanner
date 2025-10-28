@@ -2,7 +2,7 @@
 """Scans your environment for all needed licenses"""
 
 __author__ = """Tom Nijhof-Verhees"""
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 
 # Add here import to all the functions you need
 

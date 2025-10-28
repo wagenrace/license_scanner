@@ -1,6 +1,11 @@
 # History
 
-## 0.4.0 (2025-10-27)
+## 0.4.1 (2025-10-28)
+
+- make package name comparing independent of - and _
+    e.g. "license_scanner" and "license-scanner" are the same
+
+## 0.4.0 (2025-10-28)
 
 - Add support for SPDX operators AND/OR like "MIT AND Apache V2" and "MIT OR Apache V2"
 - Remove Setuptools from requirements
