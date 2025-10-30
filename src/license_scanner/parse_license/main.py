@@ -1,11 +1,12 @@
 import os
 import warnings
+from typing import Union
 from .licenses_synonyms import LICENSES_SYNONYMS, unknown_license
 
 current_loc = os.path.dirname(os.path.realpath(__file__))
 
 
-def parse_license(license_str: str) -> str | None:
+def parse_license(license_str: str) -> Union[str, None]:
     """Turn a general license name into one of that is in the list
     This makes it easier to compare license that might be differently written.
 
