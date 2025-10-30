@@ -5,7 +5,19 @@ from .licenses_synonyms import LICENSES_SYNONYMS, unknown_license
 current_loc = os.path.dirname(os.path.realpath(__file__))
 
 
-def parse_license(license_str: str):
+def parse_license(license_str: str) -> str | None:
+    """Turn a general license name into one of that is in the list
+    This makes it easier to compare license that might be differently written.
+
+    If the license string seems to be a full license, None is returned.
+    If the license is not found in the list of known licenses, a warning is raised
+    and the original string is returned.
+
+    :param license_str: license string found in package metadata
+    :type license_str: str
+    :return: normalized license string
+    :rtype: str | None
+    """
     # Get license
     if not license_str:
         return None
