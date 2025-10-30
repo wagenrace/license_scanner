@@ -1,5 +1,9 @@
 # History
 
+## 0.4.2 (2025-10-30)
+
+- Add 19 new license and their shorted version form SPDX
+
 ## 0.4.1 (2025-10-28)
 
 - make package name comparing independent of - and _

@@ -35,11 +35,13 @@ apple_public_source_license_1_1 = "Apple Public Source License 1.1"
 apple_public_source_license_1_2 = "Apple Public Source License 1.2"
 apple_public_source_license_2_0 = "Apple Public Source License 2.0"
 arphic_public_license = "Arphic Public License"
+artistic_dist = "Artistic License 1.0 (dist)"
 artistic_license = "Artistic License"
 artistic_license_1_0 = "Artistic License 1.0"
 artistic_license_1_0_perl = "Artistic License 1.0 (Perl)"
 artistic_license_1_0_w_clause_8 = "Artistic License 1.0 w/clause 8"
 artistic_license_2_0 = "Artistic License 2.0"
+aspell_ru = "Aspell Russian License"
 aswf_digital_assets_license_1_1 = "ASWF Digital Assets License 1.1"
 aswf_digital_assets_license_version_1_0 = "ASWF Digital Assets License version 1.0"
 attribution_assurance_license = "Attribution Assurance License"
@@ -65,6 +67,7 @@ bsd_2_clause___first_lines_requirement = "BSD 2-Clause - first lines requirement
 bsd_2_clause___ian_darwin_variant = "BSD 2-Clause - Ian Darwin variant"
 bsd_2_clause__freebsd = "BSD 2-Clause FreeBSD License"
 bsd_2_clause__netbsd = "BSD 2-Clause NetBSD License"
+bsd_2_clause_pkgconf_disclaimer = "BSD 2-Clause pkgconf disclaimer variant"
 bsd_2_clause_plus_patent_license = "BSD-2-Clause Plus Patent License"
 bsd_2_clause_simplified_license = "BSD 2-Clause \"Simplified\" License"
 bsd_2_clause_with_views_sentence = "BSD 2-Clause with views sentence"
@@ -202,6 +205,7 @@ cronyx_license = "Cronyx License"
 crossword_license = "Crossword License"
 cryptographic_autonomy_license_1_0 = "Cryptographic Autonomy License 1.0"
 cryptographic_autonomy_license_1_0_combined_work_exception = "Cryptographic Autonomy License 1.0 (Combined Work Exception)"
+cryptoswift = "CryptoSwift License"
 crystalstacker_license = "CrystalStacker License"
 cua_office_public_license_v1_0 = "CUA Office Public License v1.0"
 cube_license = "Cube License"
@@ -215,6 +219,7 @@ detection_rule_license_1_1 = "Detection Rule License 1.1"
 deutsche_freie_software_lizenz = "Deutsche Freie Software Lizenz"
 diffmark_license = "diffmark license"
 doc_license = "DOC License"
+docbook_dtd = "DocBook DTD License"
 docbook_schema_license = "DocBook Schema License"
 docbook_stylesheet_license = "DocBook Stylesheet License"
 docbook_xml_license = "DocBook XML License"
@@ -254,9 +259,13 @@ fsf_all_permissive_license_without_warranty = "FSF All Permissive License (witho
 fsf_unlimited_license = "FSF Unlimited License"
 fsf_unlimited_license_with_license_retention = "FSF Unlimited License (with License Retention)"
 fsf_unlimited_license_with_license_retention_and_warranty_disclaimer = "FSF Unlimited License (With License Retention and Warranty Disclaimer)"
+fsfullrsd = "FSF Unlimited License (with License Retention and Short Disclaimer)"
+fsl_1_1_alv2 = "Functional Source License, Version 1.1, ALv2 Future License"
+fsl_1_1_mit = "Functional Source License, Version 1.1, MIT Future License"
 furuseth_license = "Furuseth License"
 fuzzy_bitmap_license = "Fuzzy Bitmap License"
 fwlw_license = "fwlw License"
+game_programming_gems = "Game Programming Gems License"
 gd_license = "GD License"
 generic_xts_license = "Generic XTS License"
 giftware_license = "Giftware License"
@@ -301,12 +310,12 @@ gnu_general_public_license_v3_0_only = "GNU General Public License v3.0 only"
 gnu_general_public_license_v3_0_or_later = "GNU General Public License v3.0 or later"
 gnu_general_public_license_v3_0_w_autoconf_exception = "GNU General Public License v3.0 w/autoconf exception" 
 gnu_general_public_license_v3_0_w_gcc_runtime_library_exception = "GNU General Public License v3.0 w/gcc runtime library exception" 
+gnu_lesser_general_public_license = "GNU lesser general public license"
 gnu_lesser_general_public_license_v2_0_only = "GNU Lesser General Public License v2.0 only"
 gnu_lesser_general_public_license_v2_1_only = "GNU Lesser General Public License v2.1 only"
 gnu_lesser_general_public_license_v2_1_or_later = "GNU Lesser General Public License v2.1 or later"
 gnu_lesser_general_public_license_v3_0_only = "GNU Lesser General Public License v3.0 only"
 gnu_lesser_general_public_license_v3_0_or_later = "GNU Lesser General Public License v3.0 or later"
-gnu_lesser_general_public_license = "GNU lesser general public license"
 gnu_library_general_public_license_v1_only = "GNU Library General Public License v1 only"
 gnu_library_general_public_license_v1_or_later = "GNU Library General Public License v1 or later"
 gnu_library_general_public_license_v2_only = "GNU Library General Public License v2 only"
@@ -320,6 +329,7 @@ gsoap_public_license_v1_3b = "gSOAP Public License v1.3b"
 gtkbook_license = "gtkbook License"
 gutmann_license = "Gutmann License"
 haskell_language_report_license = "Haskell Language Report License"
+hdf5 = "HDF5 License"
 hdparm_license = "hdparm License"
 hewlett_packard_1986_license = "Hewlett-Packard 1986 License"
 hewlett_packard_1989_license = "Hewlett-Packard 1989 License"
@@ -367,11 +377,12 @@ intel_acpi_software_license_agreement = "Intel ACPI Software License Agreement"
 intel_open_source_license = "Intel Open Source License"
 interbase_public_license_v1_0 = "Interbase Public License v1.0"
 ipa_font_license = "IPA Font License"
-isc_veillard_variant = "ISC Veillard variant"
 isc_license = "ISC license"
+isc_veillard_variant = "ISC Veillard variant"
 jam_license = "Jam License"
 japan_network_information_center_license = "Japan Network Information Center License"
 jasper_license = "JasPer License"
+jove = "Jove License"
 jpl_image_use_policy = "JPL Image Use Policy"
 json_license = "JSON License"
 kastrup_license = "Kastrup License"
@@ -387,6 +398,7 @@ latex2e_with_translated_notice_permission = "Latex2e with translated notice perm
 lawrence_berkeley_national_labs_bsd_variant_license = "Lawrence Berkeley National Labs BSD variant license"
 leptonica_license = "Leptonica License"
 lesser_general_public_license_for_linguistic_resources = "Lesser General Public License For Linguistic Resources"
+libpng_1_6_35 = "PNG Reference Library License v1 (for libpng 0.5 through 1.6.35)"
 libpng_license = "libpng License"
 libselinux_public_domain_notice = "libselinux public domain notice"
 libtiff_license = "libtiff License"
@@ -413,6 +425,7 @@ mackerras_3_clause_license = "Mackerras 3-Clause License"
 magaz_license = "magaz License"
 mailprio_license = "mailprio License"
 makeindex_license = "MakeIndex License"
+man2html = "man2html License"
 martin_birgmeier_license = "Martin Birgmeier License"
 matrix_template_library_license = "Matrix Template Library License"
 mcphee_slideshow_license = "McPhee Slideshow License"
@@ -462,6 +475,7 @@ netizen_open_source_license = "Netizen Open Source License"
 netscape_public_license_v1_0 = "Netscape Public License v1.0"
 netscape_public_license_v1_1 = "Netscape Public License v1.1"
 newsletr_license = "Newsletr License"
+ngrep = "ngrep License"
 nicta_public_software_license__version_1_0 = "NICTA Public Software License, Version 1.0"
 nist_public_domain_notice = "NIST Public Domain Notice"
 nist_public_domain_notice_with_license_fallback = "NIST Public Domain Notice with license fallback"
@@ -474,6 +488,7 @@ norwegian_licence_for_open_government_data_nlod_1_0 = "Norwegian Licence for Ope
 norwegian_licence_for_open_government_data_nlod_2_0 = "Norwegian Licence for Open Government Data (NLOD) 2.0"
 noweb_license = "Noweb License"
 nrl_license = "NRL License"
+ntia_pd = "NTIA Public Domain Notice"
 ntp_license = "NTP License"
 ntp_no_attribution = "NTP No Attribution"
 nunit_license = "Nunit License"
@@ -585,6 +600,7 @@ sleepycat_license = "Sleepycat License"
 smail_general_public_license = "SMAIL General Public License"
 snia_public_license_1_1 = "SNIA Public License 1.1"
 snprintf_license = "snprintf License"
+sofa = "SOFA Software License"
 softsurfer_license = "softSurfer License"
 solderpad_hardware_license__version_0_51 = "Solderpad Hardware License, Version 0.51"
 solderpad_hardware_license_v0_5 = "Solderpad Hardware License v0.5"
@@ -601,6 +617,7 @@ ssh_short_notice = "SSH short notice"
 ssleay_license___standalone = "SSLeay License - standalone"
 standard_ml_of_new_jersey_license = "Standard ML of New Jersey License"
 sugarcrm_public_license_v1_1_3 = "SugarCRM Public License v1.1.3"
+sul_1_0 = "Sustainable Use License v1.0"
 sun_industry_standards_source_license_v1_1 = "Sun Industry Standards Source License v1.1"
 sun_industry_standards_source_license_v1_2 = "Sun Industry Standards Source License v1.2"
 sun_ppp_license = "Sun PPP License"
@@ -645,6 +662,8 @@ universal_permissive_license = "Universal Permissive License"
 universal_permissive_license_v1_0 = "Universal Permissive License v1.0"
 university_of_illinois_ncsa_open_source_license = "University of Illinois/NCSA Open Source License"
 unixcrypt_license = "UnixCrypt License"
+unlicense_libtelnet = "Unlicense - libtelnet variant"
+unlicense_libwhirlpool = "Unlicense - libwhirlpool variant"
 unlicensed_license = "The Unlicense (Unlicense)"
 upstream_compatibility_license_v1_0 = "Upstream Compatibility License v1.0"
 utah_raster_toolkit_run_length_encoded_license = "Utah Raster Toolkit Run Length Encoded License"
@@ -696,12 +715,12 @@ unknown_license = "There is no known license"
 
 LICENSES_SYNONYMS = {
     abstyles_license.lower(): abstyles_license,
-    academic_free.lower(): academic_free,
     academic_free_v1_1.lower(): academic_free_v1_1,
     academic_free_v1_2.lower(): academic_free_v1_2,
     academic_free_v2_0.lower(): academic_free_v2_0,
     academic_free_v2_1.lower(): academic_free_v2_1,
     academic_free_v3_0.lower(): academic_free_v3_0,
+    academic_free.lower(): academic_free,
     academy_of_motion_picture_arts_and_sciences_bsd.lower(): academy_of_motion_picture_arts_and_sciences_bsd,
     adacore_doc_license.lower(): adacore_doc_license,
     adaptive_public_license_1_0.lower(): adaptive_public_license_1_0,
@@ -731,11 +750,13 @@ LICENSES_SYNONYMS = {
     apple_public_source_license_1_2.lower(): apple_public_source_license_1_2,
     apple_public_source_license_2_0.lower(): apple_public_source_license_2_0,
     arphic_public_license.lower(): arphic_public_license,
-    artistic_license.lower(): artistic_license,
+    artistic_dist.lower() : artistic_dist,
     artistic_license_1_0_perl.lower(): artistic_license_1_0_perl,
     artistic_license_1_0_w_clause_8.lower(): artistic_license_1_0_w_clause_8,
     artistic_license_1_0.lower(): artistic_license_1_0,
     artistic_license_2_0.lower(): artistic_license_2_0,
+    artistic_license.lower(): artistic_license,
+    aspell_ru.lower() : aspell_ru,
     aswf_digital_assets_license_1_1.lower(): aswf_digital_assets_license_1_1,
     aswf_digital_assets_license_version_1_0.lower(): aswf_digital_assets_license_version_1_0,
     attribution_assurance_license.lower(): attribution_assurance_license,
@@ -761,6 +782,7 @@ LICENSES_SYNONYMS = {
     bsd_2_clause___ian_darwin_variant.lower(): bsd_2_clause___ian_darwin_variant,
     bsd_2_clause__freebsd.lower(): bsd_2_clause__freebsd,
     bsd_2_clause__netbsd.lower(): bsd_2_clause__netbsd,
+    bsd_2_clause_pkgconf_disclaimer.lower() : bsd_2_clause_pkgconf_disclaimer,
     bsd_2_clause_plus_patent_license.lower(): bsd_2_clause_plus_patent_license,
     bsd_2_clause_simplified_license.lower(): bsd_2_clause_simplified_license,
     bsd_2_clause_with_views_sentence.lower(): bsd_2_clause_with_views_sentence,
@@ -898,6 +920,7 @@ LICENSES_SYNONYMS = {
     crossword_license.lower(): crossword_license,
     cryptographic_autonomy_license_1_0_combined_work_exception.lower(): cryptographic_autonomy_license_1_0_combined_work_exception,
     cryptographic_autonomy_license_1_0.lower(): cryptographic_autonomy_license_1_0,
+    cryptoswift.lower() : cryptoswift,
     crystalstacker_license.lower(): crystalstacker_license,
     cua_office_public_license_v1_0.lower(): cua_office_public_license_v1_0,
     cube_license.lower(): cube_license,
@@ -911,6 +934,7 @@ LICENSES_SYNONYMS = {
     deutsche_freie_software_lizenz.lower(): deutsche_freie_software_lizenz,
     diffmark_license.lower(): diffmark_license,
     doc_license.lower(): doc_license,
+    docbook_dtd.lower() : docbook_dtd,
     docbook_schema_license.lower(): docbook_schema_license,
     docbook_stylesheet_license.lower(): docbook_stylesheet_license,
     docbook_xml_license.lower(): docbook_xml_license,
@@ -950,9 +974,13 @@ LICENSES_SYNONYMS = {
     fsf_unlimited_license_with_license_retention_and_warranty_disclaimer.lower(): fsf_unlimited_license_with_license_retention_and_warranty_disclaimer,
     fsf_unlimited_license_with_license_retention.lower(): fsf_unlimited_license_with_license_retention,
     fsf_unlimited_license.lower(): fsf_unlimited_license,
+    fsfullrsd.lower() : fsfullrsd,
+    fsl_1_1_alv2.lower() : fsl_1_1_alv2,
+    fsl_1_1_mit.lower() : fsl_1_1_mit,
     furuseth_license.lower(): furuseth_license,
     fuzzy_bitmap_license.lower(): fuzzy_bitmap_license,
     fwlw_license.lower(): fwlw_license,
+    game_programming_gems.lower() : game_programming_gems,
     gd_license.lower(): gd_license,
     generic_xts_license.lower(): generic_xts_license,
     giftware_license.lower(): giftware_license,
@@ -1017,6 +1045,7 @@ LICENSES_SYNONYMS = {
     gtkbook_license.lower(): gtkbook_license,
     gutmann_license.lower(): gutmann_license,
     haskell_language_report_license.lower(): haskell_language_report_license,
+    hdf5.lower() : hdf5,
     hdparm_license.lower(): hdparm_license,
     hewlett_packard_1986_license.lower(): hewlett_packard_1986_license,
     hewlett_packard_1989_license.lower(): hewlett_packard_1989_license,
@@ -1069,6 +1098,7 @@ LICENSES_SYNONYMS = {
     jam_license.lower(): jam_license,
     japan_network_information_center_license.lower(): japan_network_information_center_license,
     jasper_license.lower(): jasper_license,
+    jove.lower() : jove,
     jpl_image_use_policy.lower(): jpl_image_use_policy,
     json_license.lower(): json_license,
     kastrup_license.lower(): kastrup_license,
@@ -1084,6 +1114,7 @@ LICENSES_SYNONYMS = {
     lawrence_berkeley_national_labs_bsd_variant_license.lower(): lawrence_berkeley_national_labs_bsd_variant_license,
     leptonica_license.lower(): leptonica_license,
     lesser_general_public_license_for_linguistic_resources.lower(): lesser_general_public_license_for_linguistic_resources,
+    libpng_1_6_35.lower() : libpng_1_6_35,
     libpng_license.lower(): libpng_license,
     libselinux_public_domain_notice.lower(): libselinux_public_domain_notice,
     libtiff_license.lower(): libtiff_license,
@@ -1110,6 +1141,7 @@ LICENSES_SYNONYMS = {
     magaz_license.lower(): magaz_license,
     mailprio_license.lower(): mailprio_license,
     makeindex_license.lower(): makeindex_license,
+    man2html.lower() : man2html,
     martin_birgmeier_license.lower(): martin_birgmeier_license,
     matrix_template_library_license.lower(): matrix_template_library_license,
     mcphee_slideshow_license.lower(): mcphee_slideshow_license,
@@ -1159,6 +1191,7 @@ LICENSES_SYNONYMS = {
     netscape_public_license_v1_0.lower(): netscape_public_license_v1_0,
     netscape_public_license_v1_1.lower(): netscape_public_license_v1_1,
     newsletr_license.lower(): newsletr_license,
+    ngrep.lower() : ngrep,
     nicta_public_software_license__version_1_0.lower(): nicta_public_software_license__version_1_0,
     nist_public_domain_notice_with_license_fallback.lower(): nist_public_domain_notice_with_license_fallback,
     nist_public_domain_notice.lower(): nist_public_domain_notice,
@@ -1171,6 +1204,7 @@ LICENSES_SYNONYMS = {
     norwegian_licence_for_open_government_data_nlod_2_0.lower(): norwegian_licence_for_open_government_data_nlod_2_0,
     noweb_license.lower(): noweb_license,
     nrl_license.lower(): nrl_license,
+    ntia_pd.lower() : ntia_pd,
     ntp_license.lower(): ntp_license,
     ntp_no_attribution.lower(): ntp_no_attribution,
     nunit_license.lower(): nunit_license,
@@ -1282,6 +1316,7 @@ LICENSES_SYNONYMS = {
     smail_general_public_license.lower(): smail_general_public_license,
     snia_public_license_1_1.lower(): snia_public_license_1_1,
     snprintf_license.lower(): snprintf_license,
+    sofa.lower() : sofa,
     softsurfer_license.lower(): softsurfer_license,
     solderpad_hardware_license__version_0_51.lower(): solderpad_hardware_license__version_0_51,
     solderpad_hardware_license_v0_5.lower(): solderpad_hardware_license_v0_5,
@@ -1298,6 +1333,7 @@ LICENSES_SYNONYMS = {
     ssleay_license___standalone.lower(): ssleay_license___standalone,
     standard_ml_of_new_jersey_license.lower(): standard_ml_of_new_jersey_license,
     sugarcrm_public_license_v1_1_3.lower(): sugarcrm_public_license_v1_1_3,
+    sul_1_0.lower() : sul_1_0,
     sun_industry_standards_source_license_v1_1.lower(): sun_industry_standards_source_license_v1_1,
     sun_industry_standards_source_license_v1_2.lower(): sun_industry_standards_source_license_v1_2,
     sun_ppp_license_2000.lower(): sun_ppp_license_2000,
@@ -1338,10 +1374,12 @@ LICENSES_SYNONYMS = {
     unicode_license_v3.lower(): unicode_license_v3,
     unicode_terms_of_use.lower(): unicode_terms_of_use,
     united_kingdom_open_parliament_licence_v3_0.lower(): united_kingdom_open_parliament_licence_v3_0,
-    universal_permissive_license.lower(): universal_permissive_license,
     universal_permissive_license_v1_0.lower(): universal_permissive_license_v1_0,
+    universal_permissive_license.lower(): universal_permissive_license,
     university_of_illinois_ncsa_open_source_license.lower(): university_of_illinois_ncsa_open_source_license,
     unixcrypt_license.lower(): unixcrypt_license,
+    unlicense_libtelnet.lower() : unlicense_libtelnet,
+    unlicense_libwhirlpool.lower() : unlicense_libwhirlpool,
     unlicensed_license.lower(): unlicensed_license,
     upstream_compatibility_license_v1_0.lower(): upstream_compatibility_license_v1_0,
     utah_raster_toolkit_run_length_encoded_license.lower(): utah_raster_toolkit_run_length_encoded_license,
@@ -1387,10 +1425,11 @@ LICENSES_SYNONYMS = {
     zope_public_license_v2.lower(): zope_public_license_v2,
     zope_public_license.lower(): zope_public_license,
     '"apache 2.0"': apache_license_v2,
+    'license :: osi approved :: mit license': mit_license,
     "['gplv3 or any later version']": gnu_general_public_license_v3_0_or_later,
     "0bsd" : bsd_license_c0,
-    "2-clause bsd license": bsd_license_c2,
     "2-bsd": bsd_license_c2,
+    "2-clause bsd license": bsd_license_c2,
     "2-clause bsd": bsd_license_c2,
     "3-bsd": bsd_license_c3,
     "3-clause bsd <http://www.opensource.org/licenses/bsd-license.php>": bsd_license_c3,
@@ -1408,17 +1447,17 @@ LICENSES_SYNONYMS = {
     "affero general public license v1.0 only": gnu_affero_general_public_license_v1_0_only,
     "affero general public license v1.0 or later": gnu_affero_general_public_license_v1_0_or_later,
     "affero general public license v1.0": gnu_affero_general_public_license_v1_0_only,
-    "afl": academic_free,
-    "afl-1.1": academic_free_v1_1,
     "afl 1.1": academic_free_v1_1,
-    "afl-1.2": academic_free_v1_2,
     "afl 1.2": academic_free_v1_2,
-    "afl-2.0": academic_free_v2_0,
     "afl 2.0": academic_free_v2_0,
-    "afl-2.1": academic_free_v2_1,
     "afl 2.1": academic_free_v2_1,
-    "afl-3.0": academic_free_v3_0,
     "afl 3.0": academic_free_v3_0,
+    "afl-1.1": academic_free_v1_1,
+    "afl-1.2": academic_free_v1_2,
+    "afl-2.0": academic_free_v2_0,
+    "afl-2.1": academic_free_v2_1,
+    "afl-3.0": academic_free_v3_0,
+    "afl": academic_free,
     "afmparse" : afmparse_license,
     "agpl 3.0": gnu_affero_general_public_license_v3_0_only,
     "agpl v3": gnu_affero_general_public_license_v3_0_only,
@@ -1457,12 +1496,11 @@ LICENSES_SYNONYMS = {
     "apache license, v2.0": apache_license_v2,
     "apache license, version 2.0": apache_license_v2,
     "apache license": apache_license,
-    "license :: osi approved :: apache software license": apache_license,
     "apache software license (apache 2.0)": apache_license_v2,
     "apache software license 2.0": apache_license_v2,
+    "apache software license v1": apache_license_v1,
     "apache software license v2.0": apache_license_v2,
     "apache software license v2": apache_license_v2,
-    "apache software license v1": apache_license_v1,
     "apache software license, version 2.0, http://www.apache.org/licenses/license-2.0": apache_license_v2,
     "apache software license": apache_license,
     "apache v2": apache_license_v2,
@@ -1487,6 +1525,8 @@ LICENSES_SYNONYMS = {
     "artistic-1.0-perl" : artistic_license_1_0_perl,
     "artistic-1.0" : artistic_license_1_0,
     "artistic-2.0" : artistic_license_2_0,
+    "artistic-dist" : artistic_dist,
+    "aspell-ru" : aspell_ru,
     "aswf-digital-assets-1.0" : aswf_digital_assets_license_version_1_0,
     "aswf-digital-assets-1.1" : aswf_digital_assets_license_1_1,
     "baekmuk" : baekmuk_license,
@@ -1499,8 +1539,8 @@ LICENSES_SYNONYMS = {
     "bittorrent-1.0" : bittorrent_open_source_license_v1_0,
     "bittorrent-1.1" : bittorrent_open_source_license_v1_1,
     "blessing" : sqlite_blessing,
-    "blueoak 1.0.0" : blue_oak_model_license_1_0_0,
     "blue oak model license (blueoak-1.0.0)" : blue_oak_model_license_1_0_0,
+    "blueoak 1.0.0" : blue_oak_model_license_1_0_0,
     "blueoak-1.0.0" : blue_oak_model_license_1_0_0,
     "boehm-gc-without-fee" : boehm_demers_weiser_gc_license_without_fee,
     "boehm-gc" : boehm_demers_weiser_gc_license,
@@ -1511,33 +1551,32 @@ LICENSES_SYNONYMS = {
     "bsd (3-clause)": bsd_license_c3,
     "bsd 2-clause (see license file)": bsd_license_c2,
     "bsd 2-clause": bsd_license_c2,
-    "bsd-2-clause": bsd_license_c2,
-    "bsd-2-clause license": bsd_license_c2,
-    "bsd-2-clause-license": bsd_license_c2,
-    "bsd-3-clause": bsd_license_c3,
     "bsd 3 clause": bsd_license_c3,
     "bsd 3-clause license": bsd_license_c3,
     "bsd 3-clause-license": bsd_license_c3,
-    "bsd-3-clause license": bsd_license_c3,
-    "bsd-3-clause-license": bsd_license_c3,
     "bsd 3-clause": bsd_license_c3,
     "bsd 3": bsd_license_c3,
     "bsd license": bsd_license,
     "bsd zero clause license": bsd_license_c0,
     "bsd-1-clause" : bsd_1_clause_license,
+    "bsd-2-clause license": bsd_license_c2,
     "bsd-2-clause-darwin" : bsd_2_clause___ian_darwin_variant,
     "bsd-2-clause-first-lines" : bsd_2_clause___first_lines_requirement,
     "bsd-2-clause-freebsd": bsd_2_clause__freebsd,
-    "freebsd": bsd_2_clause__freebsd,
+    "bsd-2-clause-license": bsd_license_c2,
     "bsd-2-clause-netbsd": bsd_2_clause__netbsd,
     "bsd-2-clause-patent" : bsd_2_clause_plus_patent_license,
+    "bsd-2-clause-pkgconf-disclaimer" : bsd_2_clause_pkgconf_disclaimer,
     "bsd-2-clause-views" : bsd_2_clause_with_views_sentence,
+    "bsd-2-clause": bsd_license_c2,
+    "bsd-3-clause license": bsd_license_c3,
     "bsd-3-clause-acpica" : bsd_3_clause_acpica_variant,
     "bsd-3-clause-attribution" : bsd_with_attribution,
     "bsd-3-clause-clear" : bsd_3_clause_clear_license,
     "bsd-3-clause-flex" : bsd_3_clause_flex_variant,
     "bsd-3-clause-hp" : hewlett_packard_bsd_variant_license,
     "bsd-3-clause-lbnl" : lawrence_berkeley_national_labs_bsd_variant_license,
+    "bsd-3-clause-license": bsd_license_c3,
     "bsd-3-clause-modification" : bsd_3_clause_modification,
     "bsd-3-clause-no-military-license" : bsd_3_clause_no_military_license,
     "bsd-3-clause-no-nuclear-license-2014" : bsd_3_clause_no_nuclear_license_2014,
@@ -1545,6 +1584,7 @@ LICENSES_SYNONYMS = {
     "bsd-3-clause-no-nuclear-warranty" : bsd_3_clause_no_nuclear_warranty,
     "bsd-3-clause-open-mpi" : bsd_3_clause_open_mpi_variant,
     "bsd-3-clause-sun" : bsd_3_clause_sun_microsystems,
+    "bsd-3-clause": bsd_license_c3,
     "bsd-4-clause-shortened" : bsd_4_clause_shortened,
     "bsd-4-clause-uc" : bsd_4_clause_university_of_california_specific,
     "bsd-4-clause" : bsd_4_clause_original_or_old_license,
@@ -1672,6 +1712,7 @@ LICENSES_SYNONYMS = {
     "Creative Commons Zero v1.0 Universal": cc0_license,
     "cronyx" : cronyx_license,
     "crossword" : crossword_license,
+    "cryptoswift" : cryptoswift,
     "crystalstacker" : crystalstacker_license,
     "cua-opl-1.0" : cua_office_public_license_v1_0,
     "cube" : cube_license,
@@ -1689,6 +1730,7 @@ LICENSES_SYNONYMS = {
     "do what the f*ck you want to public license": wtf_you_want_license,
     "do what the f*ck you want to public": wtf_you_want_license,
     "doc" : doc_license,
+    "docbook-dtd" : docbook_dtd,
     "docbook-schema" : docbook_schema_license,
     "docbook-stylesheet" : docbook_stylesheet_license,
     "docbook-xml" : docbook_xml_license,
@@ -1728,15 +1770,20 @@ LICENSES_SYNONYMS = {
     "ferguson-twofish" : ferguson_twofish_license,
     "frameworx-1.0" : frameworx_open_license_1_0,
     "freebsd-doc" : freebsd_documentation_license,
+    "freebsd": bsd_2_clause__freebsd,
     "freeimage" : freeimage_public_license_v1_0,
     "fsfap-no-warranty-disclaimer" : fsf_all_permissive_license_without_warranty,
     "fsfap" : fsf_all_permissive_license,
     "fsful" : fsf_unlimited_license,
     "fsfullr" : fsf_unlimited_license_with_license_retention,
+    "fsfullrsd" : fsfullrsd,
     "fsfullrwd" : fsf_unlimited_license_with_license_retention_and_warranty_disclaimer,
+    "fsl-1.1-alv2" : fsl_1_1_alv2,
+    "fsl-1.1-mit" : fsl_1_1_mit,
     "ftl" : freetype_project_license,
     "furuseth" : furuseth_license,
     "fwlw" : fwlw_license,
+    "game-programming-gems" : game_programming_gems,
     "gcr-docs" : gnome_gcr_documentation_license,
     "gd" : gd_license,
     "generic-xts" : generic_xts_license,
@@ -1801,7 +1848,6 @@ LICENSES_SYNONYMS = {
     "gnu gplv2": gnu_public_license_v2,
     "gnu gplv3 or any higher": gnu_general_public_license_v3_0_only,
     "gnu gplv3": gnu_general_public_license_v3_0_only,
-    "gnu lgpl": gnu_lesser_general_public_license,
     "gnu lesser general public license (lgpl)": gnu_lesser_general_public_license,
     "gnu lesser general public license v2 (lgplv2)": gnu_lesser_general_public_license_v2_0_only,
     "gnu lesser general public license v2 or later (lgplv2+)": gnu_general_public_license_v2_0_or_later,
@@ -1809,6 +1855,7 @@ LICENSES_SYNONYMS = {
     "gnu lesser general public license v3 (lgplv3)": gnu_lesser_general_public_license_v3_0_only,
     "gnu lesser general public license v3 or later (lgplv3+)": gnu_lesser_general_public_license_v3_0_or_later,
     "gnu lesser general public license v3": gnu_lesser_general_public_license_v3_0_only,
+    "gnu lgpl": gnu_lesser_general_public_license,
     "gnu library or lesser general public license (lgpl)": gnu_lesser_general_public_license,
     "gnu-gpl": gnu_public_license,
     "gnu-gplv3": gnu_general_public_license_v3_0_only,
@@ -1867,6 +1914,7 @@ LICENSES_SYNONYMS = {
     "gtkbook" : gtkbook_license,
     "gutmann" : gutmann_license,
     "haskellreport" : haskell_language_report_license,
+    "hdf5" : hdf5,
     "hdparm" : hdparm_license,
     "hidapi" : hidapi_license,
     "hippocratic-2.1" : hippocratic_license_2_1,
@@ -1926,6 +1974,7 @@ LICENSES_SYNONYMS = {
     "iscl": isc_license,
     "jam" : jam_license,
     "jasper-2.0" : jasper_license,
+    "jove" : jove,
     "jpl-image" : jpl_image_use_policy,
     "jpnic" : japan_network_information_center_license,
     "json" : json_license,
@@ -1964,6 +2013,7 @@ LICENSES_SYNONYMS = {
     "lgplv2+": gnu_general_public_license_v2_0_or_later,
     "lgplv3": gnu_lesser_general_public_license_v3_0_only,
     "lgplv3+": gnu_lesser_general_public_license_v3_0_or_later,
+    "libpng-1.6.35" : libpng_1_6_35,
     "libpng-2.0" : png_reference_library_version_2,
     "libpng" : libpng_license,
     "libselinux-1.0" : libselinux_public_domain_notice,
@@ -1975,6 +2025,7 @@ LICENSES_SYNONYMS = {
     "licence libre du québec – permissive version 1.1": licence_libre_du_québec_permissive_version_1_1,
     "licence libre du québec – réciprocité forte version 1.1": licence_libre_du_québec_Réciprocité_forte_version_1_1,
     "licence libre du québec – réciprocité version 1.1": licence_libre_du_québec_Réciprocité_version_1_1,
+    "license :: osi approved :: apache software license": apache_license,
     "liliq-p-1.1" : licence_libre_du_québec_permissive_version_1_1,
     "liliq-r-1.1" : licence_libre_du_québec_Réciprocité_forte_version_1_1,
     "liliq-rplus-1.1" : licence_libre_du_québec_Réciprocité_version_1_1,
@@ -2001,6 +2052,7 @@ LICENSES_SYNONYMS = {
     "magaz" : magaz_license,
     "mailprio" : mailprio_license,
     "makeindex" : makeindex_license,
+    "man2html" : man2html,
     "martin-birgmeier" : martin_birgmeier_license,
     "mcphee-slideshow" : mcphee_slideshow_license,
     "metamail" : metamail_license,
@@ -2008,7 +2060,6 @@ LICENSES_SYNONYMS = {
     "mips" : mips_license,
     "miros" : the_miros_licence,
     "mit -  see license.txt": mit_license,
-    'license :: osi approved :: mit license': mit_license,
     "mit 0": mit_zero_license,
     "mit licence": mit_license,
     "mit license ": mit_license,
@@ -2016,8 +2067,8 @@ LICENSES_SYNONYMS = {
     "mit license": mit_license,
     "mit licensed, as found in the license file": mit_license,
     "mit no attribution license (mit-0)": mit_zero_license,
-    "mit-0 license": mit_zero_license,
     "mit no attribution license": mit_zero_license,
+    "mit-0 license": mit_zero_license,
     "mit-0": mit_zero_license,
     "mit-advertising" : enlightenment_license_e16,
     "mit-click" : mit_click_license,
@@ -2071,6 +2122,7 @@ LICENSES_SYNONYMS = {
     "new bsd": bsd_license,
     "newsletr" : newsletr_license,
     "ngpl" : nethack_general_public_license,
+    "ngrep" : ngrep,
     "nicta-1.0" : nicta_public_software_license__version_1_0,
     "nist-pd-fallback" : nist_public_domain_notice_with_license_fallback,
     "nist-pd" : nist_public_domain_notice,
@@ -2085,6 +2137,7 @@ LICENSES_SYNONYMS = {
     "npl-1.1" : netscape_public_license_v1_1,
     "nposl-3.0" : non_profit_open_software_license_3_0,
     "nrl" : nrl_license,
+    "ntia-pd" : ntia_pd,
     "ntp-0" : ntp_no_attribution,
     "ntp" : ntp_license,
     "nunit": nunit_license,
@@ -2239,6 +2292,7 @@ LICENSES_SYNONYMS = {
     "smppl" : secure_messaging_protocol_public_license,
     "snia" : snia_public_license_1_1,
     "snprintf" : snprintf_license,
+    "sofa" : sofa,
     "softsurfer" : softsurfer_license,
     "soundex" : soundex_license,
     "spencer-86" : spencer_license_86,
@@ -2252,6 +2306,7 @@ LICENSES_SYNONYMS = {
     "sspl-1.0" : server_side_public_license__v_1,
     "standardml-nj" : standard_ml_of_new_jersey_license,
     "sugarcrm-1.1.3" : sugarcrm_public_license_v1_1_3,
+    "sul-1.0" : sul_1_0,
     "sun-ppp-2000" : sun_ppp_license_2000,
     "sun-ppp" : sun_ppp_license,
     "sunpro" : sunpro_license,
@@ -2289,12 +2344,14 @@ LICENSES_SYNONYMS = {
     "unicode-dfs-2015" : unicode_license_agreement___data_files_and_software_2015,
     "unicode-dfs-2016" : unicode_license_agreement___data_files_and_software_2016,
     "unicode-tou" : unicode_terms_of_use,
+    "universal permissive license (upl)": universal_permissive_license,
     "unixcrypt" : unixcrypt_license,
+    "unlicense-libtelnet" : unlicense_libtelnet,
+    "unlicense-libwhirlpool" : unlicense_libwhirlpool,
     "unlicense": unlicensed_license,
     "unlicensed": unlicensed_license,
-    "universal permissive license (upl)": universal_permissive_license,
-    "upl": universal_permissive_license,
     "upl-1.0" : universal_permissive_license_v1_0,
+    "upl": universal_permissive_license,
     "urt-rle" : utah_raster_toolkit_run_length_encoded_license,
     "vim" : vim_license,
     "vostrom" : vostrom_public_license_for_open_source,
