@@ -1,10 +1,10 @@
 import warnings
-from unittest.mock import patch
 from src.license_scanner.parse_license import parse_license
 from src.license_scanner.parse_license.licenses_synonyms import (
     unknown_license,
     mit_license,
     gnu_lesser_general_public_license_v2_0_only,
+    apache_license_v2,
 )
 
 
@@ -29,12 +29,8 @@ def test_parse_license_with_newline():
 
 
 def test_parse_license_strips_whitespace():
-    with patch(
-        "src.license_scanner.parse_license.main.LICENSES_SYNONYMS",
-        {"mit": "MIT License"},
-    ):
-        result = parse_license("  MIT  ")
-        assert result == "MIT License"
+    result = parse_license("  MIT  ")
+    assert result == mit_license
 
 
 def test_parse_license_mit():
@@ -84,12 +80,8 @@ def test_parse_license_not_found_in_synonyms_normalized():
 
 
 def test_parse_license_case_insensitive():
-    with patch(
-        "src.license_scanner.parse_license.main.LICENSES_SYNONYMS",
-        {"apache 2.0": "Apache License 2.0"},
-    ):
-        result = parse_license("APACHE 2.0")
-        assert result == "Apache License 2.0"
+    result = parse_license("APACHE 2.0")
+    assert result == apache_license_v2
 
 
 def test_parse_license_empty_after_processing():
