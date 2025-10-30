@@ -1,6 +1,6 @@
 # license_scanner
 
-[![Downloads](https://static.pepy.tech/badge/license-scanner)](https://pepy.tech/project/license-scanner)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/license-scanner?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/license-scanner)
 [![Tests & License Check](https://github.com/wagenrace/license_scanner/actions/workflows/python-licenses-tests.yml/badge.svg)](https://github.com/wagenrace/license_scanner/actions/workflows/python-licenses-tests.yml)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
