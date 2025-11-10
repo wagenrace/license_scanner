@@ -46,8 +46,8 @@ build-backend = "hatchling.build"
 allowed-licenses = [
   "MIT",
   "apache software license",
+  "apache software license v1",
   "apache software license v2",
-  "apache software license v3",
   "BSD license",
   "BSD 3-clause license",
   "BSD 2-clause license",
@@ -64,6 +64,9 @@ allowed-licenses = [
   "The Unlicense (Unlicense)",
   "ISC license (iscl)",
   "MIT-CMU License (MIT-CMU)",
+  "gnu lesser general public license (lgpl)",
+  "gnu lesser general public license v2 (lgplv2)",
+  "gnu lesser general public license v3 (lgplv3)",
 ]
 allowed-packages = ["license_scanner"]
 
