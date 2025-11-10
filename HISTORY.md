@@ -1,5 +1,10 @@
 # History
 
+## 0.4.4 (2025-11-10)
+
+- BUGFIX: lgplv2 no point to gnu LESSER general public license 2.0
+- Error for not found package will now include the miss matching package and their licenses
+
 ## 0.4.3 (2025-11-10)
 
 - Merge "Python Software Foundation License 2.0" and "Python software foundation license v2"
