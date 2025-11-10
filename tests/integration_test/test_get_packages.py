@@ -4,7 +4,16 @@ import pytest
 
 @pytest.mark.parametrize(
     "model_name",
-    ["numpy", "mergedeep", "absl_py", "scikit_image", "jaraco.text", "pillow", "uv"],
+    [
+        "numpy",
+        "mergedeep",
+        "absl_py",
+        "scikit_image",
+        "jaraco.text",
+        "pillow",
+        "uv",
+        "pycdlib",
+    ],
 )
 def test_get_all_package_names(model_name):
     packages = get_all_package_names()
