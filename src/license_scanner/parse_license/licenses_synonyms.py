@@ -2077,6 +2077,8 @@ LICENSES_SYNONYMS = {
     "mit-advertising" : enlightenment_license_e16,
     "mit-click" : mit_click_license,
     "mit-cmu": mit_cmu,
+    "mit-cmu license (mit-cmu)": mit_cmu,
+    "mit-cmu license": mit_cmu,
     "mit-enna" : enna_license,
     "mit-feh" : feh_license,
     "mit-festival" : mit_festival_variant,
