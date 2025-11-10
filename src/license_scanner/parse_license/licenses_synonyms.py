@@ -2255,7 +2255,7 @@ LICENSES_SYNONYMS = {
     "python v1": python_license_v1,
     "python v2.0": python_license_v2,
     "python v2": python_license_v2,
-    "Python Software Foundation License 2.0": python_license_v2,
+    "python software foundation license 2.0": python_license_v2,
     "python-2.0.1" : python_license_2_0_1,
     "python-2.0" : python_license_2_0,
     "python-ldap" : python_ldap_license,
