@@ -1,5 +1,14 @@
 # History
 
+## 0.4.3 (2025-11-10)
+
+- Merge "Python Software Foundation License 2.0" and "Python software foundation license v2"
+- Add "expat license" as synonym for "mit"
+- Change "new bsd" from general "bsd" to "bsd 3-clause"
+- Add "revised bsd license" for "bsd 3-clause"
+- Add synonyms for "free 2-clause bsd"
+- Add "simplified bsd license" and "simplified bsd" synonyms
+
 ## 0.4.2 (2025-10-30)
 
 - Add 19 new license and their shorted version form SPDX

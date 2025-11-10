@@ -557,7 +557,6 @@ python_license_2_0 = "Python License 2.0"
 python_license_2_0_1 = "Python License 2.0.1"
 python_license_v1 = "Python software foundation license v1"
 python_license_v2 = "Python software foundation license v2"
-python_software_foundation_license_2_0 = "Python Software Foundation License 2.0"
 q_public_license_1_0 = "Q Public License 1.0"
 q_public_license_1_0___inria_2004_variant = "Q Public License 1.0 - INRIA 2004 variant"
 qhull_license = "Qhull License"
@@ -1272,7 +1271,6 @@ LICENSES_SYNONYMS = {
     python_license_v1.lower(): python_license_v1,
     python_license_v2.lower(): python_license_v2,
     python_license.lower(): python_license,
-    python_software_foundation_license_2_0.lower(): python_software_foundation_license_2_0,
     q_public_license_1_0___inria_2004_variant.lower(): q_public_license_1_0___inria_2004_variant,
     q_public_license_1_0.lower(): q_public_license_1_0,
     qhull_license.lower(): qhull_license,
@@ -1763,13 +1761,18 @@ LICENSES_SYNONYMS = {
     "eupl-1.1" : european_union_public_license_1_1,
     "eupl-1.2" : european_union_public_license_1_2,
     "eurosym" : eurosym_license,
+    "expat license": mit_license,
+    "expat": mit_license,
     "fair" : fair_license,
     "fbm" : fuzzy_bitmap_license,
     "fdk-aac" : fraunhofer_fdk_aac_codec_library,
     "ferguson-twofish" : ferguson_twofish_license,
     "frameworx-1.0" : frameworx_open_license_1_0,
+    "free bsd license" : bsd_2_clause__freebsd, # Source: https://opensource.org/license/BSD-2-Clause
+    "free bsd" : bsd_2_clause__freebsd, # Source: https://opensource.org/license/BSD-2-Clause
+    "freebsd license" : bsd_2_clause__freebsd, # Source: https://opensource.org/license/BSD-2-Clause
     "freebsd-doc" : freebsd_documentation_license,
-    "freebsd": bsd_2_clause__freebsd,
+    "freebsd" : bsd_2_clause__freebsd, # Source: https://opensource.org/license/BSD-2-Clause
     "freeimage" : freeimage_public_license_v1_0,
     "fsfap-no-warranty-disclaimer" : fsf_all_permissive_license_without_warranty,
     "fsfap" : fsf_all_permissive_license,
@@ -2009,6 +2012,7 @@ LICENSES_SYNONYMS = {
     "lgpl": gnu_lesser_general_public_license,
     "lgpl3": gnu_lesser_general_public_license_v3_0_only,
     "lgpllr" : lesser_general_public_license_for_linguistic_resources,
+    "lgplv2": gnu_general_public_license_v2_0_only,
     "lgplv2+": gnu_general_public_license_v2_0_or_later,
     "lgplv3": gnu_lesser_general_public_license_v3_0_only,
     "lgplv3+": gnu_lesser_general_public_license_v3_0_or_later,
@@ -2083,6 +2087,8 @@ LICENSES_SYNONYMS = {
     "mit": mit_license,
     "mitnfa" : mit_no_false_attribs_license,
     "mmixware" : mmixware_license,
+    "modified bsd license": bsd_3_clause_modification, # Source: https://opensource.org/license/BSD-3-Clause
+    "modified bsd": bsd_3_clause_modification, # Source: https://opensource.org/license/BSD-3-Clause
     "motosoto" : motosoto_license,
     "mozilla public license 1.1 (mpl 1.1)": mozilla_public_license_1_1,
     "mozilla public license 2.0 (mpl 2.0)": mozilla_publice_license_v2,
@@ -2118,7 +2124,8 @@ LICENSES_SYNONYMS = {
     "ncsa" : university_of_illinois_ncsa_open_source_license,
     "net-snmp": net_snmp_license,
     "netcdf" : netcdf_license,
-    "new bsd": bsd_license,
+    "new bsd license": bsd_license_c3, # Source: https://opensource.org/license/BSD-3-Clause
+    "new bsd": bsd_license_c3, # Source: https://opensource.org/license/BSD-3-Clause
     "newsletr" : newsletr_license,
     "ngpl" : nethack_general_public_license,
     "ngrep" : ngrep,
@@ -2248,6 +2255,7 @@ LICENSES_SYNONYMS = {
     "python v1": python_license_v1,
     "python v2.0": python_license_v2,
     "python v2": python_license_v2,
+    "Python Software Foundation License 2.0": python_license_v2,
     "python-2.0.1" : python_license_2_0_1,
     "python-2.0" : python_license_2_0,
     "python-ldap" : python_ldap_license,
@@ -2258,6 +2266,8 @@ LICENSES_SYNONYMS = {
     "radvd" : radvd_license,
     "rdisc" : rdisc_license,
     "repoze public license": repoze_license,
+    "revised bsd license": bsd_license_c3,
+    "revised bsd": bsd_license_c3, 
     "rhecos-1.1" : red_hat_ecos_public_license_v1_1,
     "rpl-1.1" : reciprocal_public_license_1_1,
     "rpl-1.5" : reciprocal_public_license_1_5,
@@ -2282,6 +2292,8 @@ LICENSES_SYNONYMS = {
     "shl-0.5" : solderpad_hardware_license_v0_5,
     "shl-0.51" : solderpad_hardware_license__version_0_51,
     "simpl-2.0" : simple_public_license_2_0,
+    "simplified bsd license" : bsd_2_clause_simplified_license, # Source: https://opensource.org/license/BSD-2-Clause
+    "simplified bsd" : bsd_2_clause_simplified_license, # Source: https://opensource.org/license/BSD-2-Clause
     "sissl-1.2" : sun_industry_standards_source_license_v1_2,
     "sissl" : sun_industry_standards_source_license_v1_1,
     "sl" : sl_license,
