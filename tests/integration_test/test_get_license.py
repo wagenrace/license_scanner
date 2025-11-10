@@ -3,6 +3,7 @@ from src.license_scanner.parse_license.licenses_synonyms import (
     mit_license,
     bsd_license,
     apache_license_v2,
+    gnu_lesser_general_public_license_v2_0_only,
     apache_license,
     mit_cmu,
     historical_permission_notice,
@@ -33,6 +34,13 @@ def test_get_licenses_apache(model_name):
     licenses = get_licenses(model_name)
     licenses = [parse_license(i) for i in licenses]
     assert apache_license_v2 in licenses
+
+
+@pytest.mark.parametrize("model_name", ["pycdlib"])
+def test_get_lgplv2(model_name):
+    licenses = get_licenses(model_name)
+    licenses = [parse_license(i) for i in licenses]
+    assert gnu_lesser_general_public_license_v2_0_only in licenses
 
 
 def test_get_dual_license():

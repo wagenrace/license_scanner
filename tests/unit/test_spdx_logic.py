@@ -226,6 +226,25 @@ def test_spdx_single_level_brackets_expressions_pass(license_expression):
     assert spdx_logic(license_expression, allowed_licenses) is True
 
 
+def test_spdx_single_level_brackets_expressions_pass_apache_psf():
+    allowed_licenses = [
+        "Apache software license v2",
+        "Python Software Foundation License 2.0",
+    ]
+
+    assert (
+        spdx_logic("(apache-2.0 or bsd-3-clause) and psf-2.0", allowed_licenses) is True
+    )
+
+
+def test_spdx_single_level_brackets_expressions_pass_apache_psf_2():
+    allowed_licenses = ["BSD 3-clause license", "Python Software Foundation License v2"]
+
+    assert (
+        spdx_logic("(apache-2.0 or bsd-3-clause) and psf-2.0", allowed_licenses) is True
+    )
+
+
 @pytest.mark.parametrize(
     "license_expression",
     [
