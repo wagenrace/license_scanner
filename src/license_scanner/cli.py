@@ -114,7 +114,7 @@ def main():
                 else:
                     print(f'{package} with "{license}" is NOT whitelisted')
             raise ValueError(
-                "Some of the packages found do not use white listed licenses"
+                f"Some of the packages found do not use white listed licenses: {problem_packages}"
             )
         else:
             print("=+=+=+=+= All packages are good to use =+=+=+=+=")
