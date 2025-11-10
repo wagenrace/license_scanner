@@ -68,7 +68,7 @@ allowed-licenses = [
   "gnu lesser general public license v2 (lgplv2)",
   "gnu lesser general public license v3 (lgplv3)",
 ]
-allowed-packages = ["license_scanner"]
+allowed-packages = ["license_scanner", "pip", "setuptools", "wheel"]
 
 [project.scripts]
 license_scanner = "license_scanner.cli:main"
