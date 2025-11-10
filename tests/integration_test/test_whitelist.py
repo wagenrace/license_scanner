@@ -14,6 +14,7 @@ PYTEST_PACKAGES = [
     "tomli",
     "typing_extensions",
     "autocommand",
+    "setuptools",
 ]
 
 
