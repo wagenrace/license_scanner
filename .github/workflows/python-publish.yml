@@ -13,6 +13,11 @@ on:
     branches:
       - main  # Set a branch to deploy
 
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        default: 'main'
 permissions:
   contents: read
 
@@ -22,14 +27,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - name: Set up Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v7
       with:
         python-version: '3.x'
 
     - name: Set up uv
-      uses: astral-sh/setup-uv@v4
+      uses: astral-sh/setup-uv@v10
       with:
         enable-cache: true
 
@@ -42,6 +47,9 @@ jobs:
 
     - name: build package
       run: |
+        if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+          uv version --bump dev="$GITHUB_RUN_NUMBER"
+        fi
         uv build
 
     - name: Publish package

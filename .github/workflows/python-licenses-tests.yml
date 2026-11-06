@@ -7,7 +7,12 @@ on:
   pull_request:
     branches:
       - main
-
+  
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        default: 'main'
 permissions:
   contents: read
 
@@ -20,21 +25,21 @@ jobs:
       fail-fast: false
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v7
       with:
         python-version: ${{ matrix.python-version }}
         allow-prereleases: true
 
     - name: Set up uv
-      uses: astral-sh/setup-uv@v4
+      uses: astral-sh/setup-uv@v10
       with:
         enable-cache: true
     
     - name: Install project and dev dependencies
       run: |
-        uv sync --group dev
+        uv sync --group dev --python ${{ matrix.python-version }}
         uv pip install -r tests/integration_test/requirements_${{ matrix.python-version }}.txt
         
     - name: Run license scanner
