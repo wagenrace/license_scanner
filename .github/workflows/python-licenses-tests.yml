@@ -41,7 +41,6 @@ jobs:
       run: |
         cd tests/integration_test/test${{ matrix.python-version }}
         uv sync --python ${{ matrix.python-version }}
-        uv pip install -r tests/integration_test/requirements_${{ matrix.python-version }}.txt
         
     - name: Run license scanner
       run: |
