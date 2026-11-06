@@ -39,13 +39,16 @@ jobs:
     
     - name: Install project and dev dependencies
       run: |
+        cd tests/integration_test/test${{ matrix.python-version }}
         uv sync --group dev --python ${{ matrix.python-version }}
         uv pip install -r tests/integration_test/requirements_${{ matrix.python-version }}.txt
         
     - name: Run license scanner
       run: |
-        uv run python -m license_scanner -m whitelist
+        cd tests/integration_test/test${{ matrix.python-version }}
+        uv run license_scanner -m whitelist
 
     - name: Run all tests
       run: |
-        uv run pytest tests/ -v
+        cd tests/integration_test/test${{ matrix.python-version }}
+        uv run pytest .. -v
