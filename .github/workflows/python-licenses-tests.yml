@@ -1,5 +1,5 @@
 # This workflow runs tests and license checks across multiple Python versions
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+# For more information see: https://docs.astral.sh/uv/guides/integration/github/
 
 name: Tests & License Check
 
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13", "3.14"]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13", "3.14", "3.15"]
       fail-fast: false
 
     steps:
@@ -26,19 +26,21 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         allow-prereleases: true
+
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v4
+      with:
+        enable-cache: true
     
-    - name: run license scanner
+    - name: Install project and dev dependencies
       run: |
-        pip install .
-        python -m license_scanner -m whitelist
+        uv sync --group dev
+        uv pip install -r tests/integration_test/requirements_${{ matrix.python-version }}.txt
         
-    - name: Install dependencies
+    - name: Run license scanner
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install -r tests/integration_test/requirements_${{ matrix.python-version }}.txt
-        pip install pytest
+        uv run python -m license_scanner -m whitelist
 
     - name: Run all tests
       run: |
-        python -m pytest tests/ -v
+        uv run pytest tests/ -v
