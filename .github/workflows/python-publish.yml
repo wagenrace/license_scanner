@@ -48,7 +48,7 @@ jobs:
     - name: build package
       run: |
         if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
-          uv version --bump dev="$GITHUB_RUN_NUMBER"
+          uv version --bump patch --bump dev="$GITHUB_RUN_NUMBER"
         fi
         uv build
 
