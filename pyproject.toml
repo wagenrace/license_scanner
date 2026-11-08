@@ -1,6 +1,6 @@
 [project]
 name = "license_scanner"
-dynamic = ["version"]
+version = "0.4.5"
 dependencies = ["tomli>=1.1.0; python_version < '3.11'"]
 readme = "README.md"
 keywords = ["license", "scanner", "checker"]
@@ -51,11 +51,13 @@ allowed-licenses = [
   "apache software license v2",
   "BSD license",
   "BSD 3-clause license",
+  'BSD 3-Clause Modification',
   "BSD 2-clause license",
   "BSD 0-clause license",
   'GNU lesser general public license',
   'GNU lesser general public license v2',
   'GNU lesser general public license v3',
+  'Public domain',
   'Python software foundation license',
   'Python software foundation license v1',
   'Python software foundation license v2',
@@ -65,11 +67,18 @@ allowed-licenses = [
   "The Unlicense (Unlicense)",
   "ISC license (iscl)",
   "MIT-CMU License (MIT-CMU)",
+  'MIT No Attribution',
   "gnu lesser general public license (lgpl)",
   "gnu lesser general public license v2 (lgplv2)",
   "gnu lesser general public license v3 (lgplv3)",
 ]
-allowed-packages = ["license_scanner", "pip", "setuptools", "wheel"]
+allowed-packages = [
+  "license_scanner",
+  "pip",
+  "setuptools",
+  "wheel",
+  'python_gitlab',   # only needed during running in the CI/CD
+]
 
 [project.scripts]
 license_scanner = "license_scanner.cli:main"
@@ -85,6 +94,3 @@ dev = [
   "pytest",
   "requests",
 ]
-
-[tool.hatch.version]
-path = "src/license_scanner/__init__.py"

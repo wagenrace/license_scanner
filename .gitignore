@@ -106,3 +106,4 @@ venv.bak/
 # vscode files
 .vscode/
 secret
+.pythonversion

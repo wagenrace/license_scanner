@@ -39,21 +39,18 @@ jobs:
         enable-cache: true
 
     - name: Install project
-      run: uv sync
+      run: uv sync --no-dev
 
     - name: Check for licenses
       run: |
-        uv run python -m license_scanner.cli -m whitelist
+        uv run --no-dev license_scanner -m whitelist 
 
     - name: build package
       run: |
         if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
-          uv version --bump dev="$GITHUB_RUN_NUMBER"
+          uv version --bump patch --bump dev="$GITHUB_RUN_NUMBER"
         fi
         uv build
 
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+      run: uv publish --token ${{ secrets.PYPI_API_TOKEN }}
