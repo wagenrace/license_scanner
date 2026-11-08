@@ -39,7 +39,7 @@ jobs:
         enable-cache: true
 
     - name: Install project
-      run: uv sync
+      run: uv sync --no-dev
 
     - name: Check for licenses
       run: |
