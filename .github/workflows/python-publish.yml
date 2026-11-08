@@ -43,7 +43,7 @@ jobs:
 
     - name: Check for licenses
       run: |
-        uv run license_scanner -m whitelist --no-dev
+        uv run --no-dev license_scanner -m whitelist 
 
     - name: build package
       run: |
