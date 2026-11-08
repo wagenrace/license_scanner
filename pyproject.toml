@@ -1,6 +1,6 @@
 [project]
 name = "license_scanner"
-dynamic = ["version"]
+version = "0.4.5"
 dependencies = ["tomli>=1.1.0; python_version < '3.11'"]
 readme = "README.md"
 keywords = ["license", "scanner", "checker"]
@@ -94,6 +94,3 @@ dev = [
   "pytest",
   "requests",
 ]
-
-[tool.hatch.version]
-path = "src/license_scanner/__init__.py"
