@@ -1,6 +1,6 @@
 [project]
 name = "license_scanner"
-version = "0.4.4"
+version = "0.4.5"
 dependencies = ["tomli>=1.1.0; python_version < '3.11'"]
 readme = "README.md"
 keywords = ["license", "scanner", "checker"]
