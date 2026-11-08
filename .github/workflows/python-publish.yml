@@ -1,5 +1,5 @@
-# This workflow will upload a Python Package using Twine when a release is created
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
+# This workflow builds and uploads a Python package to PyPI
+# For more information see: https://docs.astral.sh/uv/guides/integration/github/
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -13,6 +13,11 @@ on:
     branches:
       - main  # Set a branch to deploy
 
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        default: 'main'
 permissions:
   contents: read
 
@@ -22,20 +27,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v7
       with:
         python-version: '3.x'
+
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v10.3.3
+      with:
+        enable-cache: true
+
+    - name: Install project
+      run: uv sync
+
     - name: Check for licenses
       run: |
-        python -m pip install --upgrade pip
-        pip install .
-        python -m license_scanner.cli -m whitelist
+        uv run python -m license_scanner.cli -m whitelist
+
     - name: build package
       run: |
-        pip install build
-        python -m build
+        if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+          uv version --bump dev="$GITHUB_RUN_NUMBER"
+        fi
+        uv build
+
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
       with:

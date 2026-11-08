@@ -28,10 +28,10 @@ It will sort all package by license or be used in CI/CD.
 
 ## Get all licenses
 
-Install by pip
+Install by uv
 
 ```cmd
-pip install license_scanner
+uv tool install license_scanner
 ```
 
 Usage
@@ -73,9 +73,9 @@ It will now throw you an error if your environment has an package with a license
 
 ### Example: Github actions
 
-This github actions triggers every time you make a PR to the main branch. With `pip install .` it installs the current project, next it installs `license_scanner`, and lastly it runs the check.
+This github actions triggers every time you make a PR to the main branch. With `uv sync --group dev` it installs the current project and development dependencies, and lastly it runs the check.
 
-Be aware, if you want to do unittest make sure you install `pytest` AFTER you run license_scanner. Otherwise `pytest` is in your environment when you check for unwanted licenses.
+Be aware, if you want to do unittest make sure you run license_scanner before installing any extra packages beyond your test set, otherwise those extra packages are in your environment when you check for unwanted licenses.
 
 ```yaml
 name: Licenses check
@@ -94,17 +94,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
+
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v4
+      with:
+        enable-cache: true
+
+    - name: Install project and dev dependencies
+      run: |
+        uv sync --group dev
+
     - name: Check for licenses
       run: |
-        python -m pip install --upgrade pip
-        pip install .
-        pip install license_scanner
-        python -m license_scanner -m whitelist
+        uv run python -m license_scanner -m whitelist
 
 ```
 

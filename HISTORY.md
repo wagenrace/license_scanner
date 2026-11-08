@@ -1,5 +1,9 @@
 # History
 
+## 0.4.5 (2026-11-06)
+
+- Update Python to include version 3.15
+
 ## 0.4.4 (2025-11-10)
 
 - BUGFIX: lgplv2 no point to gnu LESSER general public license 2.0
