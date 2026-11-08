@@ -43,7 +43,7 @@ jobs:
 
     - name: Check for licenses
       run: |
-        uv run python -m license_scanner.cli -m whitelist
+        uv run python -m license_scanner.cli -m whitelist --no-dev
 
     - name: build package
       run: |
