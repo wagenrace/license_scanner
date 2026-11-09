@@ -141,8 +141,10 @@ However, the `WITH` operator is NOT supported at the moment.
 - Adobe Postscript AFM License
 - Adobe Systems Incorporated Source Code License Agreement
 - Adobe Utopia Font License
+- Advanced Cryptics Dictionary License
 - Afmparse License
 - Aladdin Free Public License
+- ALGLIB Documentation License
 - Amazon Digital Services License
 - AMD newlib License
 - AMD's plpa_map.c License
@@ -171,6 +173,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Aspell Russian License
 - ASWF Digital Assets License 1.1
 - ASWF Digital Assets License version 1.0
+- atc Game License
 - Attribution Assurance License
 - Azure License
 - Baekmuk License
@@ -189,16 +192,20 @@ However, the `WITH` operator is NOT supported at the moment.
 - Borceux license
 - Brian Gladman 2-Clause License
 - Brian Gladman 3-Clause License
+- Brian Gladman 3-Clause License (no conversion clause)
+- BSD - ask to endorse
 - BSD 0-clause license
 - BSD 1-Clause License
 - BSD 2-Clause - first lines requirement
 - BSD 2-Clause - Ian Darwin variant
+- BSD 2-Clause - position unchanged variant
 - BSD 2-Clause "Simplified" License
 - BSD 2-Clause FreeBSD License
 - BSD 2-clause license
 - BSD 2-Clause NetBSD License
 - BSD 2-Clause pkgconf disclaimer variant
 - BSD 2-Clause with views sentence
+- BSD 3-Clause - OpenWebUI variant
 - BSD 3-Clause "New" or "Revised" License
 - BSD 3-Clause acpica variant
 - BSD 3-Clause Clear License
@@ -211,6 +218,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - BSD 3-Clause No Nuclear Warranty
 - BSD 3-Clause Open MPI variant
 - BSD 3-Clause Sun Microsystems
+- BSD 3-Clause Tso variant
 - BSD 4 Clause Shortened
 - BSD 4-Clause "Original" or "Old" License
 - BSD 4-clause license
@@ -218,14 +226,20 @@ However, the `WITH` operator is NOT supported at the moment.
 - BSD 4.3 TAHOE License
 - BSD Advertising Acknowledgement License
 - BSD license
+- BSD Mark Modifications License
 - BSD Protection License
 - BSD Source Code Attribution
 - BSD Source Code Attribution - beginning of file variant
+- BSD Source Code Attribution - GPL alternative
+- BSD Source Code Attribution - no disclaimer
 - BSD with attribution
 - BSD with Attribution and HPND disclaimer
 - BSD-2-Clause Plus Patent License
 - BSD-4-Clause (University of California-Specific)
 - BSD-Inferno-Nettverk
+- Buddy License
+- Buena Onda License Agreement v1.1
+- Bugroff License
 - Business Source License 1.1
 - bzip2 and libbzip2 License v1.0.5
 - bzip2 and libbzip2 License v1.0.6
@@ -248,6 +262,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Checkmk License
 - Clarified Artistic License
 - Clips License
+- CMU    Mach - no notices-in-documentation variant
 - CMU License (MIT-CMU)
 - CMU Mach - no notices-in-documentation variant
 - CMU Mach License
@@ -255,6 +270,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - CNRI Python License
 - CNRI Python Open Source GPL Compatible License Agreement
 - Code Project Open License 1.02
+- Common Attack    Pattern Enumeration and Classification License
 - Common Development and Distribution License 1.0
 - Common Development and Distribution License 1.1
 - Common Documentation License 1.0
@@ -273,6 +289,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - copyleft-next 0.3.0
 - copyleft-next 0.3.1
 - Cornell Lossless JPEG License
+- Creative    Commons Public Domain Mark 1.0 Universal
 - Creative Commons Attribution 1.0 Generic
 - Creative Commons Attribution 2.0 Generic
 - Creative Commons Attribution 2.5 Australia
@@ -295,6 +312,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Creative Commons Attribution Non Commercial 2.0 Generic
 - Creative Commons Attribution Non Commercial 2.5 Generic
 - Creative Commons Attribution Non Commercial 3.0 Germany
+- Creative Commons Attribution Non Commercial 3.0 IGO
 - Creative Commons Attribution Non Commercial 3.0 Unported
 - Creative Commons Attribution Non Commercial 4.0 International
 - Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic
@@ -346,6 +364,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Detection Rule License 1.1
 - Deutsche Freie Software Lizenz
 - diffmark license
+- Do What The F*ck You Want To But It's Not My Fault Public License
 - DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 - DOC License
 - DocBook DTD License
@@ -371,6 +390,9 @@ However, the `WITH` operator is NOT supported at the moment.
 - Erlang Public License v1.1
 - Etalab Open License 2.0
 - EU DataGrid Software License
+- European Space Agency Public License – v2.4 – Permissive (Type 3)
+- European Space Agency Public License – v2.4 – Weak Copyleft (Type 2)
+- European Space Agency Public License (ESA-PL) - V2.4 - Strong Copyleft (Type 1)
 - European Union Public License 1.0
 - European Union Public License 1.1
 - European Union Public License 1.2
@@ -380,6 +402,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Ferguson Twofish License
 - Frameworx Open License 1.0
 - Fraunhofer FDK AAC Codec Library
+- Fraunhofer FDK MPEG-H Software
 - FreeBSD Documentation License
 - FreeImage Public License v1.0
 - Freetype Project License
@@ -465,6 +488,8 @@ However, the `WITH` operator is NOT supported at the moment.
 - Hewlett-Packard BSD variant license
 - HIDAPI License
 - Hippocratic License 2.1
+- Hippocratic License 3.0
+- Historical Permission Notice and Disclaimer    - INRIA-IMAG variant
 - Historical Permission Notice and Disclaimer - DEC variant
 - Historical Permission Notice and Disclaimer - documentation sell variant
 - Historical Permission Notice and Disclaimer - documentation variant
@@ -479,10 +504,12 @@ However, the `WITH` operator is NOT supported at the moment.
 - Historical Permission Notice and Disclaimer - sell regexpr variant
 - Historical Permission Notice and Disclaimer - sell variant
 - Historical Permission Notice and Disclaimer - sell xserver variant with MIT disclaimer
+- Historical Permission Notice and Disclaimer - SMC variant
 - Historical Permission Notice and Disclaimer - University of California variant
 - Historical Permission Notice and Disclaimer - University of California, US export warning
 - Historical Permission Notice and Disclaimer (HPND)
 - Historical Permission Notice and Disclaimer with MIT disclaimer
+- HPND - sell variant with safety critical systems clause
 - HPND sell variant with MIT disclaimer
 - HPND sell variant with MIT disclaimer - reverse
 - HPND with US Government export control and 2 disclaimers
@@ -490,9 +517,11 @@ However, the `WITH` operator is NOT supported at the moment.
 - HPND with US Government export control warning and acknowledgment
 - HPND with US Government export control warning and modification rqmt
 - HTML Tidy License
+- hyphen-bulgarian License
 - IBM PowerPC Initialization and Boot Software
 - IBM Public License v1.0
 - ICU License
+- IEC    Code Components End-user licence agreement
 - IEC Code Components End-user licence agreement
 - ImageMagick License
 - iMatix Standard Function Library Agreement
@@ -500,6 +529,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Independent JPEG Group License
 - Independent JPEG Group License - short
 - Info-ZIP License
+- Informatica License
 - Inner Net License v2.0
 - Inno Setup License
 - Intel ACPI Software License Agreement
@@ -508,6 +538,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - IPA Font License
 - ISC License
 - ISC Veillard variant
+- ISO permission notice
 - Jam License
 - Japan Network Information Center License
 - JasPer License
@@ -562,6 +593,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Microsoft Limited Public License
 - Microsoft Public License
 - Microsoft Reciprocal License
+- Minecraft Mod Public License v1.0.1
 - Minpack License
 - MIPS License
 - MIT +no-false-attribs license
@@ -574,6 +606,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - MIT Open Group variant
 - MIT testregex Variant
 - MIT Tom Wu Variant
+- MIT-STK License
 - MMIXware License
 - Motosoto License
 - Mozilla public license (mpl)
@@ -589,6 +622,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Mulan Permissive Software License, Version 2
 - Multics License
 - Mup License
+- MVT License 1.1
 - Nara Institute of Science and Technology License (2003)
 - NASA Open Source Agreement 1.3
 - Naumen Public License
@@ -604,6 +638,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Newsletr License
 - ngrep License
 - NICTA Public Software License, Version 1.0
+- NIST    Public Domain Notice TNT variant
 - NIST Public Domain Notice
 - NIST Public Domain Notice with license fallback
 - NIST Software License
@@ -658,12 +693,16 @@ However, the `WITH` operator is NOT supported at the moment.
 - Open Software License 2.1
 - Open Software License 3.0
 - Open Use of Data Agreement v1.0
+- OpenMDW License Agreement v1.0
 - OpenPBS v2.3 Software License
 - OpenSSL License
 - OpenSSL License - standalone
 - OpenVision License
+- OSC License 1.0
 - OSET Public License version 2.1
+- OSSP License
 - PADL License
+- ParaType Free Font Licensing Agreement v1.3
 - Peer Production License
 - PHP License v3.0
 - PHP License v3.01
@@ -715,6 +754,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - SGI Free Software License B v1.1
 - SGI Free Software License B v2.0
 - SGI OpenGL License
+- SGMLUG Parser Materials License
 - SGP4 Permission Notice
 - SIL Open Font License 1.0
 - SIL Open Font License 1.0 with no Reserved Font Name
@@ -761,6 +801,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - TCP Wrappers License
 - Technische Universitaet Berlin License 1.0
 - Technische Universitaet Berlin License 2.0
+- TekHVC License
 - TermReadKey License
 - Text-Tabs+Wrap License
 - The MirOS Licence
@@ -784,6 +825,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Unicode License Agreement - Data Files and Software (2016)
 - Unicode License v3
 - Unicode Terms of Use
+- United    Kingdom Open Parliament Licence v3.0
 - United Kingdom Open Parliament Licence v3.0
 - Universal Permissive License
 - Universal Permissive License v1.0
@@ -791,9 +833,11 @@ However, the `WITH` operator is NOT supported at the moment.
 - UnixCrypt License
 - Unlicense - libtelnet variant
 - Unlicense - libwhirlpool variant
+- UnRAR License
 - Upstream Compatibility License v1.0
 - Utah Raster Toolkit Run Length Encoded License
 - Vim License
+- Vixie Cron License
 - VOSTROM Public License for Open Source
 - Vovida Software License v1.0
 - W3C Software Notice and Document License (2015-05-13)
@@ -801,12 +845,14 @@ However, the `WITH` operator is NOT supported at the moment.
 - W3C Software Notice and License (2002-12-31)
 - w3m License
 - Widget Workshop License
+- WordNet License
 - Wsuipa License
 - WWL License
 - wxWindows Library License
 - X.Net License
 - X11 License
 - X11 License Distribution Modification Variant
+- X11 no permit persons clause
 - X11 swapped final paragraphs
 - Xdebug License v 1.03
 - Xerox License
