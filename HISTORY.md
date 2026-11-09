@@ -1,5 +1,9 @@
 # History
 
+## 0.4.6 (2026-11-09)
+
+- Adding 46 new licenses from SPDX
+
 ## 0.4.5 (2026-11-06)
 
 - Update Python to include version 3.15
