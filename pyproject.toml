@@ -1,6 +1,6 @@
 [project]
 name = "license_scanner"
-version = "0.4.5"
+version = "0.4.6"
 dependencies = ["tomli>=1.1.0; python_version < '3.11'"]
 readme = "README.md"
 keywords = ["license", "scanner", "checker"]
@@ -85,12 +85,8 @@ license_scanner = "license_scanner.cli:main"
 
 [dependency-groups]
 dev = [
-  "beautifulsoup4",
   "gcip>=1.0.0",
-  "html5lib",
   "jupyter>=1.1.1",
-  "lxml",
-  "pandas",
   "pytest",
   "requests",
 ]
