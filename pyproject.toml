@@ -85,12 +85,8 @@ license_scanner = "license_scanner.cli:main"
 
 [dependency-groups]
 dev = [
-  "beautifulsoup4",
   "gcip>=1.0.0",
-  "html5lib",
   "jupyter>=1.1.1",
-  "lxml",
-  "pandas",
   "pytest",
   "requests",
 ]
