@@ -50,8 +50,8 @@ jobs:
     - name: Run all tests
       run: |
         cd tests/integration_test/test${{ matrix.python-version }}
-        cd ../../..
-        uv run pytest . -v
+        uv sync
+        uv run pytest ../../.. -v
     
     - name: Test license scanner failing
       run: |
