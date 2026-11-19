@@ -883,7 +883,6 @@ However, the `WITH` operator is NOT supported at the moment.
 - Zope Public License v1
 - Zope Public License v2
 
-
 ## Credits
 
 - Tom Nijhof-Verhees
