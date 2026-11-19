@@ -178,6 +178,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Azure License
 - Baekmuk License
 - Bahyph License
+- BaKoMa Fonts Licence
 - Barr License
 - bcrypt Solar Designer License
 - Beerware License
@@ -507,6 +508,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - Historical Permission Notice and Disclaimer - SMC variant
 - Historical Permission Notice and Disclaimer - University of California variant
 - Historical Permission Notice and Disclaimer - University of California, US export warning
+- Historical Permission Notice and Disclaimer - X11 variant
 - Historical Permission Notice and Disclaimer (HPND)
 - Historical Permission Notice and Disclaimer with MIT disclaimer
 - HPND - sell variant with safety critical systems clause
@@ -599,6 +601,7 @@ However, the `WITH` operator is NOT supported at the moment.
 - MIT +no-false-attribs license
 - MIT Click License
 - MIT Festival Variant
+- MIT KDevelop Ideal variant
 - MIT Khronos - old variant
 - MIT license
 - MIT License Modern Variant
