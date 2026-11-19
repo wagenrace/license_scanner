@@ -1,5 +1,9 @@
 # History
 
+## 0.4.7 (2026-11-19)
+
+- Adding 3 new licenses from SPDX
+
 ## 0.4.6 (2026-11-09)
 
 - Adding 46 new licenses from SPDX
