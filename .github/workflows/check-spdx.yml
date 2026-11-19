@@ -11,7 +11,7 @@ name: Check SPDX licenses
 on:
   schedule:
     # run every Wednesday at 05:00 UTC
-    - cron: "0 5 * * 3" 
+    - cron: "0 5 * * *" 
 
   workflow_dispatch:
     inputs:
